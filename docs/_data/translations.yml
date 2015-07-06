@@ -26,7 +26,7 @@
 - name: Korean
   code: ko
   description: Bootstrap 한국어
-  url: http://bootstrapk.com/BS3/
+  url: http://bootstrapk.com/
 
 - name: Russian
   code: ru
@@ -37,6 +37,11 @@
   code: es
   description: Bootstrap en Español
   url: http://www.oneskyapp.com/es/docs/bootstrap/
+
+- name: Turkish
+  code: tr
+  description: Türkçe Bootstrap
+  url: http://www.trbootstrap.com
 
 - name: Ukrainian
   code: uk
