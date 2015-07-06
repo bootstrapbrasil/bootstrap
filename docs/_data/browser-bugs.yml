@@ -20,6 +20,16 @@
 
 -
   browser: >
+    Internet Explorer 11 & Microsoft Edge
+  summary: >
+    CSS `border-radius` sometimes causes lines of bleed-through of the `background-color` of the parent element.
+  upstream_bug: >
+    IE#1463734
+  origin: >
+    Bootstrap#16671
+
+-
+  browser: >
     Firefox
   summary: >
     `.table-bordered` with an empty `<tbody>` is missing borders.
@@ -242,6 +252,16 @@
 
 -
   browser: >
+    Safari (OS X)
+  summary: >
+    Unnecessary line-wrapping of `.navbar-brand` text for no apparent reason
+  upstream_bug: >
+    WebKit#144990, Safari#20950962
+  origin: >
+    Bootstrap#15998
+
+-
+  browser: >
     Safari (iOS)
   summary: >
     `transform: translate3d(0,0,0);` rendering bug.
@@ -269,3 +289,13 @@
     WebKit#139848, Safari#19434878
   origin: >
     Bootstrap#11266, Bootstrap#13098
+
+-
+  browser: >
+    Safari (iOS)
+  summary: >
+    Tapping below `<input>`s can focus them in some cases
+  upstream_bug: >
+    WebKit#146244, Safari#21509310
+  origin: >
+    Bootstrap#15968
