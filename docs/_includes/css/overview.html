@@ -1,49 +1,51 @@
 <div class="bs-docs-section">
-  <h1 id="overview" class="page-header">Overview</h1>
+  <h1 id="overview" class="page-header">Visão geral</h1>
 
-  <p class="lead">Get the lowdown on the key pieces of Bootstrap's infrastructure, including our approach to better, faster, stronger web development.</p>
+  <p class="lead">Conheça as principais peças da arquitetura do Bootstrap, incluindo nossos metodos para melhorar, agilizar e fortalecer o desenvolvimento web.</p>
 
   <h2 id="overview-doctype">HTML5 doctype</h2>
-  <p>Bootstrap makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
+  <p>Bootstrap faz uso de certos elementos HTML e propriedades CSS que requerem o uso do <b>HTML5 doctype</b>. Inclua-o no início de todos os seus projetos.</p>
 {% highlight html %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   ...
 </html>
 {% endhighlight %}
 
-  <h2 id="overview-mobile">Mobile first</h2>
-  <p>With Bootstrap 2, we added optional mobile friendly styles for key aspects of the framework. With Bootstrap 3, we've rewritten the project to be mobile friendly from the start. Instead of adding on optional mobile styles, they're baked right into the core. In fact, <strong>Bootstrap is mobile first</strong>. Mobile first styles can be found throughout the entire library instead of in separate files.</p>
-  <p>To ensure proper rendering and touch zooming, <strong>add the viewport meta tag</strong> to your <code>&lt;head&gt;</code>.</p>
+  <h2 id="overview-mobile">Mobile primeiro</h2>
+  <p>No Bootstrap 2, havia a opção separada para se trabalhar para dispositivos móveis. Com Bootstrap 3, isso deixou de ser opcional, nós reescrevemos o projeto para ser amigável com todos dispositivos móveis desde o início. De fato, isso faz com que o Bootstrap torne-se <b>Mobile first</b>.</p>
+
+  <p>Para garantir a renderização adequada e sensíbilidade ao toque, <strong>adicione a meta tag viewport</strong> dentro do <code>&lt;head&gt;</code>.</p>
 {% highlight html %}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {% endhighlight %}
-  <p>You can disable zooming capabilities on mobile devices by adding <code>user-scalable=no</code> to the viewport meta tag. This disables zooming, meaning users are only able to scroll, and results in your site feeling a bit more like a native application. Overall, we don't recommend this on every site, so use caution!</p>
+  <p>Você pode desativar a ampliação do zoom em dispositivos móveis adicionando <code>user-scalable=no</code> na meta tag viewport. Isso desativa o zoom, ou seja, os usuários só são capazes de trabalhar com a barra de rolagem, e o resultado é que seu site ficará parecido com um aplicativo nativo. Entretanto, nós não recomendamos isso em todos os sites, por isso tome cuidado!</p>
 {% highlight html %}
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 {% endhighlight %}
 
-  <h2 id="overview-type-links">Typography and links</h2>
-  <p>Bootstrap sets basic global display, typography, and link styles. Specifically, we:</p>
+  <h2 id="overview-type-links">Tipografia e links</h2>
+  <p>Bootstrap define estilos globais básicos de exibição, tipografia, e link. Assim, nós:</p>
   <ul>
-    <li>Set <code>background-color: #fff;</code> on the <code>body</code></li>
-    <li>Use the <code>@font-family-base</code>, <code>@font-size-base</code>, and <code>@line-height-base</code> attributes as our typographic base</li>
-    <li>Set the global link color via <code>@link-color</code> and apply link underlines only on <code>:hover</code></li>
+    <li>Definimos <code>background-color: #fff;</code> no <code>body</code></li>
+    <li>Usamos atributos <code>@font-family-base</code>, <code>@font-size-base</code>, e <code>@line-height-base</code> como nossa base de tipografia</li>
+    <li>Definimos globalmente a cor do link via <code>@link-color</code> e underline apenas no <code>:hover</code></li>
   </ul>
-  <p>These styles can be found within <code>scaffolding.less</code>.</p>
+  <p>Esses estilos podem ser encontrados em <code>scaffolding.less</code>.</p>
 
   <h2 id="overview-normalize">Normalize.css</h2>
-  <p>For improved cross-browser rendering, we use <a href="http://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a>, a project by <a href="https://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> and <a href="https://twitter.com/jon_neal" target="_blank">Jonathan Neal</a>.</p>
+  <p>Para melhorar a renderização em todos os navegadores, nós usamos <a href="http://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a>, um projeto feito por <a href="https://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> e <a href="https://twitter.com/jon_neal" target="_blank">Jonathan Neal</a>.</p>
 
   <h2 id="overview-container">Containers</h2>
-  <p>Bootstrap requires a containing element to wrap site contents and house our grid system. You may choose one of two containers to use in your projects. Note that, due to <code>padding</code> and more, neither container is nestable.</p>
-  <p>Use <code>.container</code> for a responsive fixed width container.</p>
+  <p>Bootstrap requer um elemento que possibilite envolver o conteúdo do site e adote nosso sistema de grid. Você pode escolher um dos tipos de "containers" para usar em seus projetos. Lembre-se que isso cria um <code>padding</code> a mais, então não deve-se incluir nenhum "container" dentro de outro.</p>
+
+  <p>Use <code>.container</code> para conteúdo responsivo com largura limitada.</p>
 {% highlight html %}
 <div class="container">
   ...
 </div>
 {% endhighlight %}
-  <p>Use <code>.container-fluid</code> for a full width container, spanning the entire width of your viewport.</p>
+  <p>Use <code>.container-fluid</code> para conteúdo responsivo com largura fluída, isto é, toda a largura da janela.</p>
 {% highlight html %}
 <div class="container-fluid">
   ...
