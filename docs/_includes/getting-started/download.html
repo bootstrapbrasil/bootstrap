@@ -47,17 +47,19 @@
   <h2 id="download-npm">Instalação com npm</h2>
   <p>Você pode tambem instalar o Bootstrap usando <a href="https://www.npmjs.com">npm</a>:</p>
   {% highlight bash %}$ npm install bootstrap{% endhighlight %}
-  <p><code>require('bootstrap')</code> will load all of Bootstrap's jQuery plugins onto the jQuery object. The <code>bootstrap</code> module itself does not export anything. You can manually load Bootstrap's jQuery plugins individually by loading the <code>/js/*.js</code> files under the package's top-level directory.</p>
-  <p>Bootstrap's <code>package.json</code> contains some additional metadata under the following keys:</p>
+  <p><code>require('bootstrap')</code> vai carregar todos os plugins jQuery do Bootstrap plugins no jQuery object. O próprio modulo <code>bootstrap</code> não exporta nada. Você pode carregar manualmente plugins jQuery do Bootstrap individualmente atráves do carregamento dos arquivos <code>/js/*.js</code>sob o diretório de nível superior do pacote.</p>
+  <p>O <code>package.json</code> do Bootstrap contém alguns metadados adicionais nas seguintes keys:</p>
   <ul>
-    <li><code>less</code> - path to Bootstrap's main <a href="http://lesscss.org">Less</a> source file</li>
-    <li><code>style</code> - path to Bootstrap's non-minified CSS that's been precompiled using the default settings (no customization)</li>
+    <li><code>less</code> - caminho para o arquivo principal <a href="http://lesscss.org">Less</a> do Bootstrap</li>
+    <li><code>style</code> - caminho para CSS não minificado do Bootstrap, que foram pré-compilados usando as configurações padrão (sem personalização)</li>
   </ul>
 
   <h2 id="download-composer">Instalação com Composer</h2>
   <p>Você pode tambem instalar e manusear o Less, CSS, JavaScript e fonts do Bootstrap usando <a href="https://getcomposer.org">Composer</a>:</p>
   {% highlight bash %}$ composer require twbs/bootstrap{% endhighlight %}
 
-  <h2 id="download-autoprefixer">Autoprefixer required for Less/Sass</h2>
-  <p>Bootstrap uses <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> to deal with <a href="http://webdesign.about.com/od/css/a/css-vendor-prefixes.htm">CSS vendor prefixes</a>. If you're compiling Bootstrap from its Less/Sass source and not using our Gruntfile, you'll need to integrate Autoprefixer into your build process yourself. If you're using precompiled Bootstrap or using our Gruntfile, you don't need to worry about this because Autoprefixer is already integrated into our Gruntfile.</p>
+  <h2 id="download-autoprefixer">Less/Sass requer Autoprefixer</h2>
+  <p>Bootstrap usa <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> para trabalhar com <a href="http://webdesign.about.com/od/css/a/css-vendor-prefixes.htm">CSS vendor prefixes</a>. Se você está compilando o Less/Sass do Bootstrap e não está usando o nosso Gruntfile, então você precisa do Autoprefixer para integrar seu processo de construção. Se você estiver usando Bootstrap pré-compilado ou usando o nosso Gruntfile, você não precisa se preocupar com isso porque o Autoprefixer já está integrado no nosso Gruntfile.</p>
 </div>
+
+
