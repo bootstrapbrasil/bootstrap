@@ -1,22 +1,21 @@
 <div class="bs-docs-section">
-  <h1 id="disable-responsive" class="page-header">Disabling responsiveness</h1>
+  <h1 id="disable-responsive" class="page-header">Desativando a responsividade</h1>
 
-  <p class="lead">Bootstrap automatically adapts your pages for various screen sizes.
-    Here's how to disable this feature so your page works like <a href="../examples/non-responsive/">this non-responsive example</a>.</p>
+  <p class="lead">Páginas com Bootstrap é adaptado automaticamente para várias tamanhos de telas.
+    Veja aqui como desativar essa funcionalidade para ficar como <a href="../examples/non-responsive/">este exemplo não-responsivo</a>.</p>
 
-  <h2>Steps to disable page responsiveness</h2>
+  <h2>Etapas para desativar a responsividade</h2>
   <ol>
-    <li>Omit the viewport <code>&lt;meta&gt;</code> mentioned in <a href="../css/#overview-mobile">the CSS docs</a></li>
-    <li>Override the <code>width</code> on the <code>.container</code> for each grid tier with a single width, for example <code>width: 970px !important;</code> Be sure that this comes after the default Bootstrap CSS. You can optionally avoid the <code>!important</code> with media queries or some selector-fu.</li>
-    <li>If using navbars, remove all navbar collapsing and expanding behavior.</li>
-    <li>For grid layouts, use <code>.col-xs-*</code> classes in addition to, or in place of, the medium/large ones. Don't worry, the extra-small device grid scales to all resolutions.</li>
+    <li>Omitir a adição <code>&lt;meta&gt;</code> viewport mencionada na <a href="../css/#overview-mobile">documentação CSS</a></li>
+    <li>Sobreescreca o <code>width</code> no <code>.container</code> para cada camada do grid com uma única largura, por exemplo <code>width: 970px !important;</code> Certifique-se de que esta regra venha após o CSS padrão do Bootstrap. Opcionalmente, você pode evitar o <code>!important</code> com *media queries* ou alguns seletores.</li>
+    <li>Se usar barras de navegação, remova todo o *collapsing* e *expanding behavior* da barra de navegação.</li>
+    <li>Para colunas com grid, adicione tambem as classes <code>.col-xs-*</code>, ou no lugar de, colunas <code>.col-md-*</code> ou <code>.col-lg-*</code>. Não se preocupe, as colunas <code>.col-xs-*</code> serve para para todas as resoluções.</li>
   </ol>
-  <p>You'll still need Respond.js for IE8 (since our media queries are still there and need to be processed).
-    This disables the "mobile site" aspects of Bootstrap.</p>
+  <p>Você vai ainda precisar do Respond.js para IE8 (pois nossa *media queries* e vão precisar ser processadas).</p>
 
-  <h2>Bootstrap template with responsiveness disabled</h2>
-  <p>We've applied these steps to an example. Read its source code to see the specific changes implemented.</p>
+  <h2>Template Bootstrap com a responsividade desativada</h2>
+  <p>Nós seguimos essas etapas para o exemplo. Leia o seu código fonte para ver as alterações específicas foram aplicadas.</p>
   <p>
-    <a href="../examples/non-responsive/" class="btn btn-primary">View non-responsive example</a>
+    <a href="../examples/non-responsive/" class="btn btn-primary">Visualizar exemplo não-responsivo</a>
   </p>
 </div>
