@@ -1,8 +1,8 @@
 <div class="bs-docs-section">
-  <h1 id="buttons" class="page-header">Buttons</h1>
+  <h1 id="buttons" class="page-header">Botões</h1>
 
-  <h2 id="buttons-tags">Button tags</h2>
-  <p>Use the button classes on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
+  <h2 id="buttons-tags">Tags de botão</h2>
+  <p>Use as classes de botão nos elementos<code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, ou <code>&lt;input&gt;</code></p>
   <form class="bs-example" data-example-id="btn-tags">
     <a class="btn btn-default" href="#" role="button">Link</a>
     <button class="btn btn-default" type="submit">Button</button>
@@ -17,23 +17,23 @@
 {% endhighlight %}
 
   <div class="bs-callout bs-callout-warning" id="callout-buttons-context-usage">
-    <h4>Context-specific usage</h4>
-    <p>While button classes can be used on <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements, only <code>&lt;button&gt;</code> elements are supported within our nav and navbar components.</p>
+    <h4>Uso de contexto específico</h4>
+    <p>Enquanto as classes de botão podem ser usadas em elementos <code>&lt;a&gt;</code> e <code>&lt;button&gt;</code>, apenas o elemento <code>&lt;button&gt;</code> é supportado dentro de nossos componentes  nav e navbar.</p>
   </div>
 
   <div class="bs-callout bs-callout-warning" id="callout-buttons-anchor-accessibility">
-    <h4>Links acting as buttons</h4>
-    <p>If the <code>&lt;a&gt;</code> elements are used to act as buttons – triggering in-page functionality, rather than navigating to another document or section within the current page – they should also be given an appropriate <code>role="button"</code>.</p>
+    <h4>Links atuando como botão</h4>
+    <p>Se o elemento <code>&lt;a&gt;</code> for usado como botão – acionando funcionalidades em página, em vez de navegar para outro documento ou seção dentro da página atual – ele deverá ter a propriedade <code>role="button"</code>.</p>
   </div>
 
   <div class="bs-callout bs-callout-warning" id="callout-buttons-ff-height">
-    <h4>Cross-browser rendering</h4>
-    <p>As a best practice, <strong>we highly recommend using the <code>&lt;button&gt;</code> element whenever possible</strong> to ensure matching cross-browser rendering.</p>
-    <p>Among other things, there's <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=697451">a bug in Firefox &lt;30</a> that prevents us from setting the <code>line-height</code> of <code>&lt;input&gt;</code>-based buttons, causing them to not exactly match the height of other buttons on Firefox.</p>
+    <h4>Renderização Cross-browser</h4>
+    <p>Como um a boa prática, <strong>nós altamente recomendamos usar o elemento <code>&lt;button&gt;</code> sempre que possível</strong> para assegurar a renderização correspondente no cross-browser.</p>
+    <p>Entre outras coisas, há <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=697451">um bug no Firefox &lt;30</a> que nos impede de definir <code>line-height</code> do <code>&lt;input&gt;</code>- botões baseados, fazendo com que não correspondam exatamente à altura de outros botões no Firefox.</p>
   </div>
 
-  <h2 id="buttons-options">Options</h2>
-  <p>Use any of the available button classes to quickly create a styled button.</p>
+  <h2 id="buttons-options">Opções</h2>
+  <p>Use qualquer uma das classes disponíveis para criar rapidamente um estilo de botão.</p>
   <div class="bs-example" data-example-id="btn-variants">
     <button type="button" class="btn btn-default">Default</button>
     <button type="button" class="btn btn-primary">Primary</button>
@@ -44,90 +44,90 @@
     <button type="button" class="btn btn-link">Link</button>
   </div>
 {% highlight html %}
-<!-- Standard button -->
+<!-- Botão padrão -->
 <button type="button" class="btn btn-default">Default</button>
 
-<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<!-- Fornece peso visual extra e identifica a ação primária em um conjunto de botões -->
 <button type="button" class="btn btn-primary">Primary</button>
 
-<!-- Indicates a successful or positive action -->
+<!-- Indica uma ação bem-sucedida ou positiva -->
 <button type="button" class="btn btn-success">Success</button>
 
-<!-- Contextual button for informational alert messages -->
+<!-- Botão contextual para mensagens de alerta informativos -->
 <button type="button" class="btn btn-info">Info</button>
 
-<!-- Indicates caution should be taken with this action -->
+<!-- Indica que o cuidado deve ser tomado com esta ação -->
 <button type="button" class="btn btn-warning">Warning</button>
 
-<!-- Indicates a dangerous or potentially negative action -->
+<!-- Indica uma ação perigosa ou potencialmente negativa -->
 <button type="button" class="btn btn-danger">Danger</button>
 
-<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+<!-- Enfatiza um botão fazendo com que pareça um link enquanto mantém comportamento de botão. -->
 <button type="button" class="btn btn-link">Link</button>
 {% endhighlight %}
 
   <div class="bs-callout bs-callout-warning" id="callout-buttons-color-accessibility">
-    <h4>Conveying meaning to assistive technologies</h4>
-    <p>Using color to add meaning to a button only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (the visible text of the button), or is included through alternative means, such as additional text hidden with the <code>.sr-only</code> class.</p>
+    <h4>Transmitindo significado às tecnologias assistivas</h4>
+    <p>Usando cores para adicionar significado para um botão só fornece uma indicação visual, que não será transmitida para os utilizadores de tecnologia assistiva – tais como leitores de tela. Garanta que as informações indicadas pela cor sejam óbvias a partir do conteúdo em si (o texto visível do botão), ou que esteja  incluída através de meios alternativos, tais como texto adicional escondido com a classe <code>.sr-only</code>.</p>
   </div>
 
-  <h2 id="buttons-sizes">Sizes</h2>
-  <p>Fancy larger or smaller buttons? Add <code>.btn-lg</code>, <code>.btn-sm</code>, or <code>.btn-xs</code> for additional sizes.</p>
+  <h2 id="buttons-sizes">Tamanhos</h2>
+  <p>Gosta de botões grandes ou pequenos? Adicione <code>.btn-lg</code>, <code>.btn-sm</code>, ou <code>.btn-xs</code> para tamanhos adicionais.</p>
   <div class="bs-example" data-example-id="btn-sizes">
     <p>
-      <button type="button" class="btn btn-primary btn-lg">Large button</button>
-      <button type="button" class="btn btn-default btn-lg">Large button</button>
+      <button type="button" class="btn btn-primary btn-lg">Botão grande </button>
+      <button type="button" class="btn btn-default btn-lg">Botão grande</button>
     </p>
     <p>
-      <button type="button" class="btn btn-primary">Default button</button>
-      <button type="button" class="btn btn-default">Default button</button>
+      <button type="button" class="btn btn-primary">Botão padrão</button>
+      <button type="button" class="btn btn-default">Botão padrão</button>
     </p>
     <p>
-      <button type="button" class="btn btn-primary btn-sm">Small button</button>
-      <button type="button" class="btn btn-default btn-sm">Small button</button>
+      <button type="button" class="btn btn-primary btn-sm">Botão pequeno</button>
+      <button type="button" class="btn btn-default btn-sm">Botão pequeno</button>
     </p>
     <p>
-      <button type="button" class="btn btn-primary btn-xs">Extra small button</button>
-      <button type="button" class="btn btn-default btn-xs">Extra small button</button>
+      <button type="button" class="btn btn-primary btn-xs">Botão extra pequeno</button>
+      <button type="button" class="btn btn-default btn-xs">Botão extra pequeno</button>
     </p>
   </div>
 {% highlight html %}
 <p>
-  <button type="button" class="btn btn-primary btn-lg">Large button</button>
-  <button type="button" class="btn btn-default btn-lg">Large button</button>
+  <button type="button" class="btn btn-primary btn-lg">Botão grande </button>
+  <button type="button" class="btn btn-default btn-lg">Botão grande</button>
 </p>
 <p>
-  <button type="button" class="btn btn-primary">Default button</button>
-  <button type="button" class="btn btn-default">Default button</button>
+  <button type="button" class="btn btn-primary">Botão padrão</button>
+  <button type="button" class="btn btn-default">Botão padrão</button>
 </p>
 <p>
-  <button type="button" class="btn btn-primary btn-sm">Small button</button>
-  <button type="button" class="btn btn-default btn-sm">Small button</button>
+  <button type="button" class="btn btn-primary btn-sm">Botão pequeno</button>
+  <button type="button" class="btn btn-default btn-sm">Botão pequeno</button>
 </p>
 <p>
-  <button type="button" class="btn btn-primary btn-xs">Extra small button</button>
-  <button type="button" class="btn btn-default btn-xs">Extra small button</button>
+  <button type="button" class="btn btn-primary btn-xs">Botão extra pequeno</button>
+  <button type="button" class="btn btn-default btn-xs">Botão extra pequeno</button>
 </p>
 {% endhighlight %}
 
-  <p>Create block level buttons&mdash;those that span the full width of a parent&mdash; by adding <code>.btn-block</code>.</p>
+  <p>Crie botões de nível de bloco &mdash; aquelas que abrangem toda a largura de um pai &mdash; adicionando <code>.btn-block</code>.</p>
   <div class="bs-example" data-example-id="block-btns">
     <div class="well center-block" style="max-width: 400px;">
-      <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-      <button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
+      <button type="button" class="btn btn-primary btn-lg btn-block">Botão de nível de bloco</button>
+      <button type="button" class="btn btn-default btn-lg btn-block">Botão de nível de bloco</button>
     </div>
   </div>
 {% highlight html %}
-<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-<button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
+<button type="button" class="btn btn-primary btn-lg btn-block">Botão de nível de bloco</button>
+<button type="button" class="btn btn-default btn-lg btn-block">Botão de nível de bloco</button>
 {% endhighlight %}
 
 
-  <h2 id="buttons-active">Active state</h2>
-  <p>Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. For <code>&lt;button&gt;</code> elements, this is done via <code>:active</code>. For <code>&lt;a&gt;</code> elements, it's done with <code>.active</code>. However, you may use <code>.active</code> on <code>&lt;button&gt;</code>s (and include the <code>aria-pressed="true"</code> attribute) should you need to replicate the active state programmatically.</p>
+  <h2 id="buttons-active">Estado ativo</h2>
+  <p>Botões aparecerão precionados (com background escuro, borda escura, e sombra inserida) quando ativos. Para o elemento <code>&lt;button&gt;</code>, isso é feito através de <code>:active</code>. Para o elemento <code>&lt;a&gt;</code>, isso é feito com <code>.active</code>. No entanto, você pode usar <code>.active</code> no <code>&lt;button&gt;</code>s (e incluir o atributo <code>aria-pressed="true"</code>) você deve precisar replicar o estado ativo programaticamente.</p>
 
-  <h3>Button element</h3>
-  <p>No need to add <code>:active</code> as it's a pseudo-class, but if you need to force the same appearance, go ahead and add <code>.active</code>.</p>
+  <h3>Elemento de botão</h3>
+  <p>Não precisa adicionar <code>:active</code>como sendo uma pseudo-classe, mas se você precisar forçar a mesma aparência, vá em frente e adicione <code>.active</code>.</p>
   <p class="bs-example" data-example-id="active-button-btns">
     <button type="button" class="btn btn-primary btn-lg active">Primary button</button>
     <button type="button" class="btn btn-default btn-lg active">Button</button>
@@ -137,8 +137,8 @@
 <button type="button" class="btn btn-default btn-lg active">Button</button>
 {% endhighlight %}
 
-  <h3>Anchor element</h3>
-  <p>Add the <code>.active</code> class to <code>&lt;a&gt;</code> buttons.</p>
+  <h3>Elemento âncora</h3>
+  <p>Adicione a classe <code>.active</code> para botões em <code>&lt;a&gt;</code>.</p>
   <p class="bs-example" data-example-id="active-anchor-btns">
     <a href="#" class="btn btn-primary btn-lg active" role="button">Primary link</a>
     <a href="#" class="btn btn-default btn-lg active" role="button">Link</a>
@@ -149,11 +149,11 @@
 {% endhighlight %}
 
 
-  <h2 id="buttons-disabled">Disabled state</h2>
-  <p>Make buttons look unclickable by fading them back with <code>opacity</code>.</p>
+  <h2 id="buttons-disabled">Estado desativado</h2>
+  <p>Faça botões parecerem inclicáveis pela opacidade de fundo com <code>opacity</code>.</p>
 
-  <h3>Button element</h3>
-  <p>Add the <code>disabled</code> attribute to <code>&lt;button&gt;</code> buttons.</p>
+  <h3>Elemento de botão</h3>
+  <p>Adicione o atributo <code>disabled</code> para botões <code>&lt;button&gt;</code>.</p>
   <p class="bs-example" data-example-id="disabled-button-btns">
     <button type="button" class="btn btn-primary btn-lg" disabled="disabled">Primary button</button>
     <button type="button" class="btn btn-default btn-lg" disabled="disabled">Button</button>
@@ -164,12 +164,12 @@
 {% endhighlight %}
 
   <div class="bs-callout bs-callout-danger" id="callout-buttons-ie-disabled">
-    <h4>Cross-browser compatibility</h4>
-    <p>If you add the <code>disabled</code> attribute to a <code>&lt;button&gt;</code>, Internet Explorer 9 and below will render text gray with a nasty text-shadow that we cannot fix.</p>
+    <h4>Compatibilidade Cross-browser</h4>
+    <p>Se você adicionar o atributo <code>disabled</code> para o <code>&lt;button&gt;</code>, do Internet Explorer 9 pra baixo irá renderizar o texto cinza com uma desagradável text-shadow que não podemos corrigir.</p>
   </div>
 
-  <h3>Anchor element</h3>
-  <p>Add the <code>.disabled</code> class to <code>&lt;a&gt;</code> buttons.</p>
+  <h3>Elemento âncora</h3>
+  <p>Adicione a classe <code>.disabled</code> para botões em <code>&lt;a&gt;</code>.</p>
   <p class="bs-example" data-example-id="disabled-anchor-btns">
     <a href="#" class="btn btn-primary btn-lg disabled" role="button">Primary link</a>
     <a href="#" class="btn btn-default btn-lg disabled" role="button">Link</a>
@@ -179,11 +179,11 @@
 <a href="#" class="btn btn-default btn-lg disabled" role="button">Link</a>
 {% endhighlight %}
   <p>
-    We use <code>.disabled</code> as a utility class here, similar to the common <code>.active</code> class, so no prefix is required.
+    Nóes usamos <code>.disabled</code> aqui como uma classe utilitária, semelhante a classe <code>.active</code> comum, então nenhum prefixo é requerido.
   </p>
   <div class="bs-callout bs-callout-warning" id="callout-buttons-disabled-anchor">
-    <h4>Link functionality caveat</h4>
-    <p>This class uses <code>pointer-events: none</code> to try to disable the link functionality of <code>&lt;a&gt;</code>s, but that CSS property is not yet standardized and isn't fully supported in Opera 18 and below, or in Internet Explorer 11. In addition, even in browsers that do support <code>pointer-events: none</code>, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, use custom JavaScript to disable such links.</p>
+    <h4>Link de funcionalidade de aviso</h4>
+    <p>Essa classe usa <code>pointer-events: none</code> para tentar desativar a funcionalidade de link do <code>&lt;a&gt;</code>, porém essa propriedade CSS não é padronizada e não é totalmente suportada no Opera 18 pra baixo, ou no Internet Explorer 11. Além disso, mesmo em navegadores que suportam <code>pointer-events: none</code>, a navegação pelo teclado permanece inalterada, o que significa que usuários que enxergam por teclado e usuários de tecnologias assistivas ainda serão capazes de ativar esses links. Por segurança, use JavaScript para desabilitar esses links.</p>
   </div>
 
 </div>
