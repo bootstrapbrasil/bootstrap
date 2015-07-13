@@ -225,26 +225,26 @@
   <p>Exemplos de controles de formulário padrão suportados em um layout exemplo de formulário.</p>
 
   <h3>Inputs</h3>
-  <p>Most common form control, text-based input fields. Includes support for all HTML5 types: <code>text</code>, <code>password</code>, <code>datetime</code>, <code>datetime-local</code>, <code>date</code>, <code>month</code>, <code>time</code>, <code>week</code>, <code>number</code>, <code>email</code>, <code>url</code>, <code>search</code>, <code>tel</code>, and <code>color</code>.</p>
+  <p>A maior parte de controle do formulário comum, campos de entrada baseados em texto. Inclui suporte para todos os tipos de HTML5: <code>text</code>, <code>password</code>, <code>datetime</code>, <code>datetime-local</code>, <code>date</code>, <code>month</code>, <code>time</code>, <code>week</code>, <code>number</code>, <code>email</code>, <code>url</code>, <code>search</code>, <code>tel</code>, e <code>color</code>.</p>
   <div class="bs-callout bs-callout-danger" id="callout-input-needs-type">
-    <h4>Type declaration required</h4>
-    <p>Inputs will only be fully styled if their <code>type</code> is properly declared.</p>
+    <h4>Declaração de tipo necessária</h4>
+    <p>Inputs só será plenamente denominado se seu tipo estar devidamente declarado.</p>
   </div>
   <div class="bs-example" data-example-id="text-form-control">
     <form>
-      <input type="text" class="form-control" placeholder="Text input">
+      <input type="text" class="form-control" placeholder="Entrada de texto">
     </form>
   </div><!-- /.bs-example -->
 {% highlight html %}
-<input type="text" class="form-control" placeholder="Text input">
+<input type="text" class="form-control" placeholder="Entrada de texto">
 {% endhighlight %}
   <div class="bs-callout bs-callout-info" id="callout-xref-input-group">
-    <h4>Input groups</h4>
-    <p>To add integrated text or buttons before and/or after any text-based <code>&lt;input&gt;</code>, <a href="../components/#input-groups">check out the input group component</a>.</p>
+    <h4>Grupo de Inputs</h4>
+    <p>Para adicionar texto ou botões integrados antes e/ou depois de alguma base de texto <code>&lt;input&gt;</code>, <a href="../components/#input-groups">veja o componente de grupo de entrada</a>.</p>
   </div>
 
   <h3>Textarea</h3>
-  <p>Form control which supports multiple lines of text. Change <code>rows</code> attribute as necessary.</p>
+  <p>Controle de formulário que suporta várias linhas de texto. Mude o atributo <code>rows</code> se necessário.</p>
   <div class="bs-example" data-example-id="textarea-form-control">
     <form>
       <textarea class="form-control" rows="3" placeholder="Textarea"></textarea>
@@ -254,22 +254,22 @@
 <textarea class="form-control" rows="3"></textarea>
 {% endhighlight %}
 
-  <h3>Checkboxes and radios</h3>
-  <p>Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.</p>
-  <p>Disabled checkboxes and radios are supported, but to provide a "not-allowed" cursor on hover of the parent <code>&lt;label&gt;</code>, you'll need to add the <code>.disabled</code> class to the parent <code>.radio</code>, <code>.radio-inline</code>, <code>.checkbox</code>, or <code>.checkbox-inline</code>.</p>
-  <h4>Default (stacked)</h4>
+  <h3>Checkboxes e radios</h3>
+  <p>Checkboxes (ou caixas de seleção) são para selecionar uma ou várias opções numa lista, enquanto radios (seleção em rádio - redondo) são para selecionar uma opção de muitas.</p>
+  <p>Desabilitar checkboxes e radios são suportados, mas fornecer um cursor "não-autorizado" no foco do pai <code>&lt;label&gt;</code>, você precisará adicionar a classe <code>.disabled</code> para o pai <code>.radio</code>, <code>.radio-inline</code>, <code>.checkbox</code>, ou <code>.checkbox-inline</code>.</p>
+  <h4>Padrão (empilhado)</h4>
   <div class="bs-example" data-example-id="block-checkboxes-radios">
     <form>
       <div class="checkbox">
         <label>
           <input type="checkbox" value="">
-          Option one is this and that&mdash;be sure to include why it's great
+          Opção um.
         </label>
       </div>
       <div class="checkbox disabled">
         <label>
           <input type="checkbox" value="" disabled>
-          Option two is disabled
+          Opção dois está desabilitada
         </label>
       </div>
       <br>
