@@ -247,7 +247,7 @@
   <p>Controle de formulário que suporta várias linhas de texto. Mude o atributo <code>rows</code> se necessário.</p>
   <div class="bs-example" data-example-id="textarea-form-control">
     <form>
-      <textarea class="form-control" rows="3" placeholder="Textarea"></textarea>
+      <textarea class="form-control" rows="3" placeholder="Área de texto"></textarea>
     </form>
   </div><!-- /.bs-example -->
 {% highlight html %}
@@ -263,32 +263,32 @@
       <div class="checkbox">
         <label>
           <input type="checkbox" value="">
-          Opção um.
+          Opção um é isso e aquilo &mdash; não deixe de incluir porque é ótimo.
         </label>
       </div>
       <div class="checkbox disabled">
         <label>
           <input type="checkbox" value="" disabled>
-          Opção dois está desabilitada
+          Opção dois está desabilitada.
         </label>
       </div>
       <br>
       <div class="radio">
         <label>
           <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-          Option one is this and that&mdash;be sure to include why it's great
+          Opção um é isso e aquilo &mdash; não deixe de incluir porque é ótimo.
         </label>
       </div>
       <div class="radio">
         <label>
           <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-          Option two can be something else and selecting it will deselect option one
+          Opção dois pode ser outra coisa e selecionando-o irá desmarcar a opção um.
         </label>
       </div>
       <div class="radio disabled">
         <label>
           <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-          Option three is disabled
+          Opção três está desabilitada.
         </label>
       </div>
     </form>
@@ -297,38 +297,38 @@
 <div class="checkbox">
   <label>
     <input type="checkbox" value="">
-    Option one is this and that&mdash;be sure to include why it's great
+   Opção um é isso e aquilo &mdash; não deixe de incluir porque é ótimo.
   </label>
 </div>
 <div class="checkbox disabled">
   <label>
     <input type="checkbox" value="" disabled>
-    Option two is disabled
+     Opção dois está desabilitada.
   </label>
 </div>
 
 <div class="radio">
   <label>
     <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-    Option one is this and that&mdash;be sure to include why it's great
+    Opção um é isso e aquilo &mdash; não deixe de incluir porque é ótimo.
   </label>
 </div>
 <div class="radio">
   <label>
     <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-    Option two can be something else and selecting it will deselect option one
+    Opção dois pode ser outra coisa e selecionando-o irá desmarcar a opção um.
   </label>
 </div>
 <div class="radio disabled">
   <label>
     <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-    Option three is disabled
+     Opção três está desabilitada.
   </label>
 </div>
 {% endhighlight %}
 
-  <h4>Inline checkboxes and radios</h4>
-  <p>Use the <code>.checkbox-inline</code> or <code>.radio-inline</code> classes on a series of checkboxes or radios for controls that appear on the same line.</p>
+  <h4>checkboxes e radios em linha</h4>
+  <p>Use as classes <code>.checkbox-inline</code> ou <code>.radio-inline</code> em uma série de checkboxes ou radios para controles que aparecem na mesma linha.</p>
   <div class="bs-example" data-example-id="inline-checkboxes-radios">
     <form>
       <label class="checkbox-inline">
@@ -376,8 +376,8 @@
 </label>
 {% endhighlight %}
 
-  <h4>Checkboxes and radios without label text</h4>
-  <p>Should you have no text within the <code>&lt;label&gt;</code>, the input is positioned as you'd expect. <strong>Currently only works on non-inline checkboxes and radios.</strong> Remember to still provide some form of label for assistive technologies (for instance, using <code>aria-label</code>).</p>
+  <h4>Checkboxes e radios sem texto na estiqueta (label)</h4>
+  <p>Mesmo não tendo texto dentro da <code>&lt;label&gt;</code>, o input será posicionado como o esperado. <strong> Atualmente só funciona em checkboxes and radios non-inline .</strong> Lembre de continuar fornecendo algum tipo de rótulo para tecnologias assistivas (por exemplo, usando <code>aria-label</code>).</p>
   <div class="bs-example" data-example-id="checkboxes-radios-without-labels">
     <form>
       <div class="checkbox">
@@ -406,7 +406,7 @@
 {% endhighlight %}
 
   <h3>Selects</h3>
-  <p>Note that many native select menus—namely in Safari and Chrome—have rounded corners that cannot be modified via <code>border-radius</code> properties.</p>
+  <p>Note que muitos menus seletores nativamente - a saber, no Safari e Chrome - possuem cantos arredondados que não podem ser modificados por meio da propriedade <code>border-radius</code>.</p>
   <div class="bs-example" data-example-ids="select-form-control">
     <form>
       <select class="form-control">
@@ -428,7 +428,7 @@
 </select>
 {% endhighlight %}
 
-  <p>For <code>&lt;select&gt;</code> controls with the <code>multiple</code> attribute, multiple options are shown by default.</p>
+  <p>Para <code>&lt;select&gt;</code> com o atributo de controle <code>multiple</code>, multiplas opções são exibidas por padrão.</p>
 
   <div class="bs-example" data-example-ids="select-multiple-form-control">
     <form>
@@ -453,8 +453,8 @@
 {% endhighlight %}
 
 
-  <h2 id="forms-controls-static">Static control</h2>
-  <p>When you need to place plain text next to a form label within a form, use the <code>.form-control-static</code> class on a <code>&lt;p&gt;</code>.</p>
+  <h2 id="forms-controls-static">Controle estático</h2>
+  <p>Quando você precisar colocar texto simples próximo à uma etiqueta de formulário dentro de formulário, use a classe <code>.form-control-static</code> no <code>&lt;p&gt;</code>.</p>
   <div class="bs-example" data-example-id="horizontal-static-form-control">
     <form class="form-horizontal">
       <div class="form-group">
@@ -514,21 +514,21 @@
 </form>
 {% endhighlight %}
 
-  <h2 id="forms-control-focus">Focus state</h2>
-  <p>We remove the default <code>outline</code> styles on some form controls and apply a <code>box-shadow</code> in its place for <code>:focus</code>.</p>
+  <h2 id="forms-control-focus">Estado focado</h2>
+  <p>Nós removemos o estilo padrão <code>outline</code> em alguns controles de formulários e aplicamos um <code>box-shadow</code> em seu lugar por <code>:focus</code>.</p>
   <div class="bs-example">
     <form>
       <input class="form-control" id="focusedInput" type="text" value="Demonstrative focus state">
     </form>
   </div>
   <div class="bs-callout bs-callout-info" id="callout-focus-demo">
-    <h4>Demo <code>:focus</code> state</h4>
-    <p>The above example input uses custom styles in our documentation to demonstrate the <code>:focus</code> state on a <code>.form-control</code>.</p>
+    <h4>Demonstração de estado <code>:focus</code></h4>
+    <p>O exemplo de entrada acima usa estilo personalizado em nossa documentação para demonstrar o estado <code>:focus</code> em um <code>.form-control</code>.</p>
   </div>
 
 
-  <h2 id="forms-control-disabled">Disabled state</h2>
-  <p>Add the <code>disabled</code> boolean attribute on an input to prevent user interactions. Disabled inputs appear lighter and add a <code>not-allowed</code> cursor.</p>
+  <h2 id="forms-control-disabled">Estado desativado</h2>
+  <p>Adicione o atributo boleano <code>disabled</code> em uma entrada (input) para impedir interações do usuário. Entrada desativada aparecem mais leves e adicionam um cursor <code>not-allowed</code>.</p>
   <div class="bs-example" data-example-id="text-form-control-disabled">
     <form>
       <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here…" disabled>
