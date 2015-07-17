@@ -1,8 +1,8 @@
 <div class="bs-docs-section">
-  <h1 id="glyphicons" class="page-header">Glyphicons</h1>
+  <h1 id="glyphicons" class="page-header">Ícones por Glyphicons</h1>
 
-  <h2 id="glyphicons-glyphs">Available glyphs</h2>
-  <p>Includes over 250 glyphs in font format from the Glyphicon Halflings set. <a href="http://glyphicons.com/">Glyphicons</a> Halflings are normally not available for free, but their creator has made them available for Bootstrap free of cost. As a thank you, we only ask that you include a link back to <a href="http://glyphicons.com/">Glyphicons</a> whenever possible.</p>
+  <h2 id="glyphicons-glyphs">Ícones disponíveis</h2>
+  <p>Inclui mais de 250 ícones no formato de fonte do conjunto Glyphicon. Normalmente <a href="http://glyphicons.com/">Glyphicons</a> não estão disponíveis livremente, mas seu criador tornou-os disponíveis para o Bootstrap sem custos. Como agradecimento, nós só pedimos que você inclua um link para <a href="http://glyphicons.com/">Glyphicons</a> sempre que possível.</p>
   <div class="bs-glyphicons">
     <ul class="bs-glyphicons-list">
       {% for iconClassName in site.data.glyphicons %}
@@ -15,46 +15,46 @@
   </div>
 
 
-  <h2 id="glyphicons-how-to-use">How to use</h2>
-  <p>For performance reasons, all icons require a base class and individual icon class. To use, place the following code just about anywhere. Be sure to leave a space between the icon and text for proper padding.</p>
+  <h2 id="glyphicons-how-to-use">Como usar</h2>
+  <p>Por motivos de desempenho, todos os ícones exigem uma classe base e a classe individual do ícone desejado. Para usar, coloque o seguinte código em qualquer lugar. Certifique-se de deixar um espaço entre o ícone e de texto para um preenchimento adequado.</p>
   <div class="bs-callout bs-callout-danger" id="callout-glyphicons-dont-mix">
-    <h4>Don't mix with other components</h4>
-    <p>Icon classes cannot be directly combined with other components. They should not be used along with other classes on the same element. Instead, add a nested <code>&lt;span&gt;</code> and apply the icon classes to the <code>&lt;span&gt;</code>.</p>
+    <h4>Não misture com outros componentes</h4>
+    <p>As classes de ícone não pode ser combinada directamente com outros componentes. Eles não devem ser utilizados junto com outras classes sobre o mesmo elemento. Em vez disso, adicione um <code>&lt;span&gt;</code> aninhados e aplique as classes ícone para em <code>&lt;span&gt;</code>.</p>
   </div>
   <div class="bs-callout bs-callout-danger" id="callout-glyphicons-empty-only">
-    <h4>Only for use on empty elements</h4>
-    <p>Icon classes should only be used on elements that contain no text content and have no child elements.</p>
+    <h4>Use apenas em elementos vazios</h4>
+    <p>Classes de ícone só devem serem utilizadas em elementos que não contêm nenhum conteúdo de texto e que não tenham elementos filho.</p>
   </div>
   <div class="bs-callout bs-callout-info" id="callout-glyphicons-location">
-    <h4>Changing the icon font location</h4>
-    <p>Bootstrap assumes icon font files will be located in the <code>../fonts/</code> directory, relative to the compiled CSS files. Moving or renaming those font files means updating the CSS in one of three ways:</p>
+    <h4>Alterar o local do fonte ícone</h4>
+    <p>O Bootstrap disponibiliza os arquivos de fonte ícone no diretório <code>../fonts/</code>, em relação aos arquivos CSS compilados. Mover ou renomear os arquivos de fonte significa atualizar o CSS usando alguma das três maneiras:</p>
     <ul>
-      <li>Change the <code>@icon-font-path</code> and/or <code>@icon-font-name</code> variables in the source Less files.</li>
-      <li>Utilize the <a href="http://lesscss.org/usage/#command-line-usage-relative-urls">relative URLs option</a> provided by the Less compiler.</li>
-      <li>Change the <code>url()</code> paths in the compiled CSS.</li>
+      <li>Altere as variáveis <code>@icon-font-path</code> e/ou <code>@icon-font-name</code> no arquivo fonte do Less.</li>
+      <li>Utilize a <a href="http://lesscss.org/usage/#command-line-usage-relative-urls">opção de URLs relativas</a> fornecido pelo compilador Less.</li>
+      <li>Altere o caminho <code>url()</code> no arquivo CSS compilado.</li>
     </ul>
-    <p>Use whatever option best suits your specific development setup.</p>
+    <p>Use qualquer opção que melhor se adapte a sua configuração específica de desenvolvimento.</p>
   </div>
   <div class="bs-callout bs-callout-warning" id="callout-glyphicons-accessibility">
-    <h4>Accessible icons</h4>
-    <p>Modern versions of assistive technologies will announce CSS generated content, as well as specific Unicode characters. To avoid unintended and confusing output in screen readers (particularly when icons are used purely for decoration), we hide them with the <code>aria-hidden="true"</code> attribute.</p>
-    <p>If you're using an icon to convey meaning (rather than only as a decorative element), ensure that this meaning is also conveyed to assistive technologies – for instance, include additional content, visually hidden with the <code>.sr-only</code> class.</p>
-    <p>If you're creating controls with no other text (such as a <code>&lt;button&gt;</code> that only contains an icon), you should always provide alternative content to identify the purpose of the control, so that it will make sense to users of assistive technologies. In this case, you could add an <code>aria-label</code> attribute on the control itself.</p>
+    <h4>Ícones acessíveis</h4>
+    <p>Versões modernas de tecnologias assistivas anunciará o conteúdo CSS gerado, como caracteres Unicode específicos. Para evitar a saída não intencional e confuso em leitores de tela (em particular quando ícones são usados apenas para decoração), que escondê-los com o atributo <code>aria-hidden="true"</code>.</p>
+    <p>Se você estiver usando um ícone para transmitir um significado (e não apenas como um elemento decorativo), assegurar que esta mensagem também é transmitida às tecnologias de apoio - por exemplo, inclua o conteúdo adicional, visualmente escondida com o a classe <code>.sr-only</code>.</p>
+    <p>Se você estiver criando controles com nenhum outro texto (como um botão <code>&lt;button&gt;</code> que contém apenas um ícone), você deve sempre fornecer conteúdo alternativo para identificar o objectivo do controle, de modo que ele possa fazer sentido para usuários de tecnologias assistivas. Neste caso, você pode adicionar um atributo <code>aria-label</code> no próprio controle.</p>
   </div>
 {% highlight html %}
 <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 {% endhighlight %}
 
 
-  <h2 id="glyphicons-examples">Examples</h2>
-  <p>Use them in buttons, button groups for a toolbar, navigation, or prepended form inputs.</p>
+  <h2 id="glyphicons-examples">Exemplos</h2>
+  <p>Use-os em botões, grupos de botões para uma barra de ferramentas, navegação, ou em campos de formulário como prefixo.</p>
   <div class="bs-example" data-example-id="glyphicons-general">
     <div class="btn-toolbar" role="toolbar">
       <div class="btn-group">
-        <button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-        <button type="button" class="btn btn-default" aria-label="Center Align"><span class="glyphicon glyphicon-align-center" aria-hidden="true"></span></button>
-        <button type="button" class="btn btn-default" aria-label="Right Align"><span class="glyphicon glyphicon-align-right" aria-hidden="true"></span></button>
-        <button type="button" class="btn btn-default" aria-label="Justify"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></button>
+        <button type="button" class="btn btn-default" aria-label="Alinhar na esquerda"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
+        <button type="button" class="btn btn-default" aria-label="Alinhar no centro"><span class="glyphicon glyphicon-align-center" aria-hidden="true"></span></button>
+        <button type="button" class="btn btn-default" aria-label="Alinhar na direita"><span class="glyphicon glyphicon-align-right" aria-hidden="true"></span></button>
+        <button type="button" class="btn btn-default" aria-label="Justificar"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></button>
       </div>
     </div>
     <div class="btn-toolbar" role="toolbar">
@@ -65,7 +65,7 @@
     </div>
   </div>
 {% highlight html %}
-<button type="button" class="btn btn-default" aria-label="Left Align">
+<button type="button" class="btn btn-default" aria-label="Alinhar na esquerda">
   <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
 </button>
 
@@ -73,19 +73,19 @@
   <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star
 </button>
 {% endhighlight %}
-  <p>An icon used in an <a href="#alerts">alert</a> to convey that it's an error message, with additional <code>.sr-only</code> text to convey this hint to users of assistive technologies.</p>
+  <p>Veja um ícone usado em um <a href="#alerts">alerta</a> para transmitir que é uma mensagem de erro, com texto adicional <code>.sr-only</code> para transmitir esta dica para usuários de tecnologias assistivas.</p>
   <div class="bs-example" data-example-id="glyphicons-accessibility">
     <div class="alert alert-danger" role="alert">
       <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-      <span class="sr-only">Error:</span>
-      Enter a valid email address
+      <span class="sr-only">Erro:</span>
+      Corrija o endereço de email
     </div>
   </div>
 {% highlight html %}
 <div class="alert alert-danger" role="alert">
   <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-  <span class="sr-only">Error:</span>
-  Enter a valid email address
+  <span class="sr-only">Erro:</span>
+  Corrija o endereço de email
 </div>
 {% endhighlight %}
 </div>
