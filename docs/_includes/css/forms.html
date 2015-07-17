@@ -538,38 +538,38 @@
 <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
 {% endhighlight %}
 
-  <h3 id="forms-disabled-fieldsets">Disabled fieldsets</h3>
-  <p>Add the <code>disabled</code> attribute to a <code>&lt;fieldset&gt;</code> to disable all the controls within the <code>&lt;fieldset&gt;</code> at once.</p>
+  <h3 id="forms-disabled-fieldsets">Fieldsets desativados</h3>
+  <p>Adicione o atributo <code>disabled</code> a um <code>&lt;fieldset&gt;</code> para desabilitar todos os controles dentro do <code>&lt;fieldset&gt;</code> de uma vez.</p>
 
   <div class="bs-callout bs-callout-warning" id="callout-fieldset-disabled-pointer-events">
-    <h4>Caveat about link functionality of <code>&lt;a&gt;</code></h4>
-    <p>By default, browsers will treat all native form controls (<code>&lt;input&gt;</code>, <code>&lt;select&gt;</code> and <code>&lt;button&gt;</code> elements) inside a <code>&lt;fieldset disabled&gt;</code> as disabled, preventing both keyboard and mouse interactions on them. However, if your form also includes <code>&lt;a ... class="btn btn-*"&gt;</code> elements, these will only be given a style of <code>pointer-events: none</code>. As noted in the section about <a href="#buttons-disabled">disabled state for buttons</a> (and specifically in the sub-section for anchor elements), this CSS property is not yet standardized and isn't fully supported in Opera 18 and below, or in Internet Explorer 11, and won't prevent keyboard users from being able to focus or activate these links. So to be safe, use custom JavaScript to disable such links.</p>
+    <h4>Aviso sobre funcionalidade de link <code>&lt;a&gt;</code></h4>
+    <p>Por padrão, navegadores tratarão todos os controles de formulário (elementos <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code> e <code>&lt;button&gt;</code>) dentro de um <code>&lt;fieldset disabled&gt;</code> como desativado, impedindo interações de mouse e teclado neles. Porém, se seu formulário também inclui elementos <code>&lt;a ... class="btn btn-*"&gt;</code>, estes só irá ser dado um estilo de <code>pointer-events: none</code>. Como observado na seção sobre o <a href="#buttons-disabled">estado desativado para botões</a> (e especificamente na sub-seção para elementos em âncora), essa propriedade CSS ainda não é padronizada e não é totalmente suportada no Opera 18 pra baixo, ou no Internet Explorer 11, e não irá impedir usuários de teclado de serem capazes de encontrar ou ativar esses links. Então, por segurança, use JavaScript para desativar tais links.</p>
   </div>
 
   <div class="bs-callout bs-callout-danger" id="callout-fieldset-disabled-ie">
-    <h4>Cross-browser compatibility</h4>
-    <p>While Bootstrap will apply these styles in all browsers, Internet Explorer 11 and below don't fully support the <code>disabled</code> attribute on a <code>&lt;fieldset&gt;</code>. Use custom JavaScript to disable the fieldset in these browsers.</p>
+    <h4>Compatibilidade cross-browser</h4>
+    <p>Enquanto o Bootstrap aplicar esses estilos em todos os navegadores, Internet Explorer 11 pra baixo não suportam totalmente o atributo <code>disabled</code> em um <code>&lt;fieldset&gt;</code>. Use JavaScript para desativar os campos nesses navegadores.</p>
   </div>
 
   <div class="bs-example" data-example-id="disabled-fieldset">
     <form>
       <fieldset disabled>
         <div class="form-group">
-          <label for="disabledTextInput">Disabled input</label>
+          <label for="disabledTextInput">Entrada desativada</label>
           <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
         </div>
         <div class="form-group">
-          <label for="disabledSelect">Disabled select menu</label>
+          <label for="disabledSelect">Seleção de menu desativada</label>
           <select id="disabledSelect" class="form-control">
-            <option>Disabled select</option>
+            <option>seleção desativada</option>
           </select>
         </div>
         <div class="checkbox">
           <label>
-            <input type="checkbox"> Can't check this
+            <input type="checkbox"> Não pode checkar isso
           </label>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Enviar</button>
       </fieldset>
     </form>
   </div><!-- /.bs-example -->
@@ -577,28 +577,28 @@
 <form>
   <fieldset disabled>
     <div class="form-group">
-      <label for="disabledTextInput">Disabled input</label>
+      <label for="disabledTextInput">Entrada desativada</label>
       <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
     </div>
     <div class="form-group">
-      <label for="disabledSelect">Disabled select menu</label>
+      <label for="disabledSelect">Seleção de menu desativada</label>
       <select id="disabledSelect" class="form-control">
-        <option>Disabled select</option>
+        <option>seleção desativada</option>
       </select>
     </div>
     <div class="checkbox">
       <label>
-        <input type="checkbox"> Can't check this
+        <input type="checkbox"> Não pode checkar isso
       </label>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Enviar</button>
   </fieldset>
 </form>
 {% endhighlight %}
 
 
-  <h2 id="forms-control-readonly">Readonly state</h2>
-  <p>Add the <code>readonly</code> boolean attribute on an input to prevent modification of the input's value. Read-only inputs appear lighter (just like disabled inputs), but retain the standard cursor.</p>
+  <h2 id="forms-control-readonly">Estado para leitura</h2>
+  <p>Adicione o atributo boleano <code>readonly</code> em uma entrada para impedir modificação do valor da entrada. Entrada de apenas leitura aparecem apagadas (assim como entrada desabilitada), mas mantém o cursor padrão.</p>
   <div class="bs-example" data-example-id="readonly-text-form-control">
     <form>
       <input class="form-control" type="text" placeholder="Readonly input here…" readonly>
@@ -609,8 +609,8 @@
 {% endhighlight %}
 
 
-  <h2 id="forms-control-validation">Validation states</h2>
-  <p>Bootstrap includes validation styles for error, warning, and success states on form controls. To use, add <code>.has-warning</code>, <code>.has-error</code>, or <code>.has-success</code> to the parent element. Any <code>.control-label</code>, <code>.form-control</code>, and <code>.help-block</code> within that element will receive the validation styles.</p>
+  <h2 id="forms-control-validation">Estado de validação</h2>
+  <p>Bootstrap inclui estilos de validação para estado de erro, aviso, e successo nos controles de formulário. Para usar, adicione <code>.has-warning</code>, <code>.has-error</code>, ou <code>.has-success</code> para o elemento pai. Tanto <code>.control-label</code>, <code>.form-control</code>, e <code>.help-block</code> dentro desse elemento que receberá o estilo de validação.</p>
 
   <div class="bs-callout bs-callout-warning" id="callout-form-validation-state-accessibility">
     <h4>Conveying validation state to assistive technologies and colorblind users</h4>
