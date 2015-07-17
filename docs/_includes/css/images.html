@@ -1,27 +1,27 @@
 <div class="bs-docs-section">
-  <h1 id="images" class="page-header">Images</h1>
+  <h1 id="images" class="page-header">Imagens</h1>
 
-  <h2 id="images-responsive">Responsive images</h2>
-  <p>Images in Bootstrap 3 can be made responsive-friendly via the addition of the <code>.img-responsive</code> class. This applies <code>max-width: 100%;</code>, <code>height: auto;</code> and <code>display: block;</code> to the image so that it scales nicely to the parent element.</p>
-  <p>To center images which use the <code>.img-responsive</code> class, use <code>.center-block</code> instead of <code>.text-center</code>. <a href="../css/#helper-classes-center">See the helper classes section</a> for more details about <code>.center-block</code> usage.</p>
+  <h2 id="images-responsive">Imagens responsivas</h2>
+  <p>Imagens no Bootstrap 3 podem ser feitas responsivas amigavelmente através da adição da classe <code>.img-responsive</code>. Isso aplica <code>max-width: 100%;</code>, <code>height: auto;</code> e <code>display: block;</code> na imagem para que dimensione de forma agradável ao elemento pai.</p>
+  <p>Centralize as imagens que usam a classe <code>.img-responsive</code>, usando <code>.center-block</code> em vez de <code>.text-center</code>. <a href="../css/#helper-classes-center">Veja a seção de classes de ajuda</a> para mais detalhes sobre o uso do <code>.center-block</code>.</p>
   <div class="bs-callout bs-callout-warning" id="callout-images-ie-svg">
-    <h4>SVG images and IE 8-10</h4>
-    <p>In Internet Explorer 8-10, SVG images with <code>.img-responsive</code> are disproportionately sized. To fix this, add <code>width: 100% \9;</code> where necessary. Bootstrap doesn't apply this automatically as it causes complications to other image formats.</p>
+    <h4>Imagens SVG e IE 8-10</h4>
+    <p>No Internet Explorer 8-10, imagens SVG com <code>.img-responsive</code> são dimensionados desproporcionalmente. Para consertar isso, adicione <code>width: 100% \9;</code> onde necessário. Bootstrap não aplica isso automaticamente por causar complicaçõespara outros formatos de imagem.</p>
   </div>
 {% highlight html %}
-<img src="..." class="img-responsive" alt="Responsive image">
+<img src="..." class="img-responsive" alt="Imagem responsiva">
 {% endhighlight %}
 
-  <h2 id="images-shapes">Image shapes</h2>
-  <p>Add classes to an <code>&lt;img&gt;</code> element to easily style images in any project.</p>
+  <h2 id="images-shapes">Formas</h2>
+  <p>Adicione classes a um elemento <code>&lt;img&gt;</code> para estilizar imagens facilmente em qualquer projeto.</p>
   <div class="bs-callout bs-callout-danger" id="callout-images-ie-rounded-corners">
-    <h4>Cross-browser compatibility</h4>
-    <p>Keep in mind that Internet Explorer 8 lacks support for rounded corners.</p>
+    <h4>Compatibilidade cross-browser</h4>
+    <p>Tenha em mente que o Internet Explorer 8 não tem suporte para cantos arredondados.</p>
   </div>
   <div class="bs-example bs-example-images" data-example-id="image-shapes">
-    <img data-src="holder.js/140x140" class="img-rounded" alt="A generic square placeholder image with rounded corners">
-    <img data-src="holder.js/140x140" class="img-circle" alt="A generic square placeholder image where only the portion within the circle circumscribed about said square is visible">
-    <img data-src="holder.js/140x140" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera">
+    <img data-src="holder.js/140x140" class="img-rounded" alt="Uma imagem genérica de espaço quadrado com bordas arredondadas">
+    <img data-src="holder.js/140x140" class="img-circle" alt="Uma imagem genérica de espaço quadrado onde apenas a parte de dentro do círculo circunscrito sobre o quadrado é visivel">
+    <img data-src="holder.js/140x140" class="img-thumbnail" alt="Uma imagem genérica de espaço quadrado com uma borda branca ao redor dela, tornando-se semelhante a uma fotografia tirada com uma câmera antiga de fotos instantâneas">
   </div>
 {% highlight html %}
 <img src="..." alt="..." class="img-rounded">
