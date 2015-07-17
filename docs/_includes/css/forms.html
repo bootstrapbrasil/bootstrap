@@ -613,30 +613,30 @@
   <p>Bootstrap inclui estilos de validação para estado de erro, aviso, e successo nos controles de formulário. Para usar, adicione <code>.has-warning</code>, <code>.has-error</code>, ou <code>.has-success</code> para o elemento pai. Tanto <code>.control-label</code>, <code>.form-control</code>, e <code>.help-block</code> dentro desse elemento que receberá o estilo de validação.</p>
 
   <div class="bs-callout bs-callout-warning" id="callout-form-validation-state-accessibility">
-    <h4>Conveying validation state to assistive technologies and colorblind users</h4>
-    <p>Using these validation styles to denote the state of a form control only provides a visual, color-based indication, which will not be conveyed to users of assistive technologies - such as screen readers - or to colorblind users.</p>
-    <p>Ensure that an alternative indication of state is also provided. For instance, you can include a hint about state in the form control's <code>&lt;label&gt;</code> text itself (as is the case in the following code example), include a <a href="../components/#glyphicons">Glyphicon</a> (with appropriate alternative text using the <code>.sr-only</code> class - see the <a href="../components/#glyphicons-examples">Glyphicon examples</a>), or by providing an additional <a href="#forms-help-text">help text</a> block. Specifically for assistive technologies, invalid form controls can also be assigned an <code>aria-invalid="true"</code> attribute.</p>
+    <h4>Transmitir estado de validação para as tecnologias de apoio e usuários daltônicos</h4>
+    <p>Usando esses estilos de validação para denotar o estado de um controle de formulário apenas apenas fornecerá um visual, indicação em base de cores, que não serão transmitidas para usuários de tecnologias assistivas - tais como leitores de tela - ou para usuários daltônicos.</p>
+    <p>Garanta que uma indicação alternativa de estado também seja fornecida. Por exemplo, você pode incluir uma dica sobre o estado nos controles de formulários <code>&lt;label&gt;</code> texto em si mesmo (como é o caso do código do exemplo a seguir), inclui um <a href="../components/#glyphicons">Glyphicon</a> (com texto alternativo apropriado usando a classe <code>.sr-only</code> - veja os <a href="../components/#glyphicons-examples">exemplos Glyphicon</a>), ou pelo fornecimento de um bloco de <a href="#forms-help-text">texto de ajuda</a> adicional. Especificamente para tecnologias  assistivas, controles de formulários inválidos também pode ser atribuído o atributo <code>aria-invalid="true"</code>.</p>
   </div>
 
   <div class="bs-example" data-example-id="form-validation-states">
     <form>
       <div class="form-group has-success">
-        <label class="control-label" for="inputSuccess1">Input with success</label>
+        <label class="control-label" for="inputSuccess1">Entrada com successo</label>
         <input type="text" class="form-control" id="inputSuccess1">
       </div>
       <div class="form-group has-warning">
-        <label class="control-label" for="inputWarning1">Input with warning</label>
+        <label class="control-label" for="inputWarning1">Entrada com advertência</label>
         <input type="text" class="form-control" id="inputWarning1">
       </div>
       <div class="form-group has-error">
-        <label class="control-label" for="inputError1">Input with error</label>
+        <label class="control-label" for="inputError1">Entrada com erro</label>
         <input type="text" class="form-control" id="inputError1">
       </div>
       <div class="has-success">
         <div class="checkbox">
           <label>
             <input type="checkbox" id="checkboxSuccess" value="option1">
-            Checkbox with success
+            Checkbox com sucesso
           </label>
         </div>
       </div>
@@ -644,7 +644,7 @@
         <div class="checkbox">
           <label>
             <input type="checkbox" id="checkboxWarning" value="option1">
-            Checkbox with warning
+            Checkbox com advertência
           </label>
         </div>
       </div>
@@ -652,7 +652,7 @@
         <div class="checkbox">
           <label>
             <input type="checkbox" id="checkboxError" value="option1">
-            Checkbox with error
+            Checkbox com erro
           </label>
         </div>
       </div>
@@ -660,22 +660,22 @@
   </div><!-- /.bs-example -->
 {% highlight html %}
 <div class="form-group has-success">
-  <label class="control-label" for="inputSuccess1">Input with success</label>
+  <label class="control-label" for="inputSuccess1">Entrada com successo</label>
   <input type="text" class="form-control" id="inputSuccess1">
 </div>
 <div class="form-group has-warning">
-  <label class="control-label" for="inputWarning1">Input with warning</label>
+  <label class="control-label" for="inputWarning1">Entrada com advertência</label>
   <input type="text" class="form-control" id="inputWarning1">
 </div>
 <div class="form-group has-error">
-  <label class="control-label" for="inputError1">Input with error</label>
+  <label class="control-label" for="inputError1">Entrada com erro</label>
   <input type="text" class="form-control" id="inputError1">
 </div>
 <div class="has-success">
   <div class="checkbox">
     <label>
       <input type="checkbox" id="checkboxSuccess" value="option1">
-      Checkbox with success
+      Checkbox com sucesso
     </label>
   </div>
 </div>
@@ -683,7 +683,7 @@
   <div class="checkbox">
     <label>
       <input type="checkbox" id="checkboxWarning" value="option1">
-      Checkbox with warning
+      Checkbox com advertência
     </label>
   </div>
 </div>
@@ -691,105 +691,105 @@
   <div class="checkbox">
     <label>
       <input type="checkbox" id="checkboxError" value="option1">
-      Checkbox with error
+      Checkbox com erro
     </label>
   </div>
 </div>
 {% endhighlight %}
 
-  <h3>With optional icons</h3>
-  <p>You can also add optional feedback icons with the addition of <code>.has-feedback</code> and the right icon.</p>
-  <p><strong class="text-danger">Feedback icons only work with textual <code>&lt;input class="form-control"&gt;</code> elements.</strong></p>
+  <h3>Com ícones opcionais</h3>
+  <p>Você também pode adicionar ícone opcional de feedback com a adição de <code>.has-feedback</code> e o ícone direito.</p>
+  <p><strong class="text-danger">Ícones de feedback apenas trabalham com elementos textuais <code>&lt;input class="form-control"&gt;</code>.</strong></p>
   <div class="bs-callout bs-callout-warning" id="callout-has-feedback-icon-positioning">
-    <h4>Icons, labels, and input groups</h4>
-    <p>Manual positioning of feedback icons is required for inputs without a label and for <a href="../components#input-groups">input groups</a> with an add-on on the right. You are strongly encouraged to provide labels for all inputs for accessibility reasons. If you wish to prevent labels from being displayed, hide them with the <code>.sr-only</code> class. If you must do without labels, adjust the <code>top</code> value of the feedback icon. For input groups, adjust the <code>right</code> value to an appropriate pixel value depending on the width of your addon.</p>
+    <h4>Ícones, etiquetas, e grupos de entradas</h4>
+    <p>Posicionamento manual de ícones de feedback é necessário para entradas sem uma etiqueta e para <a href="../components#input-groups">grupos de entradas</a> com um add-on à direita. Você é fortemente encorajado à providenciar etiquetas para todas as entradas por causa de acessibilidade. Se você quiser evitar etiquetas de serem mostradas, esconda elas com a classe <code>.sr-only</code>. Se você necessitar fazer sem etiquetas, ajuste o valor de <code>top</code> do ícone de feedback. Para grupos de entradas, ajuste o valor do <code>right</code> para um valor de pixel apropriado dependendo da largura do seu add-on.</p>
   </div>
   <div class="bs-callout bs-callout-warning" id="callout-has-feedback-icon-accessibility">
-    <h4>Conveying the icon's meaning to assistive technologies</h4>
-    <p>To ensure that assistive technologies – such as screen readers – correctly convey the meaning of an icon, additional hidden text should be included with the <code>.sr-only</code> class and explicitly associated with the form control it relates to using <code>aria-describedby</code>. Alternatively, ensure that the meaning (for instance, the fact that there is a warning for a particular text entry field) is conveyed in some other form, such as changing the text of the actual <code>&lt;label&gt;</code> associated with the form control.</p>
-    <p>Although the following examples already mention the validation state of their respective form controls in the <code>&lt;label&gt;</code> text itself, the above technique (using <code>.sr-only</code> text and <code>aria-describedby</code>) has been included for illustrative purposes.</p>
+    <h4>Transmitindo o significado dos ícones para tecnologia assistiva</h4>
+    <p>Para garantir que tecnologias assistivas – como os leitores de tela – transmitam correctamente o significado dos ícones, texto adicional oculto deve ser incluido com a classe <code>.sr-only</code> e explicitamente associado com o controle de formulário está relacionado ao uso de <code>aria-describedby</code>. Alternativamente, garanta que o significado (por exemplo, o fato de que há um aviso para um campo de entrada de texto particular) seja transmitido de alguma outra forma, tal como mudando o texto do atual <code>&lt;label&gt;</code> associado com o controle de formulário.</p>
+    <p>Embora o exemplo seguinte já mencione o estado de validação de seus respectivos controles de formulário no <code>&lt;label&gt;</code> texto próprio, a técnica acima (usando texto com <code>.sr-only</code> e <code>aria-describedby</code>) foi incluído para fins ilustrativos.</p>
   </div>
   <div class="bs-example" data-example-id="form-validation-states-with-icons">
     <form>
       <div class="form-group has-success has-feedback">
-        <label class="control-label" for="inputSuccess2">Input with success</label>
+        <label class="control-label" for="inputSuccess2">Entrada com sucesso</label>
         <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
         <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-        <span id="inputSuccess2Status" class="sr-only">(success)</span>
+        <span id="inputSuccess2Status" class="sr-only">(successo)</span>
       </div>
       <div class="form-group has-warning has-feedback">
-        <label class="control-label" for="inputWarning2">Input with warning</label>
+        <label class="control-label" for="inputWarning2">Entrada com advertência</label>
         <input type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status">
         <span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>
-        <span id="inputWarning2Status" class="sr-only">(warning)</span>
+        <span id="inputWarning2Status" class="sr-only">(advertência)</span>
       </div>
       <div class="form-group has-error has-feedback">
-        <label class="control-label" for="inputError2">Input with error</label>
+        <label class="control-label" for="inputError2">Entrada com erro</label>
         <input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status">
         <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
-        <span id="inputError2Status" class="sr-only">(error)</span>
+        <span id="inputError2Status" class="sr-only">(erro)</span>
       </div>
       <div class="form-group has-success has-feedback">
-        <label class="control-label" for="inputGroupSuccess1">Input group with success</label>
+        <label class="control-label" for="inputGroupSuccess1">Grupo de entrada com sucesso</label>
         <div class="input-group">
           <span class="input-group-addon">@</span>
           <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
         </div>
         <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-        <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
+        <span id="inputGroupSuccess1Status" class="sr-only">(successo)</span>
       </div>
     </form>
   </div>
 {% highlight html %}
 <div class="form-group has-success has-feedback">
-  <label class="control-label" for="inputSuccess2">Input with success</label>
+  <label class="control-label" for="inputSuccess2">Entrada com successo</label>
   <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
   <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-  <span id="inputSuccess2Status" class="sr-only">(success)</span>
+  <span id="inputSuccess2Status" class="sr-only">(successo)</span>
 </div>
 <div class="form-group has-warning has-feedback">
-  <label class="control-label" for="inputWarning2">Input with warning</label>
+  <label class="control-label" for="inputWarning2">Entrada com advertência</label>
   <input type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status">
   <span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>
-  <span id="inputWarning2Status" class="sr-only">(warning)</span>
+  <span id="inputWarning2Status" class="sr-only">(advertência)</span>
 </div>
 <div class="form-group has-error has-feedback">
-  <label class="control-label" for="inputError2">Input with error</label>
+  <label class="control-label" for="inputError2">Entrada com erro</label>
   <input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status">
   <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
-  <span id="inputError2Status" class="sr-only">(error)</span>
+  <span id="inputError2Status" class="sr-only">(erro)</span>
 </div>
 <div class="form-group has-success has-feedback">
-  <label class="control-label" for="inputGroupSuccess1">Input group with success</label>
+  <label class="control-label" for="inputGroupSuccess1">Grupo de entrada com successo</label>
   <div class="input-group">
     <span class="input-group-addon">@</span>
     <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
   </div>
   <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-  <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
+  <span id="inputGroupSuccess1Status" class="sr-only">(successo)</span>
 </div>
 {% endhighlight %}
 
-  <h4>Optional icons in horizontal and inline forms</h4>
+  <h4>Ícones opcionais em horizontal e formulários em linha</h4>
   <div class="bs-example" data-example-id="horizontal-form-validation-state-with-icon">
     <form class="form-horizontal">
       <div class="form-group has-success has-feedback">
-        <label class="control-label col-sm-3" for="inputSuccess3">Input with success</label>
+        <label class="control-label col-sm-3" for="inputSuccess3">Entrada com successo</label>
         <div class="col-sm-9">
           <input type="text" class="form-control" id="inputSuccess3" aria-describedby="inputSuccess3Status">
           <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-          <span id="inputSuccess3Status" class="sr-only">(success)</span>
+          <span id="inputSuccess3Status" class="sr-only">(successo)</span>
         </div>
       </div>
       <div class="form-group has-success has-feedback">
-        <label class="control-label col-sm-3" for="inputGroupSuccess2">Input group with success</label>
+        <label class="control-label col-sm-3" for="inputGroupSuccess2">Grupo de entrada successo</label>
         <div class="col-sm-9">
           <div class="input-group">
             <span class="input-group-addon">@</span>
             <input type="text" class="form-control" id="inputGroupSuccess2" aria-describedby="inputGroupSuccess2Status">
           </div>
           <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-          <span id="inputGroupSuccess2Status" class="sr-only">(success)</span>
+          <span id="inputGroupSuccess2Status" class="sr-only">(successo)</span>
         </div>
       </div>
     </form>
@@ -797,22 +797,22 @@
 {% highlight html %}
 <form class="form-horizontal">
   <div class="form-group has-success has-feedback">
-    <label class="control-label col-sm-3" for="inputSuccess3">Input with success</label>
+    <label class="control-label col-sm-3" for="inputSuccess3">Entrada com successo</label>
     <div class="col-sm-9">
       <input type="text" class="form-control" id="inputSuccess3" aria-describedby="inputSuccess3Status">
       <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-      <span id="inputSuccess3Status" class="sr-only">(success)</span>
+      <span id="inputSuccess3Status" class="sr-only">(successo)</span>
     </div>
   </div>
   <div class="form-group has-success has-feedback">
-    <label class="control-label col-sm-3" for="inputGroupSuccess2">Input group with success</label>
+    <label class="control-label col-sm-3" for="inputGroupSuccess2">Grupo de entrada com successo</label>
     <div class="col-sm-9">
       <div class="input-group">
         <span class="input-group-addon">@</span>
         <input type="text" class="form-control" id="inputGroupSuccess2" aria-describedby="inputGroupSuccess2Status">
       </div>
       <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-      <span id="inputGroupSuccess2Status" class="sr-only">(success)</span>
+      <span id="inputGroupSuccess2Status" class="sr-only">(successo)</span>
     </div>
   </div>
 </form>
@@ -821,102 +821,102 @@
   <div class="bs-example" data-example-id="inline-form-validation-state-with-icon">
     <form class="form-inline">
       <div class="form-group has-success has-feedback">
-        <label class="control-label" for="inputSuccess4">Input with success</label>
+        <label class="control-label" for="inputSuccess4">Entrada com successo</label>
         <input type="text" class="form-control" id="inputSuccess4" aria-describedby="inputSuccess4Status">
         <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-        <span id="inputSuccess4Status" class="sr-only">(success)</span>
+        <span id="inputSuccess4Status" class="sr-only">(successo)</span>
       </div>
     </form>
     <br>
     <form class="form-inline">
       <div class="form-group has-success has-feedback">
-        <label class="control-label" for="inputGroupSuccess3">Input group with success</label>
+        <label class="control-label" for="inputGroupSuccess3">Grupo de entrada com successo</label>
         <div class="input-group">
           <span class="input-group-addon">@</span>
           <input type="text" class="form-control" id="inputGroupSuccess3" aria-describedby="inputGroupSuccess3Status">
         </div>
         <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-        <span id="inputGroupSuccess3Status" class="sr-only">(success)</span>
+        <span id="inputGroupSuccess3Status" class="sr-only">(successo)</span>
       </div>
     </form>
   </div>
 {% highlight html %}
 <form class="form-inline">
   <div class="form-group has-success has-feedback">
-    <label class="control-label" for="inputSuccess4">Input with success</label>
+    <label class="control-label" for="inputSuccess4">Entrada com successo</label>
     <input type="text" class="form-control" id="inputSuccess4" aria-describedby="inputSuccess4Status">
     <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-    <span id="inputSuccess4Status" class="sr-only">(success)</span>
+    <span id="inputSuccess4Status" class="sr-only">(successo)</span>
   </div>
 </form>
 <form class="form-inline">
   <div class="form-group has-success has-feedback">
-    <label class="control-label" for="inputGroupSuccess3">Input group with success</label>
+    <label class="control-label" for="inputGroupSuccess3">Grupo de entrada com successo</label>
     <div class="input-group">
       <span class="input-group-addon">@</span>
       <input type="text" class="form-control" id="inputGroupSuccess3" aria-describedby="inputGroupSuccess3Status">
     </div>
     <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-    <span id="inputGroupSuccess3Status" class="sr-only">(success)</span>
+    <span id="inputGroupSuccess3Status" class="sr-only">(successo)</span>
   </div>
 </form>
 {% endhighlight %}
 
-  <h4>Optional icons with hidden <code>.sr-only</code> labels</h4>
-  <p>If you use the <code>.sr-only</code> class to hide a form control's <code>&lt;label&gt;</code> (rather than using other labelling options, such as the <code>aria-label</code> attribute), Bootstrap will automatically adjust the position of the icon once it's been added.</p>
+  <h4>Ícones opcionais com etiquetas ocultas <code>.sr-only</code></h4>
+  <p>Se você usar a classe <code>.sr-only</code> para esconder um controle de formulário <code>&lt;label&gt;</code> (em vez de usar outras opções de rotulagem, tais como o atributo <code>aria-label</code>), Bootstrap irá automaticamente ajustar a posição do ícone uma vez que foi adicionado.</p>
   <div class="bs-example" data-example-id="form-validation-state-with-icon-without-label">
     <div class="form-group has-success has-feedback">
-      <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+      <label class="control-label sr-only" for="inputSuccess5">Etiqueta oculta</label>
       <input type="text" class="form-control" id="inputSuccess5" aria-describedby="inputSuccess5Status">
       <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-      <span id="inputSuccess5Status" class="sr-only">(success)</span>
+      <span id="inputSuccess5Status" class="sr-only">(successo)</span>
     </div>
     <div class="form-group has-success has-feedback">
-      <label class="control-label sr-only" for="inputGroupSuccess4">Input group with success</label>
+      <label class="control-label sr-only" for="inputGroupSuccess4">Igrupo de entrada com successo</label>
       <div class="input-group">
         <span class="input-group-addon">@</span>
         <input type="text" class="form-control" id="inputGroupSuccess4" aria-describedby="inputGroupSuccess4Status">
       </div>
       <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-      <span id="inputGroupSuccess4Status" class="sr-only">(success)</span>
+      <span id="inputGroupSuccess4Status" class="sr-only">(successo)</span>
     </div>
   </div>
 {% highlight html %}
 <div class="form-group has-success has-feedback">
-  <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+  <label class="control-label sr-only" for="inputSuccess5">Etiqueta oculta</label>
   <input type="text" class="form-control" id="inputSuccess5" aria-describedby="inputSuccess5Status">
   <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-  <span id="inputSuccess5Status" class="sr-only">(success)</span>
+  <span id="inputSuccess5Status" class="sr-only">(successo)</span>
 </div>
 <div class="form-group has-success has-feedback">
-  <label class="control-label sr-only" for="inputGroupSuccess4">Input group with success</label>
+  <label class="control-label sr-only" for="inputGroupSuccess4">grupo de entrada com successo</label>
   <div class="input-group">
     <span class="input-group-addon">@</span>
     <input type="text" class="form-control" id="inputGroupSuccess4" aria-describedby="inputGroupSuccess4Status">
   </div>
   <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-  <span id="inputGroupSuccess4Status" class="sr-only">(success)</span>
+  <span id="inputGroupSuccess4Status" class="sr-only">(successo)</span>
 </div>
 {% endhighlight %}
 
 
-  <h2 id="forms-control-sizes">Control sizing</h2>
-  <p>Set heights using classes like <code>.input-lg</code>, and set widths using grid column classes like <code>.col-lg-*</code>.</p>
+  <h2 id="forms-control-sizes">Controle dimensionados</h2>
+  <p>Defina alturas usando classes como <code>.input-lg</code>, e defina larguras usando classes de grade de colunas como <code>.col-lg-*</code>.</p>
 
-  <h3>Height sizing</h3>
-  <p>Create taller or shorter form controls that match button sizes.</p>
+  <h3>Dimensionados de altura</h3>
+  <p>Crie controles de formulário mais altos ou mais curtos que dimensionem os tamanhos de botão.</p>
   <div class="bs-example bs-example-control-sizing" data-example-id="form-control-height-sizes">
     <form>
       <div class="controls">
         <input class="form-control input-lg" type="text" placeholder=".input-lg">
-        <input type="text" class="form-control" placeholder="Default input">
+        <input type="text" class="form-control" placeholder="Entrada padrão">
         <input class="form-control input-sm" type="text" placeholder=".input-sm">
 
         <select class="form-control input-lg">
           <option value="">.input-lg</option>
         </select>
         <select class="form-control">
-          <option value="">Default select</option>
+          <option value="">Select padrão</option>
         </select>
         <select class="form-control input-sm">
           <option value="">.input-sm</option>
@@ -926,7 +926,7 @@
   </div><!-- /.bs-example -->
 {% highlight html %}
 <input class="form-control input-lg" type="text" placeholder=".input-lg">
-<input class="form-control" type="text" placeholder="Default input">
+<input class="form-control" type="text" placeholder="Entrada padrão">
 <input class="form-control input-sm" type="text" placeholder=".input-sm">
 
 <select class="form-control input-lg">...</select>
@@ -934,20 +934,20 @@
 <select class="form-control input-sm">...</select>
 {% endhighlight %}
 
-  <h3>Horizontal form group sizes</h3>
-  <p>Quickly size labels and form controls within <code>.form-horizontal</code> by adding <code>.form-group-lg</code> or <code>.form-group-sm</code>.</p>
+  <h3>Tamanhos de grupo de formulário horizontal</h3>
+  <p>Rápidos tamanhos de etiquetas e controles de formulário dentro de <code>.form-horizontal</code> adicionando <code>.form-group-lg</code> ou <code>.form-group-sm</code>.</p>
   <div class="bs-example" data-example-id="form-group-height-sizes">
     <form class="form-horizontal">
       <div class="form-group form-group-lg">
-        <label class="col-sm-2 control-label" for="formGroupInputLarge">Large label</label>
+        <label class="col-sm-2 control-label" for="formGroupInputLarge">Etiqueta grande</label>
         <div class="col-sm-10">
-          <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Large input">
+          <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Entrada grande">
         </div>
       </div>
       <div class="form-group form-group-sm">
-        <label class="col-sm-2 control-label" for="formGroupInputSmall">Small label</label>
+        <label class="col-sm-2 control-label" for="formGroupInputSmall">Etiqueta pequena</label>
         <div class="col-sm-10">
-          <input class="form-control" type="text" id="formGroupInputSmall" placeholder="Small input">
+          <input class="form-control" type="text" id="formGroupInputSmall" placeholder="Entrada pequena">
         </div>
       </div>
     </form>
@@ -955,23 +955,23 @@
 {% highlight html %}
 <form class="form-horizontal">
   <div class="form-group form-group-lg">
-    <label class="col-sm-2 control-label" for="formGroupInputLarge">Large label</label>
+    <label class="col-sm-2 control-label" for="formGroupInputLarge">Etiqueta grande</label>
     <div class="col-sm-10">
-      <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Large input">
+      <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Entrada grande">
     </div>
   </div>
   <div class="form-group form-group-sm">
-    <label class="col-sm-2 control-label" for="formGroupInputSmall">Small label</label>
+    <label class="col-sm-2 control-label" for="formGroupInputSmall">Etiqueta pequena</label>
     <div class="col-sm-10">
-      <input class="form-control" type="text" id="formGroupInputSmall" placeholder="Small input">
+      <input class="form-control" type="text" id="formGroupInputSmall" placeholder="Entrada pequena">
     </div>
   </div>
 </form>
 {% endhighlight %}
 
 
-  <h3>Column sizing</h3>
-  <p>Wrap inputs in grid columns, or any custom parent element, to easily enforce desired widths.</p>
+  <h3>Dimensionando colunas</h3>
+  <p>Envolva entradas de colunas de grade, ou qualquer elemento pai personalizados, para facilmente impor larguras pretendidas.</p>
   <div class="bs-example" data-example-id="form-control-column-sizing">
     <form>
       <div class="row">
@@ -1001,25 +1001,25 @@
 </div>
 {% endhighlight %}
 
-  <h2 id="forms-help-text">Help text</h2>
-  <p>Block level help text for form controls.</p>
+  <h2 id="forms-help-text">Texto de ajuda</h2>
+  <p>Blocos de nível de texto de ajuda para controles de formulário.</p>
   <div class="bs-callout bs-callout-info" id="callout-help-text-accessibility">
-    <h4>Associating help text with form controls</h4>
-    <p>Help text should be explicitly associated with the form control it relates to using the <code>aria-describedby</code> attribute. This will ensure that assistive technologies – such as screen readers – will announce this help text when the user focuses or enters the control.</p>
+    <h4>Associando texto de ajuda com controles de formulário</h4>
+    <p>Texto de ajuda deve estar explicitamente associado com o controle de formulário que se refere ao uso do atributo <code>aria-describedby</code>. Isso irá assegurar que as tecnologias assistivas – tais como leitores de tela – anunciará estes textos de ajuda quando o usuário focalizar ou entrar no controle.</p>
   </div>
   <div class="bs-example" data-example-id="simple-help-text">
     <form>
       <div class="form-group">
-        <label for="inputHelpBlock">Input with help text</label>
+        <label for="inputHelpBlock">Entrada com texto de ajuda</label>
         <input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
       </div>
-      <span id="helpBlock" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+      <span id="helpBlock" class="help-block">Um bloco de texto de ajuda que divide em uma nova linha e pode ir além de uma linha one line.</span>
     </form>
   </div><!-- /.bs-example -->
 {% highlight html %}
-<label class="sr-only" for="inputHelpBlock">Input with help text</label>
+<label class="sr-only" for="inputHelpBlock">Entrada com texto de ajuda</label>
 <input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
 ...
-<span id="helpBlock" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+<span id="helpBlock" class="help-block">Um bloco de texto de ajuda que divide em uma nova linha e pode ir além de uma linha one line.</span>
 {% endhighlight %}
 </div>
