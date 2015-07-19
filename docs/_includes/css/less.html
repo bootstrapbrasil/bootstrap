@@ -1,20 +1,20 @@
 <div class="bs-docs-section">
-  <h1 id="less" class="page-header">Using Less</h1>
+  <h1 id="less" class="page-header">Utilizando Less</h1>
 
-  <p class="lead">Bootstrap's CSS is built on Less, a preprocessor with additional functionality like variables, mixins, and functions for compiling CSS. Those looking to use the source Less files instead of our compiled CSS files can make use of the numerous variables and mixins we use throughout the framework.</p>
+  <p class="lead">O CSS do Bootstrap é contruído em Less, um pré-processador com funcionalidade adicional como variáveis, mixins, e funções para compilação CSS. Aqueles que procuram usar a arquivos de fonte Less ao invés de nossos arquivos CSS compilados podem fazer uso de  the numerosas variáveis e mixins que nós usamos por todo sistema.</p>
 
-  <p>Grid variables and mixins are covered <a href="#grid-less">within the Grid system section</a>.</p>
+  <p>Variáveis de grade e mixins são cobertos <a href="#grid-less">dentro da seção de sistemas de Grid</a>.</p>
 
 
-  <h2 id="less-bootstrap">Compiling Bootstrap</h2>
-  <p>Bootstrap can be used in at least two ways: with the compiled CSS or with the source Less files. To compile the Less files, <a href="../getting-started/#grunt">consult the Getting Started section</a> for how to setup your development environment to run the necessary commands.</p>
-  <p>Third party compilation tools may work with Bootstrap, but they are not supported by our core team.</p>
+  <h2 id="less-bootstrap">Compilando Bootstrap</h2>
+  <p>Bootstrap pode ser utilizado de pelo menos duas maneiras: com o CSS compilado ou com os arquivos fontes Less. Para compilar os arquivos Less, <a href="../getting-started/#grunt">consulte a seção de ponto de partida</a> para como configurar seu ambiente de desenvolvimento  para rodar os comandos necessários.</p>
+  <p>Ferramentas de compilação de terceiros podem trabalhar com Bootstrap, mas eles não são apiadas por nossa equipe principal.</p>
 
-  <h2 id="less-variables">Variables</h2>
-  <p>Variables are used throughout the entire project as a way to centralize and share commonly used values like colors, spacing, or font stacks. For a complete breakdown, please see <a href="../customize/#less-variables-section">the Customizer</a>.</p>
+  <h2 id="less-variables">Variáveis</h2>
+  <p>Variáveis são usadas ao longo de todo o projeto como um caminho para centralizar e compartilhar valores comumente usados como cores, espaçamentos, ou montante de fontes. Para uma discriminação completa, por favor veja <a href="../customize/#less-variables-section">o personalizador</a>.</p>
 
-  <h3 id="less-variables-colors">Colors</h3>
-  <p>Easily make use of two color schemes: grayscale and semantic. Grayscale colors provide quick access to commonly used shades of black while semantic include various colors assigned to meaningful contextual values.</p>
+  <h3 id="less-variables-colors">Cores</h3>
+  <p>Facilmente faça uso de dois esquemas de cores: escala de cinza e semântica. Cores de tons de cinza  fornecem facilmente acesso para usar normalmente tons de preto enquanto inclui variáveis semanticas de cores atribuído significativamente valores contextuais.</p>
   <div class="bs-example">
     <div class="color-swatches">
       <div class="color-swatch gray-darker"></div>
@@ -49,7 +49,7 @@
 @brand-danger:  #d9534f;
 {% endhighlight %}
 
-  <p>Use any of these color variables as they are or reassign them to more meaningful variables for your project.</p>
+  <p>Use qualquer uma dessas variáveis de cor como elas são ou reatribua elas para mais variáveis significativas para seu projeto.</p>
 {% highlight scss %}
 // Use as-is
 .masthead {
@@ -63,8 +63,8 @@
 }
 {% endhighlight %}
 
-  <h3 id="less-variables-scaffolding">Scaffolding</h3>
-  <p>A handful of variables for quickly customizing key elements of your site's skeleton.</p>
+  <h3 id="less-variables-scaffolding">Scaffolding (andaime)</h3>
+  <p>Um punhado de variáveis para custumização rápida de elementos chaves para a estrutura do seu site.</p>
 {% highlight scss %}
 // Scaffolding
 @body-bg:    #fff;
@@ -72,7 +72,7 @@
 {% endhighlight %}
 
   <h3 id="less-variables-links">Links</h3>
-  <p>Easily style your links with the right color with only one value.</p>
+  <p>Estilize facilmente seus links com a cor certa com um único valor.</p>
 {% highlight scss %}
 // Variables
 @link-color:       @brand-primary;
@@ -89,10 +89,10 @@ a {
   }
 }
 {% endhighlight %}
-  <p>Note that the <code>@link-hover-color</code> uses a function, another awesome tool from Less, to automagically create the right hover color. You can use <code>darken</code>, <code>lighten</code>, <code>saturate</code>, and <code>desaturate</code>.</p>
+  <p>Note que o <code>@link-hover-color</code> usa uma função, outra ferramenta incrível de Less, Para automaticamente criar a cor de hover certa. Você pode usar <code>darken</code>, <code>lighten</code>, <code>saturate</code>, e <code>desaturate</code>.</p>
 
-  <h3 id="less-variables-typography">Typography</h3>
-  <p>Easily set your typeface, text size, leading, and more with a few quick variables. Bootstrap makes use of these as well to provide easy typographic mixins.</p>
+  <h3 id="less-variables-typography">Tipografia</h3>
+  <p>Defina facilmente seus tipo de fontes, tamanho da letra, leading, e muito mais com algumas variáveis rapidamente. Bootstrap faz uso destes bem para fornecer mixins tipográficos fáceis.</p>
 {% highlight scss %}
 @font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
