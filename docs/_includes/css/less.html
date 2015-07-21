@@ -157,12 +157,12 @@ a {
 
 
   <h2 id="less-mixins-vendor">Fornecedores de mixins</h2>
-  <p>Fornecedores de mixins são mixins para suporte de ajuda multiple browsers by including all relevant vendor prefixes in your compiled CSS.</p>
+  <p>Vendor de mixins são mixins para suporte de ajuda de vários navegadores por incluirem todos os prefixos vendor relevantes em seu CSS compilado.</p>
 
 
-  <h3 id="less-mixins-box-sizing">Box-sizing</h3>
-  <p>Reset your components' box model with a single mixin. For context, see this <a href="https://developer.mozilla.org/en-US/docs/CSS/box-sizing" target="_blank">helpful article from Mozilla</a>.</p>
-  <p>The mixin is <strong>deprecated</strong> as of v3.2.0, with the introduction of Autoprefixer. To preserve backwards-compatibility, Bootstrap will continue to use the mixin internally until Bootstrap v4.</p>
+  <h3 id="less-mixins-box-sizing">Dimensionamento de caixa</h3>
+  <p>Redefina seus componentes de box model com um simples mixin. Para contexto, veja isso <a href="https://developer.mozilla.org/en-US/docs/CSS/box-sizing" target="_blank">artigo útil da Mozilla</a>.</p>
+  <p>O mixin está <strong>obsoleto</strong> desde a v3.2.0, com a introdução de  of Autoprefixer. ToPara preservar a compatibilidade com versões anteriores, Bootstrap vai continuar a usar o mixin internamente até Bootstrap v4.</p>
 {% highlight scss %}
 .box-sizing(@box-model) {
   -webkit-box-sizing: @box-model; // Safari <= 5
@@ -171,8 +171,8 @@ a {
 }
 {% endhighlight %}
 
-  <h3 id="less-mixins-rounded-corners">Rounded corners</h3>
-  <p>Today all modern browsers support the non-prefixed <code>border-radius</code> property. As such, there is no <code>.border-radius()</code> mixin, but Bootstrap does include shortcuts for quickly rounding two corners on a particular side of an object.</p>
+  <h3 id="less-mixins-rounded-corners">Cantos arredondados</h3>
+  <p>Hoje todos os navegadores modernos suportam a propriedade non-prefixed <code>border-radius</code>. Como tal, não há mixin <code>.border-radius()</code>, mas o Bootstrap incluiu atalhos para arredondar rapidamente dois cantos em um determinado lado de um objeto.</p>
 {% highlight scss %}
 .border-top-radius(@radius) {
   border-top-right-radius: @radius;
@@ -193,9 +193,9 @@ a {
 {% endhighlight %}
 
   <h3 id="less-mixins-box-shadow">Box (Drop) shadows</h3>
-  <p>If your target audience is using the latest and greatest browsers and devices, be sure to just use the <code>box-shadow</code> property on its own. If you need support for older Android (pre-v4) and iOS devices (pre-iOS 5), use the <strong>deprecated</strong> mixin to pick up the required <code>-webkit</code> prefix.</p>
-  <p>The mixin is <strong>deprecated</strong> as of v3.1.0, since Bootstrap doesn't officially support the outdated platforms that don't support the standard property. To preserve backwards-compatibility, Bootstrap will continue to use the mixin internally until Bootstrap v4.</p>
-  <p>Be sure to use <code>rgba()</code> colors in your box shadows so they blend as seamlessly as possible with backgrounds.</p>
+  <p>Se o seu público-alvo está usando os mais recentes e melhores navegadores e dispositivos, esteja certo de usar apenas a propriedade <code>box-shadow</code> por conta própria. Se você precisa de suporte para Android antigo (pre-v4) e dispositivos iOS (pre-iOS 5), use o mixin<strong>obsoleto</strong> para pegar o prefixo <code>-webkit</code> necessário.</p>
+  <p>O mixin está <strong>obsoleto</strong> a partir do v3.1.0, já que Bootstrap não suporta oficialmente as platafomas desatualizadas que não suportam a propriedade  padrão. Para preservar a compatibilidade com versões anteriores, Bootstrap continuará a usar o mixin internamente até o Bootstrap v4.</p>
+  <p>Certifique-se de usar cores <code>rgba()</code> em seus box shadows assim eles combinarão suavemente o quanto possível com o fundo.</p>
 {% highlight scss %}
 .box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25)) {
   -webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1
@@ -203,9 +203,9 @@ a {
 }
 {% endhighlight %}
 
-  <h3 id="less-mixins-transitions">Transitions</h3>
-  <p>Multiple mixins for flexibility. Set all transition information with one, or specify a separate delay and duration as needed.</p>
-  <p>The mixins are <strong>deprecated</strong> as of v3.2.0, with the introduction of Autoprefixer. To preserve backwards-compatibility, Bootstrap will continue to use the mixins internally until Bootstrap v4.</p>
+  <h3 id="less-mixins-transitions">Transições</h3>
+  <p>Vários mixins para flexibilidade. Defina todas as informações de transição com um, ou especifique um delay separado e duração quanto necessário.</p>
+  <p>Os mixins estão <strong>obsoletos</strong> a partir de v3.2.0, com a introdução do Autoprefixer. Para preservar compatibilidade com versões anteriores, Bootstrap continuará a usar os mixins internamente até o Bootstrap v4.</p>
 {% highlight scss %}
 .transition(@transition) {
   -webkit-transition: @transition;
@@ -235,9 +235,9 @@ a {
 }
 {% endhighlight %}
 
-  <h3 id="less-mixins-transformations">Transformations</h3>
-  <p>Rotate, scale, translate (move), or skew any object.</p>
-  <p>The mixins are <strong>deprecated</strong> as of v3.2.0, with the introduction of Autoprefixer. To preserve backwards-compatibility, Bootstrap will continue to use the mixins internally until Bootstrap v4.</p>
+  <h3 id="less-mixins-transformations">Transformações</h3>
+  <p>Gire, escale, converta (movimento), ou distoça algum objeto.</p>
+  <p>Os mixins estão <strong>obsoletos</strong> a partir de v3.2.0, com a introdução de Autoprefixer. Para preservar compatibilidade com versões anteriores, Bootstrap continuará a usar os mixins internamente até o Bootstrap v4.</p>
 {% highlight scss %}
 .rotate(@degrees) {
   -webkit-transform: rotate(@degrees);
@@ -292,9 +292,9 @@ a {
 }
 {% endhighlight %}
 
-  <h3 id="less-mixins-animations">Animations</h3>
-  <p>A single mixin for using all of CSS3's animation properties in one declaration and other mixins for individual properties.</p>
-  <p>The mixins are <strong>deprecated</strong> as of v3.2.0, with the introduction of Autoprefixer. To preserve backwards-compatibility, Bootstrap will continue to use the mixins internally until Bootstrap v4.</p>
+  <h3 id="less-mixins-animations">Animações</h3>
+  <p>Um único mixin usado em todas as prorpiedades de animação do CSS3 em uma declaração e outros mixins para propriedades.</p>
+  <p>Os mixins estão <strong>obsoletos</strong> a partir de v3.2.0, com a introdução de Autoprefixer. Para preservar compatibilidade com versões anteriores, Bootstrap continuará a usar os mixins internamente até o Bootstrap v4.</p>
 {% highlight scss %}
 .animation(@animation) {
   -webkit-animation: @animation;
@@ -326,8 +326,8 @@ a {
 }
 {% endhighlight %}
 
-  <h3 id="less-mixins-opacity">Opacity</h3>
-  <p>Set the opacity for all browsers and provide a <code>filter</code> fallback for IE8.</p>
+  <h3 id="less-mixins-opacity">Opacidade</h3>
+  <p>Defina a opacidade para todos os navegadores e forneça um <code>filter</code> alternativo para o IE8.</p>
 {% highlight scss %}
 .opacity(@opacity) {
   opacity: @opacity;
@@ -337,8 +337,8 @@ a {
 }
 {% endhighlight %}
 
-  <h3 id="less-mixins-placeholder">Placeholder text</h3>
-  <p>Provide context for form controls within each field.</p>
+  <h3 id="less-mixins-placeholder">Texto de placeholder</h3>
+  <p>Forneça contexto para controles de fomulário dentro de cada campo.</p>
 {% highlight scss %}
 .placeholder(@color: @input-color-placeholder) {
   &::-moz-placeholder           { color: @color; } // Firefox
@@ -347,8 +347,8 @@ a {
 }
 {% endhighlight %}
 
-  <h3 id="less-mixins-columns">Columns</h3>
-  <p>Generate columns via CSS within a single element.</p>
+  <h3 id="less-mixins-columns">Colunas</h3>
+  <p>Gere colunas por meio de CSS dentro de um único elemento.</p>
 {% highlight scss %}
 .content-columns(@width; @count; @gap) {
   -webkit-column-width: @width;
@@ -363,27 +363,27 @@ a {
 }
 {% endhighlight %}
 
-  <h3 id="less-mixins-gradients">Gradients</h3>
-  <p>Easily turn any two colors into a background gradient. Get more advanced and set a direction, use three colors, or use a radial gradient. With a single mixin you get all the prefixed syntaxes you'll need.</p>
+  <h3 id="less-mixins-gradients">Gradientes</h3>
+  <p>Transforme facilmente duas cores qualquer dentro de um background gradiente. Obtenha mais avançadas e defina uma direção, use três cores, ou use um gradiente radial. Com um único mixin você obtém todas as sintaxes prefixadas que precisará.</p>
 {% highlight scss %}
 #gradient > .vertical(#333; #000);
 #gradient > .horizontal(#333; #000);
 #gradient > .radial(#333; #000);
 {% endhighlight %}
-  <p>You can also specify the angle of a standard two-color, linear gradient:</p>
+  <p>Você pode também especificar os angulos de um padrão duas cores, gradiente linear:</p>
 {% highlight scss %}
 #gradient > .directional(#333; #000; 45deg);
 {% endhighlight %}
-  <p>If you need a barber-stripe style gradient, that's easy, too. Just specify a single color and we'll overlay a translucent white stripe.</p>
+  <p>Se você precisar de um estilo barber-stripe gradiente, isso é facil, também. Apenas especifique uma única cor e iremos sobrepor um a listra branca translúcida.</p>
 {% highlight scss %}
 #gradient > .striped(#333; 45deg);
 {% endhighlight %}
-  <p>Up the ante and use three colors instead. Set the first color, the second color, the second color's color stop (a percentage value like 25%), and the third color with these mixins:</p>
+  <p>Aumente o custo e use três cores em vez disso. Defina a primeira cor, a segunda cor, a escala de cor da segunda cor (uma valor percentual como 25%), e a terceira cor com esses mixins:</p>
 {% highlight scss %}
 #gradient > .vertical-three-colors(#777; #333; 25%; #000);
 #gradient > .horizontal-three-colors(#777; #333; 25%; #000);
 {% endhighlight %}
-  <p><strong>Heads up!</strong> Should you ever need to remove a gradient, be sure to remove any IE-specific <code>filter</code> you may have added. You can do that by using the <code>.reset-filter()</code> mixin alongside <code>background-image: none;</code>.</p>
+  <p><strong>Atenção!</strong> Você deve sempre precisar remover um gradiente, certifique-se de remover algum <code>filter</code> IE-specific você pode ter adicionado. Você pode fazer isso usando o mixin <code>.reset-filter()</code> junto de <code>background-image: none;</code>.</p>
 
 
   <h2 id="less-mixins-utility">Utility mixins</h2>
