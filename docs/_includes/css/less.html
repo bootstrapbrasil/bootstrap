@@ -410,8 +410,8 @@ a {
 }
 {% endhighlight %}
 
-  <h3 id="less-mixins-centering">Horizontal centering</h3>
-  <p>Quickly center any element within its parent. <strong>Requires <code>width</code> or <code>max-width</code> to be set.</strong></p>
+  <h3 id="less-mixins-centering">Centralização horizontal</h3>
+  <p>Centralize rapidamente qualquer elemento dentro de seu pai. <strong>Requer <code>width</code> ou <code>max-width</code> definido.</strong></p>
 {% highlight scss %}
 // Mixin
 .center-block() {
@@ -427,8 +427,8 @@ a {
 }
 {% endhighlight %}
 
-  <h3 id="less-mixins-sizing">Sizing helpers</h3>
-  <p>Specify the dimensions of an object more easily.</p>
+  <h3 id="less-mixins-sizing">Dimensionando helpers</h3>
+  <p>Specifique as dimensões de um objeto mais facilmente.</p>
 {% highlight scss %}
 // Mixins
 .size(@width; @height) {
@@ -444,8 +444,8 @@ a {
 .avatar { .square(48px); }
 {% endhighlight %}
 
-  <h3 id="less-mixins-resizable">Resizable textareas</h3>
-  <p>Easily configure the resize options for any textarea, or any other element. Defaults to normal browser behavior (<code>both</code>).</p>
+  <h3 id="less-mixins-resizable">Redimensionar áreas de texto</h3>
+  <p>Configure facilmente as opções de redimensionamento para qualquer textarea, ou qualquer outro elemento. Predefina o comportamento normal do navegador (<code>both</code>).</p>
 {% highlight scss %}
 .resizable(@direction: both) {
   // Options: horizontal, vertical, both
@@ -455,8 +455,8 @@ a {
 }
 {% endhighlight %}
 
-  <h3 id="less-mixins-truncating">Truncating text</h3>
-  <p>Easily truncate text with an ellipsis with a single mixin. <strong>Requires element to be <code>block</code> or <code>inline-block</code> level.</strong></p>
+  <h3 id="less-mixins-truncating">Texto truncando</h3>
+  <p>Truncar facilmente textos com uma ellipsis com um único mixin. <strong>Requer elemento tenha nível <code>block</code> ou <code>inline-block</code>.</strong></p>
 {% highlight scss %}
 // Mixin
 .text-overflow() {
@@ -474,7 +474,7 @@ a {
 {% endhighlight %}
 
   <h3 id="less-mixins-retina-images">Retina images</h3>
-  <p>Specify two image paths and the @1x image dimensions, and Bootstrap will provide an @2x media query. <strong>If you have many images to serve, consider writing your retina image CSS manually in a single media query.</strong></p>
+  <p>Specifique dois caminhos de imagem e as dimensão de imagem de @1x, e Bootstrap fornecerá uma media query @2x. <strong>Se você tiver muitas imagens para atender, considere escrever sua imagem de retina CSS manualmente numa única media query.</strong></p>
 {% highlight scss %}
 .img-retina(@file-1x; @file-2x; @width-1x; @height-1x) {
   background-image: url("@{file-1x}");
