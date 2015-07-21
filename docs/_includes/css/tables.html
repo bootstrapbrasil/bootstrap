@@ -1,17 +1,17 @@
 <div class="bs-docs-section">
   <h1 id="tables" class="page-header">Tables</h1>
 
-  <h2 id="tables-example">Basic example</h2>
-  <p>For basic styling&mdash;light padding and only horizontal dividers&mdash;add the base class <code>.table</code> to any <code>&lt;table&gt;</code>. It may seem super redundant, but given the widespread use of tables for other plugins like calendars and date pickers, we've opted to isolate our custom table styles.</p>
+  <h2 id="tables-example">Exemplo basico</h2>
+  <p>Para estilo basico &mdash; padding leve e poucos divisores horizontais &mdash; adicione classe base <code>.table</code> para qualquer <code>&lt;table&gt;</code>. Isso pode parecer super-redundante, mas dada a utilização generalizada de tabelas para outros plugins como calendários e selecionadores de data, nós optamos por isolar nossos estilos de tabela personalizada.</p>
   <div class="bs-example" data-example-id="simple-table">
     <table class="table">
-      <caption>Optional table caption.</caption>
+      <caption>Legenda de tabela opcional.</caption>
       <thead>
         <tr>
           <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>Primeiro Nome</th>
+          <th>Último Name</th>
+          <th>Nome de usuário</th>
         </tr>
       </thead>
       <tbody>
@@ -43,20 +43,20 @@
 {% endhighlight %}
 
 
-  <h2 id="tables-striped">Striped rows</h2>
-  <p>Use <code>.table-striped</code> to add zebra-striping to any table row within the <code>&lt;tbody&gt;</code>.</p>
+  <h2 id="tables-striped">Striped rows (Linhas listradas)</h2>
+  <p>Use <code>.table-striped</code> para adicionar linhas zebradas à qualquer linha da tabela dentro do <code>&lt;tbody&gt;</code>.</p>
   <div class="bs-callout bs-callout-danger" id="callout-tables-striped-ie8">
-    <h4>Cross-browser compatibility</h4>
-    <p>Striped tables are styled via the <code>:nth-child</code> CSS selector, which is not available in Internet Explorer 8.</p>
+    <h4>Compatibilidade Cross-browser</h4>
+    <p>Tabelas listradas são estilizadas por meio do seletor CSS <code>:nth-child</code>, que não está disponível no Internet Explorer 8.</p>
   </div>
   <div class="bs-example" data-example-id="striped-table">
     <table class="table table-striped">
       <thead>
         <tr>
           <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>Primeiro Nome</th>
+          <th>Último Name</th>
+          <th>Nome de usuário</th>
         </tr>
       </thead>
       <tbody>
@@ -88,16 +88,16 @@
 {% endhighlight %}
 
 
-  <h2 id="tables-bordered">Bordered table</h2>
-  <p>Add <code>.table-bordered</code> for borders on all sides of the table and cells.</p>
+  <h2 id="tables-bordered">Tabela com bordas</h2>
+  <p>Adicione <code>.table-bordered</code> para bordas em todoas os lados da tabela e celulas.</p>
   <div class="bs-example" data-example-id="bordered-table">
     <table class="table table-bordered">
       <thead>
         <tr>
           <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>Primeiro Nome</th>
+          <th>Último Name</th>
+          <th>Nome de usuário</th>
         </tr>
       </thead>
       <tbody>
@@ -129,16 +129,16 @@
 {% endhighlight %}
 
 
-  <h2 id="tables-hover-rows">Hover rows</h2>
-  <p>Add <code>.table-hover</code> to enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.</p>
+  <h2 id="tables-hover-rows">Linhas com Hover</h2>
+  <p>Adicione <code>.table-hover</code> para habilitar um efeito hover nas linhas da tabela dentro do <code>&lt;tbody&gt;</code>.</p>
   <div class="bs-example" data-example-id="hoverable-table">
     <table class="table table-hover">
       <thead>
         <tr>
           <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>Primeiro Nome</th>
+          <th>Último Name</th>
+          <th>Nome de usuário</th>
         </tr>
       </thead>
       <tbody>
@@ -170,16 +170,16 @@
 {% endhighlight %}
 
 
-  <h2 id="tables-condensed">Condensed table</h2>
-  <p>Add <code>.table-condensed</code> to make tables more compact by cutting cell padding in half.</p>
+  <h2 id="tables-condensed">Tabela condensada</h2>
+  <p>Adicione <code>.table-condensed</code> para fazer as tabelas mais comactadas por cortar o padding das celulas na metade.</p>
   <div class="bs-example" data-example-id="condensed-table">
     <table class="table table-condensed">
       <thead>
         <tr>
           <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>Primeiro Nome</th>
+          <th>Último Name</th>
+          <th>Nome de usuário</th>
         </tr>
       </thead>
       <tbody>
@@ -210,8 +210,8 @@
 {% endhighlight %}
 
 
-  <h2 id="tables-contextual-classes">Contextual classes</h2>
-  <p>Use contextual classes to color table rows or individual cells.</p>
+  <h2 id="tables-contextual-classes">Classes contextuais</h2>
+  <p>Use classes contextuais para colorir as linhas da tabela ou células individuais.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
       <colgroup>
@@ -220,8 +220,8 @@
       </colgroup>
       <thead>
         <tr>
-          <th>Class</th>
-          <th>Description</th>
+          <th>Classe</th>
+          <th>Descrição</th>
         </tr>
       </thead>
       <tbody>
@@ -229,31 +229,31 @@
           <th scope="row">
             <code>.active</code>
           </th>
-          <td>Applies the hover color to a particular row or cell</td>
+          <td>Aplique a cor de hover para uma linha ou célula em particular</td>
         </tr>
         <tr>
           <th scope="row">
             <code>.success</code>
           </th>
-          <td>Indicates a successful or positive action</td>
+          <td>Indica uma ação bem-sucedida ou positiva</td>
         </tr>
         <tr>
           <th scope="row">
             <code>.info</code>
           </th>
-          <td>Indicates a neutral informative change or action</td>
+          <td>Indica uma alteração de informação neutra ou ação</td>
         </tr>
         <tr>
           <th scope="row">
             <code>.warning</code>
           </th>
-          <td>Indicates a warning that might need attention</td>
+          <td>Indica um aviso de que pode precisar de atenção</td>
         </tr>
         <tr>
           <th scope="row">
             <code>.danger</code>
           </th>
-          <td>Indicates a dangerous or potentially negative action</td>
+          <td>Indica uma ação perigosa ou potencialmente negativa</td>
         </tr>
       </tbody>
     </table>
@@ -263,65 +263,65 @@
       <thead>
         <tr>
           <th>#</th>
-          <th>Column heading</th>
-          <th>Column heading</th>
-          <th>Column heading</th>
+          <th>Título da coluna</th>
+          <th>Título da coluna</th>
+          <th>Título da coluna</th>
         </tr>
       </thead>
       <tbody>
         <tr class="active">
           <th scope="row">1</th>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
+          <td>Conteúdo da coluna</td>
+          <td>Conteúdo da coluna</td>
+          <td>Conteúdo da coluna</td>
         </tr>
         <tr>
           <th scope="row">2</th>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
+          <td>Conteúdo da coluna</td>
+          <td>Conteúdo da coluna</td>
+          <td>Conteúdo da coluna</td>
         </tr>
         <tr class="success">
           <th scope="row">3</th>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
+          <td>Conteúdo da coluna</td>
+          <td>Conteúdo da coluna</td>
+          <td>Conteúdo da coluna</td>
         </tr>
         <tr>
           <th scope="row">4</th>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
+          <td>Conteúdo da coluna</td>
+          <td>Conteúdo da coluna</td>
+          <td>Conteúdo da coluna</td>
         </tr>
         <tr class="info">
           <th scope="row">5</th>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
+          <td>Conteúdo da coluna</td>
+          <td>Conteúdo da coluna</td>
+          <td>Conteúdo da coluna</td>
         </tr>
         <tr>
           <th scope="row">6</th>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
+          <td>Conteúdo da coluna</td>
+          <td>Conteúdo da coluna</td>
+          <td>Conteúdo da coluna</td>
         </tr>
         <tr class="warning">
           <th scope="row">7</th>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
+          <td>Conteúdo da coluna</td>
+          <td>Conteúdo da coluna</td>
+          <td>Conteúdo da coluna</td>
         </tr>
         <tr>
           <th scope="row">8</th>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
+          <td>Conteúdo da coluna</td>
+          <td>Conteúdo da coluna</td>
+          <td>Conteúdo da coluna</td>
         </tr>
         <tr class="danger">
           <th scope="row">9</th>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
+          <td>Conteúdo da coluna</td>
+          <td>Conteúdo da coluna</td>
+          <td>Conteúdo da coluna</td>
         </tr>
       </tbody>
     </table>
@@ -344,26 +344,26 @@
 </tr>
 {% endhighlight %}
   <div class="bs-callout bs-callout-warning" id="callout-tables-context-accessibility">
-    <h4>Conveying meaning to assistive technologies</h4>
-    <p>Using color to add meaning to a table row or individual cell only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (the visible text in the relevant table row/cell), or is included through alternative means, such as additional text hidden with the <code>.sr-only</code> class.</p>
+    <h4>Transmitir significado às tecnologias assistivas</h4>
+    <p>Usar cores para adicionar significado para uma linha de tabela ou célula individual apenas fornece uma indicação visual, que não será transmitida para usuários de tecnologias assistivas – tais como leitores de telas. Assegure que informações indicadas por cores sejam óbvias em seu próprio conteúdo (o texto visível na  linha/célula da tabela relevante), ou está incluído através de meios alternativos, como texto adicional oculto com a classe <code>.sr-only</code>.</p>
   </div>
 
-  <h2 id="tables-responsive">Responsive tables</h2>
-  <p>Create responsive tables by wrapping any <code>.table</code> in <code>.table-responsive</code> to make them scroll horizontally on small devices (under 768px). When viewing on anything larger than 768px wide, you will not see any difference in these tables.</p>
+  <h2 id="tables-responsive">Tabela responsiva</h2>
+  <p>Criar tabelas responsivas envolvendo em qualquer <code>.table</code> no <code>.table-responsive</code> para fazê-los rolar horizontalmente em dispositivos pequenos (abaixo de 768px). Quando visualizar em algo maior do que 768px de largura, você não verá qualquer diferença nessas tabelas.</p>
 
   <div class="bs-callout bs-callout-warning" id="callout-tables-responsive-overflow">
     <h4>Vertical clipping/truncation</h4>
     <p>Responsive tables make use of <code>overflow-y: hidden</code>, which clips off any content that goes beyond the bottom or top edges of the table. In particular, this can clip off dropdown menus and other third-party widgets.</p>
   </div>
   <div class="bs-callout bs-callout-warning" id="callout-tables-responsive-ff-fieldset">
-    <h4>Firefox and fieldsets</h4>
-    <p>Firefox has some awkward fieldset styling involving <code>width</code> that interferes with the responsive table. This cannot be overriden without a Firefox-specific hack that we <strong>don't</strong> provide in Bootstrap:</p>
+    <h4>Firefox e fieldsets</h4>
+    <p>Firefox tem alguns estilos estranhos de fieldsets envolvendo <code>width</code> que interfere na tabela responsiva. Isso não pode ser sobrescrito sem um hack específico do Firefox que nós <strong>não</strong> fornecemos no Bootstrap:</p>
 {% highlight css %}
 @-moz-document url-prefix() {
   fieldset { display: table-cell; }
 }
 {% endhighlight %}
-    <p>For more information, read <a href="https://stackoverflow.com/questions/17408815/fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content/17863685#17863685">this Stack Overflow answer</a>.</p>
+    <p>Para mais informações, leia <a href="https://stackoverflow.com/questions/17408815/fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content/17863685#17863685">essas respostas de estouro de pilha</a>.</p>
   </div>
 
   <div class="bs-example" data-example-id="simple-responsive-table">
@@ -372,41 +372,41 @@
         <thead>
           <tr>
             <th>#</th>
-            <th>Table heading</th>
-            <th>Table heading</th>
-            <th>Table heading</th>
-            <th>Table heading</th>
-            <th>Table heading</th>
-            <th>Table heading</th>
+            <th>Cabeçalho da tabela</th>
+            <th>Cabeçalho da tabela</th>
+            <th>Cabeçalho da tabela</th>
+            <th>Cabeçalho da tabela</th>
+            <th>Cabeçalho da tabela</th>
+            <th>Cabeçalho da tabela</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
           </tr>
           <tr>
             <th scope="row">2</th>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
           </tr>
           <tr>
             <th scope="row">3</th>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
           </tr>
         </tbody>
       </table>
@@ -417,41 +417,41 @@
         <thead>
           <tr>
             <th>#</th>
-            <th>Table heading</th>
-            <th>Table heading</th>
-            <th>Table heading</th>
-            <th>Table heading</th>
-            <th>Table heading</th>
-            <th>Table heading</th>
+            <th>Cabeçalho da tabela</th>
+            <th>Cabeçalho da tabela</th>
+            <th>Cabeçalho da tabela</th>
+            <th>Cabeçalho da tabela</th>
+            <th>Cabeçalho da tabela</th>
+            <th>Cabeçalho da tabela</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
           </tr>
           <tr>
             <th scope="row">2</th>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
           </tr>
           <tr>
             <th scope="row">3</th>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
+            <td>Célula da tabela</td>
           </tr>
         </tbody>
       </table>
