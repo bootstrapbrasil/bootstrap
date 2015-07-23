@@ -158,82 +158,82 @@ Você pode usar a tag mark para <mark>destacar</mark> um texto.
   <p>Para e enfatização em linha ou blocos de texto, use a tag <code>&lt;small&gt;</code> para definir texto perto de 85% do manho do pai. Elementos de cabeçalho recebem sua própria <code>font-size</code> (tamanho de fonte) para aninhar elementos <code>&lt;small&gt;</code>.</p>
   <p>Você pode alternativamente usar um elemento em linha com <code>.small</code> no luagar de algum <code>&lt;small&gt;</code>.</p>
   <div class="bs-example" data-example-id="simple-small">
-    <p><small>Essa linha de texto é  destinada a ser tratada como impressão fina.</small></p>
+    <p><small>Essa linha de texto é destinada a ser tratada como impressão fina.</small></p>
   </div>
 {% highlight html %}
-<small>This line of text is meant to be treated as fine print.</small>
+<small>Essa linha de texto é destinada a ser tratada como impressão fina.</small>
 {% endhighlight %}
 
 
-  <h3>Bold</h3>
-  <p>For emphasizing a snippet of text with a heavier font-weight.</p>
+  <h3>Negrito</h3>
+  <p>Para enfatizar um trecho de texto com uma font-weight (peso de fonte) mais pesada.</p>
   <div class="bs-example" data-example-id="simple-strong">
-    <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+    <p>A seguir o trecho de texto é <strong>renderizado como texto em negrito</strong>.</p>
   </div>
 {% highlight html %}
-<strong>rendered as bold text</strong>
+<strong>renderiza como texto em negrito</strong>
 {% endhighlight %}
 
-  <h3>Italics</h3>
-  <p>For emphasizing a snippet of text with italics.</p>
+  <h3>Itálico</h3>
+  <p>Para enfatizar um trecho de texto em itálico.</p>
   <div class="bs-example" data-example-id="simple-em">
-    <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
+    <p>A seguir o trecho de texto é <em>renderizado como texto em itálico</em>.</p>
   </div>
 {% highlight html %}
-<em>rendered as italicized text</em>
+<em>renderizado como texto em itálico</em>
 {% endhighlight %}
 
   <div class="bs-callout bs-callout-info" id="callout-type-b-i-elems">
-    <h4>Alternate elements</h4>
-    <p>Feel free to use <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> in HTML5. <code>&lt;b&gt;</code> is meant to highlight words or phrases without conveying additional importance while <code>&lt;i&gt;</code> is mostly for voice, technical terms, etc.</p>
+    <h4>Elementos alternativos</h4>
+    <p>Sinta-se livre para usar <code>&lt;b&gt;</code> e <code>&lt;i&gt;</code> em HTML5. <code>&lt;b&gt;</code> é destinado para destacar palavras ou frases sem transmitir importância adicional enquanto <code>&lt;i&gt;</code> é principalmente para voz, termos técnicos, etc.</p>
   </div>
 
-  <h2 id="type-alignment">Alignment classes</h2>
-  <p>Easily realign text to components with text alignment classes.</p>
+  <h2 id="type-alignment">Classes de alinhamento</h2>
+  <p>Realinhe texto facilmente para componentes com classes de alinhamento de texto.</p>
   <div class="bs-example" data-example-id="text-alignment">
-    <p class="text-left">Left aligned text.</p>
-    <p class="text-center">Center aligned text.</p>
-    <p class="text-right">Right aligned text.</p>
-    <p class="text-justify">Justified text.</p>
-    <p class="text-nowrap">No wrap text.</p>
+    <p class="text-left">Texto alinhado à esquerda.</p>
+    <p class="text-center">Texto alinhado ao centro.</p>
+    <p class="text-right">Texto alinhado à direita.</p>
+    <p class="text-justify">Texto justificado.</p>
+    <p class="text-nowrap">Texto sem alinhamento.</p>
   </div>
 {% highlight html %}
-<p class="text-left">Left aligned text.</p>
-<p class="text-center">Center aligned text.</p>
-<p class="text-right">Right aligned text.</p>
-<p class="text-justify">Justified text.</p>
-<p class="text-nowrap">No wrap text.</p>
+<p class="text-left">Texto alinhado à esquerda.</p>
+<p class="text-center">Texto alinhado ao centro.</p>
+<p class="text-right">Texto alinhado à direita.</p>
+<p class="text-justify">Texto justificado.</p>
+<p class="text-nowrap">Texto sem alinhamento.</p>
 {% endhighlight %}
 
-  <h2 id="type-transformation">Transformation classes</h2>
-  <p>Transform text in components with text capitalization classes.</p>
+  <h2 id="type-transformation">Classes de transformação</h2>
+  <p>Transforme textos em componentes com classes capitalização de texto.</p>
   <div class="bs-example" data-example-id="text-capitalization">
-    <p class="text-lowercase">Lowercased text.</p>
-    <p class="text-uppercase">Uppercased text.</p>
-    <p class="text-capitalize">Capitalized text.</p>
+    <p class="text-lowercase">Texto em minúsculo.</p>
+    <p class="text-uppercase">Texto em maiúsculo.</p>
+    <p class="text-capitalize">Texto capitalizado.</p>
   </div>
 {% highlight html %}
-<p class="text-lowercase">Lowercased text.</p>
-<p class="text-uppercase">Uppercased text.</p>
-<p class="text-capitalize">Capitalized text.</p>
+<p class="text-lowercase">Texto em minúsculo.</p>
+<p class="text-uppercase">Texto em maiúsculo.</p>
+<p class="text-capitalize">Texto capitalizado.</p>
 {% endhighlight %}
 
   <!-- Abbreviations -->
-  <h2 id="type-abbreviations">Abbreviations</h2>
-  <p>Stylized implementation of HTML's <code>&lt;abbr&gt;</code> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations with a <code>title</code> attribute have a light dotted bottom border and a help cursor on hover, providing additional context on hover and to users of assistive technologies.</p>
+  <h2 id="type-abbreviations">Abreviações</h2>
+  <p>Implementação estilizada de HTML do elemento <code>&lt;abbr&gt;</code> para abreviações e siglas para mostrar a versão expandida em hover. Abreviação com um atributo <code>title</code> tem uma clara borda inferior pontilhada e um cursor de ajuda no hover, fornecendo contexto adicional no hover e para usuários de tecnologias assistivas.</p>
 
-  <h3>Basic abbreviation</h3>
+  <h3>Abreviação básica</h3>
   <div class="bs-example" data-example-id="simple-abbr">
-    <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+    <p>Uma abreviação da palavras número é <abbr title="número">num</abbr>.</p>
   </div>
 {% highlight html %}
-<abbr title="attribute">attr</abbr>
+<abbr title="número">num</abbr>
 {% endhighlight %}
 
-  <h3>Initialism</h3>
-  <p>Add <code>.initialism</code> to an abbreviation for a slightly smaller font-size.</p>
+  <h3>Iniciais</h3>
+  <p>Adicione <code>.initialism</code> para uma abreviação com font-size ligeiramente menor.</p>
   <div class="bs-example" data-example-id="simple-initialism">
-    <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr> is the best thing since sliced bread.</p>
+    <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr> é a melhor coisa desde o pão fatiado.</p>
   </div>
 {% highlight html %}
 <abbr title="HyperText Markup Language" class="initialism">HTML</abbr>
@@ -241,8 +241,8 @@ Você pode usar a tag mark para <mark>destacar</mark> um texto.
 
 
   <!-- Addresses -->
-  <h2 id="type-addresses">Addresses</h2>
-  <p>Present contact information for the nearest ancestor or the entire body of work. Preserve formatting by ending all lines with <code>&lt;br&gt;</code>.</p>
+  <h2 id="type-addresses">Endereços</h2>
+  <p>Informações de contato presentes para o ancestral mais próximo ou o corpo inteiro de trabalho. Preserve formatação ao finalizar todas as linhas com <code>&lt;br&gt;</code>.</p>
   <div class="bs-example" data-example-id="simple-address">
     <address>
       <strong>Twitter, Inc.</strong><br>
@@ -251,7 +251,7 @@ Você pode usar a tag mark para <mark>destacar</mark> um texto.
       <abbr title="Phone">P:</abbr> (123) 456-7890
     </address>
     <address>
-      <strong>Full Name</strong><br>
+      <strong>Nome completo</strong><br>
       <a href="mailto:#">first.last@example.com</a>
     </address>
   </div>
@@ -264,18 +264,18 @@ Você pode usar a tag mark para <mark>destacar</mark> um texto.
 </address>
 
 <address>
-  <strong>Full Name</strong><br>
+  <strong>Nome completo</strong><br>
   <a href="mailto:#">first.last@example.com</a>
 </address>
 {% endhighlight %}
 
 
   <!-- Blockquotes -->
-  <h2 id="type-blockquotes">Blockquotes</h2>
-  <p>For quoting blocks of content from another source within your document.</p>
+  <h2 id="type-blockquotes">Blockquotes (bloco de citações)</h2>
+  <p>Para blocos de citações de conteúdo de outra fonte dentro de seu documento.</p>
 
-  <h3>Default blockquote</h3>
-  <p>Wrap <code>&lt;blockquote&gt;</code> around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote. For straight quotes, we recommend a <code>&lt;p&gt;</code>.</p>
+  <h3>Blockquote padrão</h3>
+  <p>Envolva <code>&lt;blockquote&gt;</code> ao redor de qualquer <abbr title="HyperText Markup Language">HTML</abbr> como uma citação. Para citações diretas, nós recomendamos um <code>&lt;p&gt;</code>.</p>
   <div class="bs-example" data-example-id="simple-blockquote">
     <blockquote>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
@@ -287,30 +287,30 @@ Você pode usar a tag mark para <mark>destacar</mark> um texto.
 </blockquote>
 {% endhighlight %}
 
-  <h3>Blockquote options</h3>
-  <p>Style and content changes for simple variations on a standard <code>&lt;blockquote&gt;</code>.</p>
+  <h3>Opções de blockquote</h3>
+  <p>Estilo e mudanças de conteúdo para variações simples em um norma <code>&lt;blockquote&gt;</code>.</p>
 
-  <h4>Naming a source</h4>
-  <p>Add a <code>&lt;footer&gt;</code> for identifying the source. Wrap the name of the source work in <code>&lt;cite&gt;</code>.</p>
+  <h4>Nomeando uma fonte</h4>
+  <p>Adicione um <code>&lt;footer&gt;</code> (rodapé) para identificar uma fonte. Envolva o nome da fonte do trabalho em <code>&lt;cite&gt;</code>.</p>
   <div class="bs-example" data-example-id="blockquote-cite">
     <blockquote>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      <footer>Alguém famoso em <cite title="Título da fonte">Título da fonte</cite></footer>
     </blockquote>
   </div>
 {% highlight html %}
 <blockquote>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-  <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+  <footer>Alguém famoso em <cite title="Título da fonte">Título da fonte</cite></footer>
 </blockquote>
 {% endhighlight %}
 
-  <h4>Alternate displays</h4>
-  <p>Add <code>.blockquote-reverse</code> for a blockquote with right-aligned content.</p>
+  <h4>Exibição alternativa</h4>
+  <p>Adicione <code>.blockquote-reverse</code> para uma caixa de citação (blockquote) com conteúdo alinhado à direita.</p>
   <div class="bs-example" style="overflow: hidden;" data-example-id="blockquote-reverse">
     <blockquote class="blockquote-reverse">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      <footer>Alguém famoso em <cite title="Título da fonte">Título da fonte</cite></footer>
     </blockquote>
   </div>
 {% highlight html %}
@@ -321,10 +321,10 @@ Você pode usar a tag mark para <mark>destacar</mark> um texto.
 
 
   <!-- Lists -->
-  <h2 id="type-lists">Lists</h2>
+  <h2 id="type-lists">Listas</h2>
 
-  <h3>Unordered</h3>
-  <p>A list of items in which the order does <em>not</em> explicitly matter.</p>
+  <h3>Não-ordenada</h3>
+  <p>Uma lista de itens em que a ordem <em>não</em> tem importância expor.</p>
   <div class="bs-example" data-example-id="simple-ul">
     <ul>
       <li>Lorem ipsum dolor sit amet</li>
@@ -351,7 +351,7 @@ Você pode usar a tag mark para <mark>destacar</mark> um texto.
 {% endhighlight %}
 
   <h3>Ordered</h3>
-  <p>A list of items in which the order <em>does</em> explicitly matter.</p>
+  <p>Uma lista de itens em que a ordem <em>tem</em> importância em expor.</p>
   <div class="bs-example" data-example-id="simple-ol">
     <ol>
       <li>Lorem ipsum dolor sit amet</li>
@@ -370,8 +370,8 @@ Você pode usar a tag mark para <mark>destacar</mark> um texto.
 </ol>
 {% endhighlight %}
 
-  <h3>Unstyled</h3>
-  <p>Remove the default <code>list-style</code> and left margin on list items (immediate children only). <strong>This only applies to immediate children list items</strong>, meaning you will need to add the class for any nested lists as well.</p>
+  <h3>Não estilizado</h3>
+  <p>Remova o padrão da <code>list-style</code> (estilo da lista) e margem esquerda na lista de itens (Apenas para filhos imediatos). <strong>Isso apenas se aplica a filhos imediatos na lista de itens</strong>, isso significa que você precisará adicionar a classe para qualquer lista alinhada também.</p>
   <div class="bs-example" data-example-id="unstyled-list">
     <ul class="list-unstyled">
       <li>Lorem ipsum dolor sit amet</li>
@@ -397,8 +397,8 @@ Você pode usar a tag mark para <mark>destacar</mark> um texto.
 </ul>
 {% endhighlight %}
 
-  <h3>Inline</h3>
-  <p>Place all list items on a single line with <code>display: inline-block;</code> and some light padding.</p>
+  <h3>Em linha</h3>
+  <p>Coloque todos os itens da lista em uma única linha com <code>display: inline-block;</code> e algum espaçamento aparente.</p>
   <div class="bs-example" data-example-id="list-inline">
     <ul class="list-inline">
       <li>Lorem ipsum</li>
@@ -412,12 +412,12 @@ Você pode usar a tag mark para <mark>destacar</mark> um texto.
 </ul>
 {% endhighlight %}
 
-  <h3>Description</h3>
-  <p>A list of terms with their associated descriptions.</p>
+  <h3>Descrição</h3>
+  <p>Uma lista de termos como suas descrições associadas.</p>
   <div class="bs-example" data-example-id="simple-dl">
     <dl>
-      <dt>Description lists</dt>
-      <dd>A description list is perfect for defining terms.</dd>
+      <dt>Lista de descrição</dt>
+      <dd>Uma lista de descrição é perfeita para definição de termos.</dd>
       <dt>Euismod</dt>
       <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
       <dd>Donec id elit non mi porta gravida at eget metus.</dd>
@@ -432,12 +432,12 @@ Você pode usar a tag mark para <mark>destacar</mark> um texto.
 </dl>
 {% endhighlight %}
 
-  <h4>Horizontal description</h4>
-  <p>Make terms and descriptions in <code>&lt;dl&gt;</code> line up side-by-side. Starts off stacked like default <code>&lt;dl&gt;</code>s, but when the navbar expands, so do these.</p>
+  <h4>Descrição horizontal</h4>
+  <p>Faça termos e descrições em <code>&lt;dl&gt;</code> alinhando lado a lado. Comece empilhando como padrão <code>&lt;dl&gt;</code>s, mas quando a navbar (barra de navegação) aumentar, assim como estes.</p>
   <div class="bs-example" data-example-id="horizontal-dl">
     <dl class="dl-horizontal">
-      <dt>Description lists</dt>
-      <dd>A description list is perfect for defining terms.</dd>
+      <dt>Listas de descrição</dt>
+      <dd>Uma lista descrição é perfeita para definição de termos.</dd>
       <dt>Euismod</dt>
       <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
       <dd>Donec id elit non mi porta gravida at eget metus.</dd>
@@ -455,7 +455,7 @@ Você pode usar a tag mark para <mark>destacar</mark> um texto.
 {% endhighlight %}
 
   <div class="bs-callout bs-callout-info" id="callout-type-dl-truncate">
-    <h4>Auto-truncating</h4>
-    <p>Horizontal description lists will truncate terms that are too long to fit in the left column with <code>text-overflow</code>. In narrower viewports, they will change to the default stacked layout.</p>
+    <h4>Auto-truncado</h4>
+    <p>Descrição listas horizontais truncarão termos que são que são muito grandes para caber na coluna esquerda com <code>text-overflow</code>. Em janelas de exibição mais estreitas, eles mudarão para o layout de empilhamento padrão.</p>
   </div>
 </div>
