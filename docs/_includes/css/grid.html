@@ -10,30 +10,30 @@
     <li>Use linhas para criar grupos horizontais de colunas.</li>
     <li>Contenteúdo deve ser localizado dentro das colunas, e apenas colunas podem ser filhas imediatas de linhas.</li>
     <li>Classes de grid predefinidos como <code>.row</code> e <code>.col-xs-4</code> estão disponíveis para fazer rápidamente layouts em grid. Less mixins também podem ser usados para mais layouts semânticos.</li>
-    <li>Columns create gutters (gaps between column content) via <code>padding</code>. That padding is offset in rows for the first and last column via negative margin on <code>.row</code>s.</li>
+    <li>Crie colunas calhas (lacunas entre colunas com conteúdo) através de <code>padding</code>. Esse padding é deslocado em linhas para a primeira e última coluna por margem negativa nos <code>.row</code>s.</li>
     <li>The negative margin is why the examples below are outdented. It's so that content within grid columns is lined up with non-grid content.</li>
     <li>Grid columns are created by specifying the number of twelve available columns you wish to span. For example, three equal columns would use three <code>.col-xs-4</code>.</li>
-    <li>If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.</li>
-    <li>Grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override grid classes targeted at smaller devices. Therefore, e.g. applying any <code>.col-md-*</code> class to an element will not only affect its styling on medium devices but also on large devices if a <code>.col-lg-*</code> class is not present.</li>
+    <li>Se mais que 12 colunas são colocadas dentro de uma única linha, cada grupo de colunas extras serão, como uma unidade, colocadas dentro de uma nova linha.</li>
+    <li>Classes de grid aplicadas para dispositivos com largura de tela maiores ou iguais aos tamanhos de ponto de parada, e sobrescreve classes de grid direcionadas em dispositivos menores. Portanto, por exemplo, aplicando qualquer classe <code>.col-md-*</code> para um elementos não irá apenas afetar seu estilo em dispositivos médios mas também em dispositivos grandes se uma classe <code>.col-lg-*</code>  não está presente.</li>
   </ul>
-  <p>Look to the examples for applying these principles to your code.</p>
+  <p>Veja os exemplos para aplicação destes princípios para seu código.</p>
 
   <h2 id="grid-media-queries">Media queries</h2>
-  <p>We use the following media queries in our Less files to create the key breakpoints in our grid system.</p>
+  <p>Nós usamos as media queries seguintes em nossos arquivos Less para criar uma chave de ponto de parada em nosso sistema de grid.</p>
 {% highlight scss %}
-/* Extra small devices (phones, less than 768px) */
+/* Dispositivos extra pequenos (extra small) (celulares, menores que 768px) */
 /* No media query since this is the default in Bootstrap */
 
-/* Small devices (tablets, 768px and up) */
+/* Dispositivos pequenos (tablets, 768px e superiores) */
 @media (min-width: @screen-sm-min) { ... }
 
-/* Medium devices (desktops, 992px and up) */
+/* Dispositivos médios (desktops, 992px e superiores) */
 @media (min-width: @screen-md-min) { ... }
 
-/* Large devices (large desktops, 1200px and up) */
+/* Dispositivos grandes (desktops grandes, 1200px e superiores) */
 @media (min-width: @screen-lg-min) { ... }
 {% endhighlight %}
-  <p>We occasionally expand on these media queries to include a <code>max-width</code> to limit CSS to a narrower set of devices.</p>
+  <p>Nós ocasionalmente aumentamos nessas media queries para incluir uma <code>max-width</code> para limitar o CSS para uma definição restrita de dispositivos.</p>
 {% highlight scss %}
 @media (max-width: @screen-xs-max) { ... }
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }
@@ -41,84 +41,84 @@
 @media (min-width: @screen-lg-min) { ... }
 {% endhighlight %}
 
-  <h2 id="grid-options">Grid options</h2>
-  <p>See how aspects of the Bootstrap grid system work across multiple devices with a handy table.</p>
+  <h2 id="grid-options">Opções de grid</h2>
+  <p>Veja como os aspectos do sistema de grid do Bootstrap trabalha através de múltiplos dispositivos com uma tabela prática.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
       <thead>
         <tr>
           <th></th>
           <th>
-            Extra small devices
-            <small>Phones (&lt;768px)</small>
+            Dispositivos extra pequenos
+            <small>Telefones (&lt;768px)</small>
           </th>
           <th>
-            Small devices
+            Dispositivos pequenos
             <small>Tablets (&ge;768px)</small>
           </th>
           <th>
-            Medium devices
+            Dispositivos médios
             <small>Desktops (&ge;992px)</small>
           </th>
           <th>
-            Large devices
+            Dispositivos grandes
             <small>Desktops (&ge;1200px)</small>
           </th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th class="text-nowrap" scope="row">Grid behavior</th>
-          <td>Horizontal at all times</td>
-          <td colspan="3">Collapsed to start, horizontal above breakpoints</td>
+          <th class="text-nowrap" scope="row">Comportamento do grid</th>
+          <td>Horizontal em todos os momentos</td>
+          <td colspan="3">Colapsa ao princípio, horizontal acima de breakpoints</td>
         </tr>
         <tr>
-          <th class="text-nowrap" scope="row">Container width</th>
-          <td>None (auto)</td>
+          <th class="text-nowrap" scope="row">Largura do container</th>
+          <td>nenhum (auto)</td>
           <td>750px</td>
           <td>970px</td>
           <td>1170px</td>
         </tr>
         <tr>
-          <th class="text-nowrap" scope="row">Class prefix</th>
+          <th class="text-nowrap" scope="row">Prefixo de classe</th>
           <td><code>.col-xs-</code></td>
           <td><code>.col-sm-</code></td>
           <td><code>.col-md-</code></td>
           <td><code>.col-lg-</code></td>
         </tr>
         <tr>
-          <th class="text-nowrap" scope="row"># of columns</th>
+          <th class="text-nowrap" scope="row">número de colunas</th>
           <td colspan="4">12</td>
         </tr>
         <tr>
-          <th class="text-nowrap" scope="row">Column width</th>
+          <th class="text-nowrap" scope="row">Largura da coluna</th>
           <td class="text-muted">Auto</td>
           <td>~62px</td>
           <td>~81px</td>
           <td>~97px</td>
         </tr>
         <tr>
-          <th class="text-nowrap" scope="row">Gutter width</th>
-          <td colspan="4">30px (15px on each side of a column)</td>
+          <th class="text-nowrap" scope="row">Largura da calha</th>
+          <td colspan="4">30px (15px em cada lada da coluna)</td>
         </tr>
         <tr>
-          <th class="text-nowrap" scope="row">Nestable</th>
-          <td colspan="4">Yes</td>
+          <th class="text-nowrap" scope="row">Encaixável</th>
+          <td colspan="4">Sim</td>
         </tr>
         <tr>
-          <th class="text-nowrap" scope="row">Offsets</th>
-          <td colspan="4">Yes</td>
+          <th class="text-nowrap" scope="row">Distância</th>
+          <td colspan="4">Sim</td>
         </tr>
         <tr>
-          <th class="text-nowrap" scope="row">Column ordering</th>
-          <td colspan="4">Yes</td>
+          <th class="text-nowrap" scope="row">Ordenação de colunas</th>
+          <td colspan="4">Sim</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <h2 id="grid-example-basic">Example: Stacked-to-horizontal</h2>
-  <p>Using a single set of <code>.col-md-*</code> grid classes, you can create a basic grid system that starts out stacked on mobile devices and tablet devices (the extra small to small range) before becoming horizontal on desktop (medium) devices. Place grid columns in any <code>.row</code>.</p>
+  <h2 id="grid-example-basic">Exemplo: Empilhamento horizontal</h2>
+  <p>Usando uma única definição de classe de grid <code>.col-md-*</code>, você pode criar um sistema de grid bádico que inicia fora da pilha nos dispositivos móveis e tablets (o extra pequeno para alcance pequeno) antes de se tornar horizontal em dispositivos desktop (médio). Coloque colunas de grid em algum <code>.row</code>.</p>
   <div class="bs-docs-grid">
     <div class="row show-grid">
       <div class="col-md-1">.col-md-1</div>
@@ -178,8 +178,8 @@
 </div>
 {% endhighlight %}
 
-  <h2 id="grid-example-fluid">Example: Fluid container</h2>
-  <p>Turn any fixed-width grid layout into a full-width layout by changing your outermost <code>.container</code> to <code>.container-fluid</code>.</p>
+  <h2 id="grid-example-fluid">Exemplo: Container fluido</h2>
+  <p>Torne qualquer largura fixa (fixed-width) de layout de grid dentro de um layout de largura inteira (full-width) através de mudança externa no <code>.container</code> para <code>.container-fluid</code>.</p>
 {% highlight html %}
 <div class="container-fluid">
   <div class="row">
@@ -188,7 +188,7 @@
 </div>
 {% endhighlight %}
 
-  <h2 id="grid-example-mixed">Example: Mobile and desktop</h2>
+  <h2 id="grid-example-mixed">Exemplo: Celular e desktop</h2>
   <p>Don't want your columns to simply stack in smaller devices? Use the extra small and medium device grid classes by adding <code>.col-xs-*</code> <code>.col-md-*</code> to your columns. See the example below for a better idea of how it all works.</p>
   <div class="bs-docs-grid">
     <div class="row show-grid">
