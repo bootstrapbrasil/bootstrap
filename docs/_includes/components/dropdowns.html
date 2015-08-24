@@ -1,10 +1,10 @@
 <div class="bs-docs-section">
   <h1 id="dropdowns" class="page-header">Dropdowns</h1>
 
-  <p class="lead">Toggleable, contextual menu for displaying lists of links. Made interactive with the <a href="../javascript/#dropdowns">dropdown JavaScript plugin</a>.</p>
+  <p class="lead">Menu contextual, aleternável para apresentação de links em lista. Faz interação com o <a href="../javascript/#dropdowns">plugin dropdown JavaScript</a>.</p>
 
-  <h2 id="dropdowns-example">Example</h2>
-  <p>Wrap the dropdown's trigger and the dropdown menu within <code>.dropdown</code>, or another element that declares <code>position: relative;</code>. Then add the menu's HTML.</p>
+  <h2 id="dropdowns-example">Exemplo</h2>
+  <p>Envolva o gatilho do dropdown e o menu dropdown dentro da classe <code>.dropdown</code>, ou outro elemento que declara <code>position: relative;</code>. Então, adicione o HTML do menu.</p>
   <div class="bs-example" data-example-id="static-dropdown">
     <div class="dropdown clearfix">
       <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -12,9 +12,9 @@
         <span class="caret"></span>
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-        <li><a href="#">Action</a></li>
-        <li><a href="#">Another action</a></li>
-        <li><a href="#">Something else here</a></li>
+        <li><a href="#">Ação</a></li>
+        <li><a href="#">Outra ação</a></li>
+        <li><a href="#">Algo mais aqui</a></li>
       </ul>
     </div>
   </div><!-- /example -->
@@ -25,15 +25,15 @@
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li><a href="#">Separated link</a></li>
+    <li><a href="#">Ação</a></li>
+    <li><a href="#">Outra ação</a></li>
+    <li><a href="#">Algo mais aqui</a></li>
+    <li><a href="#">Link separado</a></li>
   </ul>
 </div>
 {% endhighlight %}
 
-  <p>Dropdown menus can be changed to expand upwards (instead of downwards) by adding <code>.dropup</code> to the parent.</p>
+  <p>Menus dropdown podem ser mudados para expandir para cima (ao ínvés de para baixo) adicionando <code>.dropup</code> ao elemento pai.</p>
   <div class="bs-example" data-example-id="static-dropup">
     <div class="dropup clearfix">
       <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -41,9 +41,9 @@
         <span class="caret"></span>
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-        <li><a href="#">Action</a></li>
-        <li><a href="#">Another action</a></li>
-        <li><a href="#">Something else here</a></li>
+        <li><a href="#">Ação</a></li>
+        <li><a href="#">Outra ação</a></li>
+        <li><a href="#">Algo mais aqui</a></li>
       </ul>
     </div>
   </div><!-- /example -->
@@ -54,23 +54,23 @@
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li><a href="#">Separated link</a></li>
+    <li><a href="#">Ação</a></li>
+    <li><a href="#">Outra ação</a></li>
+    <li><a href="#">Algo mais aqui</a></li>
+    <li><a href="#">Link separado</a></li>
   </ul>
 </div>
 {% endhighlight %}
 
-  <h2 id="dropdowns-alignment">Alignment</h2>
-  <p>By default, a dropdown menu is automatically positioned 100% from the top and along the left side of its parent. Add <code>.dropdown-menu-right</code> to a <code>.dropdown-menu</code> to right align the dropdown menu.</p>
+  <h2 id="dropdowns-alignment">Alinhamento</h2>
+  <p>Por padrão, um menu dropdown é automaticamente posicionado 100% do topo e ao longo da lateral esquerda de seu pai. Adicione <code>.dropdown-menu-right</code> a um <code>.dropdown-menu</code> para alinhar à direita o menu dropdown.</p>
   <div class="bs-callout bs-callout-warning" id="callout-dropdown-positioning">
-    <h4>May require additional positioning</h4>
-    <p>Dropdowns are automatically positioned via CSS within the normal flow of the document. This means dropdowns may be cropped by parents with certain <code>overflow</code> properties or appear out of bounds of the viewport. Address these issues on your own as they arise.</p>
+    <h4>Pode requerer posicionamento adicional</h4>
+    <p>Dropdowns são automaticamente posicionados via CSS dentro do fluxo normal do documento. Isso significa que dropdowns podem ser cortados por pais com certas propriedades <code>overflow</code> ou mostrados fora do campo da janela de exibição. Direcione estas questões você mesmo como elas surgirem.</p>
   </div>
   <div class="bs-callout bs-callout-warning" id="callout-dropdown-pull-right">
-    <h4>Deprecated <code>.pull-right</code> alignment</h4>
-    <p>As of v3.1.0, we've deprecated <code>.pull-right</code> on dropdown menus. To right-align a menu, use <code>.dropdown-menu-right</code>. Right-aligned nav components in the navbar use a mixin version of this class to automatically align the menu. To override it, use <code>.dropdown-menu-left</code>.</p>
+    <h4>Alinhamento <code>.pull-right</code> obsoleto</h4>
+    <p>A partir da v3.1.0, nós tiramos <code>.pull-right</code> do menu dropdown. Para alinhar um menu à direita, use <code>.dropdown-menu-right</code>. Alinhe a direita o componentes de navegação na navbar usando uma versão de mixin desta classe para alinhar automaticamente o menu. Para inverso disso, use <code>.dropdown-menu-left</code>.</p>
   </div>
 {% highlight html %}
 <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dLabel">
@@ -79,7 +79,7 @@
 {% endhighlight %}
 
   <h2 id="dropdowns-headers">Headers</h2>
-  <p>Add a header to label sections of actions in any dropdown menu.</p>
+  <p>Adicione um header para rotular seções de ações em qualquer menu dropdown.</p>
   <div class="bs-example">
     <div class="dropdown clearfix">
       <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -87,25 +87,25 @@
         <span class="caret"></span>
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
-        <li class="dropdown-header">Dropdown header</li>
-        <li><a href="#">Action</a></li>
-        <li><a href="#">Another action</a></li>
-        <li><a href="#">Something else here</a></li>
-        <li class="dropdown-header">Dropdown header</li>
-        <li><a href="#">Separated link</a></li>
+        <li class="dropdown-header">Cabeçalho dropdown</li>
+        <li><a href="#">Ação</a></li>
+        <li><a href="#">Outra ação</a></li>
+        <li><a href="#">Algo mais aqui</a></li>
+        <li class="dropdown-header">Cabeçalho dropdown</li>
+        <li><a href="#">Link separado</a></li>
       </ul>
     </div>
   </div><!-- /example -->
 {% highlight html %}
 <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
   ...
-  <li class="dropdown-header">Dropdown header</li>
+  <li class="dropdown-header">Cabeçalho dropdown</li>
   ...
 </ul>
 {% endhighlight %}
 
-  <h2 id="dropdowns-divider">Divider</h2>
-  <p>Add a divider to separate series of links in a dropdown menu.</p>
+  <h2 id="dropdowns-divider">Divisor</h2>
+  <p>Adicione um divisor para separar séries de links em um menu dropdown.</p>
   <div class="bs-example">
     <div class="dropdown clearfix">
       <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -113,11 +113,11 @@
         <span class="caret"></span>
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
-        <li><a href="#">Action</a></li>
-        <li><a href="#">Another action</a></li>
-        <li><a href="#">Something else here</a></li>
+        <li><a href="#">Ação</a></li>
+        <li><a href="#">Outra Ação</a></li>
+        <li><a href="#">Algo mais aqui</a></li>
         <li role="separator" class="divider"></li>
-        <li><a href="#">Separated link</a></li>
+        <li><a href="#">Link separado</a></li>
       </ul>
     </div>
   </div><!-- /example -->
@@ -129,8 +129,8 @@
 </ul>
 {% endhighlight %}
 
-  <h2 id="dropdowns-disabled">Disabled menu items</h2>
-  <p>Add <code>.disabled</code> to a <code>&lt;li&gt;</code> in the dropdown to disable the link.</p>
+  <h2 id="dropdowns-disabled">Itens de menu desabilitado</h2>
+  <p>Adicione <code>.disabled</code> a um <code>&lt;li&gt;</code> no dropdown para desabilitar o link.</p>
   <div class="bs-example">
     <div class="dropdown clearfix">
       <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -138,17 +138,17 @@
         <span class="caret"></span>
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenu4">
-        <li><a href="#">Regular link</a></li>
-        <li class="disabled"><a href="#">Disabled link</a></li>
-        <li><a href="#">Another link</a></li>
+        <li><a href="#">Link regular</a></li>
+        <li class="disabled"><a href="#">Link desabilitado</a></li>
+        <li><a href="#">Outro link</a></li>
       </ul>
     </div>
   </div><!-- /example -->
 {% highlight html %}
 <ul class="dropdown-menu" aria-labelledby="dropdownMenu4">
-  <li><a href="#">Regular link</a></li>
-  <li class="disabled"><a href="#">Disabled link</a></li>
-  <li><a href="#">Another link</a></li>
+  <li><a href="#">Link regular</a></li>
+  <li class="disabled"><a href="#">Link desabilitado</a></li>
+  <li><a href="#">Outro link</a></li>
 </ul>
 {% endhighlight %}
 </div>
