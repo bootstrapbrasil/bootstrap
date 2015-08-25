@@ -1,7 +1,7 @@
 <div class="bs-docs-section">
-  <h1 id="btn-groups" class="page-header">Button groups</h1>
+  <h1 id="btn-groups" class="page-header">Grupo de botões</h1>
 
-  <p class="lead">Group a series of buttons together on a single line with the button group. Add on optional JavaScript radio and checkbox style behavior with <a href="../javascript/#buttons">our buttons plugin</a>.</p>
+  <p class="lead">Agrupe uma série de botões juntos numa única linha com o grupo de botões. Adicione um JavaScript opcional de estilo de comportamento de radio e checkbox com <a href="../javascript/#buttons">nosso plugin de botões</a>.</p>
 
   <div class="bs-callout bs-callout-warning" id="callout-btn-group-tooltips">
     <h4>Tooltips &amp; popovers in button groups require special setting</h4>
@@ -9,31 +9,31 @@
   </div>
 
   <div class="bs-callout bs-callout-warning" id="callout-btn-group-accessibility">
-    <h4>Ensure correct <code>role</code> and provide a label</h4>
-    <p>In order for assistive technologies – such as screen readers – to convey that a series of buttons is grouped, an appropriate <code>role</code> attribute needs to be provided. For button groups, this would be <code>role="group"</code>, while toolbars should have a <code>role="toolbar"</code>.</p>
-    <p>One exception are groups which only contain a single control (for instance the <a href="#btn-groups-justified">justified button groups</a> with <code>&lt;button&gt;</code> elements) or a dropdown.</p>
-    <p>In addition, groups and toolbars should be given an explicit label, as most assistive technologies will otherwise not announce them, despite the presence of the correct <code>role</code> attribute. In the examples provided here, we use <code>aria-label</code>, but alternatives such as <code>aria-labelledby</code> can also be used.</p>
+    <h4>Certifique-se de acertar um <code>role</code> e fornecer uma etiqueta</h4>
+    <p>Para que tecnologias de apoio – assim como leitores de tela – transmitam uma série de botões agrupados, um atributo apropriado <code>role</code> precisa ser fornecido. Para grupos de botões, isso precisa ser <code>role="group"</code>, enquanto toolbars (barra de ferramentas) devem ter um <code>role="toolbar"</code>.</p>
+    <p>Uma exceção são grupos que contém apenas um único controle (por exemplo o <a href="#btn-groups-justified">jgrupos de botões justificados</a> com elemento <code>&lt;button&gt;</code>) ou um dropdown.</p>
+    <p>In addition, groups and toolbars should be given an explicit label, as most assistive technologies will otherwise not announce them, despite the presence of the correct <code>role</code> attribute. Em um exemplo fornecido aqui, nós usamos <code>aria-label</code>, mas alternativas tal como <code>aria-labelledby</code> podem também ser usadas.</p>
   </div>
 
-  <h2 id="btn-groups-single">Basic example</h2>
-  <p>Wrap a series of buttons with <code>.btn</code> in <code>.btn-group</code>.</p>
+  <h2 id="btn-groups-single">Exemplo básico</h2>
+  <p>Envolva uma série de botões com <code>.btn</code> em <code>.btn-group</code>.</p>
   <div class="bs-example" data-example-id="simple-button-group">
     <div class="btn-group" role="group" aria-label="Basic example">
-      <button type="button" class="btn btn-default">Left</button>
-      <button type="button" class="btn btn-default">Middle</button>
-      <button type="button" class="btn btn-default">Right</button>
+      <button type="button" class="btn btn-default">Esquerda</button>
+      <button type="button" class="btn btn-default">Meio</button>
+      <button type="button" class="btn btn-default">Direita</button>
     </div>
   </div>
 {% highlight html %}
 <div class="btn-group" role="group" aria-label="...">
-  <button type="button" class="btn btn-default">Left</button>
-  <button type="button" class="btn btn-default">Middle</button>
-  <button type="button" class="btn btn-default">Right</button>
+  <button type="button" class="btn btn-default">Esquerda</button>
+  <button type="button" class="btn btn-default">Meio</button>
+  <button type="button" class="btn btn-default">Direita</button>
 </div>
 {% endhighlight %}
 
-  <h2 id="btn-groups-toolbar">Button toolbar</h2>
-  <p>Combine sets of <code>&lt;div class="btn-group"&gt;</code> into a <code>&lt;div class="btn-toolbar"&gt;</code> for more complex components.</p>
+  <h2 id="btn-groups-toolbar">Botão toolbar (barra de ferramentas)</h2>
+  <p>Combine conjuntos de <code>&lt;div class="btn-group"&gt;</code> dentro de um <code>&lt;div class="btn-toolbar"&gt;</code> para mais componentes complexos.</p>
   <div class="bs-example" data-example-id="simple-button-toolbar">
     <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
       <div class="btn-group" role="group" aria-label="First group">
@@ -60,31 +60,31 @@
 </div>
 {% endhighlight %}
 
-  <h2 id="btn-groups-sizing">Sizing</h2>
-  <p>Instead of applying button sizing classes to every button in a group, just add <code>.btn-group-*</code> to each <code>.btn-group</code>, including when nesting multiple groups.</p>
+  <h2 id="btn-groups-sizing">Dimensionamento</h2>
+  <p>Ao invés de aplicar classes de dimensionamento de botões para todos os botões em um grupo, basta adicionar <code>.btn-group-*</code> a cada <code>.btn-group</code>, incluindo quando aninham multiplos grupos.</p>
   <div class="bs-example" data-example-id="button-group-sizing">
     <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
-      <button type="button" class="btn btn-default">Left</button>
-      <button type="button" class="btn btn-default">Middle</button>
-      <button type="button" class="btn btn-default">Right</button>
+      <button type="button" class="btn btn-default">Esquerda</button>
+      <button type="button" class="btn btn-default">Meio</button>
+      <button type="button" class="btn btn-default">Direita</button>
     </div>
     <br>
     <div class="btn-group" role="group" aria-label="Default button group">
-      <button type="button" class="btn btn-default">Left</button>
-      <button type="button" class="btn btn-default">Middle</button>
-      <button type="button" class="btn btn-default">Right</button>
+      <button type="button" class="btn btn-default">Esquerda</button>
+      <button type="button" class="btn btn-default">Meio</button>
+      <button type="button" class="btn btn-default">Direita</button>
     </div>
     <br>
     <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-      <button type="button" class="btn btn-default">Left</button>
-      <button type="button" class="btn btn-default">Middle</button>
-      <button type="button" class="btn btn-default">Right</button>
+      <button type="button" class="btn btn-default">Esquerda</button>
+      <button type="button" class="btn btn-default">Meio</button>
+      <button type="button" class="btn btn-default">Direita</button>
     </div>
     <br>
     <div class="btn-group btn-group-xs" role="group" aria-label="Extra-small button group">
-      <button type="button" class="btn btn-default">Left</button>
-      <button type="button" class="btn btn-default">Middle</button>
-      <button type="button" class="btn btn-default">Right</button>
+      <button type="button" class="btn btn-default">Esquerda</button>
+      <button type="button" class="btn btn-default">Meio</button>
+      <button type="button" class="btn btn-default">Direita</button>
     </div>
   </div>
 {% highlight html %}
@@ -94,8 +94,8 @@
 <div class="btn-group btn-group-xs" role="group" aria-label="...">...</div>
 {% endhighlight %}
 
-  <h2 id="btn-groups-nested">Nesting</h2>
-  <p>Place a <code>.btn-group</code> within another <code>.btn-group</code> when you want dropdown menus mixed with a series of buttons.</p>
+  <h2 id="btn-groups-nested">Aninhamento</h2>
+  <p>Coloque um <code>.btn-group</code> dentro de outro <code>.btn-group</code> quando você quiser misturar menu dropdown com uma série de botões.</p>
   <div class="bs-example" data-example-id="button-group-nesting">
     <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
       <button type="button" class="btn btn-default">1</button>
@@ -131,7 +131,7 @@
 </div>
 {% endhighlight %}
 
-  <h2 id="btn-groups-vertical">Vertical variation</h2>
+  <h2 id="btn-groups-vertical">Variação vertical</h2>
   <p>Make a set of buttons appear vertically stacked rather than horizontally. <strong class="text-danger">Split button dropdowns are not supported here.</strong></p>
   <div class="bs-example" data-example-id="vertical-button-group">
     <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
