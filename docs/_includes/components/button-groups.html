@@ -11,8 +11,8 @@
   <div class="bs-callout bs-callout-warning" id="callout-btn-group-accessibility">
     <h4>Certifique-se de acertar um <code>role</code> e fornecer uma etiqueta</h4>
     <p>Para que tecnologias de apoio – assim como leitores de tela – transmitam uma série de botões agrupados, um atributo apropriado <code>role</code> precisa ser fornecido. Para grupos de botões, isso precisa ser <code>role="group"</code>, enquanto toolbars (barra de ferramentas) devem ter um <code>role="toolbar"</code>.</p>
-    <p>Uma exceção são grupos que contém apenas um único controle (por exemplo o <a href="#btn-groups-justified">jgrupos de botões justificados</a> com elemento <code>&lt;button&gt;</code>) ou um dropdown.</p>
-    <p>In addition, groups and toolbars should be given an explicit label, as most assistive technologies will otherwise not announce them, despite the presence of the correct <code>role</code> attribute. Em um exemplo fornecido aqui, nós usamos <code>aria-label</code>, mas alternativas tal como <code>aria-labelledby</code> podem também ser usadas.</p>
+    <p>Uma exceção são grupos que contém apenas um único controle (por exemplo o <a href="#btn-groups-justified">grupos de botões justificados</a> com elemento <code>&lt;button&gt;</code>) ou um dropdown.</p>
+    <p>Além disso, grupos e barras de ferramentas devem conter uma etiqueta explícita, pois a maioria das tecnologias assistivas querem caso contrário não os anunciam, apesar da presença de um atributo <code>role</code> correto. Em um exemplo fornecido aqui, nós usamos <code>aria-label</code>, mas alternativas tal como <code>aria-labelledby</code> podem também ser usadas.</p>
   </div>
 
   <h2 id="btn-groups-single">Exemplo básico</h2>
@@ -132,11 +132,11 @@
 {% endhighlight %}
 
   <h2 id="btn-groups-vertical">Variação vertical</h2>
-  <p>Make a set of buttons appear vertically stacked rather than horizontally. <strong class="text-danger">Split button dropdowns are not supported here.</strong></p>
+  <p>Faça um conjunto de botões aparecer empilhado verticalmente em vez de horizontalmente. <strong class="text-danger">Divisão de botões dropdowns não são suportados aqui.</strong></p>
   <div class="bs-example" data-example-id="vertical-button-group">
     <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-      <button type="button" class="btn btn-default">Button</button>
-      <button type="button" class="btn btn-default">Button</button>
+      <button type="button" class="btn btn-default">Botão</button>
+      <button type="button" class="btn btn-default">Botão</button>
       <div class="btn-group" role="group">
         <button id="btnGroupVerticalDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
@@ -147,8 +147,8 @@
           <li><a href="#">Dropdown link</a></li>
         </ul>
       </div>
-      <button type="button" class="btn btn-default">Button</button>
-      <button type="button" class="btn btn-default">Button</button>
+      <button type="button" class="btn btn-default">Botão</button>
+      <button type="button" class="btn btn-default">Botão</button>
       <div class="btn-group" role="group">
         <button id="btnGroupVerticalDrop2" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
@@ -187,41 +187,41 @@
 </div>
 {% endhighlight %}
 
-  <h2 id="btn-groups-justified">Justified button groups</h2>
-  <p>Make a group of buttons stretch at equal sizes to span the entire width of its parent. Also works with button dropdowns within the button group.</p>
+  <h2 id="btn-groups-justified">Grupo de botões justificado</h2>
+  <p>Faça um grupo de botões esticar em tamanhos iguais ocupando toda a largura de seu pai. Também trabalha com botões dropdowns dentro de um grupo de botão.</p>
 
   <div class="bs-callout bs-callout-warning" id="callout-btn-group-justified-dbl-border">
-    <h4>Handling borders</h4>
-    <p>Due to the specific HTML and CSS used to justify buttons (namely <code>display: table-cell</code>), the borders between them are doubled. In regular button groups, <code>margin-left: -1px</code> is used to stack the borders instead of removing them. However, <code>margin</code> doesn't work with <code>display: table-cell</code>. As a result, depending on your customizations to Bootstrap, you may wish to remove or re-color the borders.</p>
+    <h4>Manipulação de bordas</h4>
+    <p>Devido ao uso especifico de HTML e CSS usado para justificar botões (ou seja <code>display: table-cell</code>), as bordas entre eles duplicadas. Em um grupo de botão normal, <code>margin-left: -1px</code> é usado para empilhar as bordas ao invés de remove-las. No entanto, <code>margin</code> não funciona com <code>display: table-cell</code>. Como consequência, conforme suas  customizações no Bootstrap, você pode querer remover ou recolorir as bordas.</p>
   </div>
   <div class="bs-callout bs-callout-warning" id="callout-btn-group-ie8-border">
-    <h4>IE8 and borders</h4>
-    <p>Internet Explorer 8 doesn't render borders on buttons in a justified button group, whether it's on <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> elements. To get around that, wrap each button in another <code>.btn-group</code>.</p>
-    <p>See <a href="https://github.com/twbs/bootstrap/issues/12476">#12476</a> for more information.</p>
+    <h4>IE8 e bordas</h4>
+    <p>Internet Explorer 8 não renderiza bordas em botões num grupo de botões justificados, seja nos elementos <code>&lt;a&gt;</code> ou <code>&lt;button&gt;</code>. Para contornar isso, envolva casa botão em outro <code>.btn-group</code>.</p>
+    <p>Veja a inssue <a href="https://github.com/twbs/bootstrap/issues/12476">#12476</a> para mais informações.</p>
   </div>
 
-  <h4>With <code>&lt;a&gt;</code> elements</h4>
-  <p>Just wrap a series of <code>.btn</code>s in <code>.btn-group.btn-group-justified</code>.</p>
+  <h4>Com elementos <code>&lt;a&gt;</code></h4>
+  <p>Apenas envolva uma série de <code>.btn</code>s em <code>.btn-group.btn-group-justified</code>.</p>
   <div class="bs-example" data-example-id="simple-justified-button-group">
     <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
-      <a href="#" class="btn btn-default" role="button">Left</a>
-      <a href="#" class="btn btn-default" role="button">Middle</a>
-      <a href="#" class="btn btn-default" role="button">Right</a>
+      <a href="#" class="btn btn-default" role="button">Esquerda</a>
+      <a href="#" class="btn btn-default" role="button">Meio</a>
+      <a href="#" class="btn btn-default" role="button">Direita</a>
     </div>
     <br>
     <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group with nested dropdown">
-      <a href="#" class="btn btn-default" role="button">Left</a>
-      <a href="#" class="btn btn-default" role="button">Middle</a>
+      <a href="#" class="btn btn-default" role="button">Esquerda</a>
+      <a href="#" class="btn btn-default" role="button">Meio</a>
       <div class="btn-group" role="group">
         <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
           Dropdown <span class="caret"></span>
         </a>
         <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
+          <li><a href="#">Ação</a></li>
+          <li><a href="#">Outra ação</a></li>
+          <li><a href="#">Algo mais aqui</a></li>
           <li role="separator" class="divider"></li>
-          <li><a href="#">Separated link</a></li>
+          <li><a href="#">Link separado</a></li>
         </ul>
       </div>
     </div>
@@ -233,35 +233,35 @@
 {% endhighlight %}
 
   <div class="bs-callout bs-callout-warning" id="callout-btn-group-anchor-btn">
-    <h4>Links acting as buttons</h4>
-    <p>If the <code>&lt;a&gt;</code> elements are used to act as buttons – triggering in-page functionality, rather than navigating to another document or section within the current page – they should also be given an appropriate <code>role="button"</code>.</p>
+    <h4>Links atuando como botões</h4>
+    <p>Se o elemento <code>&lt;a&gt;</code> é usado para ação de botões – ativando funcionalidade em página, em vez de navegar para outro documento ou seção dentro da página corrente – eles devem também ter um <code>role="button"</code> apropriado.</p>
   </div>
 
-  <h4>With <code>&lt;button&gt;</code> elements</h4>
-  <p>To use justified button groups with <code>&lt;button&gt;</code> elements, <strong class="text-danger">you must wrap each button in a button group</strong>. Most browsers don't properly apply our CSS for justification to <code>&lt;button&gt;</code> elements, but since we support button dropdowns, we can work around that.</p>
+  <h4>Com elementos <code>&lt;button&gt;</code></h4>
+  <p>Para usar grupos de botões justificados com elementos <code>&lt;button&gt;</code>, <strong class="text-danger">você deve envolver cada botão em um grupo de botões</strong>. A maioria dos navegadores não aplicam corretamente nosso CSS para justificação em elementos <code>&lt;button&gt;</code>, mas desde que nós apoiamos botões dropdowns, nós podemos trabalhar em torno disso.</p>
   <div class="bs-example" data-example-id="button-tag-button-group-justified">
     <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
       <div class="btn-group" role="group">
-        <button type="button" class="btn btn-default">Left</button>
+        <button type="button" class="btn btn-default">Esquerda</button>
       </div>
       <div class="btn-group" role="group">
-        <button type="button" class="btn btn-default">Middle</button>
+        <button type="button" class="btn btn-default">Meio</button>
       </div>
       <div class="btn-group" role="group">
-        <button type="button" class="btn btn-default">Right</button>
+        <button type="button" class="btn btn-default">Direita</button>
       </div>
     </div>
   </div>
 {% highlight html %}
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
   <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">Left</button>
+    <button type="button" class="btn btn-default">Esquerda</button>
   </div>
   <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">Middle</button>
+    <button type="button" class="btn btn-default">Meio</button>
   </div>
   <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">Right</button>
+    <button type="button" class="btn btn-default">Direita</button>
   </div>
 </div>
 {% endhighlight %}
