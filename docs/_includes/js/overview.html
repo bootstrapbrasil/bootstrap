@@ -1,12 +1,12 @@
 <div class="bs-docs-section">
-  <h1 id="js-overview" class="page-header">Overview</h1>
+  <h1 id="js-overview" class="page-header">Visão geral</h1>
 
-  <h2 id="js-individual-compiled">Individual or compiled</h2>
-  <p>Plugins can be included individually (using Bootstrap's individual <code>*.js</code> files), or all at once (using <code>bootstrap.js</code> or the minified <code>bootstrap.min.js</code>).</p>
+  <h2 id="js-individual-compiled">Individual ou compilado</h2>
+  <p>Plugins podem ser inclusos individualmente (através de arquivos <code>*.js</code> individuais do Bootstrap), ou de uma única vez (usando <code>bootstrap.js</code> ou a versão minificada/comprimida <code>bootstrap.min.js</code>).</p>
 
   <div class="bs-callout bs-callout-danger" id="callout-overview-not-both">
-    <h4>Using the compiled JavaScript</h4>
-    <p>Both <code>bootstrap.js</code> and <code>bootstrap.min.js</code> contain all plugins in a single file. Include only one.</p>
+    <h4>Usando JavaScript compilado</h4>
+    <p>Tanto <code>bootstrap.js</code> quanto <code>bootstrap.min.js</code> possuem todos os plugins. Use apenas um.</p>
   </div>
 
   <div class="bs-callout bs-callout-danger" id="callout-overview-dependencies">
@@ -47,20 +47,20 @@ $('#myModal').modal('show')                // initializes and invokes show immed
 
   <p>Each plugin also exposes its raw constructor on a <code>Constructor</code> property: <code>$.fn.popover.Constructor</code>. If you'd like to get a particular plugin instance, retrieve it directly from an element: <code>$('[rel="popover"]').data('popover')</code>.</p>
 
-  <h4>Default settings</h4>
+  <h4>Configurações padrão</h4>
   <p>You can change the default settings for a plugin by modifying the plugin's <code>Constructor.DEFAULTS</code> object:</p>
 {% highlight js %}
 $.fn.modal.Constructor.DEFAULTS.keyboard = false // changes default for the modal plugin's `keyboard` option to false
 {% endhighlight %}
 
-  <h2 id="js-noconflict">No conflict</h2>
+  <h2 id="js-noconflict">Sem conflito</h2>
   <p>Sometimes it is necessary to use Bootstrap plugins with other UI frameworks. In these circumstances, namespace collisions can occasionally occur. If this happens, you may call <code>.noConflict</code> on the plugin you wish to revert the value of.</p>
 {% highlight js %}
 var bootstrapButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
 $.fn.bootstrapBtn = bootstrapButton            // give $().bootstrapBtn the Bootstrap functionality
 {% endhighlight %}
 
-  <h2 id="js-events">Events</h2>
+  <h2 id="js-events">Eventos</h2>
   <p>Bootstrap provides custom events for most plugins' unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. <code>show</code>) is triggered at the start of an event, and its past participle form (ex. <code>shown</code>) is triggered on the completion of an action.</p>
   <p>As of 3.0.0, all Bootstrap events are namespaced.</p>
   <p>All infinitive events provide <code>preventDefault</code> functionality. This provides the ability to stop the execution of an action before it starts.</p>
@@ -70,7 +70,7 @@ $('#myModal').on('show.bs.modal', function (e) {
 })
 {% endhighlight %}
 
-  <h2 id="js-version-nums">Version numbers</h2>
+  <h2 id="js-version-nums">Números de versões</h2>
   <p>The version of each of Bootstrap's jQuery plugins can be accessed via the <code>VERSION</code> property of the plugin's constructor. For example, for the tooltip plugin:</p>
 {% highlight js %}
 $.fn.tooltip.Constructor.VERSION // => "{{ site.current_version }}"
