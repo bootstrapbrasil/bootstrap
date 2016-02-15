@@ -31,13 +31,13 @@
   <p>O pessoal da <a href="https://www.maxcdn.com/">MaxCDN</a> fornece graciosamente suporte CDN para CSS e JavaScript do Bootstrap. Basta usar <a href="https://www.bootstrapcdn.com/">Bootstrap CDN</a> atráves desses links.</p>
 {% highlight html %}
 <!-- Última versão CSS compilada e minificada -->
-<link rel="stylesheet" href="{{ site.cdn.css }}">
+<link rel="stylesheet" href="{{ site.cdn.css }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
 
 <!-- Tema opcional -->
-<link rel="stylesheet" href="{{ site.cdn.css_theme }}">
+<link rel="stylesheet" href="{{ site.cdn.css_theme }}" integrity="{{ site.cdn.css_theme_hash }}" crossorigin="anonymous">
 
 <!-- Última versão JavaScript compilada e minificada -->
-<script src="{{ site.cdn.js }}"></script>
+<script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous"></script>
 {% endhighlight %}
 
   <h2 id="download-bower">Instalação com Bower</h2>
@@ -45,10 +45,10 @@
   {% highlight bash %}$ bower install bootstrap{% endhighlight %}
 
   <h2 id="download-npm">Instalação com npm</h2>
-  <p>Você pode tambem instalar o Bootstrap usando <a href="https://www.npmjs.com">npm</a>:</p>
-  {% highlight bash %}$ npm install bootstrap{% endhighlight %}
-  <p><code>require('bootstrap')</code> vai carregar todos os plugins jQuery do Bootstrap plugins no jQuery object. O próprio modulo <code>bootstrap</code> não exporta nada. Você pode carregar manualmente plugins jQuery do Bootstrap individualmente atráves do carregamento dos arquivos <code>/js/*.js</code>sob o diretório de nível superior do pacote.</p>
-  <p>O <code>package.json</code> do Bootstrap contém alguns metadados adicionais nas seguintes keys:</p>
+  <p>You can also install Bootstrap using <a href="https://www.npmjs.com">npm</a>:</p>
+  {% highlight bash %}$ npm install bootstrap@3{% endhighlight %}
+  <p><code>require('bootstrap')</code> will load all of Bootstrap's jQuery plugins onto the jQuery object. The <code>bootstrap</code> module itself does not export anything. You can manually load Bootstrap's jQuery plugins individually by loading the <code>/js/*.js</code> files under the package's top-level directory.</p>
+  <p>Bootstrap's <code>package.json</code> contains some additional metadata under the following keys:</p>
   <ul>
     <li><code>less</code> - caminho para o arquivo principal <a href="http://lesscss.org">Less</a> do Bootstrap</li>
     <li><code>style</code> - caminho para CSS não minificado do Bootstrap, que foram pré-compilados usando as configurações padrão (sem personalização)</li>

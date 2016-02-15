@@ -609,6 +609,30 @@
 {% endhighlight %}
 
 
+  <h2 id="forms-help-text">Texto de ajuda</h2>
+  <p>Blocos de nível de texto de ajuda para controles de formulário.</p>
+  <div class="bs-callout bs-callout-info" id="callout-help-text-accessibility">
+    <h4>Associando texto de ajuda com controles de formulário</h4>
+    <p>Texto de ajuda deve estar explicitamente associado com o controle de formulário que se refere ao uso do atributo <code>aria-describedby</code>. Isso irá assegurar que as tecnologias assistivas – tais como leitores de tela – anunciará estes textos de ajuda quando o usuário focalizar ou entrar no controle.</p>
+  </div>
+  <div class="bs-example" data-example-id="simple-help-text">
+    <form>
+      <div class="form-group">
+        <label for="inputHelpBlock">Entrada com texto de ajuda</label>
+        <input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
+      </div>
+      <span id="helpBlock" class="help-block">Um bloco de texto de ajuda que divide em uma nova linha e pode ir além de uma linha one line.</span>
+    </form>
+  </div><!-- /.bs-example -->
+{% highlight html %}
+<label class="sr-only" for="inputHelpBlock">Entrada com texto de ajuda</label>
+<input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
+...
+<span id="helpBlock" class="help-block">Um bloco de texto de ajuda que divide em uma nova linha e pode ir além de uma linha one line.</span>
+{% endhighlight %}
+</div>
+
+
   <h2 id="forms-control-validation">Estado de validação</h2>
   <p>Bootstrap inclui estilos de validação para estado de erro, aviso, e successo nos controles de formulário. Para usar, adicione <code>.has-warning</code>, <code>.has-error</code>, ou <code>.has-success</code> para o elemento pai. Tanto <code>.control-label</code>, <code>.form-control</code>, e <code>.help-block</code> dentro desse elemento que receberá o estilo de validação.</p>
 
@@ -622,7 +646,8 @@
     <form>
       <div class="form-group has-success">
         <label class="control-label" for="inputSuccess1">Entrada com successo</label>
-        <input type="text" class="form-control" id="inputSuccess1">
+        <input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2">
+        <span id="helpBlock2" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
       </div>
       <div class="form-group has-warning">
         <label class="control-label" for="inputWarning1">Entrada com advertência</label>
@@ -661,7 +686,8 @@
 {% highlight html %}
 <div class="form-group has-success">
   <label class="control-label" for="inputSuccess1">Entrada com successo</label>
-  <input type="text" class="form-control" id="inputSuccess1">
+  <input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2">
+  <span id="helpBlock2" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
 </div>
 <div class="form-group has-warning">
   <label class="control-label" for="inputWarning1">Entrada com advertência</label>
@@ -1001,25 +1027,3 @@
 </div>
 {% endhighlight %}
 
-  <h2 id="forms-help-text">Texto de ajuda</h2>
-  <p>Blocos de nível de texto de ajuda para controles de formulário.</p>
-  <div class="bs-callout bs-callout-info" id="callout-help-text-accessibility">
-    <h4>Associando texto de ajuda com controles de formulário</h4>
-    <p>Texto de ajuda deve estar explicitamente associado com o controle de formulário que se refere ao uso do atributo <code>aria-describedby</code>. Isso irá assegurar que as tecnologias assistivas – tais como leitores de tela – anunciará estes textos de ajuda quando o usuário focalizar ou entrar no controle.</p>
-  </div>
-  <div class="bs-example" data-example-id="simple-help-text">
-    <form>
-      <div class="form-group">
-        <label for="inputHelpBlock">Entrada com texto de ajuda</label>
-        <input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
-      </div>
-      <span id="helpBlock" class="help-block">Um bloco de texto de ajuda que divide em uma nova linha e pode ir além de uma linha one line.</span>
-    </form>
-  </div><!-- /.bs-example -->
-{% highlight html %}
-<label class="sr-only" for="inputHelpBlock">Entrada com texto de ajuda</label>
-<input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
-...
-<span id="helpBlock" class="help-block">Um bloco de texto de ajuda que divide em uma nova linha e pode ir além de uma linha one line.</span>
-{% endhighlight %}
-</div>
