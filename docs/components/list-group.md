@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: List group
+title: Grupo de lista
 group: components
 ---
 

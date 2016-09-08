@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Media object
+title: Objeto de mídia
 group: layout
 ---
 

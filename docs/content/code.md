@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Code
+title: Código
 group: content
 ---
 

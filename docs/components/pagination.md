@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Pagination
+title: Paginação
 group: components
 ---
 

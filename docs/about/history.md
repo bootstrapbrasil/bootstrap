@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: History
+title: História
 group: about
 redirect_from: "/about/"
 ---

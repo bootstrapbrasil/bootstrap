@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Best practices
+title: Boas práticas
 group: getting-started
 ---
 

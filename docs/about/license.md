@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: License FAQs
+title: Licença - Perguntas e Respostas
 group: about
 ---
 

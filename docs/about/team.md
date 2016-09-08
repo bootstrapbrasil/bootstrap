@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Team
+title: Equipe
 group: about
 ---
 

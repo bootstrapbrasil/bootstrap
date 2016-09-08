@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Flexbox grid system
+title: Sistemas de grades Flexbox
 group: layout
 ---
 

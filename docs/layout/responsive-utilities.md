@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Responsive utilities
+title: Utilitários Responsivos
 group: layout
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Images
+title: Imagens
 group: content
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Accessibility
+title: Acessibilidade
 group: getting-started
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Navbar
+title: Barra de navegação
 group: components
 ---
 

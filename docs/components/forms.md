@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Forms
+title: Formulários
 group: components
 ---
 

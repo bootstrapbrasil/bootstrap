@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Typography
+title: Tipografia
 group: content
 ---
 

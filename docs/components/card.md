@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Cards
+title: Cartas
 group: components
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Navs
+title: Navegação
 group: components
 ---
 

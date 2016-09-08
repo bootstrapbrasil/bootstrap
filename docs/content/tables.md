@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Tables
+title: Tabelas
 group: content
 ---
 

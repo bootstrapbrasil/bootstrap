@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Grid system
+title: Sistemas de grades
 group: layout
 ---
 

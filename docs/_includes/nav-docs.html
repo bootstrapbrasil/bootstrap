@@ -1,12 +1,12 @@
 <form class="bd-search hidden-sm-down">
-  <input type="text" class="form-control" id="search-input" placeholder="Search..." autocomplete="off">
+  <input type="text" class="form-control" id="search-input" placeholder="Pesquisar..." autocomplete="off">
   <div class="dropdown-menu bd-search-results" id="search-results"></div>
 </form>
 
 <nav class="bd-links" id="docsNavbarContent">
   {% for group in site.data.nav %}
   {% assign link = group.pages | first %}
-  {% assign slug = group.title | downcase | replace: ' ', '-' || page.title | downcase | replace: ' ', '-' %}
+  {% assign slug = group.slug | downcase | replace: ' ', '-' || page.title | downcase | replace: ' ', '-' %}
   {% assign active = nil %}
 
   {% if page.url contains slug %}
@@ -15,16 +15,16 @@
 
   <div class="bd-toc-item {{ active }}">
     {% if slug == "examples" %}
-        <a class="bd-toc-link" href="{{ site.baseurl }}/{{ group.title | downcase | replace: ' ', '-' }}/">
+        <a class="bd-toc-link" href="{{ site.baseurl }}/{{ group.slug | downcase | replace: ' ', '-' }}/">
       {% else %}
-        <a class="bd-toc-link" href="{{ site.baseurl }}/{{ group.title | downcase | replace: ' ', '-' }}/{{ link.title | downcase | replace: ' ', '-' || page.title | downcase | replace: ' ', '-'  }}">
+        <a class="bd-toc-link" href="{{ site.baseurl }}/{{ group.slug | downcase | replace: ' ', '-' }}/{{ link.slug | downcase | replace: ' ', '-' || page.title | downcase | replace: ' ', '-'  }}">
       {% endif %}
         {{ group.title }}
       </a>
 
       <ul class="nav bd-sidenav">
         {% for doc in group.pages %}
-          {% assign slug = doc.title | downcase | replace: ' ', '-' | replace:'-&-','-' %}
+          {% assign slug = doc.slug | downcase | replace: ' ', '-' | replace:'-&-','-' %}
           {% capture slug %}/{{ slug }}{% endcapture %}
           {% assign active = nil %}
 
@@ -33,7 +33,7 @@
           {% endif %}
 
           <li class="{{ active }}">
-            <a href="{{ site.baseurl }}/{{ group.title | downcase | replace: ' ', '-' }}/{{ doc.title | downcase | replace: ' ', '-' | replace:'-&-','-' }}">
+            <a href="{{ site.baseurl }}/{{ group.slug | downcase | replace: ' ', '-' }}/{{ doc.slug | downcase | replace: ' ', '-' | replace:'-&-','-' }}">
               {{ doc.title }}
             </a>
 
@@ -42,7 +42,7 @@
               <ul class="nav">
                 {% for section in doc.sections %}
                   <li>
-                    <a href="#{{ section.title | downcase | replace: ' ', '-' }}">
+                    <a href="#{{ section.slug | downcase | replace: ' ', '-' }}">
                       {{ section.title }}
                     </a>
                   </li>

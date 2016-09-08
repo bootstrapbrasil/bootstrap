@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Input group
+title: Grupo de entrada
 group: components
 ---
 

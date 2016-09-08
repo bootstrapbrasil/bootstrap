@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Button group
+title: Grupo de botões
 group: components
 ---
 

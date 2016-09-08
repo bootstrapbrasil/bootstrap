@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Browsers and devices
+title: Navegadores e dispositivos
 group: getting-started
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Build tools
+title: Ferramentas de construção
 group: getting-started
 ---
 

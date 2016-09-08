@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Translations
+title: Traduções
 group: about
 ---
 

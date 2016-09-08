@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Buttons
+title: Botões
 group: components
 redirect_from: "/components/"
 ---

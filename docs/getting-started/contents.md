@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Contents
+title: Conteúdo
 group: getting-started
 ---
 

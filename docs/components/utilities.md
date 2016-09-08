@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Utility classes
+title: Classes de ajuda
 group: components
 ---
 

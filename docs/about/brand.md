@@ -1,10 +1,10 @@
 ---
 layout: docs
-title: Brand guidelines
+title: Manual de identidade visual
 group: about
 ---
 
-Have a need for Bootstrap's brand resources? Great! We have only a few guidelines we follow, and in turn ask you to follow as well. These guidelines were inspired by MailChimp's [Brand Assets](http://mailchimp.com/about/brand-assets/).
+Procurando recursos de identidade visual do Bootstrap? Ótimo! Temos apenas algumas pequenas diretrizes para seguir, e pedidos para segui-las. Este guia foi inspirado no MailChimp's [Brand Assets](http://mailchimp.com/about/brand-assets/).
 
 ## Mark and logo
 

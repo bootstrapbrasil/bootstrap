@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Customization options
+title: Opções de personalização
 group: getting-started
 ---
 

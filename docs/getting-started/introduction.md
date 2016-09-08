@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Introduction
+title: Introdução
 group: getting-started
 redirect_from: "/getting-started/"
 ---

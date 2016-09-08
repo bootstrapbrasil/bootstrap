@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Tooltips
+title: Ferramentas de dicas
 group: components
 ---
 

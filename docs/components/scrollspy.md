@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Scrollspy
+title: Rolagem espiã
 group: components
 ---
 

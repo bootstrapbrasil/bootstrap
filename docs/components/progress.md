@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Progress
+title: Progresso
 group: components
 ---
 

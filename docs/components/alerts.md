@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Alerts
+title: Alertas
 group: components
 ---
 

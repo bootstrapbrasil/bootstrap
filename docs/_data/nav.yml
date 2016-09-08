@@ -1,69 +1,126 @@
-- title: Getting started
+- title: Ponto de partida
+  slug: Getting started
   pages:
-    - title: Introduction
+    - title: Introdução
+      slug: Introduction
     - title: Download
-    - title: Contents
-    - title: Browsers & devices
+      slug: Download
+    - title: Conteúdo
+      slug: Contents
+    - title: Navegadores & dispositivos
+      slug: Browsers & devices
     - title: JavaScript
-    - title: Options
+      slug: JavaScript
+    - title: Opções
+      slug: Options
     - title: Flexbox
-    - title: Build tools
-    - title: Best practices
-    - title: Accessibility
+      slug: Flexbox
+    - title: Ferramentas de construção
+      slug: Build tools
+    - title: Boas práticas
+      slug: Best practices
+    - title: Acessibilidade
+      slug: Accessibility
 
 - title: Layout
+  slug: Layout
   pages:
-    - title: Overview
-    - title: Grid
-    - title: Flexbox grid
-    - title: Media object
-    - title: Responsive utilities
+    - title: Visão geral
+      slug: Overview
+    - title: Grades
+      slug: Grid
+    - title: Grades Flexbox
+      slug: Flexbox grid
+    - title: Objeto de mídia
+      slug: Media object
+    - title: Utilitários responsivos
+      slug: Responsive utilities
 
-- title: Content
+- title: Conteúdo
+  slug: Content
   pages:
-    - title: Reboot
-    - title: Typography
-    - title: Code
-    - title: Images
-    - title: Tables
-    - title: Figures
+    - title: Reinicialização
+      slug: Reboot
+    - title: Tipografia
+      slug: Typography
+    - title: Código
+      slug: Code
+    - title: Imagens
+      slug: Images
+    - title: Tabelas
+      slug: Tables
+    - title: Figuras
+      slug: Figures
 
-- title: Components
+- title: Componentes
+  slug: Components
   pages:
-    - title: Alerts
+    - title: Alertas
+      slug: Alerts
     - title: Breadcrumb
-    - title: Buttons
-    - title: Button group
-    - title: Card
+      slug: Breadcrumb
+    - title: Botões
+      slug: Buttons
+    - title: Grupo de botões
+      slug: Button group
+    - title: Cartas
+      slug: Card
     - title: Carousel
+      slug: Carousel
     - title: Collapse
+      slug: Collapse
     - title: Dropdowns
-    - title: Forms
-    - title: Input group
+      slug: Dropdowns
+    - title: Formulários
+      slug: Forms
+    - title: Grupo de entrada
+      slug: Input group
     - title: Jumbotron
-    - title: List group
+      slug: Jumbotron
+    - title: Grupo de lista
+      slug: List group
     - title: Modal
-    - title: Navs
-    - title: Navbar
-    - title: Pagination
+      slug: Modal
+    - title: Navegação
+      slug: Navs
+    - title: Barra de navegação
+      slug: Navbar
+    - title: Paginação
+      slug: Pagination
     - title: Popovers
-    - title: Progress
-    - title: Scrollspy
-    - title: Tag
-    - title: Tooltips
-    - title: Utilities
+      slug: Popovers
+    - title: Progresso
+      slug: Progress
+    - title: Rolagem espiã
+      slug: Scrollspy
+    - title: Etiqueta
+      slug: Tag
+    - title: Ferramenta de dicas
+      slug: Tooltips
+    - title: Utilitários
+      slug: Utilities
 
 # - title: Extend
+#   slug: Extend
 #   pages:
 #     - title: Approach
+#       slug: Approach
 #     - title: Icon fonts
+#       slug: Icon fonts
 
-- title: About
+- title: Sobre
+  slug: About
   pages:
-    - title: History
-    - title: Team
-    - title: Brand
-    - title: License
-    - title: Translations
+    - title: História
+      slug: History
+    - title: Equipe
+      slug: Team
+    - title: Manual de identidade visual
+      slug: Brand
+    - title: Licença
+      slug: License
+    - title: Traduções
+      slug: Translations
 
-- title: Migration
+- title: Migração
+  slug: Migration

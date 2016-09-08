@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Reboot
+title: Reinicialização
 group: content
 redirect_from: "/content/"
 ---

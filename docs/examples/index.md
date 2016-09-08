@@ -1,6 +1,7 @@
 ---
 layout: simple
-title: Examples
+title: Exemplos
+redirect_from: "/exemplos/"
 ---
 
 [Download the Bootstrap source code]({{ site.download.source }}) to snag these examples.
