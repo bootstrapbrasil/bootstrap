@@ -1,47 +1,81 @@
 # Dependencies
-markdown:         kramdown
-highlighter:      rouge
+markdown:       kramdown
+highlighter:    rouge
 
 kramdown:
-  auto_ids: true
+  auto_ids:     true
 
 # Permalinks
-permalink:        pretty
+permalink:      pretty
 
 # Server
-source:           docs
-destination:      _gh_pages
-host:             0.0.0.0
-port:             9001
-baseurl:          ""
-url:              http://getbootstrap.com.br
-encoding:         UTF-8
-exclude:          [assets/scss/]
+source:         "."
+destination:    ./_gh_pages
+host:           0.0.0.0
+port:           9001
+baseurl:        ""
+url:            "http://getbootstrap.com.br"
+encoding:       UTF-8
+exclude:
+  - .git/
+  - .github/
+  - assets/scss/
+  - build/
+  - js/
+  - node_modules/
+  - nuget/
+  - scss/
+  - vendor/
+  - CODE_OF_CONDUCT.md
+  - composer.json
+  - Gemfile
+  - Gemfile.lock
+  - package.js
+  - package.json
+  - package-lock.json
+  - README.md
+  - sache.json
+  - twbsconfig.yml
 
-gems:
+plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
+  - jekyll-toc
 
-# Custom vars
-current_version:  4.0.0-alpha.4
-repo:             https://github.com/twbs/bootstrap
-slack:            https://bootstrap-slack.herokuapp.com
+# Social
+title:              Bootstrap
+description:        "The most popular HTML, CSS, and JS library in the world."
+twitter:            getbootstrap
+authors:            "Mark Otto, Jacob Thornton, and Bootstrap contributors"
+social_image_path:  /assets/brand/bootstrap-social.png
+social_logo_path:   /assets/brand/bootstrap-social-logo.png
+
+# Custom variables
+current_version:      4.0.0
+current_ruby_version: 4.0.0
+docs_version:         4.0
+repo:                 "https://github.com/twbs/bootstrap"
+slack:                "https://bootstrap-slack.herokuapp.com"
+blog:                 "https://blog.getbootstrap.com"
+expo:                 "https://expo.getbootstrap.com"
+jobs:                 "https://jobs.getbootstrap.com"
+themes:               "https://themes.getbootstrap.com"
 
 download:
-  source:         https://github.com/twbs/bootstrap/archive/v4.0.0-alpha.4.zip
-  dist:           https://github.com/twbs/bootstrap/releases/download/v4.0.0-alpha.4/bootstrap-4.0.0-alpha.4-dist.zip
-
-blog:             http://blog.getbootstrap.com
-expo:             http://expo.getbootstrap.com
-themes:           http://themes.getbootstrap.com
+  source:           "https://github.com/twbs/bootstrap/archive/v4.0.0.zip"
+  dist:             "https://github.com/twbs/bootstrap/releases/download/v4.0.0/bootstrap-4.0.0-dist.zip"
 
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
-  css:            https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css
-  css_hash:       "2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj"
-  js:             https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js
-  js_hash:        "VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU"
-  jquery:         https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js
-  jquery_hash:    "sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY"
-  tether:         https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js
-  tether_hash:    "sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB"
+  css:              "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  css_hash:         "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+  js:               "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  js_hash:          "sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  jquery:           "https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  jquery_hash:      "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  popper:           "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  popper_hash:      "sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+
+toc:
+  min_level:        2
+  max_level:        4

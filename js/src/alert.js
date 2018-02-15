@@ -1,16 +1,14 @@
+import $ from 'jquery'
 import Util from './util'
-
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.4): alert.js
+ * Bootstrap (v4.0.0): alert.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
 const Alert = (($) => {
-
-
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -18,7 +16,7 @@ const Alert = (($) => {
    */
 
   const NAME                = 'alert'
-  const VERSION             = '4.0.0-alpha.4'
+  const VERSION             = '4.0.0'
   const DATA_KEY            = 'bs.alert'
   const EVENT_KEY           = `.${DATA_KEY}`
   const DATA_API_KEY        = '.data-api'
@@ -38,9 +36,8 @@ const Alert = (($) => {
   const ClassName = {
     ALERT : 'alert',
     FADE  : 'fade',
-    IN    : 'in'
+    SHOW  : 'show'
   }
-
 
   /**
    * ------------------------------------------------------------------------
@@ -49,26 +46,23 @@ const Alert = (($) => {
    */
 
   class Alert {
-
     constructor(element) {
       this._element = element
     }
 
-
-    // getters
+    // Getters
 
     static get VERSION() {
       return VERSION
     }
 
-
-    // public
+    // Public
 
     close(element) {
       element = element || this._element
 
-      let rootElement = this._getRootElement(element)
-      let customEvent = this._triggerCloseEvent(rootElement)
+      const rootElement = this._getRootElement(element)
+      const customEvent = this._triggerCloseEvent(rootElement)
 
       if (customEvent.isDefaultPrevented()) {
         return
@@ -82,12 +76,11 @@ const Alert = (($) => {
       this._element = null
     }
 
-
-    // private
+    // Private
 
     _getRootElement(element) {
-      let selector = Util.getSelectorFromElement(element)
-      let parent   = false
+      const selector = Util.getSelectorFromElement(element)
+      let parent     = false
 
       if (selector) {
         parent = $(selector)[0]
@@ -101,14 +94,14 @@ const Alert = (($) => {
     }
 
     _triggerCloseEvent(element) {
-      let closeEvent = $.Event(Event.CLOSE)
+      const closeEvent = $.Event(Event.CLOSE)
 
       $(element).trigger(closeEvent)
       return closeEvent
     }
 
     _removeElement(element) {
-      $(element).removeClass(ClassName.IN)
+      $(element).removeClass(ClassName.SHOW)
 
       if (!Util.supportsTransitionEnd() ||
           !$(element).hasClass(ClassName.FADE)) {
@@ -117,7 +110,7 @@ const Alert = (($) => {
       }
 
       $(element)
-        .one(Util.TRANSITION_END, $.proxy(this._destroyElement, this, element))
+        .one(Util.TRANSITION_END, (event) => this._destroyElement(element, event))
         .emulateTransitionEnd(TRANSITION_DURATION)
     }
 
@@ -128,13 +121,12 @@ const Alert = (($) => {
         .remove()
     }
 
-
-    // static
+    // Static
 
     static _jQueryInterface(config) {
       return this.each(function () {
-        let $element = $(this)
-        let data     = $element.data(DATA_KEY)
+        const $element = $(this)
+        let data       = $element.data(DATA_KEY)
 
         if (!data) {
           data = new Alert(this)
@@ -156,9 +148,7 @@ const Alert = (($) => {
         alertInstance.close(this)
       }
     }
-
   }
-
 
   /**
    * ------------------------------------------------------------------------
@@ -171,7 +161,6 @@ const Alert = (($) => {
     Selector.DISMISS,
     Alert._handleDismiss(new Alert())
   )
-
 
   /**
    * ------------------------------------------------------------------------
@@ -187,7 +176,6 @@ const Alert = (($) => {
   }
 
   return Alert
-
-})(jQuery)
+})($)
 
 export default Alert
