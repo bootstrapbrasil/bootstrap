@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bootstrap em Português (Brasil), agradável, intuítivo, e poderoso framework front-end para criar facilmente de forma ágil projetos web responsivos e mobile-first.">
+<meta name="author" content="Bootstrap Brasil, Bootstrap team and contributors">
+
+<title>
+  
+    Ponto de partida &middot; Bootstrap em Português (Brasil)
+  
+</title>
+
+<!-- Bootstrap core CSS -->
+
+<link href="../dist/css/bootstrap.css" rel="stylesheet">
+
+
+
+<!-- Documentation extras -->
+
+<link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+<link href="../assets/css/src/pygments-manni.css" rel="stylesheet">
+<link href="../assets/css/src/docs.css" rel="stylesheet">
+
+<!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<script src="../assets/js/ie-emulation-modes-warning.js"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon.ico">
+
+<!-- Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ponto de partida - Bootstrap em Português (Brasil)">
+<meta property="og:description" content="Introdução ao Bootstrap, como baixar e usar, exemplos de templates, e etc.">
+<meta property="og:url" content="http://bootstrapbrasil.github.io/getting-started/">
+<meta property="og:site_name" content="Bootstrap em Português (Brasil)">
+<meta property="og:image" content="http://bootstrapbrasil.github.io/assets/img/bootstrap-cover.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@getbootstrap">
+<meta name="twitter:creator" content="@getbootstrap">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-61016077-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  </head>
+  <body>
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content"><div class="container"><span class="skiplink-text">Pular para conteúdo</span></div></a>
+    <a href="http://getbootstrap.com.br/bootstrap-blog/2016/09/05/bootstrap-4-alpha-4/" class="v4-tease">Aww yeah, Bootstrap 4 em breve!</a>
+
+    <!-- Docs master nav -->
+    <header class="navbar navbar-static-top bs-docs-nav" id="top">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+        <span class="sr-only">Alternar navegação</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="../" class="navbar-brand">Bootstrap</a>
+    </div>
+    <nav id="bs-navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a href="../getting-started/">Ponto de partida</a>
+        </li>
+        <li>
+          <a href="../css/">CSS</a>
+        </li>
+        <li>
+          <a href="../components/">Componentes</a>
+        </li>
+        <li>
+          <a href="../javascript/">JavaScript</a>
+        </li>
+        <li>
+          <a href="../customize/">Personalize</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://themes.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes')">Themes</a></li>
+        <li><a href="http://expo.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">Expo</a></li>
+        <li><a href="http://bootstrapbrasil.github.io/bootstrap-blog" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">Blog <small>(em português)</small></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <!-- Docs page layout -->
+    <div class="bs-docs-header" id="content" tabindex="-1">
+      <div class="container">
+        <h1>Ponto de partida</h1>
+        <p>Introdução ao Bootstrap, como baixar e usar, exemplos de templates, e etc.</p>
+        
+      </div>
+    </div>
+
+    <div class="container bs-docs-container">
+
+      <div class="row">
+        <div class="col-md-9" role="main">
+          <div class="bs-docs-section">
+  <h1 id="download" class="page-header">Download</h1>
+
+  <p class="lead">Bootstrap (atualmente v3.3.7) possibilita algumas maneiras para se usar, cada uma diferente dependendo do seu seu nível de conhecimento ou caso de uso. Leia e descubra qual a mais adequada às suas necessidades.</p>
+
+  <div class="row bs-downloads">
+    <div class="col-sm-4">
+      <h3 id="download-bootstrap">Bootstrap</h3>
+      <p>CSS, JavaScript e fonts compilados e minificados. Não inclui a documentação ou código fonte.</p>
+      <p>
+        <a href="https://github.com/twbs/bootstrap/releases/download/v3.3.7/bootstrap-3.3.7-dist.zip" class="btn btn-lg btn-outline" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download compiled');">Baixar Bootstrap</a>
+      </p>
+    </div>
+    <div class="col-sm-4">
+      <h3 id="download-source">Código fonte</h3>
+      <p>Less, JavaScript e arquivos fonts, junto com nossa documentação. <strong>Requer um compilador Less e <a href="#grunt">alguma configuração.</a></strong></p>
+      <p>
+        <a href="https://github.com/twbs/bootstrap/archive/v3.3.7.zip" class="btn btn-lg btn-outline" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">Baixar source</a>
+      </p>
+    </div>
+    <div class="col-sm-4">
+      <h3 id="download-sass">Sass</h3>
+      <p><a href="https://github.com/twbs/bootstrap-sass">Bootstrap portou Less para Sass</a> para facilitar a inserção em projetos Rails, Compass, ou Sass-only.</p>
+      <p>
+        <a href="https://github.com/twbs/bootstrap-sass/archive/v3.3.7.tar.gz" class="btn btn-lg btn-outline" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Sass');">Baixar Sass</a>
+      </p>
+    </div>
+  </div>
+
+  <h2 id="download-cdn">Bootstrap CDN</h2>
+  <p>O pessoal da <a href="https://www.maxcdn.com/">MaxCDN</a> fornece graciosamente suporte CDN para CSS e JavaScript do Bootstrap. Basta usar <a href="https://www.bootstrapcdn.com/">Bootstrap CDN</a> atráves desses links.</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Última versão CSS compilada e minificada --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
+
+<span class="c">&lt;!-- Tema opcional --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
+
+<span class="c">&lt;!-- Última versão JavaScript compilada e minificada --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+
+  <h2 id="download-bower">Instalação com Bower</h2>
+  <p>Você pode tambem instalar e manusear o Less, CSS, JavaScript e fonts do Bootstrap usando <a href="http://bower.io">Bower</a>:</p>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>bower install bootstrap</code></pre></figure>
+
+  <h2 id="download-npm">Instalação com npm</h2>
+  <p>You can also install Bootstrap using <a href="https://www.npmjs.com">npm</a>:</p>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>npm install bootstrap@3</code></pre></figure>
+  <p><code>require('bootstrap')</code> will load all of Bootstrap's jQuery plugins onto the jQuery object. The <code>bootstrap</code> module itself does not export anything. You can manually load Bootstrap's jQuery plugins individually by loading the <code>/js/*.js</code> files under the package's top-level directory.</p>
+  <p>Bootstrap's <code>package.json</code> contains some additional metadata under the following keys:</p>
+  <ul>
+    <li><code>less</code> - caminho para o arquivo principal <a href="http://lesscss.org">Less</a> do Bootstrap</li>
+    <li><code>style</code> - caminho para CSS não minificado do Bootstrap, que foram pré-compilados usando as configurações padrão (sem personalização)</li>
+  </ul>
+
+  <h2 id="download-composer">Instalação com Composer</h2>
+  <p>Você pode tambem instalar e manusear o Less, CSS, JavaScript e fonts do Bootstrap usando <a href="https://getcomposer.org">Composer</a>:</p>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>composer require twbs/bootstrap</code></pre></figure>
+
+  <h2 id="download-autoprefixer">Less/Sass requer Autoprefixer</h2>
+  <p>Bootstrap usa <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> para trabalhar com <a href="http://webdesign.about.com/od/css/a/css-vendor-prefixes.htm">CSS vendor prefixes</a>. Se você está compilando o Less/Sass do Bootstrap e não está usando o nosso Gruntfile, então você precisa do Autoprefixer para integrar seu processo de construção. Se você estiver usando Bootstrap pré-compilado ou usando o nosso Gruntfile, você não precisa se preocupar com isso porque o Autoprefixer já está integrado no nosso Gruntfile.</p>
+</div>
+
+
+
+<div class="bs-docs-section">
+  <h1 id="whats-included" class="page-header">O que está incluso</h1>
+
+  <p class="lead">Bootstrap está disponível para download em duas formas, no qual você encontrará os seguintes diretórios e arquivos, agrupando logicamente recursos comuns e fornecendo ambas as variações: compilados e minificados.</p>
+
+  <div class="bs-callout bs-callout-warning" id="jquery-required">
+    <h4>jQuery obrigatório</h4>
+    <p>Por favor, note que <strong>todos plugins JavaScript necessitam do jQuery</strong> para serem incluídos, como mostrado no <a href="#template">template de partida</a>. <a href="https://github.com/twbs/bootstrap/blob/v3.3.7/bower.json">Consulte nosso <code>bower.json</code></a> para ver quais versões do jQuery são suportados.</p>
+  </div>
+
+  <h2 id="whats-included-precompiled">Bootstrap pré-compilado</h2>
+  <p>Feito o download, descompacte a pasta compactada para ver a estrutura do Bootstrap (o compilado). Você verá algo parecido com isto:</p>
+<!-- NOTE: This info is intentionally duplicated in the README.
+Copy any changes made here over to the README too. -->
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">bootstrap/
+├── css/
+│   ├── bootstrap.css
+│   ├── bootstrap.css.map
+│   ├── bootstrap.min.css
+│   ├── bootstrap.min.css.map
+│   ├── bootstrap-theme.css
+│   ├── bootstrap-theme.css.map
+│   ├── bootstrap-theme.min.css
+│   └── bootstrap-theme.min.css.map
+├── js/
+│   ├── bootstrap.js
+│   └── bootstrap.min.js
+└── fonts/
+    ├── glyphicons-halflings-regular.eot
+    ├── glyphicons-halflings-regular.svg
+    ├── glyphicons-halflings-regular.ttf
+    ├── glyphicons-halflings-regular.woff
+    └── glyphicons-halflings-regular.woff2</code></pre></figure>
+<!-- NOTE: This info is intentionally duplicated in the README.
+Copy any changes made here over to the README too. -->
+  <p>Esta é a forma mais básica de Bootstrap: arquivos pré-compilados, caí como uma luva para quase qualquer um projeto web. Nós fornecemos CSS e JS compilados (<code>bootstrap.*</code>), assim como CSS e JS compilados e minificados (<code>bootstrap.min.*</code>). CSS <a href="https://developer.chrome.com/devtools/docs/css-preprocessors">source maps</a> (<code>bootstrap.*.map</code>) estão disponíveis para uso com ferramentas de desenvolvimento em determinados navegadores. Fonts Glyphicons estão incluídos, assim como o tema Bootstrap opcional.</p>
+
+  <h2 id="whats-included-source">Bootstrap código fonte</h2>
+  <p>O download do código fonte Bootstrap inclui o CSS, JavaScript pré-compilados e assets fonts, junto com o fonte do Less, JavaScripts e documentação. Mais precisamente, ele inclui algo assim:</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">bootstrap/
+├── less/
+├── js/
+├── fonts/
+├── dist/
+│   ├── css/
+│   ├── js/
+│   └── fonts/
+└── docs/
+    └── examples/</code></pre></figure>
+  <p>Os diretórios <code>less/</code>, <code>js/</code>, e <code>fonts/</code> incluí códigos fonte para nosso CSS, JS, e fonts ícones (respectivamente). O diretório <code>dist/</code> incluí tudo referente a sessão de download pré-compilado sozinho. O diretório <code>docs/</code> incluí o código fonte da documentação, com exemplos de uso em <code>examples/</code>. Além disso, qualquer outro arquivo incluído fornece suporte para pacotes, informações de licença e desenvolvimento.</p>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="grunt" class="page-header">Compilando CSS e JavaScript</h1>
+
+  <p class="lead">Bootstrap usa <a href="http://gruntjs.com">Grunt</a> para seu sistema de compilação, com métodos convenientes para trabalhar com o framework. É como nós compilamos nosso código, executamos testes, e muito mais.</p>
+
+  <h2 id="grunt-installing">Instalando Grunt</h2>
+  <p>Para instalar Grunt, você deve <strong>primeiro <a href="https://nodejs.org/download/">baixar e instalar o node.js</a></strong> (que inclui npm). npm auxilia com os <a href="https://www.npmjs.com/">node packaged modules</a> e é uma maneira de gerar dependências de desenvolvimento através do node.js.</p>
+
+  Então, a partir do command line (linha de comando):
+  <ol>
+    <li>Instale globalmente o <code>grunt-cli</code> com <code>npm install -g grunt-cli</code>.</li>
+    <li>Navegue até a raiz do diretório <code>/bootstrap/</code>, depois execute <code>npm install</code>. npm vai identificar o arquivo <a href="https://github.com/twbs/bootstrap/blob/master/package.json"><code>package.json</code></a> e automaticamente instar as dependencias necessárias listada lá.</li>
+  </ol>
+
+  <p>Quando concluído, você será capaz de executar os vários comandos disponibilizados pelo Grunt a partir da linha de comando.</p>
+
+  <h2 id="grunt-commands">Comandos disponiveis Grunt</h2>
+  <h3><code>grunt dist</code> (Apenas compila o CSS e JavaScript)</h3>
+  <p>Regenera o diretório <code>/dist/</code> com arquivos CSS e JavaScript compilados e minificados. Como usuário Bootstrap, este é normalmente o comando mais desejado.</p>
+
+  <h3><code>grunt watch</code> (Assistir)</h3>
+  <p>Assiste em tempo real os arquivos fonte Less e automaticamente recompila para CSS sempre que você salvar alguma alteração.</p>
+
+  <h3><code>grunt test</code> (Executar testes)</h3>
+  <p>Executa testes com <a href="http://jshint.com">JSHint</a> e o <a href="http://qunitjs.com">QUnit</a> em <a href="http://phantomjs.org">PhantomJS</a>.</p>
+
+  <h3><code>grunt docs</code> (Construir &amp; testar documentação assets)</h3>
+  <p>Cria e testa o CSS, JavaScript, e outros assets que são usados ao executar a documentação localmente via <code>bundle exec jekyll serve</code>.</p>
+
+  <h3><code>grunt</code> (Construir absolutamente tudo e executar testes)</h3>
+  <p>Compila e minifica o CSS e JavaScript, constrói o site da documentação, executa o validador HTML5 de encontro com o docs, regenera os assets personalizados, e muito mais. Requer <a href="http://jekyllrb.com/docs/installation/">Jekyll</a>. Normalmente, só é necessário se você está explorando a fundo  Bootstrap.</p>
+
+  <h2 id="grunt-troubleshooting">Solução de Problemas</h2>
+  <p>Se você encontrar problemas com a instalação de dependências ou ao executar comandos Grunt, primeiro exclua o diretório <code>/node_modules/</code> gerado pelo npm. Então, execute novamente <code>npm install</code>.</p>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="template" class="page-header">Template básico</h1>
+
+  <p class="lead">Comece com este modelo básico de HTML, ou modifique <a href="#examples">estes exemplos</a>. Esperamos que você possa personalizar nossos modelos de exemplos, adaptando-os para atender às suas necessidades.</p>
+
+  <p>Copie o código HTML abaixo para começar a trabalhar com um documento Bootstrap mínimo.</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"pt-br"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=edge"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- As 3 meta tags acima *devem* vir em primeiro lugar dentro do `head`; qualquer outro conteúdo deve vir *após* essas tags --&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Bootstrap 101 Template<span class="nt">&lt;/title&gt;</span>
+
+    <span class="c">&lt;!-- Bootstrap --&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"css/bootstrap.min.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+
+    <span class="c">&lt;!-- HTML5 shim e Respond.js para suporte no IE8 de elementos HTML5 e media queries --&gt;</span>
+    <span class="c">&lt;!-- ALERTA: Respond.js não funciona se você visualizar uma página file:// --&gt;</span>
+    <span class="c">&lt;!--[if lt IE 9]&gt;
+      &lt;script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"&gt;&lt;/script&gt;
+      &lt;script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Olá, mundo!<span class="nt">&lt;/h1&gt;</span>
+
+    <span class="c">&lt;!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) --&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="c">&lt;!-- Inclui todos os plugins compilados (abaixo), ou inclua arquivos separadados se necessário --&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/bootstrap.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="examples" class="page-header">Exemplos</h1>
+
+  <p class="lead">Criados a partir do modelo base acima e com muitos componentes do Bootstrap. Nós encorajamos você a personalizar e adaptar o Bootstrap para atender às necessidades do seu projeto.</p>
+
+  <p>Possua todo o código fonte de exemplo abaixo fazendo o <a href="https://github.com/twbs/bootstrap/archive/v3.3.7.zip">download do repositório do Bootstrap</a>. Exemplos podem ser encontrados no diretório <code>docs/examples/</code>.</p>
+
+  <h2 id="examples-framework">Usando o framework</h2>
+  <div class="row bs-examples">
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/starter-template/">
+        <img src="../examples/screenshots/starter-template.jpg" alt="Starter template example">
+      </a>
+      <h3>Template de partida</h3>
+      <p>Nada, além do básico: CSS e JavaScript compilados junto com o *container*.</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/theme/">
+        <img src="../examples/screenshots/theme.jpg" alt="Bootstrap theme example">
+      </a>
+      <h3>Tema Bootstrap</h3>
+      <p>Carrega o tema opcional do Bootstrap, para uma experiência visual aprimorada.</p>
+    </div>
+    <div class="clearfix visible-xs"></div>
+
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/grid/">
+        <img src="../examples/screenshots/grid.jpg" alt="Multiple grids example">
+      </a>
+      <h3>Grids</h3>
+      <p>Vários exemplos de *grids*, quatro tipos de telas, aninhamento e muito mais.</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/jumbotron/">
+        <img src="../examples/screenshots/jumbotron.jpg" alt="Jumbotron example">
+      </a>
+      <h3>Jumbotron</h3>
+      <p>*Jumbotron*, junto com uma barra de navegação e colunas com *grids*.</p>
+    </div>
+    <div class="clearfix visible-xs"></div>
+
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/jumbotron-narrow/">
+        <img src="../examples/screenshots/jumbotron-narrow.jpg" alt="Narrow jumbotron example">
+      </a>
+      <h3>Jumbotron espremido</h3>
+      <p>Cria e personaliza mais a página com o *container* e *jumbotron* espremidos.</p>
+    </div>
+  </div>
+
+  <h2 id="examples-navbars">Barra de navegação em ação</h2>
+  <div class="row bs-examples">
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/navbar/">
+        <img src="../examples/screenshots/navbar.jpg" alt="Navbar example">
+      </a>
+      <h3>Barra de navegação</h3>
+      <p>Template super básico que incluí a barra de navegação com algum conteúdo adicional.</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/navbar-static-top/">
+        <img src="../examples/screenshots/navbar-static.jpg" alt="Static top navbar example">
+      </a>
+      <h3>Barra de navegação estática no topo</h3>
+      <p>Template super básico que incluí a barra de navegação estática no topo com algum conteúdo adicional.</p>
+    </div>
+    <div class="clearfix visible-xs"></div>
+
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/navbar-fixed-top/">
+        <img src="../examples/screenshots/navbar-fixed.jpg" alt="Fixed navbar example">
+      </a>
+      <h3>Barra de navegação fixada</h3>
+      <p>Template super básico que incluí a barra de navegação fixada com algum conteúdo adicional.</p>
+    </div>
+  </div>
+
+  <h2 id="examples-custom">Componentes personalizados</h2>
+  <div class="row bs-examples">
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/cover/">
+        <img src="../examples/screenshots/cover.jpg" alt="A one-page template example">
+      </a>
+      <h3>Capa</h3>
+      <p>Um template de página única para criar maravilhosas páginas iniciais.</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/carousel/">
+        <img src="../examples/screenshots/carousel.jpg" alt="Carousel example">
+      </a>
+      <h3>Carrossel</h3>
+      <p>Barra de navegação e carroussel personalizados, e novos novos componentes adicionados.</p>
+    </div>
+    <div class="clearfix visible-xs"></div>
+
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/blog/">
+        <img src="../examples/screenshots/blog.jpg" alt="Blog layout example">
+      </a>
+      <h3>Blog</h3>
+      <p>Blog simples com layout de duas colunas, com navegação, cabeçalho e tipografia personalizadas.</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/dashboard/">
+        <img src="../examples/screenshots/dashboard.jpg" alt="Dashboard example">
+      </a>
+      <h3>Painel de controle</h3>
+      <p>Estrura básica para um painel de controle administrativo com barra lateral e navegação fixos.</p>
+    </div>
+    <div class="clearfix visible-xs"></div>
+
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/signin/">
+        <img src="../examples/screenshots/sign-in.jpg" alt="Sign-in page example">
+      </a>
+      <h3>Página de acesso</h3>
+      <p>Layout com formulário de acesso simples, com um design personalizado.</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/justified-nav/">
+        <img src="../examples/screenshots/justified-nav.jpg" alt="Justified nav example">
+      </a>
+      <h3>Navegação justificada</h3>
+      <p>Cria uma barra de navegação personalizada com links justificados. Aviso! <a href="../components/#nav-justified">Não é amigavel no Safari.</a></p>
+    </div>
+    <div class="clearfix visible-xs"></div>
+
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/sticky-footer/">
+        <img src="../examples/screenshots/sticky-footer.jpg" alt="Sticky footer example">
+      </a>
+      <h3>Rodapé colado</h3>
+      <p>Anexa o rodapé em baixo, mesmo que o conteúdo da página não seja o suficiente.</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/sticky-footer-navbar/">
+        <img src="../examples/screenshots/sticky-footer-navbar.jpg" alt="Sticky footer with navbar example">
+      </a>
+      <h3>Rodapé colado com barra de navegação</h3>
+      <p>Anexa o rodapé em baixo, com uma barra de navegação fixada no topo.</p>
+    </div>
+  </div>
+
+  <h2 id="examples-experiments">Experimentos</h2>
+  <div class="row bs-examples">
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/non-responsive/">
+        <img src="../examples/screenshots/non-responsive.jpg" alt="Non-responsive example">
+      </a>
+      <h3>Bootstrap não-responsivo</h3>
+      <p>Desative facilmente a responsividade do Bootstrap <a href="#disable-responsive">com nossa documentação</a>.</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/offcanvas/">
+        <img src="../examples/screenshots/offcanvas.jpg" alt="Off-canvas navigation example">
+      </a>
+      <h3>Tela a fora (Off-canvas)</h3>
+      <p>Cria tela a fora do layout (para o menu de navegação) alternada.</p>
+    </div>
+  </div>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="tools" class="page-header">Ferramentas</h1>
+
+  <h2 id="tools-bootlint">Bootlint</h2>
+  <p><strong><a href="https://github.com/twbs/bootlint">Bootlint</a></strong> is the official Bootstrap HTML <a href="http://en.wikipedia.org/wiki/Lint_(software)">linter</a> tool. It automatically checks for several common HTML mistakes in webpages that are using Bootstrap in a fairly "vanilla" way. Vanilla Bootstrap's components/widgets require their parts of the DOM to conform to certain structures. Bootlint checks that instances of Bootstrap components have correctly-structured HTML. Consider adding Bootlint to your Bootstrap web development toolchain so that none of the common mistakes slow down your project's development.</p>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="community" class="page-header">Comunidade</h1>
+
+  <p class="lead">Mantenha-se atualizado sobre o desenvolvimento do Bootstrap e aproxime mais da comunidade com esses recursos.</p>
+  <ul>
+    <li>Leia e inscreva-se no <a href="http://blog.getbootstrap.com/">Blog oficial do Bootstrap</a>.</li>
+    <li>Chat com colegas Bootstrappers usando IRC no servidor <code>irc.freenode.net</code>, no canal <a href="irc://irc.freenode.net/%23bootstrap">##bootstrap</a>.</li>
+    <li>Para pedir suporte Bootstrap, pergunte em <a href="https://stackoverflow.com/questions/tagged/twitter-bootstrap-3">StackOverflow usando a tag <code>twitter-bootstrap-3</code></a>.</li>
+    <li>Desenvolvedores podem usar a palavra chave <code>bootstrap</code> em pacotes alterados ou criados com funcionalidade do Bootstrap e distribuir através <a href="https://www.npmjs.com/browse/keyword/bootstrap">npm</a> ou mecanismos similares para que possam ser descobertos facilmente.</li>
+    <li>Encontre exemplos inspiradores de pessoas que criaram projetos com Bootstrap em <a href="http://expo.getbootstrap.com">Bootstrap Expo</a>.</li>
+  </ul>
+  <p>Você tambem pode seguir <a href="https://twitter.com/getbootstrap">@getbootstrap no Twitter</a> e <a href="https://www.facebook.com/getbootstrap">@getbootstrap no Facebook </a> para as últimas fofocas e vídeo-clipes bacanas.</p>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="disable-responsive" class="page-header">Desativando a responsividade</h1>
+
+  <p class="lead">Páginas com Bootstrap é adaptado automaticamente para várias tamanhos de telas.
+    Veja aqui como desativar essa funcionalidade para ficar como <a href="../examples/non-responsive/">este exemplo não-responsivo</a>.</p>
+
+  <h2>Etapas para desativar a responsividade</h2>
+  <ol>
+    <li>Omitir a adição <code>&lt;meta&gt;</code> viewport mencionada na <a href="../css/#overview-mobile">documentação CSS</a></li>
+    <li>Sobreescreca o <code>width</code> no <code>.container</code> para cada camada do grid com uma única largura, por exemplo <code>width: 970px !important;</code> Certifique-se de que esta regra venha após o CSS padrão do Bootstrap. Opcionalmente, você pode evitar o <code>!important</code> com *media queries* ou alguns seletores.</li>
+    <li>Se usar barras de navegação, remova todo o *collapsing* e *expanding behavior* da barra de navegação.</li>
+    <li>Para colunas com grid, adicione tambem as classes <code>.col-xs-*</code>, ou no lugar de, colunas <code>.col-md-*</code> ou <code>.col-lg-*</code>. Não se preocupe, as colunas <code>.col-xs-*</code> serve para para todas as resoluções.</li>
+  </ol>
+  <p>Você vai ainda precisar do Respond.js para IE8 (pois nossa *media queries* e vão precisar ser processadas).</p>
+
+  <h2>Template Bootstrap com a responsividade desativada</h2>
+  <p>Nós seguimos essas etapas para o exemplo. Leia o seu código fonte para ver as alterações específicas foram aplicadas.</p>
+  <p>
+    <a href="../examples/non-responsive/" class="btn btn-primary">Visualizar exemplo não-responsivo</a>
+  </p>
+</div>
+
+
+<!-- Cross link to new migration page -->
+<div class="bs-callout bs-callout-info" id="migration">
+  <h4>Migrando do v2.x para v3.x</h4>
+  <p>Procurando migrar da versão antiga do Bootstrap para v3.x? Verifique <a href="../migration">nosso guia de migração</a>.</p>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="support" class="page-header">Suporte de dispositivos e navegadores</h1>
+  <p class="lead">Bootstrap esta criado para funcionar nos melhores e atualizados navegadores desktop e móveis, ou seja, os navegadores mais antigos podem ser exibidos de forma diferente, embora totalmente funcional.</p>
+
+  <h2 id="support-browsers">Navegadores suportados</h2>
+  <p>Especificamente, Oferecemos suporte para <strong>últimas versões</strong> de navegadores e plataformas.</p>
+
+  <p>Alternative browsers which use the latest version of WebKit, Blink, or Gecko, whether directly or via the platform's web view API, are not explicitly supported. However, Bootstrap should (in most cases) display and function correctly in these browsers as well. More specific support information is provided below.</p>
+
+  <h3 id="mobile-devices">Mobile devices</h3>
+  <p>Generally speaking, Bootstrap supports the latest versions of each major platform's default browsers. Note that proxy browsers (such as Opera Mini, Opera Mobile's Turbo mode, UC Browser Mini, Amazon Silk) are not supported.</p>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <td></td>
+          <th>Chrome</th>
+          <th>Firefox</th>
+          <th>Safari</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Android</th>
+          <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Suportado</td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Suportado</td>
+          <td class="text-muted">N/A</td>
+        </tr>
+        <tr>
+          <th scope="row">iOS</th>
+          <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Suportado</td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Suportado</td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Suportado</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="desktop-browsers">Desktop browsers</h3>
+  <p>Similarly, the latest versions of most desktop browsers are supported.</p>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <td></td>
+          <th>Chrome</th>
+          <th>Firefox</th>
+          <th>Internet Explorer</th>
+          <th>Opera</th>
+          <th>Safari</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Mac</th>
+          <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Suportado</td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Suportado</td>
+          <td class="text-muted">N/A</td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Suportado</td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Suportado</td>
+        </tr>
+        <tr>
+          <th scope="row">Windows</th>
+          <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Suportado</td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Suportado</td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Suportado</td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Suportado</td>
+          <td class="text-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Não suportado</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>On Windows, <strong>we support Internet Explorer 8-11</strong>.</p>
+
+  <p>For Firefox, in addition to the latest normal stable release, we also support the latest <a href="https://www.mozilla.org/en-US/firefox/organizations/faq/">Extended Support Release (ESR)</a> version of Firefox.</p>
+
+  <p>Unofficially, Bootstrap should look and behave well enough in Chromium and Chrome for Linux, Firefox for Linux, and Internet Explorer 7, as well as Microsoft Edge, though they are not officially supported.</p>
+  <p>For a list of some of the browser bugs that Bootstrap has to grapple with, see our <a href="../browser-bugs/">Wall of browser bugs</a>.</p>
+
+  <h2 id="support-ie8-ie9">Internet Explorer 8 and 9</h2>
+  <p>Internet Explorer 8 and 9 are also Suportado, however, please be aware that some CSS3 properties and HTML5 elements are not fully Suportado by these browsers. In addition, <strong>Internet Explorer 8 requires the use of <a href="https://github.com/scottjehl/Respond">Respond.js</a> to enable media query support.</strong></p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th class="col-xs-4">Feature</th>
+          <th class="col-xs-4">Internet Explorer 8</th>
+          <th class="col-xs-4">Internet Explorer 9</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"><code>border-radius</code></th>
+          <td class="text-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Não Suportado</td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Suportado</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>box-shadow</code></th>
+          <td class="text-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Não Suportado</td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Suportado</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>transform</code></th>
+          <td class="text-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Não Suportado</td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Suportado, with <code>-ms</code> prefix</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>transition</code></th>
+          <td colspan="2" class="text-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Não Suportado</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>placeholder</code></th>
+          <td colspan="2" class="text-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Não Suportado</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Visit <a href="http://caniuse.com/">Can I use...</a> for details on browser support of CSS3 and HTML5 features.</p>
+
+  <h2 id="support-ie8-respondjs">Internet Explorer 8 and Respond.js</h2>
+  <p>Beware of the following caveats when using Respond.js in your development and production environments for Internet Explorer 8.</p>
+  <h3 id="respond-js-x-domain">Respond.js and cross-domain CSS</h3>
+  <p>Using Respond.js with CSS hosted on a different (sub)domain (for example, on a CDN) requires some additional setup. <a href="https://github.com/scottjehl/Respond/blob/master/README.md#cdnx-domain-setup">See the Respond.js docs</a> for details.</p>
+  <h3 id="respond-file-proto">Respond.js and <code>file://</code></h3>
+  <p>Due to browser security rules, Respond.js doesn't work with pages viewed via the <code>file://</code> protocol (like when opening a local HTML file). To test responsive features in IE8, view your pages over HTTP(S). <a href="https://github.com/scottjehl/Respond/blob/master/README.md#support--caveats">See the Respond.js docs</a> for details.</p>
+  <h3 id="respond-import">Respond.js and <code>@import</code></h3>
+  <p>Respond.js doesn't work with CSS that's referenced via <code>@import</code>. In particular, some Drupal configurations are known to use <code>@import</code>. <a href="https://github.com/scottjehl/Respond/blob/master/README.md#support--caveats">See the Respond.js docs</a> for details.</p>
+
+  <h2 id="support-ie8-box-sizing">Internet Explorer 8 and box-sizing</h2>
+  <p>IE8 does not fully support <code>box-sizing: border-box;</code> when combined with <code>min-width</code>, <code>max-width</code>, <code>min-height</code>, or <code>max-height</code>. For that reason, as of v3.0.1, we no longer use <code>max-width</code> on <code>.container</code>s.</p>
+
+  <h2 id="support-ie8-font-face">Internet Explorer 8 and @font-face</h2>
+  <p>IE8 has some issues with <code>@font-face</code> when combined with <code>:before</code>. Bootstrap uses that combination with its Glyphicons. If a page is cached, and loaded without the mouse over the window (i.e. hit the refresh button or load something in an iframe) then the page gets rendered before the font loads. Hovering over the page (body) will show some of the icons and hovering over the remaining icons will show those as well. <a href="https://github.com/twbs/bootstrap/issues/13863">See issue #13863</a> for details.</p>
+
+  <h2 id="support-ie-compatibility-modes">IE Compatibility modes</h2>
+  <p>Bootstrap is Não Suportado in the old Internet Explorer compatibility modes. To be sure you're using the latest rendering mode for IE, consider including the appropriate <code>&lt;meta&gt;</code> tag in your pages:</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=edge"</span><span class="nt">&gt;</span></code></pre></figure>
+  <p>Confirm the document mode by opening the debugging tools: press <kbd>F12</kbd> and check the "Document Mode".</p>
+  <p>This tag is included in all of Bootstrap's documentation and examples to ensure the best rendering possible in each Suportado version of Internet Explorer.</p>
+  <p>See <a href="https://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge">this StackOverflow question</a> for more information.</p>
+
+  <h2 id="support-ie10-width">Internet Explorer 10 in Windows 8 and Windows Phone 8</h2>
+  <p>Internet Explorer 10 doesn't differentiate <strong>device width</strong> from <strong>viewport width</strong>, and thus doesn't properly apply the media queries in Bootstrap's CSS. Normally you'd just add a quick snippet of CSS to fix this:</p>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@-ms-viewport</span>       <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="n">device-width</span><span class="p">;</span> <span class="p">}</span></code></pre></figure>
+  <p>However, this doesn't work for devices running Windows Phone 8 versions older than <a href="http://blogs.windows.com/windows_phone/b/wpdev/archive/2013/10/14/introducing-windows-phone-preview-for-developers.aspx">Update 3 (a.k.a. GDR3)</a>, as it causes such devices to show a mostly desktop view instead of narrow "phone" view. To address this, you'll need to <strong>include the following CSS and JavaScript to work around the bug</strong>.</p>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@-ms-viewport</span>       <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="n">device-width</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">@-o-viewport</span>        <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="n">device-width</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">@viewport</span>           <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="n">device-width</span><span class="p">;</span> <span class="p">}</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Copyright 2014-2015 Twitter, Inc.</span>
+<span class="c1">// Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/IEMobile</span><span class="se">\/</span><span class="sr">10</span><span class="se">\.</span><span class="sr">0/</span><span class="p">))</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">msViewportStyle</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'style'</span><span class="p">)</span>
+  <span class="nx">msViewportStyle</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">createTextNode</span><span class="p">(</span>
+      <span class="s1">'@-ms-viewport{width:auto!important}'</span>
+    <span class="p">)</span>
+  <span class="p">)</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'head'</span><span class="p">).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">msViewportStyle</span><span class="p">)</span>
+<span class="p">}</span></code></pre></figure>
+  <p>For more information and usage guidelines, read <a href="http://timkadlec.com/2013/01/windows-phone-8-and-device-width/">Windows Phone 8 and Device-Width</a>.</p>
+  <p>As a heads up, we include this in all of Bootstrap's documentation and examples as a demonstration.</p>
+
+  <h2 id="support-safari-percentages">Safari percent rounding</h2>
+  <p>The rendering engine of versions of Safari prior to v7.1 for OS X and Safari for iOS v8.0 had some trouble with the number of decimal places used in our <code>.col-*-1</code> grid classes. So if you had 12 individual grid columns, you'd notice that they came up short compared to other rows of columns. Besides upgrading Safari/iOS, you have some options for workarounds:</p>
+  <ul>
+    <li>Add <code>.pull-right</code> to your last grid column to get the hard-right alignment</li>
+    <li>Tweak your percentages manually to get the perfect rounding for Safari (more difficult than the first option)</li>
+  </ul>
+
+  <h2 id="support-fixed-position-keyboards">Modals, navbars, and virtual keyboards</h2>
+  <h3>Overflow and scrolling</h3>
+  <p>Support for <code>overflow: hidden</code> on the <code>&lt;body&gt;</code> element is quite limited in iOS and Android. To that end, when you scroll past the top or bottom of a modal in either of those devices' browsers, the <code>&lt;body&gt;</code> content will begin to scroll. See <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=175502">Chrome bug #175502</a> (fixed in Chrome v40) and <a href="https://bugs.webkit.org/show_bug.cgi?id=153852">WebKit bug #153852</a>.</p>
+  <h3>iOS text fields and scrolling</h3>
+  <p>As of iOS 9.3, while a modal is open, if the initial touch of a scroll gesture is within the boundary of a textual <code>&lt;input&gt;</code> or a <code>&lt;textarea&gt;</code>, the <code>&lt;body&gt;</code> content underneath the modal will be scrolled instead of the modal itself. See <a href="https://bugs.webkit.org/show_bug.cgi?id=153856">WebKit bug #153856</a>.</p>
+  <h3>Virtual keyboards</h3>
+  <p>Also, note that if you're using a fixed navbar or using inputs within a modal, iOS has a rendering bug that doesn't update the position of fixed elements when the virtual keyboard is triggered. A few workarounds for this include transforming your elements to <code>position: absolute</code> or invoking a timer on focus to try to correct the positioning manually. This is not handled by Bootstrap, so it is up to you to decide which solution is best for your application.</p>
+  <h3>Navbar Dropdowns</h3>
+  <p>The <code>.dropdown-backdrop</code> element isn't used on iOS in the nav because of the complexity of z-indexing. Thus, to close dropdowns in navbars, you must directly click the dropdown element (or <a href="https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile">any other element which will fire a click event in iOS</a>).</p>
+
+  <h2 id="support-browser-zooming">Browser zooming</h2>
+  <p>Page zooming inevitably presents rendering artifacts in some components, both in Bootstrap and the rest of the web. Depending on the issue, we may be able to fix it (search first and then open an issue if need be). However, we tend to ignore these as they often have no direct solution other than hacky workarounds.</p>
+
+  <h2 id="support-sticky-hover-mobile">Sticky <code>:hover</code>/<code>:focus</code> on mobile</h2>
+  <p>Even though real hovering isn't possible on most touchscreens, most mobile browsers emulate hovering support and make <code>:hover</code> "sticky". In other words, <code>:hover</code> styles start applying after tapping an element and only stop applying after the user taps some other element. This can cause Bootstrap's <code>:hover</code> states to become undesirably "stuck" on such browsers. Some mobile browsers also make <code>:focus</code> similarly sticky. There is currently no simple workaround for these issues other than removing such styles entirely.</p>
+
+  <h2 id="support-printing">Printing</h2>
+  <p>Even in some modern browsers, printing can be quirky.</p>
+  <p>In particular, as of Chrome v32 and regardless of margin settings, Chrome uses a viewport width significantly narrower than the physical paper size when resolving media queries while printing a webpage. This can result in Bootstrap's extra-small grid being unexpectedly activated when printing. <a href="https://github.com/twbs/bootstrap/issues/12078">See issue #12078</a> and <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=273306">Chrome bug #273306</a> for some details. Suggested workarounds:</p>
+  <ul>
+    <li>Embrace the extra-small grid and make sure your page looks acceptable under it.</li>
+    <li>Customize the values of the <code>@screen-*</code> Less variables so that your printer paper is considered larger than extra-small.</li>
+    <li>Add custom media queries to change the grid size breakpoints for print media only.</li>
+  </ul>
+  <p>Also, as of Safari v8.0, fixed-width <code>.container</code>s can cause Safari to use an unusually small font size when printing. See <a href="https://github.com/twbs/bootstrap/issues/14868">#14868</a> and <a href="https://bugs.webkit.org/show_bug.cgi?id=138192">WebKit bug #138192</a> for more details. One potential workaround for this is adding the following CSS:</p>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@media</span> <span class="n">print</span> <span class="p">{</span>
+  <span class="nc">.container</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+  <h2 id="support-android-stock-browser">Android stock browser</h2>
+  <p>Out of the box, Android 4.1 (and even some newer releases apparently) ship with the Browser app as the default web browser of choice (as opposed to Chrome). Unfortunately, the Browser app has lots of bugs and inconsistencies with CSS in general.</p>
+  <h3>Select menus</h3>
+  <p>On <code>&lt;select&gt;</code> elements, the Android stock browser will not display the side controls if there is a <code>border-radius</code> and/or <code>border</code> applied. (See <a href="https://stackoverflow.com/questions/14744437/html-select-box-not-showing-drop-down-arrow-on-android-version-4-0-when-set-with">this StackOverflow question</a> for details.) Use the snippet of code below to remove the offending CSS and render the <code>&lt;select&gt;</code> as an unstyled element on the Android stock browser. The user agent sniffing avoids interference with Chrome, Safari, and Mozilla browsers.</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">nua</span> <span class="o">=</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span>
+  <span class="kd">var</span> <span class="nx">isAndroid</span> <span class="o">=</span> <span class="p">(</span><span class="nx">nua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">'Mozilla/5.0'</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">nua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">'Android '</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">nua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">'AppleWebKit'</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">nua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">'Chrome'</span><span class="p">)</span> <span class="o">===</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">isAndroid</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'select.form-control'</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">'form-control'</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">'width'</span><span class="p">,</span> <span class="s1">'100%'</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+<span class="nt">&lt;/script&gt;</span></code></pre></figure>
+  <p>Want to see an example? <a href="http://jsbin.com/kuvoz/1">Check out this JS Bin demo.</a></p>
+
+  <h2 id="support-validators">Validators</h2>
+  <p>In order to provide the best possible experience to old and buggy browsers, Bootstrap uses <a href="http://browserhacks.com">CSS browser hacks</a> in several places to target special CSS to certain browser versions in order to work around bugs in the browsers themselves. These hacks understandably cause CSS validators to complain that they are invalid. In a couple places, we also use bleeding-edge CSS features that aren't yet fully standardized, but these are used purely for progressive enhancement.</p>
+  <p>These validation warnings don't matter in practice since the non-hacky portion of our CSS does fully validate and the hacky portions don't interfere with the proper functioning of the non-hacky portion, hence why we deliberately ignore these particular warnings.</p>
+  <p>Our HTML docs likewise have some trivial and inconsequential HTML validation warnings due to our inclusion of a workaround for <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=654072">a certain Firefox bug</a>.</p>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="third-parties" class="page-header">Third party support</h1>
+  <p class="lead">While we don't officially support any third party plugins or add-ons, we do offer some useful advice to help avoid potential issues in your projects.</p>
+
+  <h2 id="third-box-sizing">Box-sizing</h2>
+  <p>Some third party software, including Google Maps and Google Custom Search Engine, conflict with Bootstrap due to <code>* { box-sizing: border-box; }</code>, a rule which makes it so <code>padding</code> does not affect the final computed width of an element. Learn more about <a href="https://css-tricks.com/box-sizing/">box model and sizing at CSS Tricks</a>.</p>
+  <p>Depending on the context, you may override as-needed (Option 1) or reset the box-sizing for entire regions (Option 2).</p>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="cm">/* Box-sizing resets
+ *
+ * Reset individual elements or override regions to avoid conflicts due to
+ * global box model settings of Bootstrap. Two options, individual overrides and
+ * region resets, are available as plain CSS and uncompiled Less formats.
+ */</span>
+
+<span class="cm">/* Option 1A: Override a single element's box model via CSS */</span>
+<span class="nc">.element</span> <span class="p">{</span>
+  <span class="na">-webkit-box-sizing</span><span class="p">:</span> <span class="n">content-box</span><span class="p">;</span>
+     <span class="na">-moz-box-sizing</span><span class="p">:</span> <span class="n">content-box</span><span class="p">;</span>
+          <span class="nl">box-sizing</span><span class="p">:</span> <span class="n">content-box</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* Option 1B: Override a single element's box model by using a Bootstrap Less mixin */</span>
+<span class="nc">.element</span> <span class="p">{</span>
+  <span class="nc">.box-sizing</span><span class="o">(</span><span class="nt">content-box</span><span class="o">)</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* Option 2A: Reset an entire region via CSS */</span>
+<span class="nc">.reset-box-sizing</span><span class="o">,</span>
+<span class="nc">.reset-box-sizing</span> <span class="o">*,</span>
+<span class="nc">.reset-box-sizing</span> <span class="o">*</span><span class="nd">:before</span><span class="o">,</span>
+<span class="nc">.reset-box-sizing</span> <span class="o">*</span><span class="nd">:after</span> <span class="p">{</span>
+  <span class="na">-webkit-box-sizing</span><span class="p">:</span> <span class="n">content-box</span><span class="p">;</span>
+     <span class="na">-moz-box-sizing</span><span class="p">:</span> <span class="n">content-box</span><span class="p">;</span>
+          <span class="nl">box-sizing</span><span class="p">:</span> <span class="n">content-box</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* Option 2B: Reset an entire region with a custom Less mixin */</span>
+<span class="nc">.reset-box-sizing</span> <span class="p">{</span>
+  <span class="k">&amp;</span><span class="o">,</span>
+  <span class="o">*,</span>
+  <span class="o">*</span><span class="nd">:before</span><span class="o">,</span>
+  <span class="o">*</span><span class="nd">:after</span> <span class="p">{</span>
+    <span class="nc">.box-sizing</span><span class="o">(</span><span class="nt">content-box</span><span class="o">)</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="nc">.element</span> <span class="p">{</span>
+  <span class="nc">.reset-box-sizing</span><span class="o">()</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="accessibility" class="page-header">Acessibilidade</h1>
+  <p class="lead">Bootstrap segue padrões web comuns e &mdash;com um pouco de esforço&mdash; pode ser criado sites acessíveis para aqueles que utilizam <abbr title="Tecnologia assistiva" class="initialism">TA</abbr>.</p>
+
+  <h2>Pular navegação</h2>
+  <p>Se seu menu de navegação contém muitos links e vem antes do conteúdo principal, adicione um link <code>Pular para conteúdo principal</code> antes do menu (para uma explicação simples, consulte este <a href="http://a11yproject.com/posts/skip-nav-links">Artigo Projeto A11y - Como usar link pular navegação (em inglês)</a>). Ao usar a classe <code>.sr-only</code> irá ocultar visualmente o link ancora, e a classe <code>.sr-only-focusable</code> irá garantir que o elemento só se tornará visível uma vez focada (para usuários com visão de teclado).</p>
+  <div class="bs-callout bs-callout-danger" id="callout-skiplinks">
+    <p>Devido a problemas de longa data / bugs no Chrome (veja a <a href="https://code.google.com/p/chromium/issues/detail?id=262171" title="Chromium bug tracker - Issue 262171: Focus should cycle from named anchor">issue 262171 in the Chromium bug tracker</a>) e Internet Explorer (veja o artigo <a href="http://accessibleculture.org/articles/2010/05/in-page-links/">in-page links and focus order</a>), Você vai precisar ter certeza de que o elemento de destino do seu link ancora é, esteja preparado para isso, para isso, basta adicionar o código <code>tabindex="-1"</code>.</p>
+    <p>Além disso, você pode não querer criar uma indicação explicita de que o elemento destino esteja realmente em foco com <code>#content:focus { outline: none; }</code>.</p>
+    <p>Note que este bug também afetará qualquer outro link ancora em seu site possa estar usando, tornando-os inúteis para usuários de teclado.</p>
+  </div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#content"</span> <span class="na">class=</span><span class="s">"sr-only sr-only-focusable"</span><span class="nt">&gt;</span>Pular para conteúdo principal<span class="nt">&lt;/a&gt;</span>
+  ...
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span> <span class="na">id=</span><span class="s">"content"</span> <span class="na">tabindex=</span><span class="s">"-1"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- Conteúdo principal da página --&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span></code></pre></figure>
+
+  <h2>Hierarquia de cabeçalhos</h2>
+  <p>Quando criamos uma hierarquia de cabeçalho (<code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code>), em seu documento, o cabeçalho principal de ser <code>&lt;h1&gt;</code>. Em seguida cabeçalhos <code>&lt;h2&gt;</code> - <code>&lt;h6&gt;</code> devem vir de forma lógica, de tal modo que os leitores de telas consigam criar uma tabela de conteúdo para suas páginas.</p>
+  <p>Leia mais sobre <a href="http://tableless.com.br/cabecalhos-nivel-1-e-sections/">Cabeçalhos nível 1, sections e acessibilidade</a> e <a href="http://tableless.com.br/entendendo-o-outline-html/">Entendendo o Outline do HTML</a>.</p>
+
+  <h2>Contrastes de Cores</h2>
+  <p>Atualmente, algumas cores padrão disponíveis no Bootstrap (tais como várias usadas em <a href="../css/#buttons">classes de botões</a>, parte da cor do código destacado em <a href="../css/#code-block">blocos de código básico</a>, a classe <code>.bg-primary</code> em <a href="../css/#helper-classes-backgrounds">background contextual</a> nas classes de ajuda, e a cor do link padrão quando usado em um fundo branco) têm uma relação de baixo contraste (abaixo da <a href="http://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast">proporção recomendada de 4.5:1</a>). Isso pode causar problemas para usuários com baixa visão ou que são daltônicos. Estas cores padrão podem precisar ser modificadas para aumentar seu contraste e legibilidade.</p>
+
+  <h2>Recursos adicionais</h2>
+  <ul>
+    <li><a href="http://tableless.com.br/boas-praticas-de-acessibilidade/">Boas práticas de Acessibilidade</a></li>
+    <li><a href="https://pt.wikipedia.org/wiki/Tecnologia_assistiva">Tecnologia assistiva – Wikipédia</a></li>
+    <li><a href="https://pt.wikipedia.org/wiki/Acessibilidade_web">Acessibilidade web - Wikipédia</a></li>
+    <li><a href="http://www.maujor.com/w3c/introwac.html">Introdução à Acessibilidade na Web</a></li>
+    <li><a href="http://www.w3c.br/pub/Materiais/PublicacoesW3C/cartilha-w3cbr-acessibilidade-web-fasciculo-I.pdf">Cartilha Acessibilidade Na Web - W3c Brasil (pdf)</a></li>
+    <li><a href="http://emag.governoeletronico.gov.br/cursodesenvolvedor/index.html">Curso eMAG / Desenvolvedor</a></li>
+    <li><a href="http://bit.ly/1ehmmIj">e-MAG Checklist de Acessibilidade Manual para o Desenvolvedor</a></li>
+    <li><a href="https://github.com/squizlabs/HTML_CodeSniffer">"HTML Codesniffer" bookmarklet for identifying accessibility issues</a></li>
+    <li><a href="https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en">Chrome's Accessibility Developer Tools extension</a></li>
+    <li><a href="http://www.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a></li>
+    <li><a href="http://a11yproject.com/">The A11Y Project</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Accessibility">MDN accessibility documentation</a></li>
+  </ul>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="license-faqs" class="page-header">Licença (Perguntas Frequentes)</h1>
+  <p class="lead">Bootstrap esta lançado sob a licença MIT e com direitos autorais (copyright) 2016 Twitter. Cheio de pedaços menores, pode ser descrito com as seguintes condições.</p>
+
+  <h2>Ela exige que você:</h2>
+  <ul>
+    <li>Mantenha a nota de licença e direitos de autor incluído nos aquivos CSS e JavaScript do Bootstrap quando você usá-los em seus projetos</li>
+  </ul>
+
+  <h2>Ela permite que você:</h2>
+  <ul>
+    <li>Baixe e use o Bootstrap livremente, no todo ou em parte, para uso pessoal, privado, interno da empresa, ou para fins comerciais</li>
+    <li>Use Bootstrap em pacotes ou distribuições que você criar</li>
+    <li>Modifique o código fonte</li>
+    <li>Disponibilize uma sub-licencça para modificar e distribuir Bootstrap a terceiros não incluídos na licença</li>
+  </ul>
+
+  <h2>Ela proíbe você de:</h2>
+  <ul>
+    <li>Mantenha os autores e proprietários da licença responsável por danos como Bootstrap é fornecido sem garantia</li>
+    <li>Mantenha os criadores ou detentores de direitos autorais do Bootstrap responsável</li>
+    <li>Redistribuir qualquer pedaço de Bootstrap sem a devida atribuição</li>
+    <li>Use quaisquer marcas de propriedade do Twitter de qualquer maneira que possa indicar ou sugerir que o Twitter endossa a sua distribuição</li>
+    <li>Use quaisquer marcas de propriedade de Twitter de qualquer maneira que possa indicar ou sugerir que você criou o software em questão Twitter</li>
+  </ul>
+
+  <h2>Ela não requer que você:</h2>
+  <ul>
+    <li>Inclue o fonte do Bootstrap, ou de quaisquer modificações que possa ter feito a ele, em qualquer redistribuição você venha a criar</li>
+    <li>Envie as alterações feitas por você de volta para o projeto Bootstrap (embora tal feedback é incentivada)</li>
+  </ul>
+
+  <p>A licença completa do Bootstrap esta localizada <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">em nosso repositório do projeto</a> para mais informações.</p>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="translations" class="page-header">Traduções</h1>
+
+  <p class="lead">Membros da comunidade têm traduzido a documentação do Bootstrap em várias línguas.</p>
+  <ul>
+    
+      <li><a href="http://v3.bootcss.com/" hreflang="zh">Bootstrap 中文文档 (Chinese)</a></li>
+    
+      <li><a href="https://kkbruce.tw/bs3/" hreflang="zh-TW">Bootstrap 3 中文手冊 (Chinese (Traditional))</a></li>
+    
+      <li><a href="http://getbootstrap.dk/" hreflang="da">Bootstrap på Dansk (Danish)</a></li>
+    
+      <li><a href="http://www.oneskyapp.com/fr/docs/bootstrap/getting-started/" hreflang="fr">Bootstrap en Français (French)</a></li>
+    
+      <li><a href="http://holdirbootstrap.de/" hreflang="de">Bootstrap auf Deutsch (German)</a></li>
+    
+      <li><a href="http://www.hackerstribe.com/guide/IT-bootstrap-3.1.1/" hreflang="it">Bootstrap in Italiano (Italian)</a></li>
+    
+      <li><a href="http://bootstrapk.com/" hreflang="ko">Bootstrap 한국어 (Korean)</a></li>
+    
+      <li><a href="http://bootstrapbrasil.github.io/" hreflang="pt-BR">Bootstrap em Português do Brasil (Brazilian Portuguese)</a></li>
+    
+      <li><a href="http://www.oneskyapp.com/ru/docs/bootstrap/" hreflang="ru">Bootstrap по-русски (Russian)</a></li>
+    
+      <li><a href="http://www.oneskyapp.com/es/docs/bootstrap/" hreflang="es">Bootstrap en Español (Spanish)</a></li>
+    
+      <li><a href="http://www.trbootstrap.com" hreflang="tr">Türkçe Bootstrap (Turkish)</a></li>
+    
+      <li><a href="http://twbs.docs.org.ua" hreflang="uk">Bootstrap українською (Ukrainian)</a></li>
+    
+      <li><a href="http://getbootstrap.com.vn" hreflang="vi">Bootstrap bằng tiếng Việt (Vietnamese)</a></li>
+    
+  </ul>
+  <p><strong class="text-danger">Nós não ajudamos a organizar ou hospedar traduções, nós apenas divulgamos eles.</strong></p>
+  <p>Terminou uma nova tradução? Solicite uma requisição para adicioná-lo à nossa lista.</p>
+</div>
+
+
+        </div>
+        
+        <div class="col-md-3" role="complementary">
+          <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
+            <ul class="nav bs-docs-sidenav">
+              
+                <li>
+  <a href="#download">Download</a>
+</li>
+<li>
+  <a href="#whats-included">O que está incluso</a>
+  <ul class="nav">
+    <li><a href="#whats-included-precompiled">Pré-compilado</a></li>
+    <li><a href="#whats-included-source">Código fonte</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#grunt">Compilando CSS e JavaScript</a>
+  <ul class="nav">
+    <li><a href="#grunt-installing">Instalando Grunt</a></li>
+    <li><a href="#grunt-commands">Comandos disponiveis Grunt</a></li>
+    <li><a href="#grunt-troubleshooting">Solução de Problemas</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#template">Template básico</a>
+</li>
+<li>
+  <a href="#examples">Exemplos</a>
+  <ul class="nav">
+    <li><a href="#examples-framework">Usando o framework</a></li>
+    <li><a href="#examples-navbars">Barra de navegação em ação</a></li>
+    <li><a href="#examples-custom">Componentes personalizados</a></li>
+    <li><a href="#examples-experiments">Experimentos</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#tools">Ferramentas</a>
+  <ul class="nav">
+    <li><a href="#tools-bootlint">Bootlint</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#community">Comunidade</a>
+</li>
+<li>
+  <a href="#disable-responsive">Desativando a responsividade</a>
+</li>
+<li>
+  <a href="#migration">Migrando do 2.x para 3.0</a>
+</li>
+<li>
+  <a href="#support">Suporte de dispositivos e navegadores</a>
+  <ul class="nav">
+    <li><a href="#support-browsers">Navegadores suportados</a></li>
+    <li><a href="#support-ie8-ie9">Internet Explorer 8-9</a></li>
+    <li><a href="#support-ie8-respondjs">IE8 e Respond.js</a></li>
+    <li><a href="#support-ie8-box-sizing">IE8 e box-sizing</a></li>
+    <li><a href="#support-ie8-font-face">IE8 e @font-face</a></li>
+    <li><a href="#support-ie-compatibility-modes">Modo de compatibiliade IE</a></li>
+    <li><a href="#support-ie10-width">IE10 e Windows (Phone) 8</a></li>
+    <li><a href="#support-safari-percentages">Safari percent rounding</a></li>
+    <li><a href="#support-fixed-position-keyboards">Modals, navbars, and virtual keyboards</a></li>
+    <li><a href="#support-browser-zooming">Browser zooming</a></li>
+    <li><a href="#support-sticky-hover-mobile">Sticky :hover/:focus on mobile</a></li>
+    <li><a href="#support-printing">Imprimindo</a></li>
+    <li><a href="#support-android-stock-browser">Android stock browser</a></li>
+    <li><a href="#support-validators">Validadores</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#third-parties">Third party support</a>
+</li>
+<li>
+  <a href="#accessibility">Acessibilidade</a>
+</li>
+<li>
+  <a href="#license-faqs">FAQs Licença</a>
+</li>
+<li>
+  <a href="#translations">Traduções</a>
+</li>
+
+              
+            </ul>
+            <a class="back-to-top" href="#top">
+              Back to top
+            </a>
+            
+          </nav>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Footer
+================================================== -->
+<footer class="bs-docs-footer">
+  <div class="container">
+
+    <ul class="bs-docs-footer-links">
+      <li><a href="https://github.com/twbs/bootstrap">GitHub</a></li>
+      <li><a href="https://twitter.com/getbootstrap">Twitter</a></li>
+      <li><a href="../getting-started/#examples">Exemplos</a></li>
+      <li><a href="../about/">Sobre</a></li>
+    </ul>
+
+    <p>Projetado e construído com todo amor do mundo por <a href="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="https://twitter.com/fat" target="_blank">@fat</a>. Mantido pela <a href="https://github.com/orgs/twbs/people">equipe core</a> com ajuda dos <a href="https://github.com/twbs/bootstrap/graphs/contributors">nossos contribuidores</a>.</p>
+
+    <p>Código licenciado sob <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, documentação sob <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
+
+  </div>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>')</script>
+
+
+  <script src="../dist/js/bootstrap.js"></script>
+
+
+
+  
+  <script src="../assets/js/vendor/holder.min.js"></script>
+  
+  <script src="../assets/js/vendor/ZeroClipboard.min.js"></script>
+  
+  <script src="../assets/js/vendor/anchor.min.js"></script>
+  
+  <script src="../assets/js/src/application.js"></script>
+  
+
+
+
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+<!-- Analytics
+================================================== -->
+<script>
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+
+  </body>
+</html>
