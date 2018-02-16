@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -9,30 +11,30 @@
 <meta name="author" content="Bootstrap Brasil, Bootstrap team and contributors">
 
 <title>
-  
+
     CSS &middot; Bootstrap em Português (Brasil)
-  
+
 </title>
 
 <!-- Bootstrap core CSS -->
 
-<link href="../dist/css/bootstrap.css" rel="stylesheet">
+<link href="{{ site.baseurl }}/docs/3.3/dist/css/bootstrap.css" rel="stylesheet">
 
 
   <!-- Optional Bootstrap Theme -->
 
-  <link href="data:text/css;charset=utf-8," data-href="../dist/css/bootstrap-theme.css" rel="stylesheet" id="bs-theme-stylesheet">
+  <link href="data:text/css;charset=utf-8," data-href="{{ site.baseurl }}/docs/3.3/dist/css/bootstrap-theme.css" rel="stylesheet" id="bs-theme-stylesheet">
 
 
 
 <!-- Documentation extras -->
 
-<link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-<link href="../assets/css/src/pygments-manni.css" rel="stylesheet">
-<link href="../assets/css/src/docs.css" rel="stylesheet">
+<link href="{{ site.baseurl }}/docs/3.3/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+<link href="{{ site.baseurl }}/docs/3.3/assets/css/src/pygments-manni.css" rel="stylesheet">
+<link href="{{ site.baseurl }}/docs/3.3/assets/css/src/docs.css" rel="stylesheet">
 
-<!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-<script src="../assets/js/ie-emulation-modes-warning.js"></script>
+<!--[if lt IE 9]><script src="{{ site.baseurl }}/docs/3.3/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<script src="{{ site.baseurl }}/docs/3.3/assets/js/ie-emulation-modes-warning.js"></script>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -82,24 +84,24 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="../" class="navbar-brand">Bootstrap</a>
+      <a href="{{ site.baseurl }}/docs/3.3/" class="navbar-brand">Bootstrap</a>
     </div>
     <nav id="bs-navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li>
-          <a href="../getting-started/">Ponto de partida</a>
+          <a href="{{ site.baseurl }}/docs/3.3/getting-started/">Ponto de partida</a>
         </li>
         <li class="active">
-          <a href="../css/">CSS</a>
+          <a href="{{ site.baseurl }}/docs/3.3/css/">CSS</a>
         </li>
         <li>
-          <a href="../components/">Componentes</a>
+          <a href="{{ site.baseurl }}/docs/3.3/components/">Componentes</a>
         </li>
         <li>
-          <a href="../javascript/">JavaScript</a>
+          <a href="{{ site.baseurl }}/docs/3.3/javascript/">JavaScript</a>
         </li>
         <li>
-          <a href="../customize/">Personalize</a>
+          <a href="{{ site.baseurl }}/docs/3.3/customize/">Personalize</a>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -117,7 +119,7 @@
       <div class="container">
         <h1>CSS</h1>
         <p>Configurações CSS em geral, classes CSS para elementos HTML fundamentais e um poderoso sistema de grid</p>
-        
+
       </div>
     </div>
 
@@ -448,7 +450,7 @@
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-6 col-sm-3"</span><span class="nt">&gt;</span>.col-xs-6 .col-sm-3<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-6 col-sm-3"</span><span class="nt">&gt;</span>.col-xs-6 .col-sm-3<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
-  <p>Além disso,  para compensar colunas em breakpoints responsive, você pode precisar <strong>redefinir offsets, pushes, ou pulls</strong>. Veja isso em ação <a href="../examples/grid/">no exemplo de grid</a>.</p>
+  <p>Além disso,  para compensar colunas em breakpoints responsive, você pode precisar <strong>redefinir offsets, pushes, ou pulls</strong>. Veja isso em ação <a href="{{ site.baseurl }}/docs/3.3/examples/grid/">no exemplo de grid</a>.</p>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-5 col-md-6"</span><span class="nt">&gt;</span>.col-sm-5 .col-md-6<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0"</span><span class="nt">&gt;</span>.col-sm-5 .col-sm-offset-2 .col-md-6 .col-md-offset-0<span class="nt">&lt;/div&gt;</span>
@@ -1832,7 +1834,7 @@ Para editar configurações, pressione <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Entrada de texto"</span><span class="nt">&gt;</span></code></pre></figure>
   <div class="bs-callout bs-callout-info" id="callout-xref-input-group">
     <h4>Grupo de Inputs</h4>
-    <p>Para adicionar texto ou botões integrados antes e/ou depois de alguma base de texto <code>&lt;input&gt;</code>, <a href="../components/#input-groups">veja o componente de grupo de entrada</a>.</p>
+    <p>Para adicionar texto ou botões integrados antes e/ou depois de alguma base de texto <code>&lt;input&gt;</code>, <a href="{{ site.baseurl }}/docs/3.3/components/#input-groups">veja o componente de grupo de entrada</a>.</p>
   </div>
 
   <h3>Textarea</h3>
@@ -2207,7 +2209,7 @@ Para editar configurações, pressione <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</
   <div class="bs-callout bs-callout-warning" id="callout-form-validation-state-accessibility">
     <h4>Transmitir estado de validação para as tecnologias de apoio e usuários daltônicos</h4>
     <p>Usando esses estilos de validação para denotar o estado de um controle de formulário apenas apenas fornecerá um visual, indicação em base de cores, que não serão transmitidas para usuários de tecnologias assistivas - tais como leitores de tela - ou para usuários daltônicos.</p>
-    <p>Garanta que uma indicação alternativa de estado também seja fornecida. Por exemplo, você pode incluir uma dica sobre o estado nos controles de formulários <code>&lt;label&gt;</code> texto em si mesmo (como é o caso do código do exemplo a seguir), inclui um <a href="../components/#glyphicons">Glyphicon</a> (com texto alternativo apropriado usando a classe <code>.sr-only</code> - veja os <a href="../components/#glyphicons-examples">exemplos Glyphicon</a>), ou pelo fornecimento de um bloco de <a href="#forms-help-text">texto de ajuda</a> adicional. Especificamente para tecnologias  assistivas, controles de formulários inválidos também pode ser atribuído o atributo <code>aria-invalid="true"</code>.</p>
+    <p>Garanta que uma indicação alternativa de estado também seja fornecida. Por exemplo, você pode incluir uma dica sobre o estado nos controles de formulários <code>&lt;label&gt;</code> texto em si mesmo (como é o caso do código do exemplo a seguir), inclui um <a href="{{ site.baseurl }}/docs/3.3/components/#glyphicons">Glyphicon</a> (com texto alternativo apropriado usando a classe <code>.sr-only</code> - veja os <a href="{{ site.baseurl }}/docs/3.3/components/#glyphicons-examples">exemplos Glyphicon</a>), ou pelo fornecimento de um bloco de <a href="#forms-help-text">texto de ajuda</a> adicional. Especificamente para tecnologias  assistivas, controles de formulários inválidos também pode ser atribuído o atributo <code>aria-invalid="true"</code>.</p>
   </div>
 
   <div class="bs-example" data-example-id="form-validation-states">
@@ -2294,7 +2296,7 @@ Para editar configurações, pressione <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</
   <p><strong class="text-danger">Ícones de feedback apenas trabalham com elementos textuais <code>&lt;input class="form-control"&gt;</code>.</strong></p>
   <div class="bs-callout bs-callout-warning" id="callout-has-feedback-icon-positioning">
     <h4>Ícones, etiquetas, e grupos de entradas</h4>
-    <p>Posicionamento manual de ícones de feedback é necessário para entradas sem uma etiqueta e para <a href="../components#input-groups">grupos de entradas</a> com um add-on à direita. Você é fortemente encorajado à providenciar etiquetas para todas as entradas por causa de acessibilidade. Se você quiser evitar etiquetas de serem mostradas, esconda elas com a classe <code>.sr-only</code>. Se você necessitar fazer sem etiquetas, ajuste o valor de <code>top</code> do ícone de feedback. Para grupos de entradas, ajuste o valor do <code>right</code> para um valor de pixel apropriado dependendo da largura do seu add-on.</p>
+    <p>Posicionamento manual de ícones de feedback é necessário para entradas sem uma etiqueta e para <a href="{{ site.baseurl }}/docs/3.3/components#input-groups">grupos de entradas</a> com um add-on à direita. Você é fortemente encorajado à providenciar etiquetas para todas as entradas por causa de acessibilidade. Se você quiser evitar etiquetas de serem mostradas, esconda elas com a classe <code>.sr-only</code>. Se você necessitar fazer sem etiquetas, ajuste o valor de <code>top</code> do ícone de feedback. Para grupos de entradas, ajuste o valor do <code>right</code> para um valor de pixel apropriado dependendo da largura do seu add-on.</p>
   </div>
   <div class="bs-callout bs-callout-warning" id="callout-has-feedback-icon-accessibility">
     <h4>Transmitindo o significado dos ícones para tecnologia assistiva</h4>
@@ -2759,7 +2761,7 @@ Para editar configurações, pressione <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</
 
   <h2 id="images-responsive">Imagens responsivas</h2>
   <p>Imagens no Bootstrap 3 podem ser feitas responsivas amigavelmente através da adição da classe <code>.img-responsive</code>. Isso aplica <code>max-width: 100%;</code>, <code>height: auto;</code> e <code>display: block;</code> na imagem para que dimensione de forma agradável ao elemento pai.</p>
-  <p>Centralize as imagens que usam a classe <code>.img-responsive</code>, usando <code>.center-block</code> em vez de <code>.text-center</code>. <a href="../css/#helper-classes-center">Veja a seção de classes de ajuda</a> para mais detalhes sobre o uso do <code>.center-block</code>.</p>
+  <p>Centralize as imagens que usam a classe <code>.img-responsive</code>, usando <code>.center-block</code> em vez de <code>.text-center</code>. <a href="{{ site.baseurl }}/docs/3.3/css/#helper-classes-center">Veja a seção de classes de ajuda</a> para mais detalhes sobre o uso do <code>.center-block</code>.</p>
   <div class="bs-callout bs-callout-warning" id="callout-images-ie-svg">
     <h4>Imagens SVG e IE 8-10</h4>
     <p>No Internet Explorer 8-10, imagens SVG com <code>.img-responsive</code> são dimensionados desproporcionalmente. Para consertar isso, adicione <code>width: 100% \9;</code> onde necessário. Bootstrap não aplica isso automaticamente por causar complicaçõespara outros formatos de imagem.</p>
@@ -2842,7 +2844,7 @@ Para editar configurações, pressione <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</
 
 
   <h3 id="helper-classes-carets">Carets (circunflexo)</h3>
-  <p>Use carets para indicar funcionalidade dropdown and direção. Note que o padrão de caret será automaticamente invertido nos <a href="../components/#btn-dropdowns-dropup">menus dropup</a>.</p>
+  <p>Use carets para indicar funcionalidade dropdown and direção. Note que o padrão de caret será automaticamente invertido nos <a href="{{ site.baseurl }}/docs/3.3/components/#btn-dropdowns-dropup">menus dropup</a>.</p>
   <div class="bs-example" data-example-id="caret">
     <span class="caret"></span>
   </div>
@@ -2871,7 +2873,7 @@ Para editar configurações, pressione <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</
 
   <div class="bs-callout bs-callout-warning" id="callout-helper-pull-navbar">
     <h4>Não use em navbars (barra de navegação)</h4>
-    <p>Para alinhar componentes em navbars com classes utilitárias, use <code>.navbar-left</code> ou <code>.navbar-right</code>. alternadas<a href="../components/#navbar-component-alignment">Veja os documentos de navbar</a> para detalhes.</p>
+    <p>Para alinhar componentes em navbars com classes utilitárias, use <code>.navbar-left</code> ou <code>.navbar-right</code>. alternadas<a href="{{ site.baseurl }}/docs/3.3/components/#navbar-component-alignment">Veja os documentos de navbar</a> para detalhes.</p>
   </div>
 
 
@@ -2940,7 +2942,7 @@ Para editar configurações, pressione <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</
 
 
   <h3 id="helper-classes-screen-readers">Leitores de tela e navigação por teclado</h3>
-  <p>Oculte um elemento para todos os dispositivos <strong>exceto leitores de tela</strong> com <code>.sr-only</code>. Combine <code>.sr-only</code> com <code>.sr-only-focusable</code> para mostrar o elemento novamente quando estiver focado (ex.: por um usuário utilizador de apenas teclado). Necessário para seguir <a href="../getting-started/#accessibility">as boas práticas de acessibilidade</a>. Pode também ser usado mixins.</p>
+  <p>Oculte um elemento para todos os dispositivos <strong>exceto leitores de tela</strong> com <code>.sr-only</code>. Combine <code>.sr-only</code> com <code>.sr-only-focusable</code> para mostrar o elemento novamente quando estiver focado (ex.: por um usuário utilizador de apenas teclado). Necessário para seguir <a href="{{ site.baseurl }}/docs/3.3/getting-started/#accessibility">as boas práticas de acessibilidade</a>. Pode também ser usado mixins.</p>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"sr-only sr-only-focusable"</span> <span class="na">href=</span><span class="s">"#content"</span><span class="nt">&gt;</span>Pular para conteúdo principal<span class="nt">&lt;/a&gt;</span></code></pre></figure>
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Usage as a mixin
 </span><span class="nc">.skip-navigation</span> <span class="p">{</span>
@@ -3226,11 +3228,11 @@ Para editar configurações, pressione <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</
 
 
   <h2 id="less-bootstrap">Compilando Bootstrap</h2>
-  <p>Bootstrap pode ser utilizado de pelo menos duas maneiras: com o CSS compilado ou com os arquivos fontes Less. Para compilar os arquivos Less, <a href="../getting-started/#grunt">consulte a seção de ponto de partida</a> para como configurar seu ambiente de desenvolvimento  para rodar os comandos necessários.</p>
+  <p>Bootstrap pode ser utilizado de pelo menos duas maneiras: com o CSS compilado ou com os arquivos fontes Less. Para compilar os arquivos Less, <a href="{{ site.baseurl }}/docs/3.3/getting-started/#grunt">consulte a seção de ponto de partida</a> para como configurar seu ambiente de desenvolvimento  para rodar os comandos necessários.</p>
   <p>Ferramentas de compilação de terceiros podem trabalhar com Bootstrap, mas eles não são apiadas por nossa equipe principal.</p>
 
   <h2 id="less-variables">Variáveis</h2>
-  <p>Variáveis são usadas ao longo de todo o projeto como um caminho para centralizar e compartilhar valores comumente usados como cores, espaçamentos, ou montante de fontes. Para uma discriminação completa, por favor veja <a href="../customize/#less-variables-section">o personalizador</a>.</p>
+  <p>Variáveis são usadas ao longo de todo o projeto como um caminho para centralizar e compartilhar valores comumente usados como cores, espaçamentos, ou montante de fontes. Para uma discriminação completa, por favor veja <a href="{{ site.baseurl }}/docs/3.3/customize/#less-variables-section">o personalizador</a>.</p>
 
   <h3 id="less-variables-colors">Cores</h3>
   <p>Facilmente faça uso de dois esquemas de cores: escala de cinza e semântica. Cores de tons de cinza  fornecem facilmente acesso para usar normalmente tons de preto enquanto inclui variáveis semanticas de cores atribuído significativamente valores contextuais.</p>
@@ -3328,7 +3330,7 @@ Para editar configurações, pressione <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</
 
   <h3 id="less-variables-icons">Ícones</h3>
   <p>Duas variáveis rápidas para personalização localização e nomes de arquivos de seus ícones.</p>
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@icon-font-path</span><span class="nd">:</span>          <span class="s2">"../fonts/"</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@icon-font-path</span><span class="nd">:</span>          <span class="s2">"{{ site.baseurl }}/docs/3.3/fonts/"</span><span class="p">;</span>
 <span class="k">@icon-font-name</span><span class="nd">:</span>          <span class="s2">"glyphicons-halflings-regular"</span><span class="p">;</span></code></pre></figure>
 
   <h3 id="less-variables-components">Componentes</h3>
@@ -3718,11 +3720,11 @@ Para editar configurações, pressione <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</
 
 
         </div>
-        
+
         <div class="col-md-3" role="complementary">
           <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
             <ul class="nav bs-docs-sidenav">
-              
+
                 <li>
   <a href="#overview">Visão geral</a>
   <ul class="nav">
@@ -3860,19 +3862,19 @@ Para editar configurações, pressione <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</
   </ul>
 </li>
 
-              
+
             </ul>
             <a class="back-to-top" href="#top">
               Back to top
             </a>
-            
+
             <a href="#" class="bs-docs-theme-toggle" role="button">
               Preview theme
             </a>
-            
+
           </nav>
         </div>
-        
+
       </div>
     </div>
 
@@ -3884,8 +3886,8 @@ Para editar configurações, pressione <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</
     <ul class="bs-docs-footer-links">
       <li><a href="https://github.com/twbs/bootstrap">GitHub</a></li>
       <li><a href="https://twitter.com/getbootstrap">Twitter</a></li>
-      <li><a href="../getting-started/#examples">Exemplos</a></li>
-      <li><a href="../about/">Sobre</a></li>
+      <li><a href="{{ site.baseurl }}/docs/3.3/getting-started/#examples">Exemplos</a></li>
+      <li><a href="{{ site.baseurl }}/docs/3.3/about/">Sobre</a></li>
     </ul>
 
     <p>Projetado e construído com todo amor do mundo por <a href="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="https://twitter.com/fat" target="_blank">@fat</a>. Mantido pela <a href="https://github.com/orgs/twbs/people">equipe core</a> com ajuda dos <a href="https://github.com/twbs/bootstrap/graphs/contributors">nossos contribuidores</a>.</p>
@@ -3899,28 +3901,28 @@ Para editar configurações, pressione <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="{{ site.baseurl }}/docs/3.3/assets/js/vendor/jquery.min.js"><\/script>')</script>
 
 
-  <script src="../dist/js/bootstrap.js"></script>
+  <script src="{{ site.baseurl }}/docs/3.3/dist/js/bootstrap.js"></script>
 
 
 
-  
-  <script src="../assets/js/vendor/holder.min.js"></script>
-  
-  <script src="../assets/js/vendor/ZeroClipboard.min.js"></script>
-  
-  <script src="../assets/js/vendor/anchor.min.js"></script>
-  
-  <script src="../assets/js/src/application.js"></script>
-  
+
+  <script src="{{ site.baseurl }}/docs/3.3/assets/js/vendor/holder.min.js"></script>
+
+  <script src="{{ site.baseurl }}/docs/3.3/assets/js/vendor/ZeroClipboard.min.js"></script>
+
+  <script src="{{ site.baseurl }}/docs/3.3/assets/js/vendor/anchor.min.js"></script>
+
+  <script src="{{ site.baseurl }}/docs/3.3/assets/js/src/application.js"></script>
+
 
 
 
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="{{ site.baseurl }}/docs/3.3/assets/js/ie10-viewport-bug-workaround.js"></script>
 
 <!-- Analytics
 ================================================== -->

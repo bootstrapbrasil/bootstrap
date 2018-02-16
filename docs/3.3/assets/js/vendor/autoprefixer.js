@@ -1,3 +1,5 @@
+---
+---
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.autoprefixer = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 (function() {
   var Autoprefixer, Browsers, Prefixes, autoprefixer, browserslist, infoCache, isPlainObject, postcss,
@@ -109,7 +111,7 @@
 
 }).call(this);
 
-},{"../data/prefixes":2,"./browsers":4,"./info":37,"./prefixes":41,"browserslist":55,"caniuse-db/data":56,"postcss":107}],2:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/data/prefixes":2,"./browsers":4,"./info":37,"./prefixes":41,"browserslist":55,"caniuse-db/data":56,"postcss":107}],2:[function(require,module,exports){
 (function() {
   var add, crispedges, feature, flexbox, gradients, logicalProps, prefix, resolution, result, sort, textDecoration,
     slice = [].slice;
@@ -904,7 +906,7 @@
 
 }).call(this);
 
-},{"../declaration":5,"./flex-spec":24}],7:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/declaration":5,"./flex-spec":24}],7:[function(require,module,exports){
 (function() {
   var AlignItems, Declaration, flexSpec,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -963,7 +965,7 @@
 
 }).call(this);
 
-},{"../declaration":5,"./flex-spec":24}],8:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/declaration":5,"./flex-spec":24}],8:[function(require,module,exports){
 (function() {
   var AlignSelf, Declaration, flexSpec,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -1020,7 +1022,7 @@
 
 }).call(this);
 
-},{"../declaration":5,"./flex-spec":24}],9:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/declaration":5,"./flex-spec":24}],9:[function(require,module,exports){
 (function() {
   var BackgroundSize, Declaration,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -1054,7 +1056,7 @@
 
 }).call(this);
 
-},{"../declaration":5}],10:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/declaration":5}],10:[function(require,module,exports){
 (function() {
   var BlockLogical, Declaration,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -1091,7 +1093,7 @@
 
 }).call(this);
 
-},{"../declaration":5}],11:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/declaration":5}],11:[function(require,module,exports){
 (function() {
   var BorderImage, Declaration,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -1121,7 +1123,7 @@
 
 }).call(this);
 
-},{"../declaration":5}],12:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/declaration":5}],12:[function(require,module,exports){
 (function() {
   var BorderRadius, Declaration,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -1179,7 +1181,7 @@
 
 }).call(this);
 
-},{"../declaration":5}],13:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/declaration":5}],13:[function(require,module,exports){
 (function() {
   var BreakInside, Declaration,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -1235,7 +1237,7 @@
 
 }).call(this);
 
-},{"../declaration":5}],14:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/declaration":5}],14:[function(require,module,exports){
 (function() {
   var CrispEdges, Value,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -1268,7 +1270,7 @@
 
 }).call(this);
 
-},{"../value":47}],15:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/value":47}],15:[function(require,module,exports){
 (function() {
   var DisplayFlex, OldDisplayFlex, OldValue, Value, flexSpec,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -1338,7 +1340,7 @@
 
 }).call(this);
 
-},{"../old-value":39,"../value":47,"./flex-spec":24}],16:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/old-value":39,"{{ site.baseurl }}/docs/3.3/value":47,"./flex-spec":24}],16:[function(require,module,exports){
 (function() {
   var FillAvailable, OldValue, Value,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -1381,7 +1383,7 @@
 
 }).call(this);
 
-},{"../old-value":39,"../value":47}],17:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/old-value":39,"{{ site.baseurl }}/docs/3.3/value":47}],17:[function(require,module,exports){
 (function() {
   var FilterValue, OldFilterValue, OldValue, Value, utils,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -1452,7 +1454,7 @@
 
 }).call(this);
 
-},{"../old-value":39,"../utils":46,"../value":47}],18:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/old-value":39,"{{ site.baseurl }}/docs/3.3/utils":46,"{{ site.baseurl }}/docs/3.3/value":47}],18:[function(require,module,exports){
 (function() {
   var Declaration, Filter,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -1483,7 +1485,7 @@
 
 }).call(this);
 
-},{"../declaration":5}],19:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/declaration":5}],19:[function(require,module,exports){
 (function() {
   var Declaration, FlexBasis, flexSpec,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -1532,7 +1534,7 @@
 
 }).call(this);
 
-},{"../declaration":5,"./flex-spec":24}],20:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/declaration":5,"./flex-spec":24}],20:[function(require,module,exports){
 (function() {
   var Declaration, FlexDirection, flexSpec,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -1605,7 +1607,7 @@
 
 }).call(this);
 
-},{"../declaration":5,"./flex-spec":24}],21:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/declaration":5,"./flex-spec":24}],21:[function(require,module,exports){
 (function() {
   var Declaration, FlexFlow, flexSpec,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -1642,7 +1644,7 @@
 
 }).call(this);
 
-},{"../declaration":5,"./flex-spec":24}],22:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/declaration":5,"./flex-spec":24}],22:[function(require,module,exports){
 (function() {
   var Declaration, Flex, flexSpec,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -1685,7 +1687,7 @@
 
 }).call(this);
 
-},{"../declaration":5,"./flex-spec":24}],23:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/declaration":5,"./flex-spec":24}],23:[function(require,module,exports){
 (function() {
   var Declaration, FlexShrink, flexSpec,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -1734,7 +1736,7 @@
 
 }).call(this);
 
-},{"../declaration":5,"./flex-spec":24}],24:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/declaration":5,"./flex-spec":24}],24:[function(require,module,exports){
 (function() {
   module.exports = function(prefix) {
     var spec;
@@ -1786,7 +1788,7 @@
 
 }).call(this);
 
-},{"../old-value":39,"../value":47}],26:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/old-value":39,"{{ site.baseurl }}/docs/3.3/value":47}],26:[function(require,module,exports){
 (function() {
   var Declaration, FlexWrap, flexSpec,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -1821,7 +1823,7 @@
 
 }).call(this);
 
-},{"../declaration":5,"./flex-spec":24}],27:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/declaration":5,"./flex-spec":24}],27:[function(require,module,exports){
 (function() {
   var Declaration, Flex, flexSpec, list,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -1881,7 +1883,7 @@
 
 }).call(this);
 
-},{"../declaration":5,"./flex-spec":24,"postcss/lib/list":102}],28:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/declaration":5,"./flex-spec":24,"postcss/lib/list":102}],28:[function(require,module,exports){
 (function() {
   var Fullscreen, Selector,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -1916,7 +1918,7 @@
 
 }).call(this);
 
-},{"../selector":44}],29:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/selector":44}],29:[function(require,module,exports){
 (function() {
   var Gradient, OldValue, Value, isDirection, list, utils,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -2152,7 +2154,7 @@
 
 }).call(this);
 
-},{"../old-value":39,"../utils":46,"../value":47,"postcss/lib/list":102}],30:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/old-value":39,"{{ site.baseurl }}/docs/3.3/utils":46,"{{ site.baseurl }}/docs/3.3/value":47,"postcss/lib/list":102}],30:[function(require,module,exports){
 (function() {
   var Declaration, ImageRendering,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -2203,7 +2205,7 @@
 
 }).call(this);
 
-},{"../declaration":5}],31:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/declaration":5}],31:[function(require,module,exports){
 (function() {
   var Declaration, InlineLogical,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -2236,7 +2238,7 @@
 
 }).call(this);
 
-},{"../declaration":5}],32:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/declaration":5}],32:[function(require,module,exports){
 (function() {
   var Declaration, JustifyContent, flexSpec,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -2300,7 +2302,7 @@
 
 }).call(this);
 
-},{"../declaration":5,"./flex-spec":24}],33:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/declaration":5,"./flex-spec":24}],33:[function(require,module,exports){
 (function() {
   var Declaration, Order, flexSpec,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -2354,7 +2356,7 @@
 
 }).call(this);
 
-},{"../declaration":5,"./flex-spec":24}],34:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/declaration":5,"./flex-spec":24}],34:[function(require,module,exports){
 (function() {
   var Placeholder, Selector,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -2395,7 +2397,7 @@
 
 }).call(this);
 
-},{"../selector":44}],35:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/selector":44}],35:[function(require,module,exports){
 (function() {
   var Declaration, TransformDecl,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -2463,7 +2465,7 @@
 
 }).call(this);
 
-},{"../declaration":5}],36:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/declaration":5}],36:[function(require,module,exports){
 (function() {
   var TransformValue, Value,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -2496,7 +2498,7 @@
 
 }).call(this);
 
-},{"../value":47}],37:[function(require,module,exports){
+},{"{{ site.baseurl }}/docs/3.3/value":47}],37:[function(require,module,exports){
 (function() {
   var capitalize, names, prefix;
 
@@ -6381,7 +6383,7 @@ module.exports={
     }
   ],
   "bugs":[
-    
+
   ],
   "categories":[
     "CSS3"
@@ -6577,7 +6579,7 @@ module.exports={
   },
   "notes":"Note that both the `border-style` and `border-width` must be specified (not set to `none` or 0) for border-images to work according to spec, though older implementations may not have this requirement. Partial support refers to supporting the shorthand syntax, but not the individual properties (border-image-source, border-image-slice, etc). ",
   "notes_by_num":{
-    
+
   },
   "usage_perc_y":84.64,
   "usage_perc_a":6.87,
@@ -7063,7 +7065,7 @@ module.exports={
   },
   "notes":"Support can be somewhat emulated in older versions of IE using the non-standard `expression()` syntax. Partial support in IE9 refers to the browser crashing when used as a `background-position` value. Partial support in Android Browser 4.4 refers to the browser lacking the ability to multiply and divide values.",
   "notes_by_num":{
-    
+
   },
   "usage_perc_y":78.46,
   "usage_perc_a":5.24,
@@ -7299,7 +7301,7 @@ module.exports={
   },
   "notes":"Partial support in Android browser refers to buggy behavior in different scenarios.",
   "notes_by_num":{
-    
+
   },
   "usage_perc_y":89.92,
   "usage_perc_a":0.11,
@@ -7327,7 +7329,7 @@ module.exports={
     }
   ],
   "bugs":[
-    
+
   ],
   "categories":[
     "CSS3"
@@ -7523,7 +7525,7 @@ module.exports={
   },
   "notes":"",
   "notes_by_num":{
-    
+
   },
   "usage_perc_y":73.09,
   "usage_perc_a":0,
@@ -7761,7 +7763,7 @@ module.exports={
   },
   "notes":"Can be partially emulated in older IE versions using the non-standard \"shadow\" filter. Partial support in Safari, iOS Safari and Android Browser refers to missing \"inset\", blur radius value, and multiple shadow support.",
   "notes_by_num":{
-    
+
   },
   "usage_perc_y":91.68,
   "usage_perc_a":0.17,
@@ -8019,7 +8021,7 @@ module.exports={
     }
   ],
   "bugs":[
-    
+
   ],
   "categories":[
     "CSS"
@@ -8252,7 +8254,7 @@ module.exports={
     }
   ],
   "bugs":[
-    
+
   ],
   "categories":[
     "CSS",
@@ -8486,7 +8488,7 @@ module.exports={
     }
   ],
   "bugs":[
-    
+
   ],
   "categories":[
     "CSS3"
@@ -8682,7 +8684,7 @@ module.exports={
   },
   "notes":"Syntax used by browsers with prefixed support may be incompatible with that for proper support. \r\n\r\nPartial support in Opera 11.10 and 11.50 also refers to only having support for linear gradients.\r\n\r\nSupport can be somewhat emulated in older IE versions using the non-standard \"gradient\" filter. \r\n\r\nFirefox 10+, Opera 11.6+, Chrome 26+ and IE10+ also support the new \"to (side)\" syntax.",
   "notes_by_num":{
-    
+
   },
   "usage_perc_y":89.71,
   "usage_perc_a":0.45,
@@ -8714,7 +8716,7 @@ module.exports={
     }
   ],
   "bugs":[
-    
+
   ],
   "categories":[
     "CSS3"
@@ -8910,7 +8912,7 @@ module.exports={
   },
   "notes":"Chrome 29- and Android 4.0 Browser support \"-webkit-hyphens: none\", but not the \"auto\" property. Chrome 30+ doesn't support it either. It is [advisable to set the @lang attribute](http://blog.adrianroselli.com/2015/01/on-use-of-lang-attribute.html) on the HTML element to enable hyphenation support and improve accessibility.",
   "notes_by_num":{
-    
+
   },
   "usage_perc_y":32.23,
   "usage_perc_a":4.25,
@@ -8938,7 +8940,7 @@ module.exports={
     }
   ],
   "bugs":[
-    
+
   ],
   "categories":[
     "CSS",
@@ -9168,7 +9170,7 @@ module.exports={
     }
   ],
   "bugs":[
-    
+
   ],
   "categories":[
     "CSS"
@@ -9364,7 +9366,7 @@ module.exports={
   },
   "notes":"Partial support in WebKit/Blink browsers refers to supporting the mask-image and mask-box-image properties, but lacks support for other parts of the spec. Partial support in Firefox refers to only support for inline SVG mask elements i.e. mask: url(#foo).",
   "notes_by_num":{
-    
+
   },
   "usage_perc_y":0,
   "usage_perc_a":79.91,
@@ -9622,7 +9624,7 @@ module.exports={
     }
   ],
   "bugs":[
-    
+
   ],
   "categories":[
     "CSS"
@@ -9818,7 +9820,7 @@ module.exports={
   },
   "notes":"Partial support refers to support for styling just the placeholder text, rather than the actual element itself: `::-webkit-input-placeholder` (Chrome/Safari/Opera),\r\n`::-moz-placeholder` (Firefox) and \r\n`:-ms-input-placeholder` (IE). ",
   "notes_by_num":{
-    
+
   },
   "usage_perc_y":0,
   "usage_perc_a":89.67,
@@ -9846,7 +9848,7 @@ module.exports={
     }
   ],
   "bugs":[
-    
+
   ],
   "categories":[
     "CSS"
@@ -10042,7 +10044,7 @@ module.exports={
   },
   "notes":"",
   "notes_by_num":{
-    
+
   },
   "usage_perc_y":77.96,
   "usage_perc_a":0,
@@ -10074,7 +10076,7 @@ module.exports={
     }
   ],
   "bugs":[
-    
+
   ],
   "categories":[
     "CSS3"
@@ -10537,7 +10539,7 @@ module.exports={
     }
   ],
   "bugs":[
-    
+
   ],
   "categories":[
     "CSS3"
@@ -10979,7 +10981,7 @@ module.exports={
   },
   "notes":"Support listed is for `transition` properties as well as the `transitionend` event. The prefixed name in WebKit browsers is `webkitTransitionEnd`",
   "notes_by_num":{
-    
+
   },
   "usage_perc_y":90.12,
   "usage_perc_a":0,
@@ -11229,7 +11231,7 @@ module.exports={
   },
   "notes":"Partial support refers to supporting only the `content-box` and `border-box` values, not `padding-box` (which was added to the spec later).",
   "notes_by_num":{
-    
+
   },
   "usage_perc_y":12.4,
   "usage_perc_a":84.66,
@@ -11253,7 +11255,7 @@ module.exports={
     }
   ],
   "bugs":[
-    
+
   ],
   "categories":[
     "CSS3"
@@ -11449,7 +11451,7 @@ module.exports={
   },
   "notes":"Chrome, Safari and Firefox also support the unofficial `grab` and `grabbing` values (with prefix)",
   "notes_by_num":{
-    
+
   },
   "usage_perc_y":51.62,
   "usage_perc_a":0,
@@ -11969,7 +11971,7 @@ module.exports={
     }
   ],
   "bugs":[
-    
+
   ],
   "categories":[
     "CSS3"
@@ -12165,7 +12167,7 @@ module.exports={
   },
   "notes":"Partial support in older Firefox versions refers to using an older syntax. Partial support in older Chrome versions refers to lacking support in Mac OS X. ",
   "notes_by_num":{
-    
+
   },
   "usage_perc_y":74.95,
   "usage_perc_a":1.02,
@@ -12436,7 +12438,7 @@ module.exports={
     }
   ],
   "bugs":[
-    
+
   ],
   "categories":[
     "CSS3"
@@ -12632,7 +12634,7 @@ module.exports={
   },
   "notes":"Prefixes are on the values, not the property names (e.g. -webkit-min-content) Firefox currently supports the \"-moz-available\" property rather than \"-moz-fill-available\".",
   "notes_by_num":{
-    
+
   },
   "usage_perc_y":71.82,
   "usage_perc_a":0,
@@ -12875,7 +12877,7 @@ module.exports={
   },
   "notes":"Partial support refers to not supporting the `break-before`, `break-after`, `break-inside` properties. Webkit browsers do have equivalent support for the non-standard `-webkit-column-break-*` properties while Firefox supports `page-break-*` to accomplish the same result (but only the `auto` and `always' values).",
   "notes_by_num":{
-    
+
   },
   "usage_perc_y":13.06,
   "usage_perc_a":79.98,
@@ -12907,7 +12909,7 @@ module.exports={
     }
   ],
   "bugs":[
-    
+
   ],
   "categories":[
     "CSS3"
@@ -13135,7 +13137,7 @@ module.exports={
     }
   ],
   "bugs":[
-    
+
   ],
   "categories":[
     "DOM",
@@ -13332,7 +13334,7 @@ module.exports={
   },
   "notes":"Partial support in IE10 refers the lack of pointerenter and pointerleave events. Firefox Nightly provides 'dom.w3c_pointer_events.enabled' option to support this specification starting with version 28.",
   "notes_by_num":{
-    
+
   },
   "usage_perc_y":8.49,
   "usage_perc_a":1.5,
@@ -13364,7 +13366,7 @@ module.exports={
     }
   ],
   "bugs":[
-    
+
   ],
   "categories":[
     "CSS3"
@@ -14027,7 +14029,7 @@ module.exports={
   },
   "notes":"",
   "notes_by_num":{
-    
+
   },
   "usage_perc_y":97.04,
   "usage_perc_a":0,
@@ -14252,7 +14254,7 @@ module.exports={
   },
   "notes":"",
   "notes_by_num":{
-    
+
   },
   "usage_perc_y":12.17,
   "usage_perc_a":0,
@@ -14504,7 +14506,7 @@ module.exports={
   },
   "notes":"The scale transform can be emulated in IE < 9 using Microsoft's \"zoom\" extension, others are (not easily) possible using the MS Matrix filter",
   "notes_by_num":{
-    
+
   },
   "usage_perc_y":91.85,
   "usage_perc_a":0,
@@ -14752,7 +14754,7 @@ module.exports={
   },
   "notes":"Partial support in IE refers to not supporting [the transform-style: preserve-3d property](http://msdn.microsoft.com/en-us/library/ie/hh673529%28v=vs.85%29.aspx#the_ms_transform_style_property). This prevents nesting 3D transformed elements.",
   "notes_by_num":{
-    
+
   },
   "usage_perc_y":79.45,
   "usage_perc_a":9.99,
@@ -14784,7 +14786,7 @@ module.exports={
     }
   ],
   "bugs":[
-    
+
   ],
   "categories":[
     "CSS"
@@ -14980,7 +14982,7 @@ module.exports={
   },
   "notes":"Currently the user-select property does not appear in any W3C specification. Support information here is only for \"none\" value, not others.",
   "notes_by_num":{
-    
+
   },
   "usage_perc_y":89.94,
   "usage_perc_a":0,
@@ -15043,7 +15045,7 @@ var _classCallCheck = function (instance, Constructor) { if (!(instance instance
 
 var Container = _interopRequire(require("./container"));
 
-// CSS at-rule like “this.keyframes name { }”.
+// CSS at-rule like â€œthis.keyframes name { }â€.
 //
 // Can contain declarations (like this.font-face or this.page) ot another rules.
 
@@ -15819,7 +15821,7 @@ var vendor = _interopRequire(require("./vendor"));
 
 var Node = _interopRequire(require("./node"));
 
-// CSS declaration like “color: black” in rules
+// CSS declaration like â€œcolor: blackâ€ in rules
 
 var Declaration = (function (Node) {
     function Declaration(defaults) {
@@ -17791,7 +17793,7 @@ var Container = _interopRequire(require("./container"));
 
 var list = _interopRequire(require("./list"));
 
-// CSS rule like “a { }”
+// CSS rule like â€œa { }â€
 
 var Rule = (function (Container) {
     function Rule(defaults) {
