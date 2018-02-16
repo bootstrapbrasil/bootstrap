@@ -56,7 +56,7 @@ current_ruby_version: 4.0.0
 docs_version:         4.0
 repo:                 "https://github.com/bootstrapbrasil/bootstrap"
 slack:                "http://bootstrapbrasil-slack.herokuapp.com"
-blog:                 "https://blog.getbootstrap.com.br"
+blog:                 "http://blog.getbootstrap.com.br"
 expo:                 "https://expo.getbootstrap.com"
 jobs:                 "https://github.com/frontendbr/vagas"
 themes:               "https://themes.getbootstrap.com"
