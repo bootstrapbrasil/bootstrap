@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Introduction
-description: Get started with Bootstrap, the world's most popular framework for building responsive, mobile-first sites, with BootstrapCDN and a template starter page.
+title: Introdução
+description: Descubra o Bootstrap, o mais framework mais conhecido do mundo para criar sites responsivos e mobile, comece com o BootstrapCDN e nosso template inicial.
 group: getting-started
 redirect_from:
   - /docs/
@@ -11,7 +11,7 @@ redirect_from:
 toc: true
 ---
 
-## Quick start
+## Visão rápida
 
 Looking to quickly add Bootstrap to your project? Use BootstrapCDN, provided for free by the folks at MaxCDN. Using a package manager or need to download the source files? [Head to the downloads page.]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/)
 
@@ -53,13 +53,13 @@ Curious which components explicitly require jQuery, our JS, and Popper.js? Click
 {{ markdown | markdownify }}
 </details>
 
-## Starter template
+## Template inicial
 
 Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors. Put it all together and your pages should look like this:
 
 {% highlight html %}
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -68,10 +68,10 @@ Be sure to have your pages set up with the latest design and development standar
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ site.cdn.css }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Olá, mundo!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <h1>Olá, mundo!</h1>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -84,7 +84,7 @@ Be sure to have your pages set up with the latest design and development standar
 
 That's all you need for overall page requirements. Visit the [Layout docs]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/overview/) or [our official examples]({{ site.baseurl }}/docs/{{ site.docs_version }}/examples/) to start laying out your site's content and components.
 
-## Important globals
+## Importância geral
 
 Bootstrap employs a handful of important global styles and settings that you'll need to be aware of when using it, all of which are almost exclusively geared towards the *normalization* of cross browser styles. Let's dive in.
 
@@ -99,7 +99,7 @@ Bootstrap requires the use of the HTML5 doctype. Without it, you'll see some fun
 </html>
 {% endhighlight %}
 
-### Responsive meta tag
+### Meta tag responsiva
 
 Bootstrap is developed *mobile first*, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, **add the responsive viewport meta tag** to your `<head>`.
 
@@ -125,11 +125,11 @@ With the above snippet, nested elements—including generated content via `::bef
 
 Learn more about [box model and sizing at CSS Tricks](https://css-tricks.com/box-sizing/).
 
-### Reboot
+### Reinicialização 
 
 For improved cross-browser rendering, we use [Reboot]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/) to correct inconsistencies across browsers and devices while providing slightly more opinionated resets to common HTML elements.
 
-## Community
+## Comunidade
 
 Stay up to date on the development of Bootstrap and reach out to the community with these helpful resources.
 

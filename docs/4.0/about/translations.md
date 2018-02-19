@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Translations
-description: Links to community-translated Bootstrap documentation sites.
+title: Traduções
+description: Links para sites da documentação traduzida do Boostrap pela comunidade.
 group: about
 ---
 
@@ -12,7 +12,3 @@ Community members have translated Bootstrap's documentation into various languag
   <li><a href="{{ language.url }}" hreflang="{{ language.code }}">{{ language.description }} ({{ language.name }})</a></li>
 {% endfor %}
 </ul>
-
-**We don't help organize or host translations, we just link to them.**
-
-Finished a new or better translation? Open a pull request to add it to our list.

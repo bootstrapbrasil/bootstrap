@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: About
-description: Learn more about the team maintaining Bootstrap, how and why the project started, and how to get involved.
+title: Sobre
+description: Saiba mais sobre a equipe mantenedora do Bootstrap, porque e como o projeto foi criado, e como contribuir.
 redirect_from:
   - "/docs/4.0/about/"
   - "/docs/4.0/history/"
@@ -9,11 +9,11 @@ redirect_from:
 group: about
 ---
 
-## Team
+## Equipe
 
 Bootstrap is maintained by a [small team of developers](https://github.com/orgs/twbs/people) on GitHub. We're actively looking to grow this team and would love to hear from you if you're excited about CSS at scale, writing and maintaining vanilla JavaScript plugins, and improving build tooling processes for frontend code.
 
-## History
+## História
 
 Originally created by a designer and a developer at Twitter, Bootstrap has become one of the most popular front-end frameworks and open source projects in the world.
 
@@ -23,6 +23,6 @@ Originally [released](https://blog.twitter.com/2011/bootstrap-from-twitter) on [
 
 With Bootstrap 4, we once again rewrote the project to account for two key architectural changes: a migration to Sass and the move to CSS's flexbox. Our intention is to help in a small way to move the web development community forward by pushing for newer CSS properties, fewer dependencies, and new technologies across more modern browsers.
 
-## Get involved
+## Contribua
 
 Get involved with Bootstrap development by [opening an issue]({{ site.repo }}/issues/new) or submitting a pull request. Read our [contributing guidelines]({{ site.repo }}/blob/v{{ site.current_version }}/.github/CONTRIBUTING.md) for information on how we develop.

@@ -1,24 +1,24 @@
 ---
 layout: docs
-title: License FAQs
-description: Commonly asked questions about Bootstrap's open source license.
+title: Licença (Perguntas Frequentes)
+description: Perguntas mais comuns sobre a licença de código aberto do Bootstrap.
 group: about
 ---
 
 Bootstrap is released under the MIT license and is copyright {{ site.time | date: "%Y" }} Twitter. Boiled down to smaller chunks, it can be described with the following conditions.
 
-#### It requires you to:
+#### Exige que você:
 
 * Keep the license and copyright notice included in Bootstrap's CSS and JavaScript files when you use them in your works
 
-#### It permits you to:
+#### Permite que você:
 
 - Freely download and use Bootstrap, in whole or in part, for personal, private, company internal, or commercial purposes
 - Use Bootstrap in packages or distributions that you create
 - Modify the source code
 - Grant a sublicense to modify and distribute Bootstrap to third parties not included in the license
 
-#### It forbids you to:
+#### Proíbe-o de:
 
 - Hold the authors and license owners liable for damages as Bootstrap is provided without warranty
 - Hold the creators or copyright holders of Bootstrap liable
@@ -26,7 +26,7 @@ Bootstrap is released under the MIT license and is copyright {{ site.time | date
 - Use any marks owned by Twitter in any way that might state or imply that Twitter endorses your distribution
 - Use any marks owned by Twitter in any way that might state or imply that you created the Twitter software in question
 
-#### It does not require you to:
+#### Não exige que você:
 
 - Include the source of Bootstrap itself, or of any modifications you may have made to it, in any redistribution you may assemble that includes it
 - Submit changes that you make to Bootstrap back to the Bootstrap project (though such feedback is encouraged)
