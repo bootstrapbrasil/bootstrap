@@ -1,1 +1,1 @@
-Caso sua dúvida seja como você pode colaborar com a tradução da documentação, veja o artigo *[Contribuindo com a documentação do Bootstrap em Português](https://medium.com/@adammacias/contribuindo-com-a-documenta%C3%A7%C3%A3o-do-bootstrap-em-portugu%C3%AAs-4f820677f084)*
+Caso sua dúvida seja como você pode colaborar com a tradução da documentação, veja o artigo *Contribuindo com a documentação do Bootstrap em Português* em https://goo.gl/Ehb8T6
