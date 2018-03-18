@@ -3,8 +3,6 @@ layout: docs
 title: Introdução
 description: Descubra o Bootstrap, o mais framework mais conhecido do mundo para criar sites responsivos e mobile, comece com o BootstrapCDN e nosso template inicial.
 group: getting-started
-redirect_from:
-  - /docs/
   - /docs/4.0/
   - /docs/4.0/getting-started/
   - /docs/getting-started/
@@ -13,7 +11,7 @@ toc: true
 
 ## Visão rápida
 
-Tentando adicionar rapidamente o Bootstrap ao seu projeto? Use o BootstrapCDN, provido gratuitamente pelo pessoal da MaxCDN. Usando um gerenciador ded pacotes ou precisa do código fonte? [Vá para a página de downloads.]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/)
+Tentando adicionar rapidamente o Bootstrap ao seu projeto? Use o BootstrapCDN, fornecido gratuitamente pelo pessoal da MaxCDN. Usando um gerenciador de pacotes ou precisa do código fonte? [Vá para a página de downloads.]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/)
 
 ### CSS
 
@@ -25,7 +23,7 @@ Copie e cole o arquivo de estilo `<link>` dentro da sua `<head>` antes de todos 
 
 ### JS
 
-Muitos dos nossos componentes precisansam de JavaScript para funcionar. Mais especificamente, eles precisansam do [jQuery](https://jquery.com), [Popper.js](https://popper.js.org/) e do nossos próprios plugins JavaScript. Coloque os seguintes `<script>`s perto do final da sua página, logo antes do fechamento da tag `</body>`, para habilitá-los. jQuery tem que vir antes, depois o Popper.js e só depois nossos plugins JavaScript.
+Muitos dos nossos componentes precisam de JavaScript para funcionar. Mais especificamente, eles precisam do [jQuery](https://jquery.com), [Popper.js](https://popper.js.org/) e do nossos próprios plugins JavaScript. Coloque os seguintes `<script>`s perto do final da sua página, logo antes do fechamento da tag `</body>`. jQuery tem que vir antes, depois o Popper.js e só depois nossos plugins JavaScript.
 
 Nós usamos a [build slim do jQuery](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/), mas a versão completa também é suportada.
 
@@ -35,7 +33,7 @@ Nós usamos a [build slim do jQuery](https://blog.jquery.com/2016/06/09/jquery-3
 <script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous"></script>
 {% endhighlight %}
 
-Curiosidade para saber quais componentes precisam de jQuery, nosso JS e Popper,js? Clique em "Mostrar componentes dependentes de JavaScript" logo abaixo. Se resta dúvidas sobre a estrutura da página em geral, continue lendo para um templete de exemplo de página.
+Curiosidade para saber quais componentes precisam de jQuery, nosso JS e Popper,js? Clique em "Mostrar componentes dependentes de JavaScript" logo abaixo. Se ainda tem dúvidas sobre a estrutura da página em geral, continue lendo para um templete de exemplo de página.
 
 <details>
 <summary class="text-primary mb-3">Mostrar componentes dependentes de JavaScript</summary>
