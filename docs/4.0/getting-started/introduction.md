@@ -3,8 +3,6 @@ layout: docs
 title: Introdução
 description: Descubra o Bootstrap, o mais framework mais conhecido do mundo para criar sites responsivos e mobile, comece com o BootstrapCDN e nosso template inicial.
 group: getting-started
-redirect_from:
-  - /docs/
   - /docs/4.0/
   - /docs/4.0/getting-started/
   - /docs/getting-started/
@@ -13,11 +11,11 @@ toc: true
 
 ## Visão rápida
 
-Looking to quickly add Bootstrap to your project? Use BootstrapCDN, provided for free by the folks at MaxCDN. Using a package manager or need to download the source files? [Head to the downloads page.]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/)
+Tentando adicionar rapidamente o Bootstrap ao seu projeto? Use o BootstrapCDN, fornecido gratuitamente pelo pessoal da MaxCDN. Usando um gerenciador de pacotes ou precisa do código fonte? [Vá para a página de downloads.]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/)
 
 ### CSS
 
-Copy-paste the stylesheet `<link>` into your `<head>` before all other stylesheets to load our CSS.
+Copie e cole o arquivo de estilo `<link>` dentro da sua `<head>` antes de todos os outros arquivos de estilo para carregar nosso CSS.
 
 {% highlight html %}
 <link rel="stylesheet" href="{{ site.cdn.css }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
@@ -25,9 +23,9 @@ Copy-paste the stylesheet `<link>` into your `<head>` before all other styleshee
 
 ### JS
 
-Many of our components require the use of JavaScript to function. Specifically, they require [jQuery](https://jquery.com), [Popper.js](https://popper.js.org/), and our own JavaScript plugins. Place the following `<script>`s near the end of your pages, right before the closing `</body>` tag, to enable them. jQuery must come first, then Popper.js, and then our JavaScript plugins.
+Muitos dos nossos componentes precisam de JavaScript para funcionar. Mais especificamente, eles precisam do [jQuery](https://jquery.com), [Popper.js](https://popper.js.org/) e do nossos próprios plugins JavaScript. Coloque os seguintes `<script>`s perto do final da sua página, logo antes do fechamento da tag `</body>`. jQuery tem que vir antes, depois o Popper.js e só depois nossos plugins JavaScript.
 
-We use [jQuery's slim build](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/), but the full version is also supported.
+Nós usamos a [build slim do jQuery](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/), mas a versão completa também é suportada.
 
 {% highlight html %}
 <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
@@ -35,10 +33,10 @@ We use [jQuery's slim build](https://blog.jquery.com/2016/06/09/jquery-3-0-final
 <script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous"></script>
 {% endhighlight %}
 
-Curious which components explicitly require jQuery, our JS, and Popper.js? Click the show components link below. If you're at all unsure about the general page structure, keep reading for an example page template.
+Curiosidade para saber quais componentes precisam de jQuery, nosso JS e Popper,js? Clique em "Mostrar componentes dependentes de JavaScript" logo abaixo. Se ainda tem dúvidas sobre a estrutura da página em geral, continue lendo para um templete de exemplo de página.
 
 <details>
-<summary class="text-primary mb-3">Show components requiring JavaScript</summary>
+<summary class="text-primary mb-3">Mostrar componentes dependentes de JavaScript</summary>
 {% capture markdown %}
 - Alerts for dismissing
 - Buttons for toggling states and checkbox/radio functionality
