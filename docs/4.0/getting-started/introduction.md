@@ -80,7 +80,7 @@ Be sure to have your pages set up with the latest design and development standar
 </html>
 {% endhighlight %}
 
-That's all you need for overall page requirements. Visit the [Layout docs]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/overview/) or [our official examples]({{ site.baseurl }}/docs/{{ site.docs_version }}/examples/) to start laying out your site's content and components.
+No geral, isto é tudo que você precisa para os requisitos da página. Visite a [Documentação de Layout]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/overview/) ou [nossos exemplos oficiais]({{ site.baseurl }}/docs/{{ site.docs_version }}/examples/) para começar a colocar conteúdos e componentes em seu site.
 
 ## Importância geral
 
@@ -123,7 +123,7 @@ With the above snippet, nested elements—including generated content via `::bef
 
 Learn more about [box model and sizing at CSS Tricks](https://css-tricks.com/box-sizing/).
 
-### Reinicialização 
+### Reinicialização
 
 For improved cross-browser rendering, we use [Reboot]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/) to correct inconsistencies across browsers and devices while providing slightly more opinionated resets to common HTML elements.
 
