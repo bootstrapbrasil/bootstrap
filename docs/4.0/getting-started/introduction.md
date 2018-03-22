@@ -54,13 +54,13 @@ Curiosidade para saber quais componentes precisam de jQuery, nosso JS e Popper,j
 
 ## Template inicial
 
-Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors. Put it all together and your pages should look like this:
+Tenha certeza de configurar suas páginas com padrões recentes de desenvolvimento e design. Ou seja, utilizando HTML5 doctype e a meta tag viewport para proporcionar o funcionamento responsivo adequado. Feito isto, suas páginas devem ficar assim:
 
 {% highlight html %}
 <!doctype html>
 <html lang="pt-br">
   <head>
-    <!-- Required meta tags -->
+    <!-- Meta tags Obrigatórias -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -72,8 +72,8 @@ Be sure to have your pages set up with the latest design and development standar
   <body>
     <h1>Olá, mundo!</h1>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
     <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
     <script src="{{ site.cdn.popper }}" integrity="{{ site.cdn.popper_hash }}" crossorigin="anonymous"></script>
     <script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous"></script>
@@ -81,7 +81,7 @@ Be sure to have your pages set up with the latest design and development standar
 </html>
 {% endhighlight %}
 
-That's all you need for overall page requirements. Visit the [Layout docs]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/overview/) or [our official examples]({{ site.baseurl }}/docs/{{ site.docs_version }}/examples/) to start laying out your site's content and components.
+No geral, são esses os requisitos para o funcionamento da página. Visite a [Documentação de Layout]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/overview/) ou [nossos exemplos oficiais]({{ site.baseurl }}/docs/{{ site.docs_version }}/examples/) para começar a incluir conteúdos e componentes em seu site.
 
 ## Importância geral
 
@@ -124,7 +124,7 @@ With the above snippet, nested elements—including generated content via `::bef
 
 Learn more about [box model and sizing at CSS Tricks](https://css-tricks.com/box-sizing/).
 
-### Reinicialização 
+### Reinicialização
 
 For improved cross-browser rendering, we use [Reboot]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/) to correct inconsistencies across browsers and devices while providing slightly more opinionated resets to common HTML elements.
 
