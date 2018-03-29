@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Best practices
+title: Boas práticas
 description: Learn about some of the best practices we've gathered from years of working on and using Bootstrap.
 group: getting-started
 ---
@@ -13,8 +13,8 @@ We've designed and developed Bootstrap to work in a number of environments. Here
 
 ### General outline
 
-- Working with CSS
-- Working with Sass files
-- Building new CSS components
-- Working with flexbox
-- Ask in [Slack](https://bootstrap-slack.herokuapp.com/)
+- Trabalhando com CSS
+- Trabalhando arquivos Sass
+- Cornstruindo novos componentes CSS
+- Trabalhando com flexbox
+- Dúvidas no [Slack](https://bootstrap-slack.herokuapp.com/)
