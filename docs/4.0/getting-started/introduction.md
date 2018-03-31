@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Introdução
-description: Descubra o Bootstrap, o mais framework mais conhecido do mundo para criar sites responsivos e mobile, comece com o BootstrapCDN e nosso template inicial.
+description: Descubra o Bootstrap, o framework mais conhecido do mundo para criar sites responsivos e mobile, comece com o BootstrapCDN e nosso template inicial.
 group: getting-started
   - /docs/
   - /docs/4.0/
