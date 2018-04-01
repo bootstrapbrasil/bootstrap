@@ -6,11 +6,11 @@ group: about
 toc: true
 ---
 
-Have a need for Bootstrap's brand resources? Great! We have only a few guidelines we follow, and in turn ask you to follow as well. These guidelines were inspired by MailChimp's [Brand Assets](https://mailchimp.com/about/brand-assets/).
+Precisa de recursos da marca Bootstrap? Ótimo! Temos apenas algumas diretrizes que seguimos e, por sua vez, pedimos que você siga também. Essas diretrizes foram inspiradas no [Brand Assets](https://mailchimp.com/about/brand-assets/) do MailChimp's.
 
 ## Marca e logo
 
-Use either the Bootstrap mark (a capital **B**) or the standard logo (just **Bootstrap**). It should always appear in San Francisco Display Semibold. **Do not use the Twitter bird** in association with Bootstrap.
+Use a marca Bootstrap (um **B** maiúsculo) ou o logotipo padrão (apenas **Bootstrap**). Eles devem sempre aparecer na fonte San Francisco Display Semibold. **Não use o pássaro do Twitter** em associação com o Bootstrap.
 
 <div class="bd-brand-logos">
   <div class="bd-brand-item">
@@ -31,7 +31,7 @@ Use either the Bootstrap mark (a capital **B**) or the standard logo (just **Boo
 
 ## Download da marca
 
-Download the Bootstrap mark in one of three styles, each available as an SVG file. Right click, Save as.
+Faça o download da marca Bootstrap em um dos três estilos, cada um disponível como um arquivo SVG. Clique com o botão direito, Salvar imagem como.
 
 <div class="bd-brand-logos">
   <div class="bd-brand-item">
@@ -47,7 +47,7 @@ Download the Bootstrap mark in one of three styles, each available as an SVG fil
 
 ## Nome
 
-The project and framework should always be referred to as **Bootstrap**. No Twitter before it, no capital _s_, and no abbreviations except for one, a capital **B**.
+O projeto e a estrutura devem ser sempre referidos como **Bootstrap**. Sem Twitter antes, Sem letras maiúsculas e sem abreviaturas, exceto uma, a letra **B**.
 
 <div class="bd-brand-logos">
   <div class="bd-brand-item">
@@ -66,7 +66,7 @@ The project and framework should always be referred to as **Bootstrap**. No Twit
 
 ## Cores
 
-Our docs and branding use a handful of primary colors to differentiate what *is* Bootstrap from what *is in* Bootstrap. In other words, if it's purple, it's representative of Bootstrap.
+Nossos documentos e marcações usam um punhado de cores primárias para diferenciar o que *é* o Bootstrap do que o que *está no* Bootstrap. Em outras palavras, se é roxo, é um representante do Bootstrap.
 
 <div class="bd-brand">
   <div class="color-swatches">
