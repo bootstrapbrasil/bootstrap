@@ -66,7 +66,7 @@ O projeto e a estrutura devem ser sempre referidos como **Bootstrap**. Sem Twitt
 
 ## Cores
 
-Nossos documentos e branding usam um punhado de cores primárias para diferenciar o que *é* o Bootstrap do que *está no* Bootstrap. Em outras palavras, se é roxo, é um representante do Bootstrap.
+Nossos documentos e marcações usam um punhado de cores primárias para diferenciar o que *é* o Bootstrap do que o que *está no* Bootstrap. Em outras palavras, se é roxo, é um representante do Bootstrap.
 
 <div class="bd-brand">
   <div class="color-swatches">

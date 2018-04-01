@@ -5,7 +5,7 @@ description: Links para sites da documentação traduzida do Boostrap pela comun
 group: about
 ---
 
-Community members have translated Bootstrap’s documentation into various languages. None are officially supported and they may not always be up to date.
+Os membros da comunidade traduziram a documentação do Bootstrap para vários idiomas. Nenhuma é oficialmente suportada e nem sempre está atualizada.
 
 <ul>
 {% for language in site.data.translations %}
