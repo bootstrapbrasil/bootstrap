@@ -6,7 +6,7 @@ group: about
 toc: true
 ---
 
-Precisa de recursos do Bootstrap? Ótimo! Temos apenas algumas diretrizes que seguimos e, por sua vez, pedimos que você siga também. Essas diretrizes foram inspiradas no [Brand Assets](https://mailchimp.com/about/brand-assets/) do MailChimp's.
+Precisa de recursos da marca Bootstrap? Ótimo! Temos apenas algumas diretrizes que seguimos e, por sua vez, pedimos que você siga também. Essas diretrizes foram inspiradas no [Brand Assets](https://mailchimp.com/about/brand-assets/) do MailChimp's.
 
 ## Marca e logo
 
