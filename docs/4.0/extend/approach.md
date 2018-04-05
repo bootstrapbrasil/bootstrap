@@ -1,76 +1,76 @@
 ---
 layout: docs
-title: Approach
-description: Learn about the guiding principles, strategies, and techniques used to build and maintain Bootstrap so you can more easily customize and extend it yourself.
+title: Abordagem
+description: Aprenda sobre o princípio deste guia, estratégias e técnicas usadas para construir e manter o Bootstrap de forma que você possa extender e customizá-lo mais facilmente.
 group: extend
 ---
 
-While the getting started pages provide an introductory tour of the project and what it offers, this document focuses on _why_ we do the things we do in Bootstrap. It explains our philosophy to building on the web so that others can learn from us, contribute with us, and help us improve.
+Enquanto as páginas _getting started_ servem como um _tour_ introdutório do projeto, esta foca no _porquê_ de fazermos as coisas da maneira que fazemos, no Bootstrap. Aqui, explicaremos nossa filosofia para desenvolver na web de maneira que outros possam aprender conosco, contribuir e nos ajudar a melhorar.
 
-See something that doesn't sound right, or perhaps could be done better? [Open an issue](https://github.com/twbs/bootstrap/issues/new)—we'd love to discuss it with you.
+Viu alguma coisa que não soou bem ou, talvez, poderia ser feita melhor? [Abra um issue](https://github.com/twbs/bootstrap/issues/new) e nós amaremos discutir com você!
 
-## Summary
+## Sumário
 
-We'll dive into each of these more throughout, but at a high level, here's what guides our approach.
+Nós vamos mergulhar de cabeça em cada um desses, mais a frente. No entanto, em resumo, isso resume nossa abordagem:
 
-- Components should be responsive and mobile-first
-- Components should be built with a base class and extended via modifier classes
-- Component states should obey a common z-index scale
-- Whenever possible, prefer a HTML and CSS implementation over JavaScript
-- Whenever possible, use utilities over custom styles
-- Whenever possible, avoid enforcing strict HTML requirements (children selectors)
+- Componentes devem ser responsivos e mobile-first;
+- Componentes devem ser construídos com uma classe base e extendidos através de uma modificadora;
+- Estados de componentes devem seguir um padrão de escala z-index;
+- Sempre que possível, prefira uma implementação de HTML e CSS via JavaScript;
+- Sempre que possível, use utilitários invés de estilos customizados;
+- Sempre que possível, evite o uso de requisitos rígidos do HTML (seletor de filhos).
 
-## Responsive
+## Responsividade
 
-Bootstrap's responsive styles are built to be responsive, an approach that's often referred to as _mobile-first_. We use this term in our docs and largely agree with it, but at times it can be too broad. While not every component _must_ be entirely responsive in Bootstrap, this responsive approach is about reducing CSS overrides by pushing you to add styles as the viewport becomes larger.
+Os estilos responsivos do Bootstrap são construídos para serem responsivos, usando uma abordagem denominada _mobile-first_. Nós usamos esse termo em nossos documentos e, fortemente, concordamos com ele (apesar de algumas vezes ser complexo). Enquanto nem todos componentes _precisam_ ser responsivos no Bootstrap, essa abordagem responsiva ajuda a reduzir sobrescrição de CSS, te forçando a adicionar estilos de acordo com o crescimendo da _viewport_.
 
-Across Bootstrap, you'll see this most clearly in our media queries. In most cases, we use `min-width` queries that begin to apply at a specific breakpoint and carry up through the higher breakpoints. For example, a `.d-none` applies from `min-width: 0` to infinity. On the other hand, a `.d-md-none` applies from the medium breakpoint and up.
+Bootstrap adentro, você vai ver isso mais claramente com nossas _media queries_. Na maioria dos casos, nós usamos _media queries_ com `min-width` e que começam em um breakpoint específico e vão aumentando até outro breakpoint. Por exemplo, um seletor `.d-none` começa em `min-width: 0` e escala infinitamente. Por outro lado, um seletor `d-md-none` começa a escalar à partir de um breakpoint mediano.
 
-At times we'll use `max-width` when a component's inherent complexity requires it. At times, these overrides are functionally and mentally clearer to implement and support than rewriting core functionality from our components. We strive to limit this approach, but will use it from time to time.
+Algumas vezes, vamos usar `max-width` quando um dado componente precisar. Às vezes, essas sobrescrições são funcional e mentalmente mais fáceis de implementar e manter, invés de reescrever as funcionalidades principais dos nossos componentes. Nós tentamos limitar essa abordagem, mas nós vamos usá-la de tempo em tempo.
 
 ## Classes
 
-Aside from our Reboot, a cross-browser normalization stylesheet, all our styles aim to use classes as selectors. This means steering clear of type selectors (e.g., `input[type="text"]`) and extraneous parent classes (e.g., `.parent .child`) that make styles too specific to easily override.
+Excluindo o Reboot, nosso _reset_ cross-browser, todos nossos estilos visam usar classes como seletores. Isso significa que ficamos longe dos seletores de tipo (ex: `input[type="text"]`) e classes pais questionáveis (ex: `.pai .filho`) que fazem os estilos muito específicos, para que seja facil sobrescrever.
 
-As such, components should be built with a base class that houses common, not-to-be overridden property-value pairs. For example, `.btn` and `.btn-primary`. We use `.btn` for all the common styles like `display`, `padding`, and `border-width`. We then use modifiers like `.btn-primary` to add the color, background-color, border-color, etc.
+De tal maneira, componentes devem ser construídos com uma classe base para propriedades e valores comuns que não serão sobrescritos. Por exemplo, `.btn` e `.btn-primary`. Nós usamos `.btn` para todos os estilos em comum como `display`, `padding` e `border-width`. Então, usamos modificadores como `.btn-primary` para adicionar a `color`, `background-color`, `border-color` e etc.
 
-Modifier classes should only be used when there are multiple properties or values to be changed across multiple variants. Modifiers are not always necessary, so be sure you're actually saving lines of code and preventing unnecessary overrides when creating them. Good examples of modifiers are our theme color classes and size variants.
+Modificadores de classes devem apenas serem usados quando existirem diversas propriedades ou valores para serem alterados, em diversas variáveis. Modificadores não são sempre necessários, então, tenha certeza que você está realmente economizando linhas de código e evitando sobrescrições desnecessárias, quando for criá-los. Bons exemplos de modificadores são nossas classes de cores e as variantes de tamanhos.
 
-## z-index scales
+## Escalas z-index
 
-There are two `z-index` scales in Bootstrap—elements within a component and overlay components.
+Existem duas escalas `z-index` no Bootstrap: uma para elementos dentro de um componente e outra para sobreposição de componentes.
 
-### Component elements
+### Elementos de componentes
 
-- Some components in Bootstrap are built with overlapping elements to prevent double borders without modifying the `border` property. For example, button groups, input groups, and pagination.
-- These components share a standard `z-index` scale of `0` through `3`.
-- `0` is default (initial), `1` is `:hover`, `2` is `:active`/`.active`, and , `3` is `:focus`.
-- This approach matches our expectations of highest user priority. If an element is focused, it's in view and at the user's attention. Active elements are second highest because they indicate state. Hover is third highest because it indicates user intent, but nearly _anything_ can be hovered.
+- Alguns componentes no Bootstrap são construídos com elementos sobrepostos para evitar borda dupla, sem modificar a propriedade `border`. Por exemplo: grupos de botões, grupos de inputs e paginação;
+- Esses componentes compartilham uma escala `z-index` padrão de `0` até `3`;
+- `0` é o padrão (valor inicial), `1` é `:hover`, `2` é `:active`/`.active` e `3` é `:focus`;
+- Essa abordagem corresponde as nossas expectativas de maior prioridades do usuário. Se um elemento está focado, está à vista e recebendo atenção do usuário. Já elementos ativos são os segundos maiores porque indicam estado. Hover é o terceiro maior porque indica intenção de usuários, apesar que quase _nada_ usa `:hover`.
 
-### Overlay components
+### Componentes de sobreposição
 
-Bootstrap includes several components that function as an overlay of some kind. This includes, in order of highest `z-index`, dropdowns, fixed and sticky navbars, modals, tooltips, and popovers. These components have their own `z-index` scale that begins at `1000`. This starting number is random and serves as a small buffer between our styles and your project's custom styles.
+Bootstrap possui vários componentes que funcionam como uma sobreposição de algum tipo. Isso inclui (de acordo com maior `z-index`): dropdowns, navbar fixas e sticky, modais, tooltips e popovers. Estes componentes possuem as próprias escalas `z-index` que começam em `1000`. Esse número inicial é aleatório e serve como um pequeno espaçamento entre nossos estilos e os estilos de seus próprios projetos.
 
-Each overlay component increases it's `z-index` value slightly in such a way that common UI principles allow user focused or hovered elements to remain in view at all times. For example, a modal is document blocking (e.g., you cannot take any other action save for the modal's action), so we put that above our navbars.
+Cada componente de sobreposição possui seu valor `z-index` um pouco maior, de modo que princípios de UI comuns permitem que elementos com foco ou `:hover` estejam visíveis sempre. Por exemplo, um modal é um bloqueador de documentos (você não pode fazer mais nada, além de usar o modal), então, nós criamos ele com valor acima das navbars.
 
-Learn more about this in our [`z-index` layout page](/docs/4.0/layout/overview/#z-index).
+Aprenda mais sobre isso na nossa [página de layout `z-index`](/docs/4.0/layout/overview/#z-index).
 
-## HTML and CSS over JS
+## HTML e CSS invés de JS
 
-Whenever possible, we prefer to write HTML and CSS over JavaScript. In general, HTML and CSS are more prolific and accessible to more people of all different experience levels. HTML and CSS are also faster in your browser than JavaScript, and your browser generally provides a great deal of functionality for you.
+Sempre que possível, nós preferimos escrever HTML e CSS invés de JavaScript. No geral, HTML e CSS são mais presentes e acessívels para pessoas de diferentes níveis de experiência. HTML e CSS também são mais rápidos que JavaScript e seu navegador, geralmente, provê uma boa gama de funcionalidades para você.
 
-This principle is our first-class JavaScript API is `data` attributes. You don’t need to write nearly any JavaScript to use our JavaScript plugins; instead, write HTML. Read more about this in [our JavaScript overview page]().
+Nesse princípio, nossa API JavaScript principal é o atributo `data`. Você não precisa escrever quase nenhum JavaScript para usar nossos plugins JS, mas sim HTML. Leia mais sobre isso na nossa página de [visão geral JavaScript]().
 
-Lastly, our styles build on the fundamental behaviors of common web elements. Whenever possible, we prefer to use what the browser provides. For example, you can put a `.btn` class on nearly any element, but most elements don’t provide any semantic value or browser functionality. So instead, we use `<button>`s and `<a>`s.
+Por último, nossos estilos ajudam a desenvolver baseados em comportamentos fundamentais de elementos comuns na web. Sempre que possível, nós preferimos usar o que o navegador provê. Por exemplo, você pode colocar uma classe `.btn` em quase qualquer elemento, mas a maioria dos elementos não possuem valores semânticos ou funcionalidades em browsers. Desse modo, pelo contrário, nós usamos `<button>` e `<a>`.
 
-The same goes for more complex components. While we *could* write our own form validation plugin to add classes to a parent element based on an input’s state, thereby allowing us to style the text say red, we prefer using the `:valid`/`:invalid` pseudo-elements every browser provides us.
+O mesmo acontece em componentes mais complexos. Enquanto nós *poderíamos* escrever nossos próprios plugins de validações de formulários para adicionarem classem a elementos pais (baseados em um estado de input) e, portanto, nos permitindo estilizar um texto em vermelho, nós preferimos usar os pseudo-elementos `:valid`/`:invalid` que todo browser suporta.
 
-## Utilities
+## Utilitários
 
-Utility classes—formerly helpers in Bootstrap 3—are a powerful ally in combatting CSS bloat and poor page performance. A utility class is typically a single, immutable property-value pairing expressed as a class (e.g., `.d-block` represents `display: block;`). Their primary appeal is speed of use while writing HTML and limiting the amount of custom CSS you have to write.
+Classes "utilitárias" (antes "ajudantes", no Bootstrap 3) são poderosos aliados no combate ao CSS repetitivo e páginas pouco performáticas. Uma classe utilitária é, tipicamente, um único e imutável par propriedade-valor expresso como uma classe (ex: `.d-block` representa `display: block;`). A melhor vantagem delas é velocidade de uso quando escrevendo HTML e limitando a quantidade de CSS customizados que você tem que escrever.
 
-Specifically regarding custom CSS, utilities can help combat increasing file size by reducing your most commonly repeated property-value pairs into single classes. This can have a dramatic effect at scale in your projects.
+Especificamente, no que diz a respeito de CSS customizado, utilitários podem combater o crescimento de tamanho dos arquivos, reduzindo suas propriedades e valores mais usados à classes únicas. Isso pode ter um efeito incrível, nos seus projetos em escala.
 
-## Flexible HTML
+## HTML Flexível
 
-While not always possible, we strive to avoid being overly dogmatic in our HTML requirements for components. Thus, we focus on single classes in our CSS selectors and try to avoid immediate children selectors (`~`). This gives you more flexibility in your implementation and helps keep our CSS simpler and less specific.
+Apesar de nem sempre ser possível, nós tentamos evitar sermos rígidos em nossos requisitos HTML para componentes. Portanto, nós focamos em classes únicas nos nossos seletores CSS, além de evitar seletores de filhos imediatos (`~`). Isto lhe dá mais flexibilidade em sua implementação e ajuda manter nosso CSS mais simples e menos específico.
