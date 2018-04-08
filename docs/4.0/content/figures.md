@@ -1,26 +1,26 @@
 ---
 layout: docs
-title: Figures
-description: Documentation and examples for displaying related images and text with the figure component in Bootstrap.
+title: Figuras
+description: Documentação e exemplos para mostrar imagens e textos relacionados usando o componente figure, no Bootstrap.
 group: content
 ---
 
-Anytime you need to display a piece of content—like an image with an optional caption, consider using a `<figure>`.
+Sempre que você precisar mostrar algum tipo de conteúdo como uma imagem com legenda, considere usar o `<figure>`.
 
-Use the included `.figure` , `.figure-img` and `.figure-caption` classes to provide some baseline styles for the HTML5 `<figure>` and `<figcaption>` elements. Images in figures have no explicit size, so be sure to add the `.img-fluid` class to your `<img>` to make it responsive.
+Use as classes `.figure`, `.figure-img` e `.figure-caption` para conseguir alguns estilos bases para os elementos HTML5 `<figure>` e `<figcaption>`. Imagens na tag `<figure>` não possuem tamanhos explícitos, por isso, tenha certeza de colocar a classe `.img-fluid` no elemento `<img>`, para fazer com que ela seja responsiva.
 
 {% example html %}
 <figure class="figure">
-  <img data-src="holder.js/400x300" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-  <figcaption class="figure-caption">A caption for the above image.</figcaption>
+  <img data-src="holder.js/400x300" class="figure-img img-fluid rounded" alt="Imagem de um quadrado genérico com bordas arredondadas, em uma figure.">
+  <figcaption class="figure-caption">Uma legenda para a imagem acima.</figcaption>
 </figure>
 {% endexample %}
 
-Aligning the figure's caption is easy with our [text utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/#text-alignment).
+Alinhar a legenda de uma figura é fácil com nossos [utilitários de textos]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/#text-alignment).
 
 {% example html %}
 <figure class="figure">
-  <img data-src="holder.js/400x300" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-  <figcaption class="figure-caption text-right">A caption for the above image.</figcaption>
+  <img data-src="holder.js/400x300" class="figure-img img-fluid rounded" alt="Imagem de um quadrado genérico com bordas arredondadas, em uma figure.">
+  <figcaption class="figure-caption text-right">Uma legenda para a imagem acima.</figcaption>
 </figure>
 {% endexample %}
