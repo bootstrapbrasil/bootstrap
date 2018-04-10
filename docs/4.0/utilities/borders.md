@@ -1,17 +1,17 @@
 ---
 layout: docs
-title: Borders
-description: Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element.
+title: Bordas
+description: Use os utilitários de borda para estilizar rapidamente a borda e o raio da borda de um elemento. Ótimo para imagens, botões ou qualquer outro elemento.
 group: utilities
 redirect_from: "/docs/4.0/utilities/"
 toc: true
 ---
 
-## Border
+## Borda
 
-Use border utilities to add or remove an element's borders. Choose from all borders or one at a time.
+Use os utilitários de borda para adicionar ou remover as bordas de um elemento. Escolha entre um dos lados ou todos de uma vez.
 
-### Additive
+### Adicione
 
 <div class="bd-example-border-utils">
 {% example html %}
@@ -23,7 +23,7 @@ Use border utilities to add or remove an element's borders. Choose from all bord
 {% endexample %}
 </div>
 
-### Subtractive
+### Remova
 
 <div class="bd-example-border-utils bd-example-border-utils-0">
 {% example html %}
@@ -35,9 +35,9 @@ Use border utilities to add or remove an element's borders. Choose from all bord
 {% endexample %}
 </div>
 
-## Border color
+## Cor da borda
 
-Change the border color using utilities built on our theme colors.
+Altere a cor da borda usando utilitários criados a partir das nossas cores de tema.
 
 <div class="bd-example-border-utils">
 {% example html %}
@@ -47,9 +47,9 @@ Change the border color using utilities built on our theme colors.
 {% endexample %}
 </div>
 
-## Border-radius
+## Raio da borda
 
-Add classes to an element to easily round its corners.
+Adicione classes a um elemento para arredondar facilmente seus cantos.
 
 <div class="bd-example bd-example-images">
   <img data-src="holder.js/75x75" class="rounded" alt="Example rounded image">
