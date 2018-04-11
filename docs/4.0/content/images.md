@@ -1,48 +1,47 @@
 ---
 layout: docs
-title: Images
-description: Documentation and examples for opting images into responsive behavior (so they never become larger than their parent elements) and add lightweight styles to them—all via classes.
+title: Imagens
+description: Documentação e exemplos para tornar imagens responsivas (nunca crescem mais que os elementos pais) e adicionar estilos leves a elas, através de classes.
 group: content
 toc: true
 ---
 
-## Responsive images
+## Imagens responsivas
 
-Images in Bootstrap are made responsive with `.img-fluid`. `max-width: 100%;` and `height: auto;` are applied to the image so that it scales with the parent element.
+Imagens no Bootstrap são feitas responsivas com a classe `.img-fluid`. As declarações `max-width: 100%;` e `height: auto;` são aplicadas a imagem, de modo que ela escale junto ao elemento pai.
 
 <div class="bd-example">
-  <img data-src="holder.js/100px250" class="img-fluid" alt="Generic responsive image">
+  <img data-src="holder.js/100px250" class="img-fluid" alt="Imagem responsiva genérica">
 </div>
 
 {% highlight html %}
-<img src="..." class="img-fluid" alt="Responsive image">
+<img src="..." class="img-fluid" alt="Imagem responsiva">
 {% endhighlight %}
 
 {% callout warning %}
-##### SVG images and IE 10
+##### Imagens SVG e o IE10
 
-In Internet Explorer 10, SVG images with `.img-fluid` are disproportionately sized. To fix this, add `width: 100% \9;` where necessary. This fix improperly sizes other image formats, so Bootstrap doesn't apply it automatically.
-{% endcallout %}
+No Internet Explorer 10, imagens SVG com `.img-fluid` são dimensionadas desproporcionalmente. Para consertar isso, adicione `width: 100% \9;` quando necessário. Isso conserta dimensões impróprias para outros formatos de imagens, então, o Bootstrap não aplica isso automaticamente.
 
-## Image thumbnails
+## Thumbnails
 
-In addition to our [border-radius utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/borders/), you can use `.img-thumbnail` to give an image a rounded 1px border appearance.
+Além de nossos [utilitários border-radius]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/borders/), você pode usar `.img-thumbnail` para dar uma borda arredondada de 1px a uma imagem.
 
 <div class="bd-example bd-example-images">
-  <img data-src="holder.js/200x200" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera">
+  <img data-src="holder.js/200x200" class="img-thumbnail" alt="Uma imagem de um quadrado genérico com uma borda branca ao redor, fazendo ela parecer uma fotografia tirada com uma polaroide antiga.">
 </div>
 
 {% highlight html %}
 <img src="..." alt="..." class="img-thumbnail">
 {% endhighlight %}
 
-## Aligning images
+## Alinhando imagens
 
-Align images with the [helper float classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/float) or [text alignment classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/#text-alignment). `block`-level images can be centered using [the `.mx-auto` margin utility class]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/#horizontal-centering).
+Alinhe imagens com as [classes utilitárias de float]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/float) ou [classes para alinhamento de texto]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/#text-alignment). Imagens de `block`-level podem ser centralizadas usando a [classe utilitária de margem `.mx-auto`]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/#horizontal-centering).
 
 <div class="bd-example bd-example-images">
-  <img data-src="holder.js/200x200" class="rounded float-left" alt="A generic square placeholder image with rounded corners">
-  <img data-src="holder.js/200x200" class="rounded float-right" alt="A generic square placeholder image with rounded corners">
+  <img data-src="holder.js/200x200" class="rounded float-left" alt="Uma imagem genérica de um quadrado com cantos arredondados.">
+  <img data-src="holder.js/200x200" class="rounded float-right" alt="Uma imagem genérica de um quadrado com cantos arredondados.">
 </div>
 
 {% highlight html %}
@@ -51,7 +50,7 @@ Align images with the [helper float classes]({{ site.baseurl }}/docs/{{ site.doc
 {% endhighlight %}
 
 <div class="bd-example bd-example-images">
-  <img data-src="holder.js/200x200" class="rounded mx-auto d-block" alt="A generic square placeholder image with rounded corners">
+  <img data-src="holder.js/200x200" class="rounded mx-auto d-block" alt="Uma imagem genérica de um quadrado com cantos arredondados.">
 </div>
 
 {% highlight html %}
@@ -60,7 +59,7 @@ Align images with the [helper float classes]({{ site.baseurl }}/docs/{{ site.doc
 
 <div class="bd-example bd-example-images">
   <div class="text-center">
-    <img data-src="holder.js/200x200" class="rounded" alt="A generic square placeholder image with rounded corners">
+    <img data-src="holder.js/200x200" class="rounded" alt="Uma imagem genérica de um quadrado com cantos arredondados.">
   </div>
 </div>
 
@@ -71,9 +70,9 @@ Align images with the [helper float classes]({{ site.baseurl }}/docs/{{ site.doc
 {% endhighlight %}
 
 
-## Picture
+## Elemento <picture>
 
-If you are using the `<picture>` element to specify multiple `<source>` elements for a specific `<img>`, make sure to add the `.img-*` classes to the `<img>` and not to the `<picture>` tag.
+Se você está usando o elemento `<picture>` para especificar várias fontes (`<source>`) para uma imagem específica, se assegure de adicionar as classes `.img-` para as `<img>` e não para as tags `<picture>`.
 
 {% highlight html %}
 ​<picture>

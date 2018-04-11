@@ -1,25 +1,25 @@
 ---
 layout: docs
-title: Tables
-description: Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Bootstrap.
+title: Tabelas
+description: Documentação e exemplos para inclusão de diferentes tipos de tabelas (de acordo com sua necessidade de plugins JavaScript), no Bootstrap.
 group: content
 toc: true
 ---
 
-## Examples
+## Exemplos
 
-Due to the widespread use of tables across third-party widgets like calendars and date pickers, we've designed our tables to be **opt-in**. Just add the base class `.table` to any `<table>`, then extend with custom styles or our various included modifier classes.
+Devido ao abrangente uso de tabelas em _widgets_ de terceiros, como calendários e selecionadores da datas, nós desenvolvemos nossas tabelas de forma que sejam **alternativas**. Basta adicionar a classe `.table` em qualquer `<table>`, então, customize-a mais usando nossos estilos de costumização ou as diversas classes modificadoras.
 
-Using the most basic table markup, here's how `.table`-based tables look in Bootstrap. **All table styles are inherited in Bootstrap 4**, meaning any nested tables will be styled in the same manner as the parent.
+Usando a marcação mais básica para tabelas, assim é como tabelas usando `.table` irão parecer, no Bootstrap. **Todos os estilos de tabelas são herdados no Bootstrap 4**, significando que qualquer tabela aninhada vai se comportar do mesmo modo que seus pais.
 
 {% example html %}
 <table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Primeiro</th>
+      <th scope="col">Último</th>
+      <th scope="col">Nickname</th>
     </tr>
   </thead>
   <tbody>
@@ -45,16 +45,16 @@ Using the most basic table markup, here's how `.table`-based tables look in Boot
 </table>
 {% endexample %}
 
-You can also invert the colors—with light text on dark backgrounds—with `.table-dark`.
+Você também pode inverter as cores (texto claro em background escuro), usando a class `.table-dark`.
 
 {% example html %}
 <table class="table table-dark">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Primeiro</th>
+      <th scope="col">Último</th>
+      <th scope="col">Nickname</th>
     </tr>
   </thead>
   <tbody>
@@ -80,18 +80,18 @@ You can also invert the colors—with light text on dark backgrounds—with `.ta
 </table>
 {% endexample %}
 
-## Table head options
+## Opções de cabeçalhos para tabelas
 
-Similar to tables and dark tables, use the modifier classes `.thead-light` or `.thead-dark` to make `<thead>`s appear light or dark gray.
+Similar as tabelas comuns e tabelas escuras, use as classes modificadoras `.thead-light` ou `thead-dark` para fazer o `<thead>` ser mais claro ou escuro.
 
 {% example html %}
 <table class="table">
   <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Primeiro</th>
+      <th scope="col">Último</th>
+      <th scope="col">Nickname</th>
     </tr>
   </thead>
   <tbody>
@@ -120,9 +120,9 @@ Similar to tables and dark tables, use the modifier classes `.thead-light` or `.
   <thead class="thead-light">
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Primeiro</th>
+      <th scope="col">Último</th>
+      <th scope="col">Nickname</th>
     </tr>
   </thead>
   <tbody>
@@ -148,18 +148,18 @@ Similar to tables and dark tables, use the modifier classes `.thead-light` or `.
 </table>
 {% endexample %}
 
-## Striped rows
+## Linhas zebradas
 
-Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`.
+Use `.table-striped` para adicionar listras zebradas para qualquer `<tbody>`.
 
 {% example html %}
 <table class="table table-striped">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Primeiro</th>
+      <th scope="col">Último</th>
+      <th scope="col">Nickname</th>
     </tr>
   </thead>
   <tbody>
@@ -190,9 +190,9 @@ Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Primeiro</th>
+      <th scope="col">Último</th>
+      <th scope="col">Nickname</th>
     </tr>
   </thead>
   <tbody>
@@ -218,18 +218,18 @@ Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`
 </table>
 {% endexample %}
 
-## Bordered table
+## Tabela com bordas
 
-Add `.table-bordered` for borders on all sides of the table and cells.
+Use `.table-bordered` para colocar bordas em todos os lados da tabela e suas células.
 
 {% example html %}
 <table class="table table-bordered">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Primeiro</th>
+      <th scope="col">Último</th>
+      <th scope="col">Nickname</th>
     </tr>
   </thead>
   <tbody>
@@ -259,9 +259,9 @@ Add `.table-bordered` for borders on all sides of the table and cells.
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Primeiro</th>
+      <th scope="col">Último</th>
+      <th scope="col">Nickname</th>
     </tr>
   </thead>
   <tbody>
@@ -286,18 +286,18 @@ Add `.table-bordered` for borders on all sides of the table and cells.
 </table>
 {% endexample %}
 
-## Borderless table
+## Tabela sem bordas
 
-Add `.table-borderless` for a table without borders.
+Use `.table-borderless` para ter uma tabela sem bordas.
 
 {% example html %}
 <table class="table table-borderless">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Primeiro</th>
+      <th scope="col">Último</th>
+      <th scope="col">Nickname</th>
     </tr>
   </thead>
   <tbody>
@@ -322,16 +322,16 @@ Add `.table-borderless` for a table without borders.
 </table>
 {% endexample %}
 
-`.table-borderless` can also be used on dark tables.
+`.table-borderless` também pode ser usada em tabelas mais escuras.
 
 {% example html %}
 <table class="table table-borderless table-dark">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Primeiro</th>
+      <th scope="col">Último</th>
+      <th scope="col">Nickname</th>
     </tr>
   </thead>
   <tbody>
@@ -356,18 +356,18 @@ Add `.table-borderless` for a table without borders.
 </table>
 {% endexample %}
 
-## Hoverable rows
+## Linhas com efeito hover
 
-Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
+Utilize `.table-hover` para ativar um efeito hover, nas linhas dentro do `<tbody>`.
 
 {% example html %}
 <table class="table table-hover">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Primeiro</th>
+      <th scope="col">Último</th>
+      <th scope="col">Nickname</th>
     </tr>
   </thead>
   <tbody>
@@ -397,9 +397,9 @@ Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Primeiro</th>
+      <th scope="col">Último</th>
+      <th scope="col">Nickname</th>
     </tr>
   </thead>
   <tbody>
@@ -424,18 +424,18 @@ Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
 </table>
 {% endexample %}
 
-## Small table
+## Tabela pequena
 
-Add `.table-sm` to make tables more compact by cutting cell padding in half.
+Use `.table-sm` para fazer com que as tabelas fiquem mais compactas, já que o padding das células serão cortados ao meio.
 
 {% example html %}
 <table class="table table-sm">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Primeiro</th>
+      <th scope="col">Último</th>
+      <th scope="col">Nickname</th>
     </tr>
   </thead>
   <tbody>
@@ -465,9 +465,9 @@ Add `.table-sm` to make tables more compact by cutting cell padding in half.
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Primeiro</th>
+      <th scope="col">Último</th>
+      <th scope="col">Nickname</th>
     </tr>
   </thead>
   <tbody>
@@ -492,48 +492,48 @@ Add `.table-sm` to make tables more compact by cutting cell padding in half.
 </table>
 {% endexample %}
 
-## Contextual classes
+## Classes contextuais
 
-Use contextual classes to color table rows or individual cells.
+Use classes contextuais para colorir linhas ou células da tabela.
 
 <div class="bd-example">
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">Class</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
+        <th scope="col">Classe</th>
+        <th scope="col">Cabeçalho</th>
+        <th scope="col">Cabeçalho</th>
       </tr>
     </thead>
     <tbody>
       <tr class="table-active">
-        <th scope="row">Active</th>
-        <td>Cell</td>
-        <td>Cell</td>
+        <th scope="row">Ativo</th>
+        <td>Célula</td>
+        <td>Célula</td>
       </tr>
       <tr>
-        <th scope="row">Default</th>
-        <td>Cell</td>
-        <td>Cell</td>
+        <th scope="row">Padrão</th>
+        <td>Célula</td>
+        <td>Célula</td>
       </tr>
 
       {% for color in site.data.theme-colors %}
       <tr class="table-{{ color.name }}">
         <th scope="row">{{ color.name | capitalize }}</th>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Célula</td>
+        <td>Célula</td>
       </tr>{% endfor %}
     </tbody>
   </table>
 </div>
 
 {% highlight html %}
-<!-- On rows -->
+<!-- Em linhas -->
 <tr class="table-active">...</tr>
 {% for color in site.data.theme-colors %}
 <tr class="table-{{ color.name }}">...</tr>{% endfor %}
 
-<!-- On cells (`td` or `th`) -->
+<!-- Em células (`td` ou `th`) -->
 <tr>
   <td class="table-active">...</td>
   {% for color in site.data.theme-colors %}
@@ -541,76 +541,76 @@ Use contextual classes to color table rows or individual cells.
 </tr>
 {% endhighlight %}
 
-Regular table background variants are not available with the dark table, however, you may use [text or background utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) to achieve similar styles.
+Variantes de background não estão disponíveis em tabelas escuras, mas você pode usar [utilitários de texto ou background]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) para atingir estilos similares.
 
 <div class="bd-example">
   <table class="table table-dark">
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
+        <th scope="col">Cabeçalho</th>
+        <th scope="col">Cabeçalho</th>
       </tr>
     </thead>
     <tbody>
       <tr class="bg-primary">
         <th scope="row">1</th>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Célula</td>
+        <td>Célula</td>
       </tr>
       <tr>
         <th scope="row">2</th>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Célula</td>
+        <td>Célula</td>
       </tr>
       <tr class="bg-success">
         <th scope="row">3</th>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Célula</td>
+        <td>Célula</td>
       </tr>
       <tr>
         <th scope="row">4</th>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Célula</td>
+        <td>Célula</td>
       </tr>
       <tr class="bg-info">
         <th scope="row">5</th>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Célula</td>
+        <td>Célula</td>
       </tr>
       <tr>
         <th scope="row">6</th>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Célula</td>
+        <td>Célula</td>
       </tr>
       <tr class="bg-warning">
         <th scope="row">7</th>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Célula</td>
+        <td>Célula</td>
       </tr>
       <tr>
         <th scope="row">8</th>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Célula</td>
+        <td>Célula</td>
       </tr>
       <tr class="bg-danger">
         <th scope="row">9</th>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Célula</td>
+        <td>Célula</td>
       </tr>
     </tbody>
   </table>
 </div>
 
 {% highlight html %}
-<!-- On rows -->
+<!-- Em linhas -->
 <tr class="bg-primary">...</tr>
 <tr class="bg-success">...</tr>
 <tr class="bg-warning">...</tr>
 <tr class="bg-danger">...</tr>
 <tr class="bg-info">...</tr>
 
-<!-- On cells (`td` or `th`) -->
+<!-- Em células (`td` ou `th`) -->
 <tr>
   <td class="bg-primary">...</td>
   <td class="bg-success">...</td>
@@ -623,24 +623,24 @@ Regular table background variants are not available with the dark table, however
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
-Create responsive tables by wrapping any `.table` with `.table-responsive{-sm|-md|-lg|-xl}`, making the table scroll horizontally at each `max-width` breakpoint of up to (but not including) 576px, 768px, 992px, and 1120px, respectively.
+Crie tabelas responsivas envolvendo qualquer `.table` com `.table-responsive{-sm|-md|-lg|-xl}`, fazendo a tabela ter rolagem horizontal em cada _breakpoint_ de `max-width`, por volta de (não extamente) 576px, 768px, 992px e 1120px, respectivamente.
 
 {% capture callout-include %}{% include callout-info-mediaqueries-breakpoints.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
-## Captions
+## Legendas
 
-A `<caption>` functions like a heading for a table. It helps users with screen readers to find a table and understand what it's about and decide if they want to read it.
+Um `<caption>` funciona como um cabeçalho para a tabela. Isso ajuda usários de _screen readers_ achar uma tabela e descobrir sobre oquê é e decidir se eles querem lê-la.
 
 {% example html %}
 <table class="table">
-  <caption>List of users</caption>
+  <caption>Lista de usuários</caption>
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Primeiro</th>
+      <th scope="col">Último</th>
+      <th scope="col">Nickname</th>
     </tr>
   </thead>
   <tbody>
@@ -666,19 +666,20 @@ A `<caption>` functions like a heading for a table. It helps users with screen r
 </table>
 {% endexample %}
 
-## Responsive tables
+## Tabelas responsivas
 
-Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a `.table` with `.table-responsive`. Or, pick a maximum breakpoint with which to have a responsive table up to by using `.table-responsive{-sm|-md|-lg|-xl}`.
+Tabelas responsivas permitem tabelas serem roladas horizontalmente, com facilidade. Faça com que qualquer tabela seja responsiva em todas _viewports_, simplesmente, envolvendo um `.table` com `.table-responsive`. Além disso, você pode escolher um _breakpoint_ máximo para a tabela ser responsiva, usando a classe `.table-responsive{-sm|-md|-lg|-xl}`.
 
 {% callout warning %}
-##### Vertical clipping/truncation
+##### Corte vertical
 
-Responsive tables make use of `overflow-y: hidden`, which clips off any content that goes beyond the bottom or top edges of the table. In particular, this can clip off dropdown menus and other third-party widgets.
+Tabelas responsivas usam `overflow-y: hidden`, declaração a qual corta qualquer conteúdo que vai além da borda de cima ou de baixo, numa tabela. Em particular, isso pode acabar cortando menus dropdowns e outros widgets de terceiros.
+
 {% endcallout %}
 
-### Always responsive
+### Sempre responsiva
 
-Across every breakpoint, use `.table-responsive` for horizontally scrolling tables.
+Use `.table-responsive` para fazer que tabelas rolem horizontalmente, através de todos dispositivos.
 
 <div class="bd-example">
   <div class="table-responsive">
@@ -686,53 +687,53 @@ Across every breakpoint, use `.table-responsive` for horizontally scrolling tabl
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Heading</th>
-          <th scope="col">Heading</th>
-          <th scope="col">Heading</th>
-          <th scope="col">Heading</th>
-          <th scope="col">Heading</th>
-          <th scope="col">Heading</th>
-          <th scope="col">Heading</th>
-          <th scope="col">Heading</th>
-          <th scope="col">Heading</th>
+          <th scope="col">Cabeçalho</th>
+          <th scope="col">Cabeçalho</th>
+          <th scope="col">Cabeçalho</th>
+          <th scope="col">Cabeçalho</th>
+          <th scope="col">Cabeçalho</th>
+          <th scope="col">Cabeçalho</th>
+          <th scope="col">Cabeçalho</th>
+          <th scope="col">Cabeçalho</th>
+          <th scope="col">Cabeçalho</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
+          <td>Célula</td>
+          <td>Célula</td>
+          <td>Célula</td>
+          <td>Célula</td>
+          <td>Célula</td>
+          <td>Célula</td>
+          <td>Célula</td>
+          <td>Célula</td>
+          <td>Célula</td>
         </tr>
         <tr>
           <th scope="row">2</th>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
+          <td>Célula</td>
+          <td>Célula</td>
+          <td>Célula</td>
+          <td>Célula</td>
+          <td>Célula</td>
+          <td>Célula</td>
+          <td>Célula</td>
+          <td>Célula</td>
+          <td>Célula</td>
         </tr>
         <tr>
           <th scope="row">3</th>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
+          <td>Célula</td>
+          <td>Célula</td>
+          <td>Célula</td>
+          <td>Célula</td>
+          <td>Célula</td>
+          <td>Célula</td>
+          <td>Célula</td>
+          <td>Célula</td>
+          <td>Célula</td>
         </tr>
       </tbody>
     </table>
@@ -747,9 +748,9 @@ Across every breakpoint, use `.table-responsive` for horizontally scrolling tabl
 </div>
 {% endhighlight %}
 
-### Breakpoint specific
+### Breakpoint específico
 
-Use `.table-responsive{-sm|-md|-lg|-xl}` as needed to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.
+Use `.table-responsive{-sm|-md|-lg|-xl}` sempre que necessário, para criar tabelas responsivas em um breakpoint específico. Desse breakpoint pra cima, a tabela vai se comportar normalmente e não vai rolar horizontalmente.
 
 <div class="bd-example">
 {% for bp in site.data.breakpoints %}{% unless bp.breakpoint == "xs" %}
@@ -758,37 +759,37 @@ Use `.table-responsive{-sm|-md|-lg|-xl}` as needed to create responsive tables u
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
+        <th scope="col">Cabeçalho</th>
+        <th scope="col">Cabeçalho</th>
+        <th scope="col">Cabeçalho</th>
+        <th scope="col">Cabeçalho</th>
+        <th scope="col">Cabeçalho</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th scope="row">1</th>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Célula</td>
+        <td>Célula</td>
+        <td>Célula</td>
+        <td>Célula</td>
+        <td>Célula</td>
       </tr>
       <tr>
         <th scope="row">2</th>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Célula</td>
+        <td>Célula</td>
+        <td>Célula</td>
+        <td>Célula</td>
+        <td>Célula</td>
       </tr>
       <tr>
         <th scope="row">3</th>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Célula</td>
+        <td>Célula</td>
+        <td>Célula</td>
+        <td>Célula</td>
+        <td>Célula</td>
       </tr>
     </tbody>
   </table>

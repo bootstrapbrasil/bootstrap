@@ -1,50 +1,50 @@
 ---
 layout: docs
-title: Code
-description: Documentation and examples for displaying inline and multiline blocks of code with Bootstrap.
+title: Código
+description: Documentação e exemplos para mostrar blocos de código em linha ou multi-linhas, usando o Bootstrap.
 group: content
 toc: true
 ---
 
-## Inline code
+## Código em linha
 
-Wrap inline snippets of code with `<code>`. Be sure to escape HTML angle brackets.
+Envolte pedaços de códigos (aqueles com única linha), usando o elemento `<code>`. Se assegure de usar escape, nos colchetes do HTML.
 
 {% example html %}
-For example, <code>&lt;section&gt;</code> should be wrapped as inline.
+Por exemplo, isso deve ser envolto em uma linha: <code>&lt;section&gt;</code>.
 {% endexample %}
 
-## Code blocks
+## Bloco de códigos
 
-Use `<pre>`s for multiple lines of code. Once again, be sure to escape any angle brackets in the code for proper rendering. You may optionally add the `.pre-scrollable` class, which will set a max-height of 340px and provide a y-axis scrollbar.
+Use tags `<pre>` para diversas linhas de código. Mais uma vez: tenha certeza de usar escape em qualquer colchete HTML, para que tudo seja renderizado adequadamente. Opcionalmente, você pode adicionar a classe `.pre-scrollable`, a qual vai usar `max-height` com valor de `340px` e criar uma barra de rolagem vertical.
 
 {% example html %}
-<pre><code>&lt;p&gt;Sample text here...&lt;/p&gt;
-&lt;p&gt;And another line of sample text here...&lt;/p&gt;
+<pre><code>&lt;p&gt;Exemplo de texto aqui...&lt;/p&gt;
+&lt;p&gt;Outro exemplo de texto aqui...&lt;/p&gt;
 </code></pre>
 {% endexample %}
 
-## Variables
+## Variáveis
 
-For indicating variables use the `<var>` tag.
+Para indicar variáveis, use a tag `<var>`.
 
 {% example html %}
 <var>y</var> = <var>m</var><var>x</var> + <var>b</var>
 {% endexample %}
 
-## User input
+## Input do usuário
 
-Use the `<kbd>` to indicate input that is typically entered via keyboard.
+Use o `<kbd>` para indicar um input típico de entrada via teclado.
 
 {% example html %}
-To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
-To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+Para trocar diretórios, digite <kbd>cd</kbd> seguido pelo nome do diretório.<br>
+Para editar configurações, pressione <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
 {% endexample %}
 
-## Sample output
+## Amostra de output
 
-For indicating sample output from a program use the `<samp>` tag.
+Para indicar uma amostra output de um programa, use a tag `<samp>`.
 
 {% example html %}
-<samp>This text is meant to be treated as sample output from a computer program.</samp>
+<samp>Este texto deve ser tratado como uma amostra output de um programa de computadores.</samp>
 {% endexample %}
