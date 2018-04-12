@@ -1,88 +1,86 @@
-- title: Ponto de partida
+- title: Getting started
   pages:
-    - title: Introdução
+    - title: Introduction
     - title: Download
-    - title: Conteúdo
-    - title: Navegadores & dispositivos
+    - title: Contents
+    - title: Browsers & devices
     - title: JavaScript
-    - title: Customização de tema
-    - title: Ferramentas de Build
-    # - title: Boas práticas # TODO: Write this content
+    - title: Theming
+    - title: Build tools
+    # - title: Best practices # TODO: Write this content
     - title: Webpack
-    - title: Acessibilidade
+    - title: Accessibility
 
 - title: Layout
-  slug: Layout
   pages:
-    - title: Visão geral
+    - title: Overview
     - title: Grid
-    - title: Objeto de mídia
-    - title: Utilitários de layout
+    - title: Media object
+    - title: Utilities for layout
 
-- title: Conteúdo
+- title: Content
   pages:
-    - title: Reinicialização
-    - title: Tipografia
-    - title: Código
-    - title: Imagens
-    - title: Tabelas
-    - title: Figuras
+    - title: Reboot
+    - title: Typography
+    - title: Code
+    - title: Images
+    - title: Tables
+    - title: Figures
 
-- title: Componentes
+- title: Components
   pages:
-    - title: Alertas
-    - title: Badges (Indicadores)
-    - title: Breadcrumb (Rastro de navegação)
-    - title: Botões
-    - title: Grupo de botões
-    - title: Cartão
+    - title: Alerts
+    - title: Badge
+    - title: Breadcrumb
+    - title: Buttons
+    - title: Button group
+    - title: Card
     - title: Carousel
-      slug: Carousel
     - title: Collapse
-      slug: Collapse
     - title: Dropdowns
-    - title: Formulários
-    - title: Grupo de inputs (Campos)
-    - title: Jumbotron (Telão)
-    - title: Lista em grupos
+    - title: Forms
+    - title: Input group
+    - title: Jumbotron
+    - title: List group
     - title: Modal
-    - title: Navegações
-    - title: Barra de navegação
-    - title: Páginação
+    - title: Navs
+    - title: Navbar
+    - title: Pagination
     - title: Popovers
-    - title: Barra de Progresso
+    - title: Progress
     - title: Scrollspy
     - title: Tooltips
 
 - title: Utilities
   pages:
-    - title: Bordas
+    - title: Borders
     - title: Clearfix
-    - title: Ícone de fechar
-    - title: Cores
+    - title: Close icon
+    - title: Colors
     - title: Display
     - title: Embed
     - title: Flex
-    - title: Float (Flutuar)
-    - title: Substituição de imagem
-    - title: Posicionamentos
-    - title: Leitores de telas
-    - title: Tamanhos
-    - title: Espaçamentos
-    - title: Texto
-    - title: Alinhamento vertical
-    - title: Visibilidade
+    - title: Float
+    - title: Image replacement
+    - title: Position
+    - title: Screenreaders
+    - title: Shadows
+    - title: Sizing
+    - title: Spacing
+    - title: Text
+    - title: Vertical align
+    - title: Visibility
 
-- title: Extendendo
+- title: Extend
   pages:
-    - title: Abordagem
-    - title: Ícones
+    - title: Approach
+    - title: Icons
 
-- title: Migração
+- title: Migration
 
 - title: About
   pages:
-    - title: Visão geral
-    - title: Manual de identidade visual
-    - title: Licença
-    - title: Traduções
+    - title: Overview
+    - title: Brand
+    - title: License
+    - title: Translations
