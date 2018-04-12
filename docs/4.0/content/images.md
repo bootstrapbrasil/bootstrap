@@ -22,6 +22,7 @@ Imagens no Bootstrap são feitas responsivas com a classe `.img-fluid`. As decla
 ##### Imagens SVG e o IE10
 
 No Internet Explorer 10, imagens SVG com `.img-fluid` são dimensionadas desproporcionalmente. Para consertar isso, adicione `width: 100% \9;` quando necessário. Isso conserta dimensões impróprias para outros formatos de imagens, então, o Bootstrap não aplica isso automaticamente.
+{% endcallout %}
 
 ## Thumbnails
 
@@ -70,7 +71,7 @@ Alinhe imagens com as [classes utilitárias de float]({{ site.baseurl }}/docs/{{
 {% endhighlight %}
 
 
-## Elemento <picture>
+## Elemento `<picture>`
 
 Se você está usando o elemento `<picture>` para especificar várias fontes (`<source>`) para uma imagem específica, se assegure de adicionar as classes `.img-` para as `<img>` e não para as tags `<picture>`.
 
