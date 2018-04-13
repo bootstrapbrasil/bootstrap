@@ -1,6 +1,6 @@
-/* GLOBAL STYLES
+/* ESTILOS GLOBAIS
 -------------------------------------------------- */
-/* Padding below the footer and lighter body text */
+/* Padding abaixo do footer e texto mais suave no <body> */
 
 body {
   padding-top: 3rem;
@@ -9,20 +9,21 @@ body {
 }
 
 
-/* CUSTOMIZE THE CAROUSEL
+/* CUSTOMIZA O CAROUSEL
 -------------------------------------------------- */
 
-/* Carousel base class */
+/* Classe base do carousel */
 .carousel {
   margin-bottom: 4rem;
 }
-/* Since positioning the image, we need to help out the caption */
+
+/* Já que usamos posicionamento de imagens, precisaremos fazer alguns ajustes na legenda */
 .carousel-caption {
   bottom: 3rem;
   z-index: 10;
 }
 
-/* Declare heights because of positioning of img element */
+/* Declaramos alturas, devido ao posicionamento do elemento img */
 .carousel-item {
   height: 32rem;
   background-color: #777;
@@ -36,10 +37,10 @@ body {
 }
 
 
-/* MARKETING CONTENT
+/* CONTEÚDO DO MARKETING
 -------------------------------------------------- */
 
-/* Center align the text within the three columns below the carousel */
+/* Alinha, centralmente, o texto dentro das três colunas abaixo do carousel */
 .marketing .col-lg-4 {
   margin-bottom: 1.5rem;
   text-align: center;
@@ -53,14 +54,14 @@ body {
 }
 
 
-/* Featurettes
+/* Featrurezinhas
 ------------------------- */
 
 .featurette-divider {
-  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  margin: 5rem 0; /* Espaça o elemento <hr> mais */
 }
 
-/* Thin out the marketing headings */
+/* Afina os cabeçalhos de marketing */
 .featurette-heading {
   font-weight: 300;
   line-height: 1;
@@ -68,11 +69,11 @@ body {
 }
 
 
-/* RESPONSIVE CSS
+/* CSS RESPONSIVE
 -------------------------------------------------- */
 
 @media (min-width: 40em) {
-  /* Bump up size of carousel content */
+  /* Aumenta o tamanho do conteúdo do carousel */
   .carousel-caption p {
     margin-bottom: 1.25rem;
     font-size: 1.25rem;
