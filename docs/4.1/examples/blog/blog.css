@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
 
 /*
- * Blog name and description
+ * Nome do blog e descrição
  */
 .blog-title {
   margin-bottom: 0;
@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Pagination */
+/* Paginação */
 .blog-pagination {
   margin-bottom: 4rem;
 }
@@ -101,7 +101,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*
- * Blog posts
+ * Posts do blog
  */
 .blog-post {
   margin-bottom: 4rem;
