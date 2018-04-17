@@ -53,7 +53,7 @@ Read the [Getting started page](https://getbootstrap.com/docs/4.0/getting-starte
 
 ## Status
 
-[![Slack](https://bootstrap-slack.herokuapp.com/badge.svg)](https://bootstrapbrasil-slack.herokuapp.com/)
+[![Slack](https://bootstrapbrasil-slack.herokuapp.com/badge.svg)](https://bootstrapbrasil-slack.herokuapp.com/)
 
 [![Sauce Labs Test Status](https://saucelabs.com/browser-matrix/bootstrap.svg)](https://saucelabs.com/u/bootstrap)
 
