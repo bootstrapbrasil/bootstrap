@@ -41,7 +41,7 @@ body {
   left: 0;
   display: block;
   width: 100%;
-  margin-bottom: 0; /* Override default `<label>` margin */
+  margin-bottom: 0; /* Sobrescreve a margem padrão da `<label>` */
   line-height: 1.5;
   color: #495057;
   border: 1px solid transparent;
