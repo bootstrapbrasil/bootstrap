@@ -9,19 +9,19 @@ a:hover {
   color: #fff;
 }
 
-/* Custom default button */
+/* Botão padrão customizado */
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
   color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
+  text-shadow: none; /* Previne herença do `body` */
   background-color: #fff;
   border: .05rem solid #fff;
 }
 
 
 /*
- * Base structure
+ * Estrutura base
  */
 
 html,
@@ -44,7 +44,7 @@ body {
 
 
 /*
- * Header
+ * Cabeçalho
  */
 .masthead {
   margin-bottom: 2rem;
@@ -87,7 +87,7 @@ body {
 
 
 /*
- * Cover
+ * Capa
  */
 .cover {
   padding: 0 1.5rem;
