@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Overview
-description: Components and options for laying out your Bootstrap project, including wrapping containers, a powerful grid system, a flexible media object, and responsive utility classes.
+title: Visão Geral
+description: Componentes e opções para o layout do seu projeto Bootstrap, incluindo wrapping containers, um poderoso sistema de grid, um objeto de mídia flexível e classes responsivas.
 group: layout
 redirect_from: "/docs/4.1/layout/"
 toc: true
@@ -9,9 +9,10 @@ toc: true
 
 ## Containers
 
-Containers are the most basic layout element in Bootstrap and are **required when using our default grid system**. Choose from a responsive, fixed-width container (meaning its `max-width` changes at each breakpoint) or fluid-width (meaning it's `100%` wide all the time).
+Containers são os elementos de layout mais básico do Bootstrap e são **necessários quando usamos o sistema de grid padrão**. Escolha entre um container responsivo de largura fixa (ou seja, com alterações de `max-width` em cada ponto de interrupção) ou por um responsivo de largura fluida (ou seja, `100%` de largura o tempo todo).
 
-While containers *can* be nested, most layouts do not require a nested container.
+
+Embora os containers possam ser aninhados, a maioria dos layouts não exige um container aninhado.
 
 <div class="bd-example">
   <div class="bd-example-container">
@@ -27,7 +28,7 @@ While containers *can* be nested, most layouts do not require a nested container
 </div>
 {% endhighlight %}
 
-Use `.container-fluid` for a full width container, spanning the entire width of the viewport.
+Use `.container-fluid` para um container com de largura total, abrangindo toda a largura da sua área de visualização.
 
 <div class="bd-example">
   <div class="bd-example-container bd-example-container-fluid">
@@ -44,11 +45,11 @@ Use `.container-fluid` for a full width container, spanning the entire width of 
 {% endhighlight %}
 
 
-## Responsive breakpoints
+## Pontos de parada reponsivos
 
-Since Bootstrap is developed to be mobile first, we use a handful of [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) to create sensible breakpoints for our layouts and interfaces. These breakpoints are mostly based on minimum viewport widths and allow us to scale up elements as the viewport changes.
+Como o bootstrap é desenvolvido para ser "mobile first" usamos varias [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) para criar sensíveis pontos de parada para nossos layouts e interfaces. Esses pontos são baseadas em larguras de área de visualização miníma e nos permitem dimensionar conforme muda o tamanho da área de visualização.
 
-Bootstrap primarily uses the following media query ranges—or breakpoints—in our source Sass files for our layout, grid system, and components.
+Bootstrap usa principalmente os seguintes intervalos de media queries, ou pontos de paradas, em nossos arquivos de origem do SASS para os layouts, sistemas de grid e componentes.
 
 {% highlight scss %}
 // Extra small devices (portrait phones, less than 576px)
@@ -67,7 +68,7 @@ Bootstrap primarily uses the following media query ranges—or breakpoints—in 
 @media (min-width: 1200px) { ... }
 {% endhighlight %}
 
-Since we write our source CSS in Sass, all our media queries are available via Sass mixins:
+Como escrevemos nosso CSS de origem no Sass, todas as nossas consultas de mídia estão disponíveis via mixins do Sass:
 
 {% highlight scss %}
 @include media-breakpoint-up(xs) { ... }
@@ -84,7 +85,7 @@ Since we write our source CSS in Sass, all our media queries are available via S
 }
 {% endhighlight %}
 
-We occasionally use media queries that go in the other direction (the given screen size *or smaller*):
+Ocasionalmente, usamos media queries que seguem na outra direção (no tamanho da tela fornecida *ou menor*):
 
 {% highlight scss %}
 // Extra small devices (portrait phones, less than 576px)
@@ -105,7 +106,7 @@ We occasionally use media queries that go in the other direction (the given scre
 
 {% include callout-info-mediaqueries-breakpoints.md %}
 
-Once again, these media queries are also available via Sass mixins:
+Mais uma vez, essas media queries também estão disponíveis via mixins Sass:
 
 {% highlight scss %}
 @include media-breakpoint-down(xs) { ... }
@@ -114,7 +115,7 @@ Once again, these media queries are also available via Sass mixins:
 @include media-breakpoint-down(lg) { ... }
 {% endhighlight %}
 
-There are also media queries and mixins for targeting a single segment of screen sizes using the minimum and maximum breakpoint widths.
+Há também media queries e mixins para selecionar um único segmento com o tamanho da tela separado pelo tamanho minímo e tamanho máximo.
 
 {% highlight scss %}
 // Extra small devices (portrait phones, less than 576px)
@@ -133,7 +134,7 @@ There are also media queries and mixins for targeting a single segment of screen
 @media (min-width: 1200px) { ... }
 {% endhighlight %}
 
-These media queries are also available via Sass mixins:
+Essas media queries também estão disponíveis via Sass mixins: 
 
 {% highlight scss %}
 @include media-breakpoint-only(xs) { ... }
@@ -143,7 +144,7 @@ These media queries are also available via Sass mixins:
 @include media-breakpoint-only(xl) { ... }
 {% endhighlight %}
 
-Similarly, media queries may span multiple breakpoint widths:
+Da mesma forma, as media querias podem abranger várias larguras de pontos de parada.
 
 {% highlight scss %}
 // Example
@@ -151,7 +152,7 @@ Similarly, media queries may span multiple breakpoint widths:
 @media (min-width: 768px) and (max-width: 1199.98px) { ... }
 {% endhighlight %}
 
-The Sass mixin for targeting the same screen size range would be:
+O Sass mixin para selecionar o mesmo tamanho de tela seria:
 
 {% highlight scss %}
 @include media-breakpoint-between(md, xl) { ... }
