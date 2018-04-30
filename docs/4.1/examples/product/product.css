@@ -3,7 +3,7 @@
 }
 
 /*
- * Custom translucent site header
+ * Cabeçalho translucente customizado
  */
 
 .site-header {
@@ -21,7 +21,7 @@
 }
 
 /*
- * Dummy devices (replace them with your own or something else entirely!)
+ * Dispositivos modelos (substitua eles com seus próprios dispositivos ou algo diferente)
  */
 
 .product-device {
@@ -57,7 +57,7 @@
 
 
 /*
- * Extra utilities
+ * Utilitários extras
  */
 
 .border-top { border-top: 1px solid #e5e5e5; }

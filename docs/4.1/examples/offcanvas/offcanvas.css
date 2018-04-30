@@ -1,6 +1,6 @@
 html,
 body {
-  overflow-x: hidden; /* Prevent scroll on narrow devices */
+  overflow-x: hidden; /* Previne rolagem, em dispositivos estreitos */
 }
 
 body {
@@ -10,7 +10,7 @@ body {
 @media (max-width: 991.98px) {
   .offcanvas-collapse {
     position: fixed;
-    top: 56px; /* Height of navbar */
+    top: 56px; /* Altura da navbar */
     bottom: 0;
     left: 100%;
     width: 100%;
