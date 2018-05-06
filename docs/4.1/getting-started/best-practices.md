@@ -1,18 +1,18 @@
 ---
 layout: docs
 title: Boas práticas
-description: Learn about some of the best practices we've gathered from years of working on and using Bootstrap.
+description: Aprenda sobre algumas das melhores práticas que nós reunimos, depois de anos trabalhando com o Bootstrap.
 group: getting-started
 ---
 
-We've designed and developed Bootstrap to work in a number of environments. Here are some of the best practices we've gathered from years of working on and using it ourselves.
+Nós desenhamos e criamos o Bootstrap para que funcione em diferentes ambientes. Aqui estão algumas das melhores práticas que nós reunimos, depois de anos trabalhando com o Bootstrap.
 
 {% capture callout %}
-**Heads up!** This copy is a work in progress.
+**Atenção!** Esta cópia é um trabalho em progresso.
 {% endcapture %}
 {% include callout.html content=callout type="info" %}
 
-### General outline
+### Resumo
 
 - Trabalhando com CSS
 - Trabalhando arquivos Sass
