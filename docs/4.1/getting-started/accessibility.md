@@ -32,15 +32,15 @@ O conteúdo que deve estar visualmente oculto, mas permanecer acessível a tecno
 
 {% highlight html %}
 <p class="text-danger">
-  <span class="sr-only">Danger: </span>
-  This action is not reversible
+  <span class="sr-only">Perigo: </span>
+  Esta ação não é reversível.
 </p>
 {% endhighlight %}
 
 Para controles interativos visualmente ocultos, como os links “skip” tradicionais, o `.sr-only` pode ser combinado com a classe `.sr-only-focusable`. Isso garantirá que o controle se torne visível uma vez em foco (para usuários de teclado com visão).
 
 {% highlight html %}
-<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+<a class="sr-only sr-only-focusable" href="#content">Voltar ao conteúdo principal.</a>
 {% endhighlight %}
 
 ## Recursos Adicionais
