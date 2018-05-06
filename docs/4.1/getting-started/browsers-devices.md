@@ -1,18 +1,18 @@
 ---
 layout: docs
-title: Browsers and devices
-description: Learn about the browsers and devices, from modern to old, that are supported by Bootstrap, including known quirks and bugs for each.
+title: Browsers e dispositivos
+description: Aprenda sobre os browsers e dispositivos (dos modernos até os antigos) que suportam o Bootstrap, incluindo quirks e bugs conhecidos, em cada.
 group: getting-started
 toc: true
 ---
 
-## Supported browsers
+## Suporte de browsers
 
-Bootstrap supports the **latest, stable releases** of all major browsers and platforms. On Windows, **we support Internet Explorer 10-11 / Microsoft Edge**.
+Bootstrap é suportado pelas versões mais **recentes e estáveis** dos maiores navegadores e plataformas. No Windows, somos suportados pelo **Internet Explorer 10, 11 e Microsoft Edge**.
 
-Alternative browsers which use the latest version of WebKit, Blink, or Gecko, whether directly or via the platform's web view API, are not explicitly supported. However, Bootstrap should (in most cases) display and function correctly in these browsers as well. More specific support information is provided below.
+Navegadores alternativos que usam a versão mais recente do WebKit, Blink ou Gecko (tanto diretamente, quanto através da API web view da plataforma) não suportam explicitamente o Bootstrap. Contudo, o framework funciona normalmente (na maioria dos casos) nesses browsers. Informações mais específicas a respeito estão abaixo.
 
-You can find our supported range of browsers and their versions [in our `package.json`]({{ site.repo }}/blob/v4-dev/package.json):
+Você pode consultar nosso leque de browsers com suporte e suas versões no nosso [`package.json`]({{ site.repo }}/blob/v4-dev/package.json):
 
 ```json
 "browserslist": [
@@ -29,11 +29,11 @@ You can find our supported range of browsers and their versions [in our `package
 ]
 ```
 
-We use [Autoprefixer](https://github.com/postcss/autoprefixer) to handle intended browser support via CSS prefixes, which uses [Browserslist](https://github.com/browserslist/browserslist) to manage these browser versions. Consult their documentation for how to integrate these tools into your projects.
+Nós usamos o [Autoprefixer](https://github.com/postcss/autoprefixer) para obter o suporte esperado (usando prefixos CSS), o qual usa [Browserslist](https://github.com/browserslist/browserslist) para gerenciar as versões destes navegadores.
 
-### Mobile devices
+### Dispositivos móveis
 
-Generally speaking, Bootstrap supports the latest versions of each major platform's default browsers. Note that proxy browsers (such as Opera Mini, Opera Mobile's Turbo mode, UC Browser Mini, Amazon Silk) are not supported.
+No geral, Bootstrap é suportado pelas versões mais recentes das maiores plataformas padrões dos browsers. No entanto, lembre-se que _proxy browsers_ (como o Opera Mini, modo turbo do Opera Mobile, UC Browser Mini, Amazon Silk) não são suportados.
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -49,34 +49,34 @@ Generally speaking, Bootstrap supports the latest versions of each major platfor
   <tbody>
     <tr>
       <th scope="row">Android</th>
-      <td class="text-success">Supported</td>
-      <td class="text-success">Supported</td>
+      <td class="text-success">Suportado</td>
+      <td class="text-success">Suportado</td>
       <td class="text-muted">N/A</td>
-      <td class="text-success">Android v5.0+ supported</td>
-      <td class="text-success">Supported</td>
+      <td class="text-success">Android v5.0+ Suportado</td>
+      <td class="text-success">Suportado</td>
     </tr>
     <tr>
       <th scope="row">iOS</th>
-      <td class="text-success">Supported</td>
-      <td class="text-success">Supported</td>
-      <td class="text-success">Supported</td>
+      <td class="text-success">Suportado</td>
+      <td class="text-success">Suportado</td>
+      <td class="text-success">Suportado</td>
       <td class="text-muted">N/A</td>
-      <td class="text-success">Supported</td>
+      <td class="text-success">Suportado</td>
     </tr>
     <tr>
-      <th scope="row">Windows 10 Mobile</th>
+      <th scope="row">Windows 10 Móvel</th>
       <td class="text-muted">N/A</td>
       <td class="text-muted">N/A</td>
       <td class="text-muted">N/A</td>
       <td class="text-muted">N/A</td>
-      <td class="text-success">Supported</td>
+      <td class="text-success">Suportado</td>
     </tr>
   </tbody>
 </table>
 
-### Desktop browsers
+### Browsers desktop
 
-Similarly, the latest versions of most desktop browsers are supported.
+De forma parecida, as versões mais recentes da maioria dos navegadores desktops são suportadas.
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -93,66 +93,66 @@ Similarly, the latest versions of most desktop browsers are supported.
   <tbody>
     <tr>
       <th scope="row">Mac</th>
-      <td class="text-success">Supported</td>
-      <td class="text-success">Supported</td>
+      <td class="text-success">Suportado</td>
+      <td class="text-success">Suportado</td>
       <td class="text-muted">N/A</td>
       <td class="text-muted">N/A</td>
-      <td class="text-success">Supported</td>
-      <td class="text-success">Supported</td>
+      <td class="text-success">Suportado</td>
+      <td class="text-success">Suportado</td>
     </tr>
     <tr>
       <th scope="row">Windows</th>
-      <td class="text-success">Supported</td>
-      <td class="text-success">Supported</td>
-      <td class="text-success">Supported, IE10+</td>
-      <td class="text-success">Supported</td>
-      <td class="text-success">Supported</td>
-      <td class="text-danger">Not supported</td>
+      <td class="text-success">Suportado</td>
+      <td class="text-success">Suportado</td>
+      <td class="text-success">Suportado, IE10+</td>
+      <td class="text-success">Suportado</td>
+      <td class="text-success">Suportado</td>
+      <td class="text-danger">Not Suportado</td>
     </tr>
   </tbody>
 </table>
 
-For Firefox, in addition to the latest normal stable release, we also support the latest [Extended Support Release (ESR)](https://www.mozilla.org/en-US/firefox/organizations/#faq) version of Firefox.
+No Firefox, em adição ao release mais recente e estável, nós também temos suporte da recente versão "[Extended Support Release (ESR)](https://www.mozilla.org/en-US/firefox/organizations/#faq)".
 
-Unofficially, Bootstrap should look and behave well enough in Chromium and Chrome for Linux, Firefox for Linux, and Internet Explorer 9, though they are not officially supported.
+Não oficialmente, Bootstrap vai se apresentar e comportar bem no Chromium, Chrome e Firefox para Linux, além do Internet Explorer 9 (apesar de não termos suporte oficial).
 
-For a list of some of the browser bugs that Bootstrap has to grapple with, see our [Wall of browser bugs]({{ site.baseurl }}/docs/{{ site.docs_version }}/browser-bugs/).
+Para consultar alguns bugs que o Bootstrap enfrenta, veja nosso [Mural de bugs]({{ site.baseurl }}/docs/{{ site.docs_version }}/browser-bugs/).
 
 ## Internet Explorer
 
-Internet Explorer 10+ is supported; IE9 and down is not. Please be aware that some CSS3 properties and HTML5 elements are not fully supported in IE10, or require prefixed properties for full functionality. Visit [Can I use...](https://caniuse.com/) for details on browser support of CSS3 and HTML5 features.
+Do Internet Explorer 10 acima, nós temos suporte. No entanto, do IE9 para baixo, não temos. Portanto, esteja atento que algumas propriedades CSS3 e elementos HTML5 não são, totalmente, suportadas no IE10 ou requerem prefixos para compatilidade. Visite o site [Can I use...](https://caniuse.com/) para detalhes sobre suporte CSS3 em browsers e recursos HTML5.
 
-**If you require IE8-9 support, use Bootstrap 3.** It's the most stable version of our code and is still supported by our team for critical bugfixes and documentation changes. However, no new features will be added to it.
+**Se você precisa de suporte no IE8 ou 9, use o Bootstrap 3**. É a versão mais estável do nosso código e nosso time ainda dá suporte para reparar bugs críticos e alterar a documentação. Contudo, nem um recurso novo será adicionado a ela.
 
-## Modals and dropdowns on mobile
+## Modais e dropdowns em dispositivos móveis
 
-### Overflow and scrolling
+### Overflow e rolagem
 
-Support for `overflow: hidden;` on the `<body>` element is quite limited in iOS and Android. To that end, when you scroll past the top or bottom of a modal in either of those devices' browsers, the `<body>` content will begin to scroll. See [Chrome bug #175502](https://bugs.chromium.org/p/chromium/issues/detail?id=175502) (fixed in Chrome v40) and [WebKit bug #153852](https://bugs.webkit.org/show_bug.cgi?id=153852).
+Suporte para `overflow: hidden;` no elemento `<body>` é um pouco limitado, no iOS e Android. Nesse sentido, quando você rola perto da parte superior ou inferior do modal (em algum dos browsers destes dispositivos), o conteúdo do `<body>` vai começar a rolar. Veja o [bug do Chrome #175502](https://bugs.chromium.org/p/chromium/issues/detail?id=175502) (reparado no Chrome v40) e o [bug Webkit #153852](https://bugs.webkit.org/show_bug.cgi?id=153852).
 
-### iOS text fields and scrolling
+### Campos de texto e rolagem no iOS
 
-As of iOS 9.2, while a modal is open, if the initial touch of a scroll gesture is within the boundary of a textual `<input>` or a `<textarea>`, the `<body>` content underneath the modal will be scrolled instead of the modal itself. See [WebKit bug #153856](https://bugs.webkit.org/show_bug.cgi?id=153856).
+A partir do iOS 9.2, enquanto o modal está aberto, se o toque inicial do gesto de rolagem está dentro dos limites de um `<input>` de texto ou `<textarea>`, o conteúdo do `<body>` abaixo do modal vai ser rolado, invés do modal. Veja o [bug Webkit #153856](https://bugs.webkit.org/show_bug.cgi?id=153856).
 
-### Navbar Dropdowns
+### Dropdowns navbar
 
-The `.dropdown-backdrop` element isn't used on iOS in the nav because of the complexity of z-indexing. Thus, to close dropdowns in navbars, you must directly click the dropdown element (or [any other element which will fire a click event in iOS](https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile)).
+O elemento `.dropdown-backdrop` não é usando no iOS, por causa da complexidade do z-index. Portanto, para fechar dropdowns em navbars, você deve clicar diretamente no elemento dropdown ou [qualquer outro elemento que vai acionar o evento de clique no iOS](https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile)).
 
-## Browser zooming
+## Zoom em browsers
 
-Page zooming inevitably presents rendering artifacts in some components, both in Bootstrap and the rest of the web. Depending on the issue, we may be able to fix it (search first and then open an issue if need be). However, we tend to ignore these as they often have no direct solution other than hacky workarounds.
+Dar zoom em páginas irá mostrar, inevitavelmente, artefatos de renderização em alguns componentes, tanto no Bootstrap quando no resto da web. Dependendo do problema, poderemos consertá-lo, bastando pesquisar antes e depois abrir um issue (se necessário). Contudo, nós tendemos a ignorar estes problemas, já que eles não possuem soluções diretas, aléms de hacks, normalmente.
 
-## Sticky `:hover`/`:focus` on iOS
+## Sticky `:hover`/`:focus` no iOS
 
-While `:hover` isn't possible on most touch devices, iOS emulates this behavior, resulting in "sticky" hover styles that persist after tapping one element. These hover styles are only removed when users tap another element. This behavior is considered largely undesirable and appears to not be an issue on Android or Windows devices.
+Enquanto o `:hover` não é possível na maioria dos dispositivos de toque, o iOS emula este comportamento, resultando em estilos que persistem depois de soltar um elemento. Estes estilos hover só são interrompidos quando o usuário toca outro elemento. Este comportamento é considerado, largamente, indesejável e aparenta não ser um problema nos dispositivos Android ou Windows.
 
-Throughout our v4 alpha and beta releases, we included incomplete and commented out code for opting into a media query shim that would disable hover styles in touch device browsers that emulate hovering. This work was never fully completed or enabled, but to avoid complete breakage, we've opted to deprecate [this shim](https://github.com/twbs/mq4-hover-shim) and keep the mixins as shortcuts for the pseudo-classes.
+Durante nossos realeases v4 alpha e beta, nós incluímos códigos incompletos e comentados para dar a opção de usar uma media query que desativaria estilos hover em dispositivos de toque que emulam estes estilos. Isto nunca foi finalizado ou ativado, mas para evitar quebra total, nós optamos em defazar [isto](https://github.com/twbs/mq4-hover-shim) e manter os mixins como atalhos para as pseudo-classes.
 
-## Printing
+## Impressão
 
-Even in some modern browsers, printing can be quirky.
+Mesmo em alguns browsers modernos, imprimir pode ser bem chatinho.
 
-As of Safari v8.0, use of the fixed-width `.container` class can cause Safari to use an unusually small font size when printing. See [issue #14868]({{ site.repo }}/issues/14868) and [WebKit bug #138192](https://bugs.webkit.org/show_bug.cgi?id=138192) for more details. One potential workaround is the following CSS:
+A partir do Safari v8.0, o uso da classe `.container` pode levar o Safari a usar pequenos tamanhos de fontes, quando imprimindo. Veja o [issue #14868]({{ site.repo }}/issues/14868) e [WebKit bug #138192](https://bugs.webkit.org/show_bug.cgi?id=138192), para mais detalhes. Uma possível solução alternativa é o seguinte CSS:
 
 {% highlight css %}
 @media print {
@@ -162,13 +162,13 @@ As of Safari v8.0, use of the fixed-width `.container` class can cause Safari to
 }
 {% endhighlight %}
 
-## Android stock browser
+## Browser padrão do Android
 
-Out of the box, Android 4.1 (and even some newer releases apparently) ship with the Browser app as the default web browser of choice (as opposed to Chrome). Unfortunately, the Browser app has lots of bugs and inconsistencies with CSS in general.
+O Android 4.1 e algumas versões mais recentes são lançadas com um app Browser padrão, que não é o Chrome. Infelizmente, o app Browser tem muitos bugs e inconsistências com CSS.
 
-#### Select menu
+#### Menu Select
 
-On `<select>` elements, the Android stock browser will not display the side controls if there is a `border-radius` and/or `border` applied. (See [this StackOverflow question](https://stackoverflow.com/questions/14744437/html-select-box-not-showing-drop-down-arrow-on-android-version-4-0-when-set-with) for details.) Use the snippet of code below to remove the offending CSS and render the `<select>` as an unstyled element on the Android stock browser. The user agent sniffing avoids interference with Chrome, Safari, and Mozilla browsers.
+Em elementos `<select>`, o app Browser não irá mostrar os controles laterais se houver `border-radius` ou `border` aplicadas (veja [esta questão no StackOverflow](https://stackoverflow.com/questions/14744437/html-select-box-not-showing-drop-down-arrow-on-android-version-4-0-when-set-with), para mais detalhes). Use o snippet abaixo para remover o CSS problemático e renderizar o `<select>` como um elemento não estilizado, no app Browser do Android. O sniffer do user agent evita interferência com o Chrome, Safari e navegadores Mozilla.
 
 {% highlight html %}
 <script>
@@ -182,12 +182,12 @@ $(function () {
 </script>
 {% endhighlight %}
 
-Want to see an example? [Check out this JS Bin demo.](http://jsbin.com/OyaqoDO/2)
+Quer ver um exemplo? [Veja esta demo no JS Bin](http://jsbin.com/OyaqoDO/2).
 
-## Validators
+## Validação
 
-In order to provide the best possible experience to old and buggy browsers, Bootstrap uses [CSS browser hacks](http://browserhacks.com/) in several places to target special CSS to certain browser versions in order to work around bugs in the browsers themselves. These hacks understandably cause CSS validators to complain that they are invalid. In a couple places, we also use bleeding-edge CSS features that aren't yet fully standardized, but these are used purely for progressive enhancement.
+Pensando em dar a melhor experiência para os antigos e bugados browsers, Bootstrap usa [hacks CSS](http://browserhacks.com/) em diversos locais para conseguir um CSS único em algumas versões de browsers e, consequentemente, trabalhar em cima dos próprios bugs. Estes hacks, compreensivelmente, levam os validadores CSS a falarem que o código está inválido. Em outros locais, nós também usamos recursos CSS inovadores que ainda não foram padronizados. No entanto, eles são usados puramente para _progressive enhancement_.
 
-These validation warnings don't matter in practice since the non-hacky portion of our CSS does fully validate and the hacky portions don't interfere with the proper functioning of the non-hacky portion, hence why we deliberately ignore these particular warnings.
+Estes avisos de validação não significam nada na prática, já que a parte sem hacks valida normalmente e a parte com hacks não interfere no funcionamente da parte sem hacks. Portanto, se ignorarmos estes avisos, a parte com hacks é usada em _progressive enhancement_.
 
-Our HTML docs likewise have some trivial and inconsequential HTML validation warnings due to our inclusion of a workaround for [a certain Firefox bug](https://bugzilla.mozilla.org/show_bug.cgi?id=654072).
+Nossa documentação HTML, da mesma forma tem alguns avisos de validação triviais e inconsequentes, devido a inclusão de uma solução para um certo [bug no Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=654072).
