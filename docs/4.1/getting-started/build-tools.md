@@ -1,57 +1,57 @@
 ---
 layout: docs
-title: Build tools
-description: Learn how to use Bootstrap's included npm scripts to build our documentation, compile source code, run tests, and more.
+title: Ferramentas de build
+description: Aprenda a usar os scripts npm incluídos no Bootstrap para construir nossa documentação, compilar o código fonte, realizar testes, entre outras coisas.
 group: getting-started
 toc: true
 ---
 
-## Tooling setup
+## Setup de ferramentas
 
-Bootstrap uses [NPM scripts](https://docs.npmjs.com/misc/scripts) for its build system. Our [package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json) includes convenient methods for working with the framework, including compiling code, running tests, and more.
+Bootstrap usa [scripts NPM](https://docs.npmjs.com/misc/scripts) no seu sistema de build. Nosso [package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json) possui métodos convenientes ao nosso framework, incluindo compilação de código, realização de testes e outras coisas.
 
-To use our build system and run our documentation locally, you'll need a copy of Bootstrap's source files and Node. Follow these steps and you should be ready to rock:
+Para usar nossa build e executar a documentação localmente, você vai precisar de uma cópia dos arquivos fontes Bootstrap e do Node.js.
 
-1. [Download and install Node.js](https://nodejs.org/download/), which we use to manage our dependencies.
-2. Navigate to the root `/bootstrap` directory and run `npm install` to install our local dependencies listed in [package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json).
-3. [Install Ruby][install-ruby], install [Bundler][gembundler] with `gem install bundler`, and finally run `bundle install`. This will install all Ruby dependencies, such as Jekyll and plugins.
-  - **Windows users:** Read [this guide](https://jekyllrb.com/docs/windows/) to get Jekyll up and running without problems.
+1. [Baixe e instale o Node.js](https://nodejs.org/download/), o qual usamos para gerenciar nossas dependências;
+2. Vá até o diretório raiz `/bootstrap` e execute o comando `npm install`, para instalar nossas dependências locais listadas no [package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json);
+3. Primeiro, instale o [Ruby][install-ruby]. Depois, instale o [Bundler][gembundler] com o comando `gem install bundler` e execute `bundle install`. Assim, você vai instalar todas as dependências Ruby, como Jekyll e plugins.
+  - **Usuários de Windows:** leiam [este guia](https://jekyllrb.com/docs/windows/) para conseguir rodar o jekyll, tranquilamente.
 
-When completed, you'll be able to run the various commands provided from the command line.
+Quando fizer isso, você será capaz de executar diversos comandos disponíveis em cli.
 
 [install-ruby]: https://www.ruby-lang.org/en/documentation/installation/
 [gembundler]: https://bundler.io/
 
-## Using NPM scripts
+## Usando scripts NPM
 
-Our [package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json) includes the following commands and tasks:
+Nosso [package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json) possui os seguintes comandos e tarefas:
 
-| Task | Description |
+| Comando | Tarefa |
 | --- | --- |
-| `npm run dist` | `npm run dist` creates the `/dist` directory with compiled files. **Uses [Sass](https://sass-lang.com/), [Autoprefixer][autoprefixer], and [UglifyJS](https://github.com/mishoo/UglifyJS2).** |
-| `npm test` | Same as `npm run dist` plus it runs tests locally |
-| `npm run docs` | Builds and lints CSS and JavaScript for docs. You can then run the documentation locally via `npm run docs-serve`. |
+| `npm run dist` | cria o diretório `/dist`, o qual tem arquivos compilados (**usa [Sass](https://sass-lang.com/), [Autoprefixer][autoprefixer] e [UglifyJS](https://github.com/mishoo/UglifyJS2).**). |
+| `npm test` | é a mesma coisa que `npm run dist`, com a diferença que ele excuta os testes localmente.|
+| `npm run docs` | Constrói e formata o CSS e JavaScript para documentos. Assim, depois você pode rodar a documentação localmente, usando `npm run docs-serve` |
 
-Run `npm run` to see all the npm scripts.
+Execute `npm run` para ver todos os scripts npm.
 
 ## Autoprefixer
 
-Bootstrap uses [Autoprefixer][autoprefixer] (included in our build process) to automatically add vendor prefixes to some CSS properties at build time. Doing so saves us time and code by allowing us to write key parts of our CSS a single time while eliminating the need for vendor mixins like those found in v3.
+Boostrap usa o [Autoprefixer][autoprefixer] (incluído na build) para, automaticamente, adicionar prefixos de fabricantes em algumas propriedades CSS. Deste modo, poupamos código e tempo porque nos ocupamos só em escrever as partes chaves do nosso CSS uma vez, sem precisar de mixins para adicionar prefixos (como aqueles da v3).
 
-We maintain the list of browsers supported through Autoprefixer in a separate file within our GitHub repository. See [/package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json) for details.
+Nós mantemos uma lista de browsers suportados no Autoprefixer em um arquivo separado, em um repositório do GitHub. Veja [/package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json), para mais detalhes.
 
-## Local documentation
+## Documentação local
 
-Running our documentation locally requires the use of Jekyll, a decently flexible static site generator that provides us: basic includes, Markdown-based files, templates, and more. Here's how to get it started:
+Rodar nossa documentação, localmente, requer o uso do Jekyll. Ele é um gerador flexível de sites estáticos, o qual provê: includes básicos, arquivos em Markdown, templates, entre outras coisas. Para se familiarizar, faça o seguinte:
 
-1. Run through the [tooling setup](#tooling-setup) above to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
-2. From the root `/bootstrap` directory, run `npm run docs-serve` in the command line.
-3. Open `http://localhost:9001` in your browser, and voilà.
+1. Leia sobre o [setup de ferramentas](#tooling-setup), acima, para instalar o Jekyll e outras dependências Ruby com `bundle-install`;
+2. Dentro do diretório raiz `/bootstrap`, execute `npm run docs-serve` na linha de comando;
+3. Abra `http://localhost:9001` no seu browser e voilà.
 
-Learn more about using Jekyll by reading its [documentation](https://jekyllrb.com/docs/home/).
+Aprenda mais sobre o uso do Jekyll, lendo sua [documentação](https://jekyllrb.com/docs/home/).
 
-## Troubleshooting
+## Solução de problemas
 
-Should you encounter problems with installing dependencies, uninstall all previous dependency versions (global and local). Then, rerun `npm install`.
+Se você encontrar problemas para instalar dependências, desinstale todas as versões anteriores das dependências (global e localmente), então, re-execute `npm install`.
 
 [autoprefixer]: https://github.com/postcss/autoprefixer
