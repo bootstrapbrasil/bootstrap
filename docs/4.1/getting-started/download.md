@@ -1,87 +1,87 @@
 ---
 layout: docs
 title: Download
-description: Download Bootstrap to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, RubyGems, and more.
+description: Baixe o Bootstrap e obtenha o CSS e JavaScript compilado, além do código fonte. Também, você pode incluir o framework no seu gerenciador de pacotes predileto como npm, RubyGems, etc.
 group: getting-started
 toc: true
 ---
 
-## Compiled CSS and JS
+## CSS e JS compilado
 
-Download ready-to-use compiled code for **Bootstrap v{{ site.current_version}}** to easily drop into your project, which includes:
+Baixe o código compilado e pronto para uso do **Bootstrap v{{ site.current_version}}** para, facilmente, começar seu projeto. O download inclui:
 
-- Compiled and minified CSS bundles (see [CSS files comparison]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/contents/#css-files))
-- Compiled and minified JavaScript plugins
+- Pacotes de CSS minificados e compilados (veja a [comparação de arquivos CSS]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/contents/#css-files));
+- Plugins JavaScripts compilados e minificados.
 
-This doesn't include documentation, source files, or any optional JavaScript dependencies (jQuery and Popper.js).
+Este download não inclui documentação, códigos fontes ou qualquer dependências JavaScripts (jQuery ou Popper.js).
 
-<a href="{{ site.download.dist }}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap');">Download</a>
+<a href="{{ site.download.dist }}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap');">Baixar</a>
 
-## Source files
+## Arquivos fontes
 
-Compile Bootstrap with your own asset pipeline by downloading our source Sass, JavaScript, and documentation files. This option requires some additional tooling:
+Compile o Bootstrap com suas próprias ferramentas, baixando nosso Sass, JavaScript e arquivos da documentação. Esta opção requer algumas ferramentas adicionais:
 
-- Sass compiler (Libsass or Ruby Sass is supported) for compiling your CSS.
-- [Autoprefixer](https://github.com/postcss/autoprefixer) for CSS vendor prefixing
+- Compilador Sass (Libsass ou Ruby Sass) para compilar seu CSS;
+- [Autoprefixer](https://github.com/postcss/autoprefixer) para usar prefixos CSS.
 
-Should you require [build tools]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/build-tools/#tooling-setup), they are included for developing Bootstrap and its docs, but they're likely unsuitable for your own purposes.
+[Ferramentas de build]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/build-tools/#tooling-setup) são usadas para desenvolver o Bootstrap e sua documentação, mas pode ser que sejam desncessárias para você.
 
-<a href="{{ site.download.source }}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">Download source</a>
+<a href="{{ site.download.source }}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">Baixar fonte</a>
 
 ## BootstrapCDN
 
-Skip the download with [BootstrapCDN](https://www.bootstrapcdn.com/) to deliver cached version of Bootstrap's compiled CSS and JS to your project.
+Evite o download, usando a [BootstrapCDN](https://www.bootstrapcdn.com/) para ter uma versão em cache dos CSS e JS compilados, em seu porjeto.
 
 {% highlight html %}
 <link rel="stylesheet" href="{{ site.cdn.css }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
 <script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous"></script>
 {% endhighlight %}
 
-If you're using our compiled JavaScript, don't forget to include CDN versions of jQuery and Popper.js before it.
+Se você está usando nosso JavaScript compilado, não esqueça de incluir as versões em CDN do jQuery e Popper.js, antes dele.
 
 {% highlight html %}
 <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
 <script src="{{ site.cdn.popper }}" integrity="{{ site.cdn.popper_hash }}" crossorigin="anonymous"></script>
 {% endhighlight %}
 
-## Package managers
+## Gerenciador de pacotes
 
-Pull in Bootstrap's **source files** into nearly any project with some of the most popular package managers. No matter the package manager, Bootstrap will **require a Sass compiler and [Autoprefixer](https://github.com/postcss/autoprefixer)** for a setup that matches our official compiled versions.
+Use o **código fonte** Bootstrap em qualquer projeto, com ajuda dos mais populares gerenciadores de pacotes. Não importa o gerenciador de pacotes, o Bootstrap **vai precisar de um compilador Sass e do [Autoprefixer](https://github.com/postcss/autoprefixer)**, para se ter uma configuração compatível com nossa versão compilada oficial.
 
 ### npm
 
-Install Bootstrap in your Node.js powered apps with [the npm package](https://www.npmjs.com/package/bootstrap):
+Instale o Bootstrap em seus apps Node.js com o [pacote npm](https://www.npmjs.com/package/bootstrap):
 
 {% highlight sh %}
 npm install bootstrap
 {% endhighlight %}
 
-`require('bootstrap')` will load all of Bootstrap's jQuery plugins onto the jQuery object. The `bootstrap` module itself does not export anything. You can manually load Bootstrap's jQuery plugins individually by loading the `/js/*.js` files under the package's top-level directory.
+`require('bootstrap')` vai carregar todos os plugins jQuery no objeto jQuery. O próprio módulo `bootstrap` não exporta nada. Você pode, manualmente, carregar os plugins jQuery Bootstrap individualmente, carregando os arquivos `/js/*.js` dentro do diretório principal dos pacotes.
 
-Bootstrap's `package.json` contains some additional metadata under the following keys:
+O `package.json` possui alguns metadados, nas seguintes chaves:
 
-- `sass` - path to Bootstrap's main [Sass](https://sass-lang.com/) source file
-- `style` - path to Bootstrap's non-minified CSS that's been precompiled using the default settings (no customization)
+- `sass` - caminho para o principal arquivo [Sass](https://sass-lang.com/) Bootstrap;
+- `style` - caminho para o CSS não minificado Bootstrap, o qual foi pré-compilado usando configurações padrões (sem customização).
 
 ### RubyGems
 
-Install Bootstrap in your Ruby apps using [Bundler](https://bundler.io/) (**recommended**) and [RubyGems](https://rubygems.org/) by adding the following line to your [`Gemfile`](https://bundler.io/gemfile.html):
+Instale o Bootstrap em seus apps Ruby, usando o [Bundler](https://bundler.io/) (**recomendado**) e [RubyGems](https://rubygems.org/), adicionando a seguinte linha ao seu [`Gemfile`](https://bundler.io/gemfile.html):
 
 {% highlight ruby %}
 gem 'bootstrap', '~> {{ site.current_ruby_version }}'
 {% endhighlight %}
 
-Alternatively, if you're not using Bundler, you can install the gem by running this command:
+Alternativamente, se você não está usando o Bundler, pode instalar a gem executando este comando:
 
 {% highlight sh %}
 gem install bootstrap -v {{ site.current_ruby_version }}
 {% endhighlight %}
 
-[See the gem's README](https://github.com/twbs/bootstrap-rubygem/blob/master/README.md) for further details.
+[Veja o README da gem](https://github.com/twbs/bootstrap-rubygem/blob/master/README.md), para mais detalhes.
 
 ### Composer
 
-You can also install and manage Bootstrap's Sass and JavaScript using [Composer](https://getcomposer.org/):
+Você também pode instalar e gerenciar o Sass e JavaScript do Bootstrap, usando o [Composer](https://getcomposer.org/):
 
 {% highlight sh %}
 composer require twbs/bootstrap:{{ site.current_version }}
@@ -89,7 +89,7 @@ composer require twbs/bootstrap:{{ site.current_version }}
 
 ### NuGet
 
-If you develop in .NET, you can also install and manage Bootstrap's [CSS](https://www.nuget.org/packages/bootstrap/) or [Sass](https://www.nuget.org/packages/bootstrap.sass/) and JavaScript using [NuGet](https://www.nuget.org/):
+Se você desenvolve em .NET, também pode instalar e gerenciar [CSS](https://www.nuget.org/packages/bootstrap/), [Sass](https://www.nuget.org/packages/bootstrap.sass/) e Javascript, usando [NuGet](https://www.nuget.org/):
 
 {% highlight powershell %}
 Install-Package bootstrap
