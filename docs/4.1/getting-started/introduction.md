@@ -34,20 +34,22 @@ Nós usamos a [build slim do jQuery](https://blog.jquery.com/2016/06/09/jquery-3
 <script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous"></script>
 {% endhighlight %}
 
-Curiosidade para saber quais componentes precisam de jQuery, nosso JS e Popper,js? Clique em "Mostrar componentes dependentes de JavaScript" logo abaixo. Se ainda tem dúvidas sobre a estrutura da página em geral, continue lendo para um templete de exemplo de página.
+Curiosidade para saber quais componentes precisam de jQuery, nosso JS e Popper.js? Clique em "Mostrar componentes dependentes de JavaScript" logo abaixo. Se ainda tem dúvidas sobre a estrutura da página em geral, continue lendo para um templete de exemplo de página.
 
 <details>
 <summary class="text-primary mb-3">Mostrar componentes dependentes de JavaScript</summary>
 {% capture markdown %}
-- Alerts for dismissing
-- Buttons for toggling states and checkbox/radio functionality
-- Carousel for all slide behaviors, controls, and indicators
-- Collapse for toggling visibility of content
-- Dropdowns for displaying and positioning (also requires [Popper.js](https://popper.js.org/))
-- Modals for displaying, positioning, and scroll behavior
-- Navbar for extending our Collapse plugin to implement responsive behavior
-- Tooltips and popovers for displaying and positioning (also requires [Popper.js](https://popper.js.org/))
-- Scrollspy for scroll behavior and navigation updates
+- Botões de dispensar alertas;
+- Botões para alternar estados e funcionalidades dos botões checkboxes e radios;
+- Comportamento de deslize, controles e indicadores do Carousel;
+- Colapso para alternar visibilidade de conteúdo;
+- Apresentação e posicionamento de dropdowns;
+  - Também requer [Popper.js](https://popper.js.org/).
+- Apresentação, posicionamento e rolagem nos Modais;
+- Aprimorar nosso plugin de colapso em navbars, para implementar comportamento responsivo;
+- Posicionamento e apresentação de tooltips e popovers;
+  - Também requer [Popper.js](https://popper.js.org/).
+- Comportamento de rolagem e atualizações de navegação no Scrollspy.
 {% endcapture %}
 {{ markdown | markdownify }}
 </details>
@@ -57,7 +59,7 @@ Curiosidade para saber quais componentes precisam de jQuery, nosso JS e Popper,j
 Tenha certeza de configurar suas páginas com padrões recentes de desenvolvimento e design. Ou seja, utilizando HTML5 doctype e a meta tag viewport para proporcionar o funcionamento responsivo adequado. Feito isto, suas páginas devem ficar assim:
 
 {% highlight html %}
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <!-- Meta tags Obrigatórias -->
@@ -85,58 +87,59 @@ No geral, são esses os requisitos para o funcionamento da página. Visite a [Do
 
 ## Importância geral
 
-Bootstrap employs a handful of important global styles and settings that you'll need to be aware of when using it, all of which are almost exclusively geared towards the *normalization* of cross browser styles. Let's dive in.
+O Bootstrap usa um punhado de estilos globais e configurações importantes que você precisará ficar atento, quando tiver usando, os quais são guiados a *normalização* de estilos cross browsers. Vamos lá!
 
 ### HTML5 doctype
 
-Bootstrap requires the use of the HTML5 doctype. Without it, you'll see some funky incomplete styling, but including it shouldn't cause any considerable hiccups.
+Bootstrap exige o uso do doctype HTML5. Sem isso, você verá alguns estilos incompletos e esquisitos.
 
 {% highlight html %}
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-br">
   ...
 </html>
 {% endhighlight %}
 
 ### Meta tag responsiva
 
-Bootstrap is developed *mobile first*, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, **add the responsive viewport meta tag** to your `<head>`.
+Bootstrap tem uma abordagem *mobile first*, uma estratégia que optimizamos o código para dispositivos móveis primeiro e, então, é que começamos a pensar em media queries para aparelhos maiores. Por isso, para garantir renderização adequada e _touch zooming_ em todos eletrônicos, **use a tag responsiva viewport** no `<head>`.
 
 {% highlight html %}
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 {% endhighlight %}
 
-You can see an example of this in action in the [starter template](#starter-template).
+Você pode ver um exemplo disso em ação, neste [template iniciante](#starter-template).
 
 ### Box-sizing
 
-For more straightforward sizing in CSS, we switch the global `box-sizing` value from `content-box` to `border-box`. This ensures `padding` does not affect the final computed width of an element, but it can cause problems with some third party software like Google Maps and Google Custom Search Engine.
+Para um redimensionamento mais intuitivo no CSS, nós trocamos o valor do `box-sizing` global de `content-box` para `border-box`. Dessa maneira, garantimos que o `padding` não afetará a largura computada final de um elemento, apesar de isto poder causar problemas em alguns softwares de terceiros, como Google Maps e Google Search Engine.
 
-On the rare occasion you need to override it, use something like the following:
+Na rara ocasião de precisar sobrecrever isso, use algo como o seguinte:
 
 {% highlight css %}
-.selector-for-some-widget {
+.seletor-para-algum-widget {
   box-sizing: content-box;
 }
 {% endhighlight %}
 
-With the above snippet, nested elements—including generated content via `::before` and `::after`—will all inherit the specified `box-sizing` for that `.selector-for-some-widget`.
+Com o snippet acima, elementos aninhados (incluindo conteúdo gerado via `::before` e `::after`) vão herdar o `box-sizing` especificado no `seletor-para-algum-widget`.
 
-Learn more about [box model and sizing at CSS Tricks](https://css-tricks.com/box-sizing/).
+Aprenda mais sobre o [box model e dimensionamento, no CSS Tricks](https://css-tricks.com/box-sizing/).
 
-### Reinicialização
+### Reboot
 
-For improved cross-browser rendering, we use [Reboot]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/) to correct inconsistencies across browsers and devices while providing slightly more opinionated resets to common HTML elements.
+Para uma renderização cross-browser melhorada, nós usamos o [Reboot]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/) para corrigir inconsistências através dos browsers, enquanto provemos resets um pouquinho customizados para elementos HTML comuns.
+
 
 ## Comunidade
 
-Stay up to date on the development of Bootstrap and reach out to the community with these helpful resources.
+Fique atualizado no desenvolvimento do Bootstrap e encontre nossa comunidade através destas fontes úteis:
 
-- Follow [@getbootstrap on Twitter](https://twitter.com/getbootstrap).
-- Read and subscribe to [The Official Bootstrap Blog]({{ site.blog }}).
-- Join [the official Slack room]({{ site.slack }}).
-- Chat with fellow Bootstrappers in IRC. On the `irc.freenode.net` server, in the `##bootstrap` channel.
-- Implementation help may be found at Stack Overflow (tagged [`bootstrap-4`](https://stackoverflow.com/questions/tagged/bootstrap-4)).
-- Developers should use the keyword `bootstrap` on packages which modify or add to the functionality of Bootstrap when distributing through [npm](https://www.npmjs.com/browse/keyword/bootstrap) or similar delivery mechanisms for maximum discoverability.
+- Siga [@getbootstrap no Twitter](https://twitter.com/getbootstrap);
+- Leia e se inscreva no [Blog Bootstrap Oficial]({{ site.blog }});
+- Participe da [nossa sala oficial no Slack]({{ site.slack }});
+- Converse com os Bootstrappers via IRC, através do servidor `irc.freenode.net`, no canal `##bootstrap`;
+- Ajuda com implementação pode ser encontrada no Stack Overflow (tag [`bootstrap-4`](https://stackoverflow.com/questions/tagged/bootstrap-4));
+- Desenvolvedores devem usar a palavra-chave `bootstrap` em pacotes que modificarem ou adicionarem funcionalidades do Bootstrap, quando distribuindo via [npm](https://www.npmjs.com/browse/keyword/bootstrap) ou sistemas de entrega semelhantes, para máxima visibilidade.
 
-You can also follow [@getbootstrap on Twitter](https://twitter.com/getbootstrap) for the latest gossip and awesome music videos.
+Você também pode seguir o [@getbootstrap no Twitter](https://twitter.com/getbootstrap), para as melhores fofocas e vídeo clipes. =)
