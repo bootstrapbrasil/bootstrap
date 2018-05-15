@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Customização de tema Bootstrap
-description: Utilize variáveis Sass do Bootstrap 4 para construir fácilmente tema personalizado e customize componentes.
+title: Customização de temas Bootstrap
+description: Utilize variáveis Sass do Bootstrap 4 para construir, fácilmente, temas e componentes customizados.
 group: getting-started
 toc: true
 redirect_from: "/docs/4.1/getting-started/options/"
@@ -9,20 +9,20 @@ redirect_from: "/docs/4.1/getting-started/options/"
 
 ## Introdução
 
-In Bootstrap 3, theming was largely driven by variable overrides in LESS, custom CSS, and a separate theme stylesheet that we included in our `dist` files. With some effort, one could completely redesign the look of Bootstrap 3 without touching the core files. Bootstrap 4 provides a familiar, but slightly different approach.
+No Bootstrap 3, tematizações foram amplamente feitas com sobrescrição de variáveis LESS, CSS customizado e uma folha de estilos separada que nós incluíamos nos nossos arquivos `dist`. Com algum esforço, qualquer um podia redesenhar o visual do Bootstrap 3, sem tocar em seus principais arquivos. Já o Bootstrap 4 tem uma abordagem familiar, mas um pouco diferente.
 
-Now, theming is accomplished by Sass variables, Sass maps, and custom CSS. There's no more dedicated theme stylesheet; instead, you can enable the built-in theme to add gradients, shadows, and more.
+Agora, tematizações são feitas com variáveis e mapas Sass, além de CSS customizado. Não existe mais, uma folha de estilos tema dedicada.
 
 ## Sass
 
-Utilize nossos arquivos Sass fonte para aproveitar as variáveis, mapas, mixins e muito mais.
+Utilize nossos arquivos fonte Sass para aproveitar as variáveis, mapas, mixins e muito mais.
 
 ### Estrutura de arquivos
 
-Whenever possible, avoid modifying Bootstrap's core files. For Sass, that means creating your own stylesheet that imports Bootstrap so you can modify and extend it. Assuming you're using a package manager like npm, you'll have a file structure that looks like this:
+Sempre que possível, evite modificar os arquivos principais do Bootstrap. No Sass, isso significa que precisará criar sua própria folha de estilos e importar o Bootstrap, para que você possa modificar e extendê-lo. Assumindo que você usa um gerenciador de pacotes como o npm, terá uma estrutura de arquivos parecida com essa:
 
 {% highlight plaintext %}
-your-project/
+seu-projeto/
 ├── scss
 │   └── custom.scss
 └── node_modules/
@@ -31,10 +31,10 @@ your-project/
         └── scss
 {% endhighlight %}
 
-If you've downloaded our source files and aren't using a package manager, you'll want to manually setup something similar to that structure, keeping Bootstrap's source files separate from your own.
+Se você baixou nossos arquivos fonte e não está usando um gerenciador de pacotes, vai querer fazer algo semelhante a essa estrutura, manualmente, mantendo os arquivos fontes separados dos seus.
 
 {% highlight plaintext %}
-your-project/
+seu-projeto/
 ├── scss
 │   └── custom.scss
 └── bootstrap/
@@ -44,25 +44,25 @@ your-project/
 
 ### Importando
 
-In your `custom.scss`, you'll import Bootstrap's source Sass files. You have two options: include all of Bootstrap, or pick the parts you need. We encourage the latter, though be aware there are some requirements and dependencies across our components. You also will need to include some JavaScript for our plugins.
+No seu `custom.scss`, você vai importar os arquivos Sass Bootstrap. Nesse sentido, você terá duas opções: incluir todo o Bootstrap ou apenas as partes que você precisa. Nós encorajamos que pegue somente aquilo que necessite, mas fique atento que há alguns requisitos e dependências, nos componentes. Você também vai precisar adicionar alguns JavaScripts para nossos plugins.
 
 {% highlight scss %}
 // Custom.scss
-// Option A: Include all of Bootstrap
+// Opção A: Importa todo o Bootstrap
 
 @import "node_modules/bootstrap/scss/bootstrap";
 {% endhighlight %}
 
 {% highlight scss %}
 // Custom.scss
-// Option B: Include parts of Bootstrap
+// Opção B: Importa partes do Bootstrap
 
-// Required
+// Partes obrigatórias
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
 
-// Optional
+// Partes opcionais
 @import "node_modules/bootstrap/scss/reboot";
 @import "node_modules/bootstrap/scss/type";
 @import "node_modules/bootstrap/scss/images";
@@ -70,38 +70,38 @@ In your `custom.scss`, you'll import Bootstrap's source Sass files. You have two
 @import "node_modules/bootstrap/scss/grid";
 {% endhighlight %}
 
-With that setup in place, you can begin to modify any of the Sass variables and maps in your `custom.scss`. You can also start to add parts of Bootstrap under the `// Optional` section as needed. We suggest using the full import stack from our `bootstrap.scss` file as your starting point.
+Com essa configuração, você pode começar a modificar quaisquer variáveis e mapas Sass, no seu `custom.scss`. Você também pode começar a adicionar partes do Bootstrap, abaixo do comentário "`// Partes adicionais`", sempre que necessário. Nós sugerimos usar toda a pilha de importação do nosso arquivo `bootstrap.scss`, como seu ponto inicial.
 
 ### Variáveis padrão
 
-Every Sass variable in Bootstrap 4 includes the `!default` flag allowing you to override the variable's default value in your own Sass without modifying Bootstrap's source code. Copy and paste variables as needed, modify their values, and remove the `!default` flag. If a variable has already been assigned, then it won't be re-assigned by the default values in Bootstrap.
+Toda variável Sass no Bootstrap 4 possui uma _flag_ `!default`, permitindo que você sobrescreva o valor da variável padrão, no seu próprio Sass, sem modificar o código fonte Bootstrap. Copie, cole e modifique os valores das variáveis, sempre que precisar. Sem falar que você também pode remover a flag `!default` de variáveis. Se uma variável já recebeu um valor, então, ela não vai ter uma nova atribuição de valores padrões Bootstrap.
 
-You will find the complete list of Bootstrap's variables in `scss/_variables.scss`.
+Você vai achar uma lista completa das variáveis Bootstrap, no diretório `scss/_variables.scss`.
 
-Variable overrides within the same Sass file can come before or after the default variables. However, when overriding across Sass files, your overrides must come before you import Bootstrap's Sass files.
+Sobrescrição de variáveis dentro do mesmo arquivo Sass pode acontecer antes ou depois das variáveis padrões. Contudo, quando for fazer sobrescrições em arquivos Sass, suas sobrescrições devem vir antes de você importar arquivos Sass do Bootstrap.
 
-Here's an example that changes the `background-color` and `color` for the `<body>` when importing and compiling Bootstrap via npm:
+Aqui vai um exemplo que muda as propriedades `background-color` e `color` do `<body>`, quando for importar e compilar Bootstrap via npm:
 
 {% highlight scss %}
-// Your variable overrides
+// Suas sobrescrições de variáveis
 $body-bg: #000;
 $body-color: #111;
 
-// Bootstrap and its default variables
+//Bootstrap e suas variáveis padrões
 @import "node_modules/bootstrap/scss/bootstrap";
 {% endhighlight %}
 
-Repeat as necessary for any variable in Bootstrap, including the global options below.
+Faça isso o quanto quiser, para qualquer variável Bootstrap, incluindo a opção global abaixo.
 
-### Mapas and loops
+### Mapas e loops
 
-Bootstrap 4 includes a handful of Sass maps, key value pairs that make it easier to generate families of related CSS. We use Sass maps for our colors, grid breakpoints, and more. Just like Sass variables, all Sass maps include the `!default` flag and can be overridden and extended.
+Bootstrap 4 possui um punhado de mapas Sass, os quais são pares de chave-valor que facilitam gerar famílias de CSS relacionados. Nós usamos mapas Sass para nossas cores, breakpoints grid e etc. Assim como as variáveis Sass, todos os mapas Sass possuem a _flag_ `!default` e podem ser sobrescritos e extendidos.
 
-Some of our Sass maps are merged into empty ones by default. This is done to allow easy expansion of a given Sass map, but comes at the cost of making _removing_ items from a map slightly more difficult.
+Alguns de nossos mapas Sass são fundidos em outros vazios, por padrão. Isto é feito para permitir uma fácil expansão de um dado mapa Sass, apesar de, consequentemente, ser um pouco mais difícil remover ítens de um mapa.
 
 #### Alterando o mapa
 
-To modify an existing color in our `$theme-colors` map, add the following to your custom Sass file:
+Para modificar uma cor existente no nosso mapa `$theme-colors`, você pode adicionar o seguinte ao seu arquivo Sass customizado:
 
 {% highlight scss %}
 $theme-colors: (
@@ -112,7 +112,7 @@ $theme-colors: (
 
 #### Adicionando ao mapa
 
-To add a new color to `$theme-colors`, add the new key and value:
+para adicionar uma nova cor ao `$theme-colors`, adicione a nova chave e valor:
 
 {% highlight scss %}
 $theme-colors: (
@@ -122,32 +122,32 @@ $theme-colors: (
 
 #### Removendo do mapa
 
-To remove colors from `$theme-colors`, or any other map, use `map-remove`. Be aware you must insert it between our requirements and options:
+Para remover cores do `$theme-colors` ou qualquer outro mapa, use `map-remove`. No entanto, certifique-se de inserir isso entre as partes obrigatórias e opcionais:
 
 {% highlight scss %}
-// Required
+// Partes obrigatórias
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
 
 $theme-colors: map-remove($theme-colors, "info", "light", "dark");
 
-// Optional
+// Partes adicionais
 @import "node_modules/bootstrap/scss/root";
 @import "node_modules/bootstrap/scss/reboot";
 @import "node_modules/bootstrap/scss/type";
 ...
 {% endhighlight %}
 
-#### Required keys
+#### Chaves obrigatórias
 
-Bootstrap assumes the presence of some specific keys within Sass maps as we used and extend these ourselves. As you customize the included maps, you may encounter errors where a specific Sass map's key is being used.
+Bootstrap espera que existam algumas chaves específicas, já que usamos e extendemos elas para construírmos o framework, nós mesmos. Por isso, assim que você for customizando os mapas, pode encontrar erros em que uma chave específica está sendo usada.
 
-For example, we use the `primary`, `success`, and `danger` keys from `$theme-colors` for links, buttons, and form states. Replacing the values of these keys should present no issues, but removing them may cause Sass compilation issues. In these instances, you'll need to modify the Sass code that makes use of those values.
+Por exemplo, nós usamos as chaves `primary`, `success` e `danger` do mapa `$theme-colors`, para links, botões e estados de formulários. Substituir os valores dessas chaves não deve apresentar problemas, mas removê-las pode causar problemas na compilação Sass. Nesses casos, você precisará modificar o código Sass que faz uso destes valores.
 
 ### Funções
 
-Bootstrap utilizes several Sass functions, but only a subset are applicable to general theming. We've included three functions for getting values from the color maps:
+Bootstrap usa diversas funções Sass, mas só algumas delas são aplicáveis em tematização. Nós usamos três funções para obter valores dos mapas de cores:
 
 {% highlight scss %}
 @function color($key: "blue") {
@@ -163,16 +163,16 @@ Bootstrap utilizes several Sass functions, but only a subset are applicable to g
 }
 {% endhighlight %}
 
-These allow you to pick one color from a Sass map much like how you'd use a color variable from v3.
+Isso permite que obtenha uma cor de um mapa Sass, da mesma maneira que você usava uma variável de cor, na versão 3.
 
 {% highlight scss %}
-.custom-element {
+.elemento-personalizado {
   color: gray("100");
   background-color: theme-color("dark");
 }
 {% endhighlight %}
 
-We also have another function for getting a particular _level_ of color from the `$theme-colors` map. Negative level values will lighten the color, while higher levels will darken.
+Nós também temos outra função para recuperar um nível de cor específico do mapa `$theme-colors`. Níveis com valores negativos vão esclarecer a cor, enquanto níveis maiores vão escurecer.
 
 {% highlight scss %}
 @function theme-color-level($color-name: "primary", $level: 0) {
@@ -184,21 +184,21 @@ We also have another function for getting a particular _level_ of color from the
 }
 {% endhighlight %}
 
-In practice, you'd call the function and pass in two parameters: the name of the color from `$theme-colors` (e.g., primary or danger) and a numeric level.
+Na prática, você chamaria a função e passaria dois argumentos: o nome da cor do `$theme-colors` (ex: primary e danger) e um valor numérico.
 
 {% highlight scss %}
-.custom-element {
+.elemento-personalizado {
   color: theme-color-level(primary, -10);
 }
 {% endhighlight %}
 
-Additional functions could be added in the future or your own custom Sass to create level functions for additional Sass maps, or even a generic one if you wanted to be more verbose.
+Outras funções podem ser adicionadas, futuramente, ou use seu próprio Sass para criar funções de nível para outros mapas Sass.
 
 ### Contraste de cor
 
-One additional function we include in Bootstrap is the color contrast function, `color-yiq`. It utilizes the [YIQ color space](https://en.wikipedia.org/wiki/YIQ) to automatically return a light (`#fff`) or dark (`#111`) contrast color based on the specified base color. This function is especially useful for mixins or loops where you're generating multiple classes.
+Uma outra função que temos no Bootstrap é aquela para contraste de cores: `color-yiq`. Ela usa o [YIQ color space](https://en.wikipedia.org/wiki/YIQ) para, automaticamente, retornar um contraste de cores claras (`#fff`) ou escuras (`#111`), baseado na cor especificada. Esta função é, especialmente, útil para mixins ou loops quando for gerar múltiplas classes.
 
-For example, to generate color swatches from our `$theme-colors` map:
+Por exemplo, para gerar amostras de cores a partir do nosso mapa `$theme-colors`, use isso:
 
 {% highlight scss %}
 @each $color, $value in $theme-colors {
@@ -208,47 +208,47 @@ For example, to generate color swatches from our `$theme-colors` map:
 }
 {% endhighlight %}
 
-It can also be used for one-off contrast needs:
+Ela também pode ser usada para retornar o contraste de uma única cor:
 
 {% highlight scss %}
-.custom-element {
-  color: color-yiq(#000); // returns `color: #fff`
+.elemento-personalizado {
+  color: color-yiq(#000); // retorna `color: #fff`
 }
 {% endhighlight %}
 
-You can also specify a base color with our color map functions:
+Você também pode especificar uma cor base, com nossas funções de mapa de cores:
 
 {% highlight scss %}
-.custom-element {
-  color: color-yiq(theme-color("dark")); // returns `color: #fff`
+.elemento-personalizado {
+  color: color-yiq(theme-color("dark")); // retorna `color: #fff`
 }
 {% endhighlight %}
 
 ## Opções do Sass
 
-Customize Bootstrap 4 with our built-in custom variables file and easily toggle global CSS preferences with new `$enable-*` Sass variables. Override a variable's value and recompile with `npm run test` as needed.
+Personalize o Bootstrap 4 com nosso arquivo customizado de variáveis e, facilmente, alterne configurações CSS globais com as novas variáveis Sass `$enable-*`. Sobrescreva o valor da variável e recompile com `npm run test`, sempre que precisar.
 
-You can find and customize these variables for key global options in Bootstrap's `scss/_variables.scss` file.
+Você pode achar e personalizar estas variáveis para opções globais, no arquivo Bootstrap `scss/_variables.scss`.
 
-| Variable                    | Values                             | Description                                                                            |
+| Variável                    | Valores                             | Descrição                                                                            |
 | --------------------------- | ---------------------------------- | -------------------------------------------------------------------------------------- |
-| `$spacer`                   | `1rem` (default), or any value > 0 | Specifies the default spacer value to programmatically generate our [spacer utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/). |
-| `$enable-rounded`           | `true` (default) or `false`        | Enables predefined `border-radius` styles on various components. |
-| `$enable-shadows`           | `true` or `false` (default)        | Enables predefined `box-shadow` styles on various components. |
-| `$enable-gradients`         | `true` or `false` (default)        | Enables predefined gradients via `background-image` styles on various components. |
-| `$enable-transitions`       | `true` (default) or `false`        | Enables predefined `transition`s on various components. |
-| `$enable-hover-media-query` | `true` or `false` (default)        | **Deprecated** |
-| `$enable-grid-classes`      | `true` (default) or `false`        | Enables the generation of CSS classes for the grid system (e.g., `.container`, `.row`, `.col-md-1`, etc.). |
-| `$enable-caret`             | `true` (default) or `false`        | Enables pseudo element caret on `.dropdown-toggle`. |
-| `$enable-print-styles`      | `true` (default) or `false`        | Enables styles for optimizing printing. |
+| `$spacer`                   | `1rem` é o padrão, mas também pode-se utilizar valores maior que 0. | Especifíca o valor padrão para gerar os [utilitário de espaçamento]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/), programaticamente. |
+| `$enable-rounded`           | `true` (padrão) ou `false`        | Ativa estilos `border-radius` pré-definidos, em vários componentes. |
+| `$enable-shadows`           | `true` ou `false` (padrão)        | Ativa estilos `box-shadow` pré-definidos, em vários componentes. |
+| `$enable-gradients`         | `true` ou `false` (padrão)        | Ativa gradientes pré-definidos via estilos `background-image`, em vários componentes. |
+| `$enable-transitions`       | `true` (padrão) ou `false`        | Ativa `transições` pré-definidas, em vários componentes. |
+| `$enable-hover-media-query` | `true` ou `false` (padrão)        | **Defasado** |
+| `$enable-grid-classes`      | `true` (padrão) ou `false`        | Ativa a geração de classes CSS para o grid (ex: `.container`, `.row`, `.col-md-1`, etc). |
+| `$enable-caret`             | `true` (padrão) ou `false`        | Ativa a setinha do `.dropdown-toggle` usando pseudo-elementos. |
+| `$enable-print-styles`      | `true` (padrão) ou `false`        | Ativa estilos para otimizar impressões. |
 
 ## Cor
 
-Many of Bootstrap's various components and utilities are built through a series of colors defined in a Sass map. This map can be looped over in Sass to quickly generate a series of rulesets.
+Muitos dos componentes e utilitários Bootstrap são construídos com uma série de cores definidas em mapas Sass. Estes mapas podem ser iterados para, rapidamente, gerar vários blocos de regras.
 
 ### Todas as cores
 
-All colors available in Bootstrap 4, are available as Sass variables and a Sass map in `scss/_variables.scss` file. This will be expanded upon in subsequent minor releases to add additional shades, much like the [grayscale palette](#grays) we already include.
+Todas as cores disponíveis no Bootstrap 4 também estão disponíveis nas variáveis e no mapa Sass, dentro do arquivo `scss/_variables.scss`. Isso será expandido, nos próximos pequenos releases com tons adicionais, como a [escala de cores cinzas](#grays) que já incluímos.
 
 <div class="row">
   {% for color in site.data.colors %}
@@ -260,26 +260,26 @@ All colors available in Bootstrap 4, are available as Sass variables and a Sass 
   {% endfor %}
 </div>
 
-Here's how you can use these in your Sass:
+É assim que você pode usar isso, no seu Sass:
 
 {% highlight scss %}
-// With variable
+// Com variáveis
 .alpha { color: $purple; }
 
-// From the Sass map with our `color()` function
+// Usando o mapa Sass, com nossa função `color()`
 .beta { color: color("purple"); }
 {% endhighlight %}
 
-[Color utility classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) are also available for setting `color` and `background-color`.
+[Classes utilitárias de cores]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) também estão disponíveis para definir o valor de `color` e `background-color`.
 
 {% capture callout %}
-In the future, we'll aim to provide Sass maps and variables for shades of each color as we've done with the grayscale colors below.
+No futuro, vamos se concentrar em prover mapas e variáveis Sass para os tons de cada cor, assim como fizemos com a escala de cinza abaixo.
 {% endcapture %}
 {% include callout.html content=callout type="info" %}
 
 ### Cores do tema
 
-We use a subset of all colors to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in Bootstraps's `scss/_variables.scss` file.
+Usamos um subconjunto de todas as cores para criar uma paleta de cores menor e gerar um esquemas de cores, também disponíveis em variáveis e mapas Sass, no arquivo Bootstrap `scss/_variables.scss`.
 
 <div class="row">
   {% for color in site.data.theme-colors %}
@@ -289,9 +289,9 @@ We use a subset of all colors to create a smaller color palette for generating c
   {% endfor %}
 </div>
 
-### Cinzas
+### Tons de cinza
 
-An expansive set of gray variables and a Sass map in `scss/_variables.scss` for consistent shades of gray across your project.
+Um grande conjunto de variáveis e mapas Sass, no arquivo `scss/_variables.scss`, para tons de cinzas consistentes nos seus projetos.
 
 <div class="row mb-3">
   <div class="col-md-4">
@@ -301,7 +301,7 @@ An expansive set of gray variables and a Sass map in `scss/_variables.scss` for 
   </div>
 </div>
 
-Within `scss/_variables.scss`, you'll find Bootstrap's color variables and Sass map. Here's an example of the `$colors` Sass map:
+Dentro do arquivo  `scss/_variables.scss`, você vai achar as variáveis e mapas de cores Bootstrap. Aqui está um exemplo do mapa `$colors`:
 
 {% highlight scss %}
 $colors: (
@@ -319,29 +319,29 @@ $colors: (
   "gray": $gray-600,
   "gray-dark": $gray-800
 ) !default;
-{% endhighlight %}
+{% endhighlight %} 
 
-Add, remove, or modify values within the map to update how they're used in many other components. Unfortunately at this time, not _every_ component utilizes this Sass map. Future updates will strive to improve upon this. Until then, plan on making use of the `${color}` variables and this Sass map.
+Adicione, remova ou modifique valores dentro do mapa, para atualizar o uso deles em outros componentes. Infelizmente, atualmente, _nem todos_ componentes utiliza este mapa Sass. Futuras atualizações vão tentar melhorar essa situação. No entanto, até lá, planeje o uso deste mapa e de variáveis de cores.
 
 ## Componentes
 
-Many of Bootstrap's components and utilities are built with `@each` loops that iterate over a Sass map. This is especially helpful for generating variants of a component by our `$theme-colors` and creating responsive variants for each breakpoint. As you customize these Sass maps and recompile, you'll automatically see your changes reflected in these loops.
+Muitos componentes e utilitários Bootstrap são construídos com loops `@each`, os quais iteram sobre um mapa Sass. Isso é, especialmente, útil para gerar variantes de um componente com nosso `$theme-colors` e criando variantes responsivos para cada breakpoint. Assim que você personalizar estes mapas Sass e recompilar, verá suas mudanças refletidas nestes loops, automaticamente.
 
 ### Modificadores
 
-Many of Bootstrap's components are built with a base-modifier class approach. This means the bulk of the styling is contained to a base class (e.g., `.btn`) while style variations are confined to modifier classes (e.g., `.btn-danger`). These modifier classes are built from the `$theme-colors` map to make customizing the number and name of our modifier classes.
+Muitos dos componentes Bootstrap são construídos com uma abordagem de classe-modificadora. Isso significa que o grosso da estilização está em uma classe base (ex: `.btn`), enquanto variações de estilos estão em classes modificadoras, como `.btn-danger`. Estas classes modificadoras são feitas a partir do mapa `$theme-colors`, para personalizar a quantidade e nomes delas.
 
-Here are two examples of how we loop over the `$theme-colors` map to generate modifiers to the `.alert` component and all our `.bg-*` background utilities.
+Aqui está dois exemplos de como nós iteramos o mapa `$theme-colors` para gerar modificadores do componente `.alert` e todos nossos utilitários de background `.bg-*`.
 
 {% highlight scss %}
-// Generate alert modifier classes
+// Gera classes modificadoras de alertas
 @each $color, $value in $theme-colors {
   .alert-#{$color} {
     @include alert-variant(theme-color-level($color, -10), theme-color-level($color, -9), theme-color-level($color, 6));
   }
 }
 
-// Generate `.bg-*` color utilities
+// Gera utilitários de cores para `.bg-*`
 @each $color, $value in $theme-colors {
   @include bg-variant('.bg-#{$color}', $value);
 }
@@ -349,7 +349,7 @@ Here are two examples of how we loop over the `$theme-colors` map to generate mo
 
 ### Responsivo
 
-These Sass loops aren't limited to color maps, either. You can also generate responsive variations of your components or utilities. Take for example our responsive text alignment utilities where we mix an `@each` loop for the `$grid-breakpoints` Sass map with a media query include.
+Estes loops Sass não são limitados a mapas de cores. Você também pode gerar variações responsivas de seus componentes e utilitários. Por exemplo, pegue nossos utilitários para alinhamento de texto, onde nós misturamos um loop `@each` para o mapa Sass `$grid-breakpoins`, o qual possui integrações de media queries.
 
 {% highlight scss %}
 @each $breakpoint in map-keys($grid-breakpoints) {
@@ -363,15 +363,15 @@ These Sass loops aren't limited to color maps, either. You can also generate res
 }
 {% endhighlight %}
 
-Should you need to modify your `$grid-breakpoints`, your changes will apply to all the loops iterating over that map.
+Se precisar alterar seu `$grid-breakpoints`, suas modificações serão aplicadas a todos os loops iterando neste mapa.
 
 ## Variáveis CSS
 
-Bootstrap 4 includes around two dozen [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables) in its compiled CSS. These provide easy access to commonly used values like our theme colors, breakpoints, and primary font stacks when working in your browser's Inspector, a code sandbox, or general prototyping.
+Bootstrap 4 inclui cerca de duas dúzias de [propriedades CSS personalizadas (variáveis)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables), em seu CSS compilado. Elas provêm fácil acsso a valores comumente usados, como nossas cores de tema, breakpoints e pilhas de fontes primárias (para quando estiver trabalhando no inspetor do browser, sandbox de código ou uma prototipagem qualquer).
 
 ### Variáveis disponíveis
 
-Here are the variables we include (note that the `:root` is required). They're located in our `_root.scss` file.
+Aqui estão as variáveis que incluímos (perceba que o `:root` é obrigatório). Elas estão localizadas no nosso arquivo `_root.scss`.
 
 {% highlight css %}
 :root {
@@ -408,7 +408,7 @@ Here are the variables we include (note that the `:root` is required). They're l
 
 ### Exemplos
 
-CSS variables offer similar flexibility to Sass's variables, but without the need for compilation before being served to the browser. For example, here we're resetting our page's font and link styles with CSS variables.
+Variáveis CSS oferecem uma flexibilidade similar as do Sass, mas sem precisar compilar antes de usar no navegador. Por exemplo, com isso estamos resetando os estilos de fonte e links de nossa página, com variáveis CSS:
 
 {% highlight css %}
 body {
@@ -419,11 +419,11 @@ a {
 }
 {% endhighlight %}
 
-### Breakpoint variables
+### Variáveis de breakpoint
 
-While we originally included breakpoints in our CSS variables (e.g., `--breakpoint-md`), **these are not supported in media queries**, but they can still be used _within_ rulesets in media queries. These breakpoint variables remain in the compiled CSS for backward compatibility given they can be utilized by JavaScript. [Learn more in the spec.](https://www.w3.org/TR/css-variables-1/#using-variables)
+Apesar de, originalmente, termos incluídos breakpoints em nossas variáveis CSS (ex: `--breakpoint-md`), **elas não são suportadas dentro de media queries**, mas ainda podem ser usadas dentro de bloco de regras, nas media queries. Estas variáveis de breakpoint permanecem no CSS compilado, para retro-compatibilidade (dado que podem ser utilizadas pelo JavaScript). [Leia mais na especificação](https://www.w3.org/TR/css-variables-1/#using-variables)!
 
-Here's an example of **what's not supported:**
+Aqui está um exemplo de **oquê não é suportado:**
 
 {% highlight css %}
 @media (min-width: var(--breakpoint-sm)) {
@@ -431,11 +431,11 @@ Here's an example of **what's not supported:**
 }
 {% endhighlight %}
 
-And here's an example of **what is supported:**
+E aqui está um exemplo de **oquê é suportado:**
 
 {% highlight css %}
 @media (min-width: 768px) {
-  .custom-element {
+  .elemento-personalizado {
     color: var(--primary);
   }
 }
