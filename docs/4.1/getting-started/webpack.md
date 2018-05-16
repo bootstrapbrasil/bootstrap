@@ -1,24 +1,24 @@
 ---
 layout: docs
 title: Webpack
-description: Learn how to include Bootstrap in your project using Webpack 3.
+description: Aprenda como integrar o Bootstrap ao seu projeto, usando Webpack 3.
 group: getting-started
 toc: true
 ---
 
-## Installing Bootstrap
+## Instalação do Bootstrap
 
-[Install bootstrap]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/#npm) as a Node.js module using npm.
+[Instale o Bootstrap]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/#npm) como um módulo do Node.js, usando npm.
 
-## Importing JavaScript
+## Inportação do JavaScript
 
-Import [Bootstrap's JavaScript]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/) by adding this line to your app's entry point (usually `index.js` or `app.js`):
+Importe o [JavaScript Bootstrap]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/), adicionando esta linha ao _entry point_ do seu app (`index.js` ou `app.js`, normalmente):
 
 {% highlight js %}
 import 'bootstrap';
 {% endhighlight %}
 
-Alternatively, you may **import plugins individually** as needed:
+Opcionalmente, você também pode **importar plugins individualmente**, sempre que necessário:
 
 {% highlight js %}
 import 'bootstrap/js/dist/util';
@@ -26,42 +26,40 @@ import 'bootstrap/js/dist/dropdown';
 ...
 {% endhighlight %}
 
-Bootstrap is dependent on [jQuery](https://jquery.com/) and [Popper](https://popper.js.org/),
-these are defined as `peerDependencies`, this means that you will have to make sure to add both of them
-to your `package.json` using `npm install --save jquery popper.js`.
+Bootstrap depende do [jQuery](https://jquery.com/) e [Popper](https://popper.js.org/), os quais são definidos como `peerDependencies`, significando que você terá que se certificar de adicionar os dois ao seu `package.json`, usando `npm install --save jquery popper.js`.
 
 {% capture callout %}
-Notice that if you chose to **import plugins individually**, you must also install [exports-loader](https://github.com/webpack-contrib/exports-loader)
+Perceba que se você escolher **importar os plugins individualmente**, deverá instalar o [exports-loader](https://github.com/webpack-contrib/exports-loader), também.
 {% endcapture %}
 {% include callout.html content=callout type="warning" %}
 
-## Importing Styles
+## Importar estilos
 
-### Importing Precompiled Sass
+### Importação do Sass pré-compilado
 
-To enjoy the full potential of Bootstrap and customize it to your needs, use the source files as a part of your project's bundling process.
+Para aproveitar todo potencial e personalizar o Bootstrap do jeito que quiser, use os arquivos fontes como parte do seu _bundling process_.
 
-First, create your own `_custom.scss` and use it to override the [built-in custom variables]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/options/). Then, use your main Sass file to import your custom variables, followed by Bootstrap:
+Primeiro, crie seu próprio `_custom.scss` e use-o para sobrescrever as [variáveis integradas de customização]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/options/). Assim, use o arquivo Sass principal para importar suas variáveis personalizadas e depois o Bootstrap, em si:
 
 {% highlight scss %}
 @import "custom";
 @import "~bootstrap/scss/bootstrap";
 {% endhighlight %}
 
-For Bootstrap to compile, make sure you install and use the required loaders: [sass-loader](https://github.com/webpack-contrib/sass-loader), [postcss-loader](https://github.com/postcss/postcss-loader) with [Autoprefixer](https://github.com/postcss/autoprefixer#webpack). With minimal setup, your webpack config should include this rule or similar:
+Para o Bootstrap compilar, certifique-se de instalar e usar os _loaders_ necessários, que são: [sass-loader](https://github.com/webpack-contrib/sass-loader) e [postcss-loader](https://github.com/postcss/postcss-loader) com [Autoprefixer](https://github.com/postcss/autoprefixer#webpack). Nas mínimas configurações, seu Webpack deve ter esta regra ou algo parecido:
 
 {% highlight js %}
   ...
   {
     test: /\.(scss)$/,
     use: [{
-      loader: 'style-loader', // inject CSS to page
+      loader: 'style-loader', // injeta CSS na página
     }, {
-      loader: 'css-loader', // translates CSS into CommonJS modules
+      loader: 'css-loader', // traduz CSS em módulos commonJS
     }, {
-      loader: 'postcss-loader', // Run post css actions
+      loader: 'postcss-loader', // Executa tarefas do postcss
       options: {
-        plugins: function () { // post css plugins, can be exported to postcss.config.js
+        plugins: function () { // plugins postcss, podem ser exportados para o postcss.config.js
           return [
             require('precss'),
             require('autoprefixer')
@@ -69,21 +67,21 @@ For Bootstrap to compile, make sure you install and use the required loaders: [s
         }
       }
     }, {
-      loader: 'sass-loader' // compiles Sass to CSS
+      loader: 'sass-loader' // compila Sass em CSS
     }]
   },
   ...
 {% endhighlight %}
 
-### Importing Compiled CSS
+### Importação do CSS compilado
 
-Alternatively, you may use Bootstrap's ready-to-use CSS by simply adding this line to your project's entry point:
+Opcionalmente, você pode usar o CSS Bootstrap pronto para uso, simplesmente, adicionando esta linha ao _entry point_ do seu projeto:
 
 {% highlight js %}
 import 'bootstrap/dist/css/bootstrap.min.css';
 {% endhighlight %}
 
-In this case you may use your existing rule for `css` without any special modifications to webpack config, except you don't need `sass-loader` just [style-loader](https://github.com/webpack-contrib/style-loader) and [css-loader](https://github.com/webpack-contrib/css-loader).
+Neste caso, você pode usar suas regras `CSS` sem nenhuma modificação especial nas configurações webpack. Assim, você não precisa do `sass-loader`, apenas do [style-loader](https://github.com/webpack-contrib/style-loader) e [css-loader](https://github.com/webpack-contrib/css-loader).
 
 {% highlight js %}
   ...
