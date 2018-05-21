@@ -55,13 +55,13 @@ Altere a cor da borda usando utilitários criados a partir das nossas cores de t
 Adicione classes a um elemento para arredondar facilmente seus cantos.
 
 <div class="bd-example bd-example-images">
-  <img data-src="holder.js/75x75" class="rounded" alt="Example rounded image">
-  <img data-src="holder.js/75x75" class="rounded-top" alt="Example top rounded image">
-  <img data-src="holder.js/75x75" class="rounded-right" alt="Example right rounded image">
-  <img data-src="holder.js/75x75" class="rounded-bottom" alt="Example bottom rounded image">
-  <img data-src="holder.js/75x75" class="rounded-left" alt="Example left rounded image">
-  <img data-src="holder.js/75x75" class="rounded-circle" alt="Completely round image">
-  <img data-src="holder.js/75x75" class="rounded-0" alt="Example non-rounded image (overrides rounding applied elsewhere)">
+  <img data-src="holder.js/75x75" class="rounded" alt="Exemplo de borda arredondada">
+  <img data-src="holder.js/75x75" class="rounded-top" alt="Exemplo de borda superior arredondada">
+  <img data-src="holder.js/75x75" class="rounded-right" alt="Exemplo de borda lateral direita arredondada">
+  <img data-src="holder.js/75x75" class="rounded-bottom" alt="Exemplo de borda inferior arredondada">
+  <img data-src="holder.js/75x75" class="rounded-left" alt="Exemplo de borda lateral esquerda arredondada">
+  <img data-src="holder.js/75x75" class="rounded-circle" alt="Imagem redonda">
+  <img data-src="holder.js/75x75" class="rounded-0" alt="Exemplo de imagem não arredondada (sobrescreve qualquer arredondamento presente)">
 </div>
 
 {% highlight html %}
