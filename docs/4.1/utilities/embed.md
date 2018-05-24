@@ -1,20 +1,20 @@
 ---
 layout: docs
-title: Embeds
-description: Create responsive video or slideshow embeds based on the width of the parent by creating an intrinsic ratio that scales on any device.
+title: Incorporações
+description: Crie incorporações de vídeos ou slideshows, baseando-se na largura do pai, criando uma proporção que escala em qualquer dispositivo.
 group: utilities
 toc: true
 ---
 
-## About
+## Sobre
 
-Rules are directly applied to `<iframe>`, `<embed>`, `<video>`, and `<object>` elements; optionally use an explicit descendant class `.embed-responsive-item` when you want to match the styling for other attributes.
+Regras são, diretamente, aplicadas a elementos `<iframe>`, `<embed>`, `<video>` e `<object>`. Opcionalmente, use uma classe descendente explícita `.embed-responsive-item`, quando quiser combinar o estilo em outros atributos.
 
-**Pro-Tip!** You don't need to include `frameborder="0"` in your `<iframe>`s as we override that for you.
+**Dica PROFISSA!** Não é necessário usar `frameborder="0"` em seus `<iframe>`s, dado que já fazemos isso por você.
 
-## Example
+## Exemplo
 
-Wrap any embed like an `<iframe>` in a parent element with `.embed-responsive` and an aspect ratio. The `.embed-responsive-item` isn't strictly required, but we encourage it.
+Envolte qualquer elemento (como um `<iframe>`) em um elemento pai com a classe `.embed-responsive` e uma proporção de tela. Já a classe `.embed-responsive-item` não obrigatória, mas encorajamos utilizá-la.
 
 {% capture example %}
 <div class="embed-responsive embed-responsive-16by9">
@@ -23,27 +23,27 @@ Wrap any embed like an `<iframe>` in a parent element with `.embed-responsive` a
 {% endcapture %}
 {% include example.html content=example %}
 
-## Aspect ratios
+## Proporções de telas
 
-Aspect ratios can be customized with modifier classes.
+Proporções de telas podem ser personalizadas com classes modificadoras.
 
 {% highlight html %}
-<!-- 21:9 aspect ratio -->
+<!-- Proporção 21:9 -->
 <div class="embed-responsive embed-responsive-21by9">
   <iframe class="embed-responsive-item" src="..."></iframe>
 </div>
 
-<!-- 16:9 aspect ratio -->
+<!-- Proporção 16:9 -->
 <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="..."></iframe>
 </div>
 
-<!-- 4:3 aspect ratio -->
+<!--Proporção 4:3 -->
 <div class="embed-responsive embed-responsive-4by3">
   <iframe class="embed-responsive-item" src="..."></iframe>
 </div>
 
-<!-- 1:1 aspect ratio -->
+<!--Proporção 1:1 -->
 <div class="embed-responsive embed-responsive-1by1">
   <iframe class="embed-responsive-item" src="..."></iframe>
 </div>
