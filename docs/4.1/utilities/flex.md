@@ -1,36 +1,36 @@
 ---
 layout: docs
-title: Flex
-description: Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.
+title: Flexbox
+description: Rapidamente, gerencie o layout, alinhamento, dimensão da grade de colunas, navegação, componentes e muito mais, utilizando todo um conjunto de utilitários flexbox. No entanto, para implementações mais complexas, CSS customizado pode ser necessário.
 group: utilities
 toc: true
 ---
 
-## Enable flex behaviors
+## Ative o comportamento flexbox
 
-Apply `display` utilities to create a flexbox container and transform **direct children elements** into flex items. Flex containers and items are able to be modified further with additional flex properties.
+Use utilitários `display` para criar um container flexbox e transformar **elementos filhos diretos** em flex items. Depois, flex containers e items são capazes de serem modificados com propriedades flex adicionais.
 
 {% capture example %}
-<div class="d-flex p-2 bd-highlight">I'm a flexbox container!</div>
+<div class="d-flex p-2 bd-highlight">Eu sou um flex container!</div>
 {% endcapture %}
 {% include example.html content=example %}
 
 {% capture example %}
-<div class="d-inline-flex p-2 bd-highlight">I'm an inline flexbox container!</div>
+<div class="d-inline-flex p-2 bd-highlight">Eu sou um flex container inline!</div>
 {% endcapture %}
 {% include example.html content=example %}
 
-Responsive variations also exist for `.d-flex` and `.d-inline-flex`.
+Variações responsivas também existem para `.d-flex` e `.d-inline-flex`.
 
 {% for bp in site.data.breakpoints %}
 - `.d{{ bp.abbr }}-flex`
 - `.d{{ bp.abbr }}-inline-flex`{% endfor %}
 
-## Direction
+## Direção
 
-Set the direction of flex items in a flex container with direction utilities. In most cases you can omit the horizontal class here as the browser default is `row`. However, you may encounter situations where you needed to explicitly set this value (like responsive layouts).
+Defina a direção dos flex items, em um flex container, com os utilitários de direção. Na maioria dos casos, você poderá omitir a classe horizontal, já que o padrão dos browsers é `row`. Contudo, poderás encontrar situações onde precisará, explicitamente, definir este valor (como nos layouts responsivos).
 
-Use `.flex-row` to set a horizontal direction (the browser default), or `.flex-row-reverse` to start the horizontal direction from the opposite side.
+Use `.flex-row` para definir uma direção horizontal (o padrão do browser) ou `.flex-row-reverse` para iniciar a direção horizontal, só que começando do lado oposto.
 
 {% capture example %}
 <div class="d-flex flex-row bd-highlight mb-3">
@@ -46,7 +46,7 @@ Use `.flex-row` to set a horizontal direction (the browser default), or `.flex-r
 {% endcapture %}
 {% include example.html content=example %}
 
-Use `.flex-column` to set a vertical direction, or `.flex-column-reverse`  to start the vertical direction from the opposite side.
+Use `flex-column` para definir uma direção vertical ou `flex-column-reverse` para iniciar a direção vertical no lado oposto.
 
 {% capture example %}
 <div class="d-flex flex-column bd-highlight mb-3">
@@ -62,7 +62,7 @@ Use `.flex-column` to set a vertical direction, or `.flex-column-reverse`  to st
 {% endcapture %}
 {% include example.html content=example %}
 
-Responsive variations also exist for `flex-direction`.
+Variações responsivas também existem para `flex-direction`.
 
 {% for bp in site.data.breakpoints %}
 - `.flex{{ bp.abbr }}-row`
@@ -70,9 +70,9 @@ Responsive variations also exist for `flex-direction`.
 - `.flex{{ bp.abbr }}-column`
 - `.flex{{ bp.abbr }}-column-reverse`{% endfor %}
 
-## Justify content
+## Conteúdo justificado
 
-Use `justify-content` utilities on flexbox containers to change the alignment of flex items on the main axis (the x-axis to start, y-axis if `flex-direction: column`). Choose from `start` (browser default), `end`, `center`, `between`, or `around`.
+Use utilitários `justify-content` nos flex containers para alterar o alinhamento dos flex items, no eixo principal (eixo x quando usando a classe start ou eixo y quando usando a classe end). Escolha entre `start` (padrão do browser), `end`, `center`, `between` ou `around`.
 
 <div class="bd-example">
   <div class="d-flex justify-content-start bd-highlight mb-3">
@@ -110,7 +110,7 @@ Use `justify-content` utilities on flexbox containers to change the alignment of
 <div class="d-flex justify-content-around">...</div>
 {% endhighlight %}
 
-Responsive variations also exist for `justify-content`.
+Variações responsivas também estão presentes na classe `justify-content`.
 
 {% for bp in site.data.breakpoints %}
 - `.justify-content{{ bp.abbr }}-start`
@@ -121,7 +121,7 @@ Responsive variations also exist for `justify-content`.
 
 ## Align items
 
-Use `align-items` utilities on flexbox containers to change the alignment of flex items on the cross axis (the y-axis to start, x-axis if `flex-direction: column`). Choose from `start`, `end`, `center`, `baseline`, or `stretch` (browser default).
+Use utilitários `align-items` em flex containers para mudar o alinhamento dos flex items, no eixo transversal (eixo y quando usando a classe start ou eixo x quando utilizar `flex-direction: column`). Você pode escolher entre `start`, `end`, `center`, `baseline` ou `stretch` (padrão de browsers).
 
 <div class="bd-example">
   <div class="d-flex align-items-start bd-highlight mb-3" style="height: 100px">
@@ -159,7 +159,7 @@ Use `align-items` utilities on flexbox containers to change the alignment of fle
 <div class="d-flex align-items-stretch">...</div>
 {% endhighlight %}
 
-Responsive variations also exist for `align-items`.
+Variações responsivas também estão presentes para `align-items`.
 
 {% for bp in site.data.breakpoints %}
 - `.align-items{{ bp.abbr }}-start`
@@ -170,45 +170,45 @@ Responsive variations also exist for `align-items`.
 
 ## Align self
 
-Use `align-self` utilities on flexbox items to individually change their alignment on the cross axis (the y-axis to start, x-axis if `flex-direction: column`). Choose from the same options as `align-items`: `start`, `end`, `center`, `baseline`, or `stretch` (browser default).
+Use utilitários `align-self` em flex items para, individualmente, alterar seus alinhamentos no eixo transversal (eixo y quando usando a classe start ou eixo x quando utilizar `flex-direction: column`). Poderás escolher das mesmas opções que o `align-item`: `start`, `end`, `center`, `baseline` ou `stretch` (padrão de browsers).
 
 <div class="bd-example">
   <div class="d-flex bd-highlight mb-3" style="height: 100px">
     <div class="p-2 bd-highlight">Flex item</div>
-    <div class="align-self-start p-2 bd-highlight">Aligned flex item</div>
+    <div class="align-self-start p-2 bd-highlight">Flex item alinhado</div>
     <div class="p-2 bd-highlight">Flex item</div>
   </div>
   <div class="d-flex bd-highlight mb-3" style="height: 100px">
     <div class="p-2 bd-highlight">Flex item</div>
-    <div class="align-self-end p-2 bd-highlight">Aligned flex item</div>
+    <div class="align-self-end p-2 bd-highlight">Flex item alinhado</div>
     <div class="p-2 bd-highlight">Flex item</div>
   </div>
   <div class="d-flex bd-highlight mb-3" style="height: 100px">
     <div class="p-2 bd-highlight">Flex item</div>
-    <div class="align-self-center p-2 bd-highlight">Aligned flex item</div>
+    <div class="align-self-center p-2 bd-highlight">Flex item alinhado</div>
     <div class="p-2 bd-highlight">Flex item</div>
   </div>
   <div class="d-flex bd-highlight mb-3" style="height: 100px">
     <div class="p-2 bd-highlight">Flex item</div>
-    <div class="align-self-baseline p-2 bd-highlight">Aligned flex item</div>
+    <div class="align-self-baseline p-2 bd-highlight">Flex item alinhado</div>
     <div class="p-2 bd-highlight">Flex item</div>
   </div>
   <div class="d-flex bd-highlight" style="height: 100px">
     <div class="p-2 bd-highlight">Flex item</div>
-    <div class="align-self-stretch p-2 bd-highlight">Aligned flex item</div>
+    <div class="align-self-stretch p-2 bd-highlight">Flex item alinhado</div>
     <div class="p-2 bd-highlight">Flex item</div>
   </div>
 </div>
 
 {% highlight html %}
-<div class="align-self-start">Aligned flex item</div>
-<div class="align-self-end">Aligned flex item</div>
-<div class="align-self-center">Aligned flex item</div>
-<div class="align-self-baseline">Aligned flex item</div>
-<div class="align-self-stretch">Aligned flex item</div>
+<div class="align-self-start">Flex item alinhado</div>
+<div class="align-self-end">Flex item alinhado</div>
+<div class="align-self-center">Flex item alinhado</div>
+<div class="align-self-baseline">Flex item alinhado</div>
+<div class="align-self-stretch">Flex item alinhado</div>
 {% endhighlight %}
 
-Responsive variations also exist for `align-self`.
+Variações responsivas também existem para `align-self`.
 
 {% for bp in site.data.breakpoints %}
 - `.align-self{{ bp.abbr }}-start`
@@ -217,9 +217,9 @@ Responsive variations also exist for `align-self`.
 - `.align-self{{ bp.abbr }}-baseline`
 - `.align-self{{ bp.abbr }}-stretch`{% endfor %}
 
-## Fill
+## Preenchimento
 
-Use the `.flex-fill` class on a series of sibling elements to force them into equal widths while taking up all available horizontal space. [Especially useful for equal-width, or justified, navigation.]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navs/#working-with-flex-utilities)
+Utilize a classe `.flex-fill` em uma série de elementos irmãos, para forçá-los a terem larguras idênticas, de modo que usem todo o espaço horizontal disponível. [Muito útil para navegação com largura igual ou justificada.]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navs/#working-with-flex-utilities)
 
 {% capture example %}
 <div class="d-flex bd-highlight">
@@ -230,14 +230,14 @@ Use the `.flex-fill` class on a series of sibling elements to force them into eq
 {% endcapture %}
 {% include example.html content=example %}
 
-Responsive variations also exist for `flex-fill`.
+Variações responsivas também existem para `flex-fill`.
 
 {% for bp in site.data.breakpoints %}
 - `.flex{{ bp.abbr }}-fill`{% endfor %}
 
-## Grow and shrink
+## Grow e shrink
 
-Use `.flex-grow-*` utilities to toggle a flex item's ability to grow to fill available space. In the example below, the `.flex-grow-1` elements uses all available space it can, while allowing the remaining two flex items their necessary space.
+Use utilitários `flex-grow` para alternar a habilidade de um flex item de extender-se para ocupar todo o espaço disponível. No exemplo abaixo, os elementos `flex-grow-1` usam todo o espaço disponível que podem, enquanto os restantes flex items usam só o necessário.
 
 {% capture example %}
 <div class="d-flex bd-highlight">
@@ -248,7 +248,7 @@ Use `.flex-grow-*` utilities to toggle a flex item's ability to grow to fill ava
 {% endcapture %}
 {% include example.html content=example %}
 
-Use `.flex-shrink-*` utilities to toggle a flex item's ability to shrink if necessary. In the example below, the second flex item with `.flex-shrink-1` is forced to wrap it's contents to a new line, "shrinking" to allow more space for the previous flex item with `.w-100`.
+Utilize utilitários `.flex-shrink-*` para alternar a habilidade de um flex item de se encolher, quando necessário. No exemplo abaixo, o segundo flex item com `.flex-shrink-1` é forçado a quebrar sua linha, para dar mais espaço ao elemento anterior que possui `w-100`.
 
 {% capture example %}
 <div class="d-flex bd-highlight">
@@ -258,17 +258,17 @@ Use `.flex-shrink-*` utilities to toggle a flex item's ability to shrink if nece
 {% endcapture %}
 {% include example.html content=example %}
 
-Responsive variations also exist for `flex-grow` and `flex-shrink`.
+Variações responsivas também existem para `flex-grow` e `flex-shrink`.
 
 {% for bp in site.data.breakpoints %}
 - `.flex{{ bp.abbr }}-{grow|shrink}-0`
 - `.flex{{ bp.abbr }}-{grow|shrink}-1`{% endfor %}
 
-## Auto margins
+## Margens automáticas
 
-Flexbox can do some pretty awesome things when you mix flex alignments with auto margins. Shown below are three examples of controlling flex items via auto margins: default (no auto margin), pushing two items to the right (`.mr-auto`), and pushing two items to the left (`.ml-auto`).
+Flexbox pode fazer algumas coisas muito legais, quando misturamos alinhamentos flex e margens automáticas. Abaixo, é exibido três exemplos de como controlar flex items usando margens automáticas: default (sem margens automáticas), empurrando dois items à direita (`.mr-auto`) e empurrando dois items a esquerda (`.ml-auto`).
 
-**Unfortunately, IE10 and IE11 do not properly support auto margins on flex items whose parent has a non-default `justify-content` value.** [See this StackOverflow answer](https://stackoverflow.com/a/37535548) for more details.
+**Infelizmente, IE10 e IE11 não suportam margens automáticas, adequadamente, em flex items que o pai possui um valor `justify-content` não padrão.** [Veja este tópico, no StackOverflow,](https://stackoverflow.com/a/37535548) para mais detalhes.
 
 {% capture example %}
 <div class="d-flex bd-highlight mb-3">
@@ -291,9 +291,9 @@ Flexbox can do some pretty awesome things when you mix flex alignments with auto
 {% endcapture %}
 {% include example.html content=example %}
 
-### With align-items
+### Com align-items
 
-Vertically move one flex item to the top or bottom of a container by mixing `align-items`, `flex-direction: column`, and `margin-top: auto` or `margin-bottom: auto`.
+Verticalmente, mova um flex item para a parte superior ou inferior de um container, combinando `align-items`, `flex-direction: column` e `margin-top: auto` ou `margin-bottom: auto`.
 
 {% capture example %}
 <div class="d-flex align-items-start flex-column bd-highlight mb-3" style="height: 200px;">
@@ -310,9 +310,9 @@ Vertically move one flex item to the top or bottom of a container by mixing `ali
 {% endcapture %}
 {% include example.html content=example %}
 
-## Wrap
+## Quebra
 
-Change how flex items wrap in a flex container. Choose from no wrapping at all (the browser default) with `.flex-nowrap`, wrapping with `.flex-wrap`, or reverse wrapping with `.flex-wrap-reverse`.
+Altere como os flex items quebrarão, em um flex container. Escolha entre nunca quebrar (padrão do browser), quebrar e quebra reversa. Isso tudo usando `.flex-nowrap`, `.flex-wrap` ou `flex-wrap-reverse`, respectivamente.
 
 <div class="bd-example">
   <div class="d-flex flex-nowrap bd-highlight" style="width: 8rem;">
@@ -383,36 +383,36 @@ Change how flex items wrap in a flex container. Choose from no wrapping at all (
 {% endhighlight %}
 
 
-Responsive variations also exist for `flex-wrap`.
+Variações responsivas também existem para `flex-wrap`.
 
 {% for bp in site.data.breakpoints %}
 - `.flex{{ bp.abbr }}-nowrap`
 - `.flex{{ bp.abbr }}-wrap`
 - `.flex{{ bp.abbr }}-wrap-reverse`{% endfor %}
 
-## Order
+## Ordem
 
-Change the _visual_ order of specific flex items with a handful of `order` utilities. We only provide options for making an item first or last, as well as a reset to use the DOM order. As `order` takes any integer value (e.g., `5`), add custom CSS for any additional values needed.
+Mude a ordem _visual_ de flex items específicos, com um punhado de utilitários `order`. Nós, apenas, provemos opções para fazer um item ser o primeiro ou último, assim como um reset para usar a ordem do DOM. Como os utilitários `order` usam um número inteiro (`5`, por exemplo), use um CSS personalizado para criar valores adicionais, se necessário.
 
 {% capture example %}
 <div class="d-flex flex-nowrap bd-highlight">
-  <div class="order-3 p-2 bd-highlight">First flex item</div>
-  <div class="order-2 p-2 bd-highlight">Second flex item</div>
-  <div class="order-1 p-2 bd-highlight">Third flex item</div>
+  <div class="order-3 p-2 bd-highlight">Primeiro flex item</div>
+  <div class="order-2 p-2 bd-highlight">Segundo flex item</div>
+  <div class="order-1 p-2 bd-highlight">Terceiro flex item</div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-Responsive variations also exist for `order`.
+Variações responsivas também existem para `order`.
 
 {% for bp in site.data.breakpoints %}{% for i in (0..12) %}
 - `.order{{ bp.abbr }}-{{ i }}`{% endfor %}{% endfor %}
 
 ## Align content
 
-Use `align-content` utilities on flexbox containers to align flex items *together* on the cross axis. Choose from `start` (browser default), `end`, `center`, `between`, `around`, or `stretch`. To demonstrate these utilities, we've enforced `flex-wrap: wrap` and increased the number of flex items.
+Use utilitários `align-content` em flex containers para alinhar todos os flex items ao mesmo tempo, no eixo transversal. Você pode escolher entre `start` (padrão dos browsers), `end`, `center`, `between`, `around` ou `stretch`. Para demonstrar estes utilitários, nós utilizamos `flex-wrap: wrap` e aumentamos a quantidade de flex items.
 
-**Heads up!** This property has no effect on single rows of flex items.
+**Atenção!** Esta propriedade não faz efeito em linhas únicas de flex items.
 
 <div class="bd-example">
   <div class="d-flex align-content-start flex-wrap bd-highlight mb-3" style="height: 200px">
@@ -560,7 +560,7 @@ Use `align-content` utilities on flexbox containers to align flex items *togethe
 <div class="d-flex align-content-stretch flex-wrap">...</div>
 {% endhighlight %}
 
-Responsive variations also exist for `align-content`.
+Variações responsivas também existem para `align-content`.
 
 {% for bp in site.data.breakpoints %}
 - `.align-content{{ bp.abbr }}-start`
