@@ -1,12 +1,12 @@
 ---
 layout: docs
-title: Colors
-description: Convey meaning through color with a handful of color utility classes. Includes support for styling links with hover states, too.
+title: Cores
+description: Transmita mensagens através de cores, usando um punhado de cores utilitárias. Inclui suporte para estilização de links em estados de hover, também.
 group: utilities
 toc: true
 ---
 
-## Color
+## Cores
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
@@ -19,19 +19,19 @@ toc: true
 {% endcapture %}
 {% include example.html content=example %}
 
-Contextual text classes also work well on anchors with the provided hover and focus states. **Note that the `.text-white` and `.text-muted` class has no link styling.**
+Classes de texto contextuais também funcionam bem em âncoras, usando os estados hover e focus providos. **No entanto, perceba que as classes `.text-white` e `.text-muted` não possuem estilização para links.**
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
 <p><a href="#" class="text-{{ color.name }}{% if color.name == "light" %} bg-dark{% endif %}">{{ color.name | capitalize }} link</a></p>{% endfor %}
-<p><a href="#" class="text-muted">Muted link</a></p>
-<p><a href="#" class="text-white bg-dark">White link</a></p>
+<p><a href="#" class="text-muted">Link esmaecido</a></p>
+<p><a href="#" class="text-white bg-dark">Link branco</a></p>
 {% endcapture %}
 {% include example.html content=example %}
 
-## Background color
+## Cores de fundo
 
-Similar to the contextual text color classes, easily set the background of an element to any contextual class. Anchor components will darken on hover, just like the text classes. Background utilities **do not set `color`**, so in some cases you'll want to use `.text-*` utilities.
+Similar as classes de textos contextuais, você também pode definir o background de um elemento, com classes contextuais. Componentes de âncoras vão escurecer no hover, assim como quando usando classes de texto. Utilitários de background **não definem propriedades `color`**, então, em alguns casos, você precisará de utilitários de texto.
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
@@ -41,9 +41,11 @@ Similar to the contextual text color classes, easily set the background of an el
 {% endcapture %}
 {% include example.html content=example %}
 
-## Background gradient
+## Gradientes de fundo
 
-When `$enable-gradients` is set to true, you'll be able to use `.bg-gradient-` utility classes. **By default, `$enable-gradients` is disabled and the example below is intentionally broken.** This is done for easier customization from the moment you start using Bootstrap. [Learn about our Sass options]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/theming/#sass-options) to enable these classes and more.
+Quando a variável `$enable-gradients` está definida com valor "true", as variantes do utilitário `.bg-gradient` poderão ser utilizadas. **Por padrão, `$enable-gradients` está definida com "false" e o exemplo abaixo está, intencionalmente, quebrado.** Isso é para fácil customização, assim que você começa a usar o Bootstrap. 
+
+[Aprenda mais sobre nossas configurações Sass]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/theming/#sass-options), para ativiar estas classes e outras coisas.
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
@@ -52,9 +54,10 @@ When `$enable-gradients` is set to true, you'll be able to use `.bg-gradient-` u
 {% include example.html content=example %}
 
 {% capture callout %}
-#### Dealing with specificity
+#### Lidando com especificidade
 
-Sometimes contextual classes cannot be applied due to the specificity of another selector. In some cases, a sufficient workaround is to wrap your element's content in a `<div>` with the class.
+As vezes, classes contextuais não podem ser utilizadas, devido a especificidade de um outro seletor. Em alguns casos, envolver seu elemento em uma nova `<div>` com a classe, é suficiente.
+
 {% endcapture %}
 {% include callout.html content=callout type="info" %}
 
