@@ -1,13 +1,13 @@
 ---
 layout: docs
-title: Visibility
-description: Control the visibility, without modifying the display, of elements with visibility utilities.
+title: Visibilidade
+description: Controle a visibilidade de elementos, sem modificar a propriedade display, usando os utilitários de visibilidade.
 group: utilities
 ---
 
-Set the `visibility` of elements with our visibility utilities. These do not modify the `display` value at all and are helpful for hiding content from most users, but still keeping them for screen readers.
+Defina o valor da propriedade `visibility` de elementos, usando os utilitários de visibilidade. Eles não modificam o valor da propriedade `display` e são úteis para esconder o conteúdo da maioria dos usuários, com excessão dos usuários com leitores de telas.
 
-Apply `.visible` or `.invisible` as needed.
+Use as classes `.visible` ou `.invisible`, como quiser.
 
 {% highlight html %}
 <div class="visible">...</div>
@@ -15,7 +15,7 @@ Apply `.visible` or `.invisible` as needed.
 {% endhighlight %}
 
 {% highlight scss %}
-// Class
+// Como são as classes
 .visible {
   visibility: visible;
 }
@@ -23,11 +23,11 @@ Apply `.visible` or `.invisible` as needed.
   visibility: hidden;
 }
 
-// Usage as a mixin
-.element {
+// Modo de uso com mixins
+.elemento {
   @include invisible(visible);
 }
-.element {
+.outro-elemento {
   @include invisible(hidden);
 }
 {% endhighlight %}
