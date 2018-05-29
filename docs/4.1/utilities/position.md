@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Position
-description: Use these shorthand utilities for quickly configuring the position of an element.
+title: Posicionamento
+description: Use estes utilitários de atalho, para definir o tipo de posicionamento de um elemento, rapidamente.
 group: utilities
 toc: true
 ---
 
-## Common values
+## Valores comuns
 
-Quick positioning classes are available, though they are not responsive.
+Apesar de termos classes para definir o tipo de posicionamento, elas não são responsivas.
 
 {% highlight html %}
 <div class="position-static">...</div>
@@ -20,25 +20,29 @@ Quick positioning classes are available, though they are not responsive.
 
 ## Fixed top
 
-Position an element at the top of the viewport, from edge to edge. Be sure you understand the ramifications of fixed position in your project; you may need to add additional CSS.
+Posicione um elemento no topo da viewport, de ponta a ponta, usando a seguinte classe:
 
 {% highlight html %}
 <div class="fixed-top">...</div>
 {% endhighlight %}
 
+_Ps: certifique-se de entender a influência de elementos posicionados de tal forma, em seu projeto, pois, você pode precisar de CSS adicional._
+
 ## Fixed bottom
 
-Position an element at the bottom of the viewport, from edge to edge. Be sure you understand the ramifications of fixed position in your project; you may need to add additional CSS.
+Posicione um elemento na parte inferior da viewport, de ponta a ponta, usando a seguinte classe:
 
 {% highlight html %}
 <div class="fixed-bottom">...</div>
 {% endhighlight %}
 
+_Ps: certifique-se de entender a influência de elementos posicionados de tal forma, em seu projeto, pois, você pode precisar de CSS adicional._
+
 ## Sticky top
 
-Position an element at the top of the viewport, from edge to edge, but only after you scroll past it. The `.sticky-top` utility uses CSS's `position: sticky`, which isn't fully supported in all browsers.
+Posicione um elemento no topo da viewport, de ponta a ponta, mas só depois que o usuário rolar sobre ele. O utilitário `.sticky-top` usa a declaração `position: sticky`, a qual não é suportada em todos browsers, completamente.
 
-**IE11 and IE10 will render `position: sticky` as `position: relative`.** As such, we wrap the styles in a `@supports` query, limiting the stickiness to only browsers that can render it properly.
+**IE11 e IE10 vão renderizar `position: sticky` como se fosse `position: relative`**. Devido a isso, precisamos usar uma query `@supports`, para usar tal comportamento só em browsers que suportam isso, adequadamente.
 
 {% highlight html %}
 <div class="sticky-top">...</div>
