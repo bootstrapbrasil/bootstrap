@@ -1,25 +1,25 @@
 ---
 layout: docs
-title: Screenreaders
-description: Use screenreader utilities to hide elements on all devices except screen readers.
+title: Leitores de tela
+description: Use estes utilitários para esconder elementos em todos os dispositivos, com exceção dos próprios leitores de tela.
 group: utilities
 toc: true
 ---
 
-Hide an element to all devices **except screen readers** with `.sr-only`. Combine `.sr-only` with `.sr-only-focusable` to show the element again when it's focused (e.g. by a keyboard-only user). Can also be used as mixins.
+Com os utilitários você poderá esconder um elemento em todos os dispositivos, **exceto em leitores de tela**. Também, combinando as classes `.sr-only` e `.sr-only-focusable`, é possível mostrar um elemento, novamente, quando ele recebe foco. Isso tudo é possível usando mixins, também.
 
 {%- comment -%}
-Necessary for following [accessibility best practices]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/#accessibility).
+É necessário para seguir as [melhores práticas de acessibilidade]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/#accessibility).
 {%- endcomment -%}
 
 {% capture example %}
-<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+<a class="sr-only sr-only-focusable" href="#content">Pular para o conteúdo principal</a>
 {% endcapture %}
 {% include example.html content=example %}
 
 {% highlight scss %}
-// Usage as a mixin
-.skip-navigation {
+// Exemplo de uso com mixin
+.pula-navegacao {
   @include sr-only;
   @include sr-only-focusable;
 }
