@@ -1,35 +1,34 @@
 ---
 layout: docs
-title: Sizing
-description: Easily make an element as wide or as tall (relative to its parent) with our width and height utilities.
+title: Dimensionamento
+description: Facilmente, é possível fazer um elemento ser tão largo e alto quanto seu pai, usando nossos utilitários de largura e altura.
 group: utilities
 toc: true
 ---
 
-Width and height utilities are generated from the `$sizes` Sass map in `_variables.scss`. Includes support for `25%`, `50%`, `75%`, `100%`, and `auto` by default. Modify those values as you need to generate different utilities here.
+Utilitáiros de largura e altura são gerados a partir do mapa Sass `$sizes`, no arquivo `_variables.scss`. Por padrão, as classes dão suporte para valores de `25%`, `50%`, `75%`, `100%` e `auto`. Também é possível modificar esses valores, se for necessário gerar novos utilitários com novos valores.
 
 {% capture example %}
-<div class="w-25 p-3" style="background-color: #eee;">Width 25%</div>
-<div class="w-50 p-3" style="background-color: #eee;">Width 50%</div>
-<div class="w-75 p-3" style="background-color: #eee;">Width 75%</div>
-<div class="w-100 p-3" style="background-color: #eee;">Width 100%</div>
-<div class="w-auto p-3" style="background-color: #eee;">Width auto</div>
+<div class="w-25 p-3" style="background-color: #eee;">Largura de 25%</div>
+<div class="w-50 p-3" style="background-color: #eee;">Largura de 50%</div>
+<div class="w-75 p-3" style="background-color: #eee;">Largura de 75%</div>
+<div class="w-100 p-3" style="background-color: #eee;">Largura de 100%</div>
+<div class="w-auto p-3" style="background-color: #eee;">Largura automática</div>
 {% endcapture %}
 {% include example.html content=example %}
 
 {% capture example %}
 <div style="height: 100px; background-color: rgba(255,0,0,0.1);">
-  <div class="h-25 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 25%</div>
-  <div class="h-50 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 50%</div>
-  <div class="h-75 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 75%</div>
-  <div class="h-100 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 100%</div>
-  <div class="h-auto d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height auto</div>
+  <div class="h-25 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Altura de 25%</div>
+  <div class="h-50 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Altura de 50%</div>
+  <div class="h-75 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Altura de 75%</div>
+  <div class="h-100 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Altura de 100%</div>
+  <div class="h-auto d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Altura automática</div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-You can also use `max-width: 100%;` and `max-height: 100%;` utilities as needed.
-
+Você também pode usar os utilitários de largura e altura máxima.
 {% capture example %}
 <img class="mw-100" data-src="holder.js/1000px100?text=Max-width%20%3D%20100%25" alt="Max-width 100%">
 {% endcapture %}
