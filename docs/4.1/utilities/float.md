@@ -1,55 +1,57 @@
 ---
 layout: docs
 title: Float
-description: Toggle floats on any element, across any breakpoint, using our responsive float utilities.
+description: Utilize float em qualquer elemento, em quaquer breakpoint, usando nossos utilitários responsivos.
 group: utilities
 toc: true
 ---
 
-## Overview
+## Sobre
 
-These utility classes float an element to the left or right, or disable floating, based on the current viewport size using the [CSS `float` property](https://developer.mozilla.org/en-US/docs/Web/CSS/float). `!important` is included to avoid specificity issues. These use the same viewport breakpoints as our grid system. Please be aware float utilities have no affect on flex items.
+Estas classes utilitárias flutuam um elemento à esquerda e direita ou desativa a flutuação, baseando-se no tamanho da atual viewport e usando a [propriedade CSS `float`](https://developer.mozilla.org/en-US/docs/Web/CSS/float). Além do mais, a *flag* `!important` é utilizada para evitar problemas de especificidade. 
+
+Também, não esqueça que essas classes usam os mesmos breakpoints que nosso sistema de grid e que não afetam flex items.
 
 ## Classes
 
-Toggle a float with a class:
+Alterne entre flutuação ou não, usando as seguintes classes:
 
 {% capture example %}
-<div class="float-left">Float left on all viewport sizes</div><br>
-<div class="float-right">Float right on all viewport sizes</div><br>
-<div class="float-none">Don't float on all viewport sizes</div>
+<div class="float-left">Flutua à esquerda em todos os tamanhos de viewport.</div><br>
+<div class="float-right">Flutua à direita em todos os tamanhos de viewport.</div><br>
+<div class="float-none">Nunca flutua, independente do tamanho da viewport.</div>
 {% endcapture %}
 {% include example.html content=example %}
 
 ## Mixins
 
-Or by Sass mixin:
+Também é possível utilizar os mixins Sass:
 
 {% highlight scss %}
-.element {
+.elemento {
   @include float-left;
 }
-.another-element {
+.outro-elemento {
   @include float-right;
 }
-.one-more {
+.mais-outro {
   @include float-none;
 }
 {% endhighlight %}
 
-## Responsive
+## Responsividade
 
-Responsive variations also exist for each `float` value.
+Cada valor da propriedade `float` possui variantes responsivas:
 
 {% capture example %}
-<div class="float-sm-left">Float left on viewports sized SM (small) or wider</div><br>
-<div class="float-md-left">Float left on viewports sized MD (medium) or wider</div><br>
-<div class="float-lg-left">Float left on viewports sized LG (large) or wider</div><br>
-<div class="float-xl-left">Float left on viewports sized XL (extra-large) or wider</div><br>
+<div class="float-sm-left">Flutua à esquerda, em viewports de tamanho SM (pequena) ou maior.</div><br>
+<div class="float-md-left">Flutua à esquerda, em viewports de tamanho MD (média) ou maior.</div><br>
+<div class="float-lg-left">Flutua à esquerda, em viewports de tamanho LG (grande) ou maior.</div><br>
+<div class="float-xl-left">Flutua à esquerda, em viewports de tamanho XL (extra-grande) ou maior.</div><br>
 {% endcapture %}
 {% include example.html content=example %}
 
-Here are all the support classes;
+Aqui, estão todas as classes suportadas:
 
 {% for bp in site.data.breakpoints %}
 - `.float{{ bp.abbr }}-left`
