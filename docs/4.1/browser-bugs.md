@@ -1,27 +1,27 @@
 ---
 layout: docs
-title: Wall of browser bugs
+title: Mural dos bugs de navegadores
 group: browser-bugs
 ---
 
-Bootstrap currently works around several outstanding browser bugs in major browsers to deliver the best cross-browser experience possible. Some bugs, like those listed below, cannot be solved by us.
+Bootstrap, atualmente, contorna diversos bugs nos maiores browsers, para prover a melhor experiência cross-browser, possível. No entanto, alguns bugs, como os listados abaixo, não podemos resolver.
 
-We publicly list browser bugs that are impacting us here, in the hopes of expediting the process of fixing them. For information on Bootstrap's browser compatibility, [see our browser compatibility docs]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/browsers-devices/#supported-browsers).
+Optamos por publicar nossos bugs mais impactantes, aqui. Isso para tentar resolvê-los mais rápido. Para mais informações sobre compatibilidade de browsers, [veja nossa documentação a respeito]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/browsers-devices/#supported-browsers).
 
-See also:
+Veja também:
 
-* [Chromium issue 536263: [meta] Issues affecting Bootstrap](https://bugs.chromium.org/p/chromium/issues/detail?id=536263)
-* [Mozilla bug 1230801: Fix the issues that affect Bootstrap](https://bugzilla.mozilla.org/show_bug.cgi?id=1230801)
-* [WebKit bug 159753: [meta] Issues affecting Bootstrap](https://bugs.webkit.org/show_bug.cgi?id=159753)
-* [jQuery's browser bug workarounds](https://docs.google.com/document/d/1LPaPA30bLUB_publLIMF0RlhdnPx_ePXm7oW02iiT6o)
+* [Issue 536263 do Chromium: [meta] problemas afetando Bootstrap](https://bugs.chromium.org/p/chromium/issues/detail?id=536263)
+* [Bug 1230801 do Mozilla: correção de problemas que afetam o Bootstrap](https://bugzilla.mozilla.org/show_bug.cgi?id=1230801)
+* [Bug 159753 do Webkit: [meta] Problemas que afetam o Bootstrap](https://bugs.webkit.org/show_bug.cgi?id=159753)
+* [Correção de bugs com jQuery](https://docs.google.com/document/d/1LPaPA30bLUB_publLIMF0RlhdnPx_ePXm7oW02iiT6o)
 
 <table class="bd-browser-bugs table table-bordered table-hover">
   <thead>
     <tr>
       <th>Browser(s)</th>
-      <th>Summary of bug</th>
-      <th>Upstream bug(s)</th>
-      <th>Bootstrap issue(s)</th>
+      <th>Descrição</th>
+      <th>Reporte original</th>
+      <th>Reporte Bootstrap</th>
     </tr>
   </thead>
   <tbody>
@@ -36,19 +36,19 @@ See also:
   </tbody>
 </table>
 
-# Most wanted features
+# Recursos mais desejados
 
-There are several features specified in Web standards which would allow us to make Bootstrap more robust, elegant, or performant, but aren't yet implemented in certain browsers, thus preventing us from taking advantage of them.
+Existem vários recursos nos padrões web que permitiriam-nos fazer o Bootstrap ser mais robusto, elegante e performático, mas que ainda não estão implementados em alguns browsers, portanto, evitando que nós tiremos vantagem deles.
 
-We publicly list these "most wanted" feature requests here, in the hopes of expediting the process of getting them implemented.
+Devido a isso, publicamos esta tabela de recursos mais pedidos, aqui. Com isso, esperamos incentivar suas implementações.
 
 <table class="bd-browser-bugs table table-bordered table-hover">
   <thead>
     <tr>
       <th>Browser(s)</th>
-      <th>Summary of feature</th>
-      <th>Upstream issue(s)</th>
-      <th>Bootstrap issue(s)</th>
+      <th>Descrição</th>
+      <th>Pedido de implementação original</th>
+      <th>Pedido de implementação Bootstrap</th>
     </tr>
   </thead>
   <tbody>
