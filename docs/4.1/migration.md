@@ -1,336 +1,394 @@
 ---
 layout: docs
-title: Migrating to v4
-description: Bootstrap 4 is a major rewrite of the entire project. The most notable changes are summarized below, followed by more specific changes to relevant components.
+title: Migração para a v4
+description: Bootstrap 4 é uma grande aprimoração de todos os projetos anteriores. As melhorias mais notáveis estão categorizadas abaixo, de mudanças mais específicas até os componentes mais relevantes.
 group: migration
 toc: true
 ---
 
-## Stable changes
+## Mudanças estáveis
 
-Moving from Beta 3 to our stable v4.0 release, there are no breaking changes, but there are some notable changes.
+Da versão Beta 3 até o nosso release estável 4.0, não tem nenhuma incrível mudança, mas algumas notáveis.
 
-### Printing
-- Fixed broken print utilities. Previously, using a `.d-print-*` class would unexpectedly overrule any other `.d-*` class. Now, they match our other display utilities and only apply to that media (`@media print`).
+### Impressão
+- Consertamos utilitários de impressão. Anteriormente, usando uma classe `.d-print-*`, sobrescreveríamos qualquer outra classe `.d-*`. No entanto, agora, é possível combinar estes utilitários e o efeito só atinge a determinada media (`@media print`);
 
-- Expanded available print display utilities to match other utilities. Beta 3 and older only had `block`, `inline-block`, `inline`, and `none`. Stable v4 added `flex`, `inline-flex`, `table`, `table-row`, and `table-cell`.
+- Expandimos a quantidade disponível de utilitários de impressão, para termos mais combinações destes utilitários. A Beta 3 e versões anteriores apenas tinham as variantes `block`, `inline-block`, `inline` e `none`. A versão 4 estável acrescentou `flex`, `inline-flex`, `table`, `table-row` e `table-cell`;
 
-- Fixed print preview rendering across browsers with new print styles that specify `@page` `size`.
+- Corrigimos a renderização da pré-visualização de impressão nos browsers, usando novos estilos que especificam `@page` `size`.
 
-## Beta 3 changes
+## Mudanças do Beta 3
 
-While Beta 2 saw the bulk of our breaking changes during the beta phase, but we still have a few that needed to be addressed in the Beta 3 release. These changes apply if you're updating to Beta 3 from Beta 2 or any older version of Bootstrap.
+Apesar da versão Beta 2 ter recebido grandes mudanças, ainda havia algumas poucas que precisavam serem adicionadas, através da Beta 3. Estas mudanças são visíveis, se você está atualizando da Beta 2 (ou qualquer outra versão mais antiga) para a Beta 3.
 
-### Miscellaneous
+### Miscelânea
 
-- Removed the unused `$thumbnail-transition` variable. We weren't transitioning anything, so it was just extra code.
-- The npm package no longer includes any files other than our source and dist files; if you relied on them and were running our scripts via the `node_modules` folder, you should adapt your workflow.
+- Variável `$thumbnail-transition` era pouco utilizada, portanto, foi removida. Não estávamos passando por nenhuma transição, então, era só código desnecessário;
+- O pacote npm não inclui mais nenhum arquivo, além dos arquivos fonte e de distribuição. Se você dependia deles e estava executando nossos scripts através do diretório `node_modules`, deve adaptar seu workflow.
 
-### Forms
+### Formulários
 
-- Rewrote both custom and default checkboxes and radios. Now, both have matching HTML structure (outer `<div>` with sibling `<input>` and `<label>`) and the same layout styles (stacked default, inline with modifier class). This allows us to style the label based on the input's state, simplifying support for the `disabled` attribute (previously requiring a parent class) and better supporting our form validation.
+- Reescrevemos os checkboxes e radio buttons, tanto os padrões quanto os personalizados. Agora, ambos possuem estruturas HTMLs iguais (`<div>` externa com os elementos irmãos: `<input>` e `<label>`), além do mesmos estilos de layout (empilhado por padrão e inline usando classes modificadoras). Isso nos permitiu estilizar a label baseando-se no estado do input, simplificando o suporte para o atributo `disabled` (exigia uma classe pai, anteriormente) e melhorando o suporte à validação de formulário.
 
-  As part of this, we've changed the CSS for managing multiple `background-image`s on custom form checkboxes and radios. Previously, the now removed `.custom-control-indicator` element had the background color, gradient, and SVG icon. Customizing the background gradient meant replacing all of those every time you needed to change just one. Now, we have `.custom-control-label::before` for the fill and gradient and `.custom-control-label::after` handles the icon.
+Como parte disso, nós mudamos o CSS para gerenciar múltiplas `background-image`s em checkboxes e radios buttons personalizados. Anteriormente, o agora removido elemento `.custom-control-indicator`, tinha background color, gradiente e ícones SVG. Personalizar o grandiente de backround significava substituir tudo aquilo, toda vez que você precisava alterar apenas um. Agora, nós temos `.custom-control-label::before` para o preenchimento e gradiente, além do `.custom-control-label::after` para lidar com ícones.
 
-  To make a custom check inline, add `.custom-control-inline`.
+Para fazer um checkbox inline personalizado, use `.custom-control-inline`.
 
-- Updated selector for input-based button groups. Instead of `[data-toggle="buttons"] { }` for style and behavior, we use the `data` attribute just for JS behaviors and rely on a new `.btn-group-toggle` class for styling.
+- O seletor para grupos de botões baseados em input foi atualizado. Invés de `[data-toggle="buttons"] { }` para estilo e comportamento, nós usamos o atributo `data` só para os comportamentos JavaScript e a classe `.btn-group-toggle` para estilizar;
 
-- Removed `.col-form-legend` in favor of a slightly improved `.col-form-label`. This way `.col-form-label-sm` and `.col-form-label-lg` can be used on `<legend>` elements with ease.
+- A classe `.col-form-legend` foi removida, em prol de outra um pouco melhor: `.col-form-label`. Assim, as classes `.col-form-label-sm` e `.col-form-label-lg` podem serem utilizadas em elementos `<legend>`, com facilidade;
 
-- Custom file inputs received a change to their `$custom-file-text` Sass variable. It's no longer a nested Sass map and now only powers one string—the `Browse` button as that is now the only pseudo-element generated from our Sass. The `Choose file` text now comes from the `.custom-file-label`.
+- Inputs de arquivos personalizados receberam mudanças em suas variáveis Sass `$custom-file-text`. Agora, não são mapas Sass aninhados e só afetam uma linha (o botão `Browse`, já que que ele é o único pseudo-elemento gerado por nosso Sass). O texto `Choose file` agora é originado da classe `.custom-file-label`.
 
-### Input groups
+### Grupos de input
 
-- Input group addons are now specific to their placement relative to an input. We've dropped `.input-group-addon` and `.input-group-btn` for two new classes, `.input-group-prepend` and `.input-group-append`. You must explicitly use an append or a prepend now, simplifying much of our CSS. Within an append or prepend, place your buttons as they would exist anywhere else, but wrap text in `.input-group-text`.
+- Addons de grupos de inputs agora são específicos para seus posicionamentos, em relação a um input. 
+  - Nós defasamos `.input-group-addon` e `.input-group-btn` em prol de duas novas classes: `.input-group-prepend` e `.input-group-append`.
+    - Agora, você deve escolher entre as variantes append ou prepend, simplificando o CSS.
+    - Dentro de um append ou prepend, use botões assim como faria em qualquer outro lugar, mas textos devem ser colocados dentro de elementos com a classe `.input-group-text`;
 
-- Validation styles are now supported, as are multiple inputs (though you can only validate one input per group).
+- Estilos de validação agora são suportados, assim como múltiplos inputs (apesar de ser possível validar apenas um input, por grupo);
 
-- Sizing classes must be on the parent `.input-group` and not the individual form elements.
+- Classes para dimensionamento devem ser colocadas no `.input-group` pai e, não no elemento de formulário individual.
 
-## Beta 2 changes
+## Mudanças da Beta 2
 
-While in beta, we aim to have no breaking changes. However, things don't always go as planned. Below are the breaking changes to bear in mind when moving from Beta 1 to Beta 2.
+Durante a beta, não focamos em nenhuma mudança extraordinária. No entanto, as coisas nem sempre são como planejadas. Abaixo estão grandes alterações para se ter em mente, quando migrar da Beta 1 para Beta 2.
 
-### Breaking
+### Grandes mudanças
 
-- Removed `$badge-color` variable and its usage on `.badge`. We use a color contrast function to pick a `color` based on the `background-color`, so the variable is unnecessary.
-- Renamed `grayscale()` function to `gray()` to avoid breaking conflict with the CSS native `grayscale` filter.
-- Renamed `.table-inverse`, `.thead-inverse`, and `.thead-default` to `.*-dark` and `.*-light`, matching our color schemes used elsewhere.
-- Responsive tables now generate classes for each grid breakpoint. This breaks from Beta 1 in that the `.table-responsive` you've been using is more like `.table-responsive-md`. You may now use `.table-responsive` or `.table-responsive-{sm,md,lg,xl}` as needed.
-- Dropped Bower support as the package manager has been deprecated for alternatives (e.g., Yarn or npm). [See bower/bower#2298](https://github.com/bower/bower/issues/2298) for details.
-- Bootstrap still requires jQuery 1.9.1 or higher, but you're advised to use version 3.x since v3.x's supported browsers are the ones Bootstrap supports plus v3.x has some security fixes.
-- Removed the unused `.form-control-label` class. If you did make use of this class, it was duplicate of the `.col-form-label` class that vertically centered a `<label>` with it's associated input in horizontal form layouts.
-- Changed the `color-yiq` from a mixin that included the `color` property to a function that returns a value, allowing you to use it for any CSS property. For example, instead of `color-yiq(#000)`, you'd write `color: color-yiq(#000);`.
+- Variável `$badge-color` e seu uso em `.badge` foi removido;
+  - Nós usamos uma função de contraste de cores para acharmos uma `cor` específica, baseando-se na `background-color`, então, a variável é desnecessária.
+- Renomeamos a função `grayscale()` para `gray()`, assim evitando conflitos com o filtro CSS nativo `grayscale`;
+- Renomeamos `.table-inverse`, `thead-inverse` e `.thead-default` para `.*-dark` e `.*-light`, combinando com nosso esquema de cores usado no resto do framework;
+- Tabelas responsivas agora possuem classes para cada grid breakpoint; 
+  - Isso foi pensado depois do Beta 1, quando a classe `.table-responsive` que você usava tava mais para `.table-responsive-md`;
+  - Agora, você você pode usar `.table-responsive` ou `.table-responsive-{sm,md,lg,xl}`, como quiser.
+- Largamos mão do suporte ao Bower, já que o gerenciador de pacotes está defasado, em relação à alternativas como Yarn ou npm;
+  - Veja o issue [bower/bower#2298](https://github.com/bower/bower/issues/2298), para mais detalhes.
+- Bootstrap ainda requer jQuery 1.9.1 ou maior, mas é aconselhado usar a versão 3.x, já que os browsers suportados por esta versão são os mesmos que o Bootstrap suporta, sem falar que também possui algumas correções de segurança;
+- Removemos a classe pouco utilizada `.form-control-label`. 
+  - Se é que você usava esta classe, saiba que ela era apenas uma cópia da `.col-form-label` que centralizava uma `<label>` verticalmente com seu input associado, em formulários de layout horizontal;
+- Alteramos o `color-yiq`, de um mixin que usava a proprieade `color` para uma função que retorna um valor, permitindo que você use ele em qualquer propriedade CSS.
+  - Por exemplo, invés de `color-yiq(#000)`, você pode escrever `color: color-yiq(#000);`.
 
-### Highlights
+### Destaques
 
-- Introduced new `pointer-events` usage on modals. The outer `.modal-dialog` passes through events with `pointer-events: none` for custom click handling (making it possible to just listen on the `.modal-backdrop` for any clicks), and then counteracts it for the actual `.modal-content` with `pointer-events: auto`.
+- Foi introduzido novos usos de `pointer-events`, em modais.
+  - O `.modal-dialog` mais externo possui `pointer-events: none` para que possamos lidar com cliques customizados (isso faz com que só seja possível esperar por cliques no `.modal-backdrop`) e ele seja neutralizado para o próprio `.modal-content` que possui `pointer-events: auto`.
 
+## Sumário
 
-## Summary
+Aqui estão as coisas mais importantes que você deve estar atento, quando migrando da v3 para v4.
 
-Here are the big ticket items you'll want to be aware of when moving from v3 to v4.
+### Suporte de navegadores
 
-### Browser support
+- Largou-se mão de suporte ao IE8, IE9 e iOS 6;
+  - A v4 só suporta IE10+ e iOS 7+, agora;
+  - Para sites que precisam de qualquer uma destas versões não suportadas, use a v3.
+- Adicionou-se suporte oficial para o WebView e navegador do Android v5.0 (Lollipop).
+  - As versões mais antigas do navegador Android e do WebView continuam suportadas não oficialmente, apenas.
 
-- Dropped IE8, IE9, and iOS 6 support. v4 is now only IE10+ and iOS 7+. For sites needing either of those, use v3.
-- Added official support for Android v5.0 Lollipop's Browser and WebView. Earlier versions of the Android Browser and WebView remain only unofficially supported.
+### Mudanças globais
 
-### Global changes
-
-- **Flexbox is enabled by default.** In general this means a move away from floats and more across our components.
-- Switched from [Less](http://lesscss.org/) to [Sass](https://sass-lang.com/) for our source CSS files.
-- Switched from `px` to `rem` as our primary CSS unit, though pixels are still used for media queries and grid behavior as device viewports are not affected by type size.
-- Global font-size increased from `14px` to `16px`.
-- Revamped grid tiers to add a fifth option (addressing smaller devices at `576px` and below) and removed the `-xs` infix from those classes. Example: `.col-6.col-sm-4.col-md-3`.
-- Replaced the separate optional theme with configurable options via SCSS variables (e.g., `$enable-gradients: true`).
-- Build system overhauled to use a series of npm scripts instead of Grunt. See `package.json` for all scripts, or our project readme for local development needs.
-- Non-responsive usage of Bootstrap is no longer supported.
-- Dropped the online Customizer in favor of more extensive setup documentation and customized builds.
-- Added dozens of new [utility classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/) for common CSS property-value pairs and margin/padding spacing shortcuts.
+- **Flexbox está ativado por padrão.** 
+  - Em resumo, isto significa que estamos um passo mais longe de floats e outro mais próximo dos nossos componentes;
+- Mudamos o pré-processador dos nossos arquivos CSS fonte, do [Less](http://lesscss.org/) para o [Sass](https://sass-lang.com/);
+- Deixamos de usar `px` em troca de `rem` como nossa unidade CSS primária (apesar de pixel ainda ser usado para media queries e comportamento de grids, já que viewport de dispositivos não são afetadas por tipo de unidade);
+- A font-size global aumentou de `14px` para `16px`;
+- Reformamos a graduação do sistema de grades para adicionar uma quinta opção (colocando os menores dispositivos de `576px` para baixo) e removemos o infixo `-xs` destas opções;
+  - Exemplo: `.col-6.col-sm-4.col-md-3`.
+- Substituímos o tema opcional por opções configuráveis em variáveis SCSS (ex: `$enable-gradients: true`);
+- Sistema de build reformado para usar vários scripts npm, invés do Grunt;
+  - Veja o `package.json` para ver todos os scripts ou nosso readme do projeto para instruções de desenvolvimento local;
+- Uso não responsivo do Bootstrap não é mais suportado;
+- Largou-se mão do Customizer online, em prol de uma documentação de configuração mais extensa e build personalizada;
+- Adicionou-se várias [classes utilitárias]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/) novas para pares comuns de propriedade-valor e atalhos para espaçamento de margem e padding.
 
 ### Grid system
 
-- **Moved to flexbox.**
-  - Added support for flexbox in the grid mixins and predefined classes.
-  - As part of flexbox, included support for vertical and horizontal alignment classes.
-- **Updated grid class names and a new grid tier.**
-  - Added a new `sm` grid tier below `768px` for more granular control. We now have `xs`, `sm`, `md`, `lg`, and `xl`. This also means every tier has been bumped up one level (so `.col-md-6` in v3 is now `.col-lg-6` in v4).
-  - `xs` grid classes have been modified to not require the infix to more accurately represent that they start applying styles at `min-width: 0` and not a set pixel value. Instead of `.col-xs-6`, it's now `.col-6`. All other grid tiers require the infix (e.g., `sm`).
-- **Updated grid sizes, mixins, and variables.**
-  - Grid gutters now have a Sass map so you can specify specific gutter widths at each breakpoint.
-  - Updated grid mixins to utilize a `make-col-ready` prep mixin and a `make-col` to set the `flex` and `max-width` for individual column sizing.
-  - Changed grid system media query breakpoints and container widths to account for new grid tier and ensure columns are evenly divisible by `12` at their max width.
-  - Grid breakpoints and container widths are now handled via Sass maps (`$grid-breakpoints` and `$container-max-widths`) instead of a handful of separate variables. These replace the `@screen-*` variables entirely and allow you to fully customize the grid tiers.
-  - Media queries have also changed. Instead of repeating our media query declarations with the same value each time, we now have `@include media-breakpoint-up/down/only`. Now, instead of writing `@media (min-width: @screen-sm-min) { ... }`, you can write `@include media-breakpoint-up(sm) { ... }`.
+- **Migrou para o flexbox.**
+  - Criou-se suporte para flexbox nos mixins de grid e classes pré-definidas;
+  - Como parte do flexbox, também foi incluído classes para alinhamento horizontal e vertical.
+- **Nome de classes e graduação do sistema de grades foram atualizados.**
+  - Adicionamos um novo grau `sm` abaixo de `786px` para um controle mais granular;
+    - Agora, nós temos `xs`, `sm`, `md`, `lg` e `xl`.
+      - Isso também significa que cada grau subiu um degrau, então, `.col-md-6` na v3 é equivalente a `.col-lg-6` na v4.
+  - As classes do grau `xs` foram modificadas de forma que não seja necessário usar o determinado infixo (`xs`), isso para representar, apropriedamente, que elas começam a aplicar estilos em `min-width: 0` e não em um valor diferente.
+    - Invés de `.col-xs-6`, agora é `.col-6`. No entanto, todos os outros graus exigem que você use infixos.
+- **Tamanhos, mixins e variáveis foram atualizadas.**
+  - As gutters do grid agora possuem um mapa Sass para que você possa especificar determinados tamanhos de larguras, em cada breakpoint;
+  - Os mixins do grid foram atualizados para utilizarem o mixin `make-col-ready` como base e outro mixin `make-col` para definir `flex` e `max-width` para o tamanho individual de colunas;
+  - Alteramos os breakpoints da media query do sistema de grid e larguras dos containers para levar em conta a nova graduação do grid e garantir que todas as colunas estão bem divididas por `12`, na sua largura máxima;
+  - Os breakpoints e containers do grid agora são manipulados via mapas Sass (`$grid-breakpoints` e `$container-max-widths`), invés de um punhado de variáveis separadas;
+    - Estes mapas substituem as variáveis `@screen-*`, totalmente, e permitem que você customize a graduação do grid.
+  - As media queries também mudaram.
+    - Invés de ficar repetindo nossas declarações de media queries com o mesmo valor, todas às vezes, nós temos `@include media-breakpoint-up/down/only`, agora. Portanto, invés de escrever `@media (min-width: @screen-sm-min) { ... }`, você pode digitar `@include media-breakpoint-up(sm) { ... }`.
 
-### Components
+### Componentes
 
-- **Dropped panels, thumbnails, and wells** for a new all-encompassing component, [cards]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/card/).
-- **Dropped the Glyphicons icon font.** If you need icons, some options are:
-  - the upstream version of [Glyphicons](https://glyphicons.com/)
-  - [Octicons](https://octicons.github.com/)
-  - [Font Awesome](https://fontawesome.com/)
-  - See the [Extend page]({{ site.baseurl }}/docs/{{ site.docs_version }}/extend/icons/) for a list of alternatives. Have additional suggestions? Please open an issue or PR.
-- **Dropped the Affix jQuery plugin.**
-  - We recommend using `position: sticky` instead. [See the HTML5 Please entry](http://html5please.com/#sticky) for details and specific polyfill recommendations. One suggestion is to use an `@supports` rule for implementing it (e.g., `@supports (position: sticky) { ... }`)/
-  - If you were using Affix to apply additional, non-`position` styles, the polyfills might not support your use case. One option for such uses is the third-party [ScrollPos-Styler](https://github.com/acch/scrollpos-styler) library.
-- **Dropped the pager component** as it was essentially slightly customized buttons.
-- **Refactored nearly all components** to use more un-nested class selectors instead of over-specific children selectors.
+- **Deixamos de lado os panels, thumbnails e wells** por um componente mais robusto: o [card]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/card/);
+- **Largamos mão da fonte de ícones Glyphicons.** 
+  - Se você precisa de ícones, aqui estão algumas opções:
+    - O próprio site do [Glyphicons](https://glyphicons.com/);
+    - [Octicons](https://octicons.github.com/);
+    - [Font Awesome](https://fontawesome.com/);
+    - Veja a página [Extend]({{ site.baseurl }}/docs/{{ site.docs_version }}/extend/icons/), para ver uma lista de alternativas;
+    - Tem alguma sugestão? Abra um issue, por favor.
 
-## By component
+- **Desistimos do plugin jQuery Affix;** 
+  - No lugar, recomendamos usar `position: sticky`;
+    - [Veja esta página do HTML5 Please](http://html5please.com/#sticky) para detalhes e recomendações de polyfills específicos;
+    - Uma sugestão é usar uma regra `@supports` para implementar isso (ex: `@supports (position: sticky) { ... }`).
+  - Se você está usando o Affix para aplicar estilos adicionais que não são derivados de `position`, os polyfills podem não ser adequado a você. Uma alternativa para tais casos é a biblioteca [ScrollPos-Styler](https://github.com/acch/scrollpos-styler).
+- **Também desistimos do componente pager**, já que era um botão customizado, praticamente;
+- **Refizemos quase todos componentes** para usar mais seletores de classes não aninhados, invés de seletores filhos específicos.
 
-This list highlights key changes by component between v3.x.x and v4.0.0.
+## Destaques em componentes
+
+Esta lista destaca mudanças chaves em componentes, entre a v3.x.x e v4.0.0.
 
 ### Reboot
 
-New to Bootstrap 4 is the [Reboot]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/), a new stylesheet that builds on Normalize with our own somewhat opinionated reset styles. Selectors appearing in this file only use elements—there are no classes here. This isolates our reset styles from our component styles for a more modular approach. Some of the most important resets this includes are the `box-sizing: border-box` change, moving from `em` to `rem` units on many elements, link styles, and many form element resets.
+Novo no Bootstrap 4, [Reboot]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/) é uma folha de estilos construída com base no Normalize e em nossa opinião sobre o que é um bom reset. Seletores que aparecem neste arquivo só usam elementos, portanto, não há nenhum seletor de classe. Isso separa nosso reset dos componentes, criando uma abordagem mais modular. Um dos resets mais importantes que ele inclui são o `box-sizing: border-box`, uso da unidade `rem` invés de `em` em muitos dos elementos, estilos de links e muitos outros resets para elementos de formulários.
 
-### Typography
+### Tipografia
 
-- Moved all `.text-` utilities to the `_utilities.scss` file.
-- Dropped `.page-header` as its styles can be applied via utilities.
-- `.dl-horizontal` has been dropped. Instead, use `.row` on `<dl>` and use grid column classes (or mixins) on its `<dt>` and `<dd>` children.
-- Redesigned blockquotes, moving their styles from the `<blockquote>` element to a single class, `.blockquote`. Dropped the `.blockquote-reverse` modifier for text utilities.
-- `.list-inline` now requires that its children list items have the new `.list-inline-item` class applied to them.
+- Moveu-se todos os utilitários `.text-` para o arquivo `_utilitários.scss`;
+- Desistimos da `.page-header`, já que seus estilos podem ser obtidos usando utilitários;
+- Também deixamos a classe `.dl-horizontal` de lado;
+  - Invés dela, use `.row` no `<dl>` e classes de coluna do grid (ou mixins) em seus filhos `<dt>` e `<dd>`.
+- Os blocos de citações foram redesenhados, movendo seus estilos do elemento `<blockquote>` para a classe `.blockquote` e trocando a classe modificadora `.blockquote-reverse` pelo uso de utilitários de texto;
+- Agora, a `.list-inline` exige que seus itens filhos usem a classe `.list-inline-item`.
 
-### Images
+### Imagens
 
-- Renamed `.img-responsive` to `.img-fluid`.
-- Renamed `.img-rounded` to `.rounded`
-- Renamed `.img-circle` to `.rounded-circle`
+- Renomeamos `.img-responsive` para `.img-fluid`;
+- Renomeamos `.img-rounded` para `.rounded`;
+- Renomeamos `.img-circle` para `.rounded-circle`.
 
-### Tables
+### Tabelas
 
-- Nearly all instances of the `>` selector have been removed, meaning nested tables will now automatically inherit styles from their parents. This greatly simplifies our selectors and potential customizations.
-- Renamed `.table-condensed` to `.table-sm` for consistency.
-- Added a new `.table-inverse` option.
-- Added table header modifiers: `.thead-default` and `.thead-inverse`.
-- Renamed contextual classes to have a `.table-`-prefix. Hence `.active`, `.success`, `.warning`, `.danger` and `.info` to `.table-active`, `.table-success`, `.table-warning`, `.table-danger` and `.table-info`.
+- Quase todas as aparições do seletor `>` foram removidas, significando que tabelas aninhadas vão herdar estilos de seus pais, automaticamente;
+  - Isso simplifica nossos seletores e potenciais customizações.
+- Renomeamos `.table-condensed` para `.table-sm`, assegurando consistência;
+- Adicionamos uma nova opção `.table-inverse`;
+- Adicionamos modificadores para cabeçalhos de tabelas: `.thead-default` e `.thead-inverse`;
+- Renomeamos classes contextuais para terem um prefixo `.table-`. Assim, as classes `.active`, `.success`, `.warning`, `.danger` e `.info` se transformam em `.table-active`, `.table-success`, `.table-warning`, `.table-danger` e `.table-info`.
 
-### Forms
+### Formulários
 
-- Moved element resets to the `_reboot.scss` file.
-- Renamed `.control-label` to `.col-form-label`.
-- Renamed `.input-lg` and `.input-sm` to `.form-control-lg` and `.form-control-sm`, respectively.
-- Dropped `.form-group-*` classes for simplicity's sake. Use `.form-control-*` classes instead now.
-- Dropped `.help-block` and replaced it with `.form-text` for block-level help text. For inline help text and other flexible options, use utility classes like `.text-muted`.
-- Dropped `.radio-inline` and `.checkbox-inline`.
-- Consolidated `.checkbox` and `.radio` into `.form-check` and the various `.form-check-*` classes.
-- Horizontal forms overhauled:
-  - Dropped the `.form-horizontal` class requirement.
-  - `.form-group` no longer applies styles from the `.row` via mixin, so `.row` is now required for horizontal grid layouts (e.g., `<div class="form-group row">`).
-  - Added new `.col-form-label` class to vertically center labels with `.form-control`s.
-  - Added new `.form-row` for compact form layouts with the grid classes (swap your `.row` for a `.form-row` and go).
-- Added custom forms support (for checkboxes, radios, selects, and file inputs).
-- Replaced `.has-error`, `.has-warning`, and `.has-success` classes with HTML5 form validation via CSS's `:invalid` and `:valid` pseudo-classes.
-- Renamed `.form-control-static` to `.form-control-plaintext`.
+- Movemos elementos de resets para o arquivo `_reboot.scss`;
+- Renomeamos `.control-label` para `.col-form-label`;
+- Renomeamos `.input-lg` e `.input-sm` para `.form-control-lg` e `.form-control-sm`, respectivamente;
+- Deixamos as classes `.form-group-*` de lado, em nome da simplicidade;
+  - Use as classes `.form-control-*`, invés.
+- Desistimos da class `.radio-block` e a substituímos com `.form-text`, para textos de ajuda em block-level;
+  - Para textos de ajuda em inline-level e outras opções flexíveis, use classes utilitárias como `.text-muted`.
+- Desistimos de `radio-inline` e `checkbox-inline`;
+- Consolidamos `.checkbox` e `.radio` em `.form-check` e nas várias classes`.form-check-*`;
+- Revisamos formulários horizontais:
+  - Removemos a exigência da classe `.form-horizontal`;
+  - A classe `.form-group` não recebe mais estilos da `.row`, via mixin. Assim, o uso da `.row` é obrigatório para layouts de grid horizontais, como: `<div class="form-group row">`;
+  - Adicionamos uma nova classe `.col-form-label` para centralizar labels com `.form-control`, verticalmente;
+  - Adicionamos a nova `.form-row` para layouts de formulários compactos com as classes do grid (em resumo, basta trocar `.row` por `.form-row`).
+- Adicionamos suporte a formulários customizados (checkboxes, radios, selects e input de arquivos);
+- Substituímos `.has-error`, `.has-warning` e `.has-success` com validação de formulários HTML5 via pseudo-seletores `:invalid` e `:valid`;
+- Renomeamos `.form-control-static` para `.form-control-plaintext`.
 
-### Buttons
+### Botões
 
-- Renamed `.btn-default` to `.btn-secondary`.
-- Dropped the `.btn-xs` class entirely as `.btn-sm` is proportionally much smaller than v3's.
-- The [stateful button]({{ site.url }}/docs/3.3/javascript/#buttons-stateful) feature of the `button.js` jQuery plugin has been dropped. This includes the `$().button(string)` and `$().button('reset')` methods. We advise using a tiny bit of custom JavaScript instead, which will have the benefit of behaving exactly the way you want it to.
-  - Note that the other features of the plugin (button checkboxes, button radios, single-toggle buttons) have been retained in v4.
-- Change buttons' `[disabled]` to `:disabled` as IE9+ supports `:disabled`. However `fieldset[disabled]` is still necessary because [native disabled fieldsets are still buggy in IE11](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset#Browser_compatibility).
+- Renomeamos `.btn-default` para `.btn-secondary`;
+- Desistimos da classe `.btn-xs` já que `.btn-sm` é, proporcionalmente, muito menor que a da v3;
+- O recurso do plugin jQuery `button.js`, [stateful button]({{ site.url }}/docs/3.3/javascript/#buttons-stateful) foi largado de mão;
+  - Isso também inclui os métodos `$().button(string)` e `$().button('reset')`;
+  - Nós aconselhamos usar um pouco de JavaScript customizado, invés, para te dar o benefício de fazer funcionar como você quiser;
+  - Perceba que os outros recursos do plugin (botões de alternância, checkboxes, radios) foram preservados.
+- Mudamos os estados dos botões de `[disabled]` para `:disabled`, já que este último é suportado por IE9+.
+  - Contudo, `fieldset[disabled]` ainda é necessário porque [fieldsets desativados nativamente ainda são problemáticos no IE11](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset#Browser_compatibility).
 
-### Button group
+### Grupo de botões
 
-- Rewrote component with flexbox.
-- Removed `.btn-group-justified`. As a replacement you can use `<div class="btn-group d-flex" role="group"></div>` as a wrapper around elements with `.w-100`.
-- Dropped the `.btn-group-xs` class entirely given removal of `.btn-xs`.
-- Removed explicit spacing between button groups in button toolbars; use margin utilities now.
-- Improved documentation for use with other components.
+- O componente foi reescrito com flexbox;
+- Removemos `.btn-group-justified`;
+  - Alternativamente, você pode usar `<div class="btn-group d-flex" role="group"></div>` como um envolto em elementos com `.w-100`.
+- Desistimos da classe `.btn-group-xs`, dado a remoção do `.btn-xs`;
+- Removemos o espaçamento entre grupos de botões, nas barras de botões;
+  - Use utilitários de margem, agora.
+- Aperfeiçoamos a documentação sobre o uso do grupo de botões com outros componentes.
 
 ### Dropdowns
 
-- Switched from parent selectors to singular classes for all components, modifiers, etc.
-- Simplified dropdown styles to no longer ship with upward or downward facing arrows attached to the dropdown menu.
-- Dropdowns can be built with `<div>`s or `<ul>`s now.
-- Rebuilt dropdown styles and markup to provide easy, built-in support for `<a>` and `<button>` based dropdown items.
-- Renamed `.divider` to `.dropdown-divider`.
-- Dropdown items now require `.dropdown-item`.
-- Dropdown toggles no longer require an explicit `<span class="caret"></span>`; this is now provided automatically via CSS's `::after` on `.dropdown-toggle`.
+- Mudamos de seletores pais para classes em todos os componentes, modificadores, etc;
+- Simplificamos os estilos do dropdown para nunca mais se apresentar com flechas para cima ou baixo, fixadas no menu dropdown;
+- Dropdowns podem ser construídos com `<div>` ou `<ul>`, agora;
+- Reformamos os estilos dos dropdowns para prover um fácil suporte para aqueles baseados em itens com `<a>` ou `<button>`;
+- Renomeamos `.divider` para `.dropdown-divider`;
+- Os itens dropdown agora necessitam da classe `.dropdown-divider`;
+- O botão dropdown não precisa mais de `<span class="caret"></span>`;
+  - Isso é feito automaticamente, usando o pseudo-elemento `::after` no `.dropdown-toggle`, agora.
 
-### Grid system
+### Sistema grid
 
-- Added a new `576px` grid breakpoint as `sm`, meaning there are now five total tiers (`xs`, `sm`, `md`, `lg`, and `xl`).
-- Renamed the responsive grid modifier classes from `.col-{breakpoint}-{modifier}-{size}` to `.{modifier}-{breakpoint}-{size}` for simpler grid classes.
-- Dropped push and pull modifier classes for the new flexbox-powered `order` classes. For example, instead of `.col-8.push-4` and `.col-4.pull-8`, you'd use `.col-8.order-2` and `.col-4.order-1`.
-- Added flexbox utility classes for grid system and components.
+- Adicionamos um novo breakpoint grid de `576px` como `sm`, significando que agora há cinco graus: `xs`, `sm`, `md`, `lg` e `xl`;
+- Renomeamos as classes modificadoras responsivas de `.col-{breakpoint}-{modificador}-{tamanho}` para `.{modificador}-{breakpoint}-{tamanho}`, simplificando as classes do grid;
+- Desistimos das classes modificadoras push e pull, em prol das novas classes baseadas na propriedade flexbox `order`;
+  - Invés de `.col-8.push-4` e `.col-4.pull-8`, você usaria `.col-8.order-2` e `.col-4.order-1`.
+- Adicionamos classes utilitárias flexbox para o sistema grid e componentes.
 
-### List groups
+### Grupo de listas
 
-- Rewrote component with flexbox.
-- Replaced `a.list-group-item` with an explicit class, `.list-group-item-action`, for styling link and button versions of list group items.
-- Added `.list-group-flush` class for use with cards.
+- Reescrevemos o componente, usando flexbox;
+- Substituímos `a.list-group-item` por uma classe `.list-group-item-action`, para estilizar versões de link e botões dos grupos de listas;
+- Adicionamos a classe `.list-group-flush` para uso com cards.
 
 ### Modal
 
-- Rewrote component with flexbox.
-- Given move to flexbox, alignment of dismiss icons in the header is likely broken as we're no longer using floats. Floated content comes first, but with flexbox that's no longer the case. Update your dismiss icons to come after modal titles to fix.
-- The `remote` option (which could be used to automatically load and inject external content into a modal) and the corresponding `loaded.bs.modal` event were removed. We recommend instead using client-side templating or a data binding framework, or calling [jQuery.load](https://api.jquery.com/load/) yourself.
+- Reescrevemos o componente, usando flexbox;
+- Dado a reescrita com flexbox, o alinhamento dos ícones de dispersão no cabeçalho estão meio bugados, já que não usamos mais floats;
+  - Coloque seus ícones de dispersão depois dos títulos dos modais, para evitar isso.
+- A opção `remote` (a qual é usada para carregar e injetar conteúdo em um modal, automaticamente) e o evento correspondente `loaded.bs.modal` foram removidos.
+  - Nós recomendamos usar *client-side templating*, um *framework de data binding* ou invocar o [jQuery.load](https://api.jquery.com/load/), você mesmo.
 
 ### Navs
 
-- Rewrote component with flexbox.
-- Dropped nearly all `>` selectors for simpler styling via un-nested classes.
-- Instead of HTML-specific selectors like `.nav > li > a`, we use separate classes for `.nav`s, `.nav-item`s, and `.nav-link`s. This makes your HTML more flexible while bringing along increased extensibility.
+- Reescrevemos o componentes com flexbox;
+- Desistimos de quase todos os seletores `>`, para uma estilização simplificada através de classes não aninhadas;
+- Invés de seletores HTML específicos como `.nav > li > a`, nós usamos classes separadas como `.nav`, `.nav-item` e `.nav-link`.
+  - Isso faz seu HTML ser mais flexível, enquanto traz maior extensibilidade.
 
 ### Navbar
 
-The navbar has been entirely rewritten in flexbox with improved support for alignment, responsiveness, and customization.
+O navbar foi, inteiramente, reescrito usando flexbox com suporte melhorado à alinhamento, responsividade e customização.
 
-- Responsive navbar behaviors are now applied to the `.navbar` class via the **required** `.navbar-expand-{breakpoint}` where you choose where to collapse the navbar. Previously this was a Less variable modification and required recompiling.
-- `.navbar-default` is now `.navbar-light`, though `.navbar-dark` remains the same. **One of these is required on each navbar.** However, these classes no longer set `background-color`s; instead they essentially only affect `color`.
-- Navbars now require a background declaration of some kind. Choose from our background utilities (`.bg-*`) or set your own with the light/inverse classes above [for mad customization]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navbar/#color-schemes).
-- Given flexbox styles, navbars can now use flexbox utilities for easy alignment options.
-- `.navbar-toggle` is now `.navbar-toggler` and has different styles and inner markup (no more three `<span>`s).
-- Dropped the `.navbar-form` class entirely. It's no longer necessary; instead, just use `.form-inline` and apply margin utilities as necessary.
-- Navbars no longer include `margin-bottom` or `border-radius` by default. Use utilities as necessary.
-- All examples featuring navbars have been updated to include new markup.
+- Comportamentos navbar responsivos agora são aplicados a classe `.navbar`, através do **obrigatório** `.navbar-expand-{breakpoint}`, onde você escolhe expandir o navbar;
+  - Anteriormente, isso era feito com uma modificação em variável Less e requeria recompilação.
+- A classe `.navbar-default` agora é `.navbar-light`, mas `.navbar-dark` continua a mesma;
+  - **Uma dessas classes deve ser usada, num navbar.**
+    - No entanto, estas classes não definem mais a cor do background (`background-color`), mas apenas a cor dos caracteres (`color`).
+- Navbars agoram precisam de um declaração de background de algum tipo;
+  - Escolha entre nossos utilitários de background (`.bg-*`) ou defina o seu próprio com as classes light/inverse acima para uma [customização maluca]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navbar/#color-schemes).
+- Dado aos estilos flexbox, navbars podem usar utilitários flexbox para fácil alinhamento, agora;
+- `.navbar-toggle` agora é `.navbar-toggler`, tem diferentes estilos e uma marcação HTML interna (sem mais tanto `<span>`!);
+- Desistimos da classe `.navbar-form`, totalmente;
+  - Ela não é mais necessária. Por isso, basta usar `.form-inline` e aplicar utilitários de margem, o quanto quiser.
+- Navbars não usam mais `margin-bottom` ou `border-radius`, por padrão;
+  - Use utilitários, se necessário.
+- Todos os exemplos relacionados a navbars foram atualizados para receberem nova marcação HTML.
 
-### Pagination
+### Paginação
 
-- Rewrote component with flexbox.
-- Explicit classes (`.page-item`, `.page-link`) are now required on the descendants of `.pagination`s
-- Dropped the `.pager` component entirely as it was little more than customized outline buttons.
+- Reescrevemos o componente, usando flexbox;
+- Classes explícitas (`.page-item` e `.page-link`) agora são obrigatórias, em descendentes de um `.pagination`;
+- Desistimos do `.pager`, já que ele nada mais era do que um botão outline customizado.
 
 ### Breadcrumbs
 
-- An explicit class, `.breadcrumb-item`, is now required on the descendants of `.breadcrumb`s
+- A classe `.breadcrumb-item` é obrigatória em descendentes do `.breadcrumb`, agora.
 
-### Labels and badges
+### Labels e badges
 
-- Consolidated `.label` and `.badge` to disambiguate from the `<label>` element and simplify related components.
-- Added `.badge-pill` as modifier for rounded "pill" look.
-- Badges are no longer floated automatically in list groups and other components. Utility classes are now required for that.
-- `.badge-default` has been dropped and `.badge-secondary` added to match component modifier classes used elsewhere.
+- Consolidamos `.label` e `.badge` para diferenciar do elemento `<label>` e simplificar componentes relacionados;
+- Adicionamos `.badge-pill` como sendo uma classe modificadora para formato arredondado, semelhante a uma pílula;
+- Os badges não são mais flutuados automaticamente, em grupos de listas e outros componentes;
+  - Classes utilitárias são necessárias para isso.
+- A `.badge-default` foi defasada e `.badge-secondary` adicionada para combinar com classes modificadoras de outro componente.
 
-### Panels, thumbnails, and wells
+### Panels, thumbnails e wells
 
-Dropped entirely for the new card component.
+Todos defasados, em prol do novo componente: card.
 
 ### Panels
 
-- `.panel` to `.card`, now built with flexbox.
-- `.panel-default` removed and no replacement.
-- `.panel-group` removed and no replacement. `.card-group` is not a replacement, it is different.
-- `.panel-heading` to `.card-header`
-- `.panel-title` to `.card-title`. Depending on the desired look, you may also want to use [heading elements or classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/typography/#headings) (e.g. `<h3>`, `.h3`) or bold elements or classes (e.g. `<strong>`, `<b>`, [`.font-weight-bold`]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/#font-weight-and-italics)). Note that `.card-title`, while similarly named, produces a different look than `.panel-title`.
-- `.panel-body` to `.card-body`
-- `.panel-footer` to `.card-footer`
-- `.panel-primary`, `.panel-success`, `.panel-info`, `.panel-warning`, and `.panel-danger` have been dropped for `.bg-`, `.text-`, and `.border` utilities generated from our `$theme-colors` Sass map.
+- Repensado de `.panel` para `.card`, usando flexbox;
+- `.panel-default` removida e sem substituta;
+- `.panel-group` removida e sem substituta.
+  - `.card-group` não é uma classe substituta, pois, é diferente.
+- `.panel-heading` repensado para `.card-header`;
+- `.panel-title` refeito como sendo `.card-title`;
+  - Dependendo do visual desejado, você também pode querer usar [elementos ou classes de cabeçalho]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/typography/#headings) (ex: `<h3>` e `.h3`), elementos negritos ou outras classes (ex: `<strong>`, `<b>` e [`.font-weight-bold`]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/#font-weight-and-italics));
+  - Perceba que `.card-title`, apesar do nome ser similar, tem um resultado visual diferente do `.panel-title`.
+- `.panel-body` refeito em `.card-body`;
+- `.panel-footer` repensado como `.card-footer`;
+- `.panel-primary`, `.panel-success`, `.panel-info`, `.panel-warning` e `.panel-danger` foram defasados, em troca dos utilitários `.bg-`, `.text-` e `.border` gerados à partir do nosso mapa Sass `$theme-colors`.
 
-### Progress
+### Progresso
 
-- Replaced contextual `.progress-bar-*` classes with `.bg-*` utilities. For example, `class="progress-bar progress-bar-danger"` becomes `class="progress-bar bg-danger"`.
-- Replaced `.active` for animated progress bars with `.progress-bar-animated`.
+- Substituídas as classes `.progress-bar-*` contextuais por utilitários `.bg-*`;
+  - Exemplo: `class="progress-bar progress-bar-danger"` se torna `class="progress-bar bg-danger"`.
+- Substituída a classe `.active` para barras de progressos animadas por `.progress-bar-animated`.
 
 ### Carousel
 
-- Overhauled the entire component to simplify design and styling. We have fewer styles for you to override, new indicators, and new icons.
-- All CSS has been un-nested and renamed, ensuring each class is prefixed with `.carousel-`.
-  - For carousel items, `.next`, `.prev`, `.left`, and `.right` are now `.carousel-item-next`, `.carousel-item-prev`, `.carousel-item-left`, and `.carousel-item-right`.
-  - `.item` is also now `.carousel-item`.
-  - For prev/next controls, `.carousel-control.right` and `.carousel-control.left` are now `.carousel-control-next` and `.carousel-control-prev`, meaning they no longer require a specific base class.
-- Removed all responsive styling, deferring to utilities (e.g., showing captions on certain viewports) and custom styles as needed.
-- Removed image overrides for images in carousel items, deferring to utilities.
-- Tweaked the Carousel example to include the new markup and styles.
+- Revisado todo o componente para simplificar o estilo e design;
+  - Agora temos menos estilos para você sobrescrever, novos indicadores e ícones.
+- Todo o CSS foi desaninhado e renomeado, garantindo que cada classe tenha o prefixo `.carousel-`;
+  - Os itens do carousel: `.next`, `.prev`, `.left` e `.right` agora são `.carousel-item-next`, `.carousel-item-prev`, `.carousel-item-left` e `.carousel-item-right`;
+  - Os controles prev/next: `.carousel-control.right` e `.carousel-control.left` agora são `.carousel-control-next` e `.carousel-control-prev`, significando que eles não precisam mais de um classe base.
+- Removido todo estilo responsivo, jogando a responsabilidade para utilitários (ex: mostrar legendas em certas viewports) e estilos customizados, quando necessário;
+- Removido sobrescrição de imagens nos itens do carousel, deixando isso para utilitários;
+- Arrumamos o exemplo de Carousel para que tenha a nova marcação HTML e estilos CSS.
 
-### Tables
+### Tabelas
 
-- Removed support for styled nested tables. All table styles are now inherited in v4 for simpler selectors.
-- Added inverse table variant.
+- Removido o suporte à tabelas aninhadas estilizadas;
+  - Todos estilos de tabelas agora são herdados, na v4, para simplificar os seletores.
+- Adicionado a tabela inversa.
 
-### Utilities
+### Utilitários
 
-- **Display, hidden, and more:**
-  - Made display utilities responsive (e.g., `.d-none` and `d-{sm,md,lg,xl}-none`).
-  - Dropped the bulk of `.hidden-*` utilities for new [display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/). For example, instead of `.hidden-sm-up`, use `.d-sm-none`. Renamed the `.hidden-print` utilities to use the display utility naming scheme. [More info under the Responsive utilities section of this page.](#responsive-utilities)
-  - Added `.float-{sm,md,lg,xl}-{left,right,none}` classes for responsive floats and removed `.pull-left` and `.pull-right` since they're redundant to `.float-left` and `.float-right`.
-- **Type:**
-  - Added responsive variations to our text alignment classes `.text-{sm,md,lg,xl}-{left,center,right}`.
-- **Alignment and spacing:**
-  - Added new [responsive margin and padding utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) for all sides, plus vertical and horizontal shorthands.
-  - Added boatload of [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/).
-  - Dropped `.center-block` for the new `.mx-auto` class.
-- Clearfix updated to drop support for older browser versions.
+- **Display, hidden e outros:**
+  - Fizemos os utilitários display serem responsivos;
+    - Exemplo: `.d-none` e `d-{sm,md,lg,xl}-none`.
+  - Desistimos da maioria dos utilitários `.hidden-*`, em troca de [novos utilitários display]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/);
+    - Invés de `.hidden-sm-up`, use `.d-sm-none`;
+    - Renomeamos os utilitários `.hidden-print` para que usem o esquema de nomenclatura dos utilitários display;
+    - [Saiba mais, na seção de utilitários responsivos, nesta página](#responsive-utilities).
+  - Adicionamos as classes `.float-{sm,md,lg,xl}-{left,right,none}` para flutuações responsivas, além de removermos `.pull-left` e `.pull-right` porque são redundâncias de `.float-left` e `.float-right`.
+- **Tipo:**
+  - Adicionamos variações responsivas para nossas classes de alinhamento de texto `.text-{sm,md,lg,xl}-{left,center,right}`.
+- **Alinhamento e espaçamento:**
+  - Adicionamos novos [utilitários responsivos de margem e padding]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) para os quatro lados, além de atalhos horizontais e verticais;
+  - Adicionamos um punhado de [utilitários flexbox]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/);
+  - Desistimos da `.center-block`, em troca da nova classe `.mx-auto`.
+- O clearfix foi atualizado para não dar mais suporte a versões antigas de browsers.
 
-### Vendor prefix mixins
 
-Bootstrap 3's [vendor prefix](https://www.thoughtco.com/css-vendor-prefixes-3466867) mixins, which were deprecated in v3.2.0, have been removed in Bootstrap 4. Since we use [Autoprefixer](https://github.com/postcss/autoprefixer), they're no longer necessary.
 
-Removed the following mixins: `animation`, `animation-delay`, `animation-direction`, `animation-duration`, `animation-fill-mode`, `animation-iteration-count`, `animation-name`, `animation-timing-function`, `backface-visibility`, `box-sizing`, `content-columns`, `hyphens`, `opacity`, `perspective`, `perspective-origin`, `rotate`, `rotateX`, `rotateY`, `scale`, `scaleX`, `scaleY`, `skew`, `transform-origin`, `transition-delay`, `transition-duration`, `transition-property`, `transition-timing-function`, `transition-transform`, `translate`, `translate3d`, `user-select`
+### Mixins para prefixos de browsers
 
-## Documentation
+Os mixins para prefixos de browsers, no Bootstrap 3, os quais foram defasados na v3.2.0, foram removidos no Bootstrap 4. Já que usamos o [Autoprefixer](https://github.com/postcss/autoprefixer), eles não são necessários.
 
-Our documentation received an upgrade across the board as well. Here's the low down:
+Removemos os seguintes mixins: `animation`, `animation-delay`, `animation-direction`, `animation-duration`, `animation-fill-mode`, `animation-iteration-count`, `animation-name`, `animation-timing-function`, `backface-visibility`, `box-sizing`, `content-columns`, `hyphens`, `opacity`, `perspective`, `perspective-origin`, `rotate`, `rotateX`, `rotateY`, `scale`, `scaleX`, `scaleY`, `skew`, `transform-origin`, `transition-delay`, `transition-duration`, `transition-property`, `transition-timing-function`, `transition-transform`, `translate`, `translate3d` e `user-select`.
 
-- We're still using Jekyll, but we have plugins in the mix:
-  - `bugify.rb` is used to efficiently list out the entries on our [browser bugs]({{ site.baseurl }}/docs/{{ site.docs_version }}/browser-bugs/) page.
-  - `example.rb` is a custom fork of the default `highlight.rb` plugin, allowing for easier example-code handling.
-  - `callout.rb` is a similar custom fork of that, but designed for our special docs callouts.
-  - [jekyll-toc](https://github.com/toshimaru/jekyll-toc) is used to generate our table of contents.
-- All docs content has been rewritten in Markdown (instead of HTML) for easier editing.
-- Pages have been reorganized for simpler content and a more approachable hierarchy.
-- We moved from regular CSS to SCSS to take full advantage of Bootstrap's variables, mixins, and more.
+## Documentação
 
-### Responsive utilities
+Nossa documentação recebeu um upgrade, também. Segue as novidades:
 
-All `@screen-` variables have been removed in v4.0.0. Use the `media-breakpoint-up()`, `media-breakpoint-down()`, or `media-breakpoint-only()` Sass mixins or the `$grid-breakpoints` Sass map instead.
+- Nós continuamos usando Jekyll, mas também usamos plugins:
+  - `bugify.rb` é usado para listar, eficientemente, nosso registro na página [browser bugs]({{ site.baseurl }}/docs/{{ site.docs_version }}/browser-bugs/);
+  - `example.rb` é um *fork* personalizado do plugin `highlight.rb`, permitindo uma manipulação do código-exemplo, mais fácil;
+  - `callout.rb` também é um *fork* personalizado do plugin, mas pensado para nossas chamadas especiais nos documentos;
+  - O [jekyll-toc](https://github.com/toshimaru/jekyll-toc) é usado para gerar nossa tabela de conteúdos.
+- Todo conteúdo dos documentos foram reescritos em Markdown (invés de HTML) para fácil edição;
+- Páginas foram reorganizadas para um conteúdo mais simples e hierarquia mais acessível;
+- Migramos do CSS ao SCSS para termos toda a vantagem das variáveis, mixins e outras coisas do Bootstrap.
 
-Our responsive utility classes have largely been removed in favor of explicit `display` utilities.
+### Utilitários responsivos
 
-- The `.hidden` and `.show` classes have been removed because they conflicted with jQuery's `$(...).hide()` and `$(...).show()` methods. Instead, try toggling the `[hidden]` attribute or use inline styles like `style="display: none;"` and `style="display: block;"`.
-- All `.hidden-` classes have been removed, save for the print utilities which have been renamed.
-  - Removed from v3: `.hidden-xs` `.hidden-sm` `.hidden-md` `.hidden-lg` `.visible-xs-block` `.visible-xs-inline` `.visible-xs-inline-block` `.visible-sm-block` `.visible-sm-inline` `.visible-sm-inline-block` `.visible-md-block` `.visible-md-inline` `.visible-md-inline-block` `.visible-lg-block` `.visible-lg-inline` `.visible-lg-inline-block`
-  - Removed from v4 alphas: `.hidden-xs-up` `.hidden-xs-down` `.hidden-sm-up` `.hidden-sm-down` `.hidden-md-up` `.hidden-md-down` `.hidden-lg-up` `.hidden-lg-down`
-- Print utilities no longer start with `.hidden-` or `.visible-`, but with `.d-print-`.
-  - Old names: `.visible-print-block`, `.visible-print-inline`, `.visible-print-inline-block`, `.hidden-print`
-  - New classes: `.d-print-block`, `.d-print-inline`, `.d-print-inline-block`, `.d-print-none`
+Todas variáveis `@screen-` foram removidas na v4.0.0. Use os mixins Sass `media-breakpoint-up()`, `media-breakpoint-down()`, `media-breakpoint-only()` ou o mapa `$grid-breakpoints`, invés.
 
-Rather than using explicit `.visible-*` classes, you make an element visible by simply not hiding it at that screen size. You can combine one `.d-*-none` class with one `.d-*-block` class to show an element only on a given interval of screen sizes (e.g. `.d-none.d-md-block.d-xl-none` shows the element only on medium and large devices).
+Nossos utilitários responsivos foram removidos, em prol de utilitários `display`.
 
-Note that the changes to the grid breakpoints in v4 means that you'll need to go one breakpoint larger to achieve the same results. The new responsive utility classes don't attempt to accommodate less common cases where an element's visibility can't be expressed as a single contiguous range of viewport sizes; you will instead need to use custom CSS in such cases.
+- As classes `.hidden` e `.show` foram removidas porque entravam em conflito com os métodos `$(...).hide()` e `$(...).show()` do jQuery. Invés delas, tente alternar o atributo `[hidden]` ou usar estilos inline como `style="display: none;"` e
+`style="display: block;"`.
+- Todas as classes `.hidden-` foram removidas, exceto pelos utilitários de impressão, os quais só renomeamos;
+  - Removemos da v3: `.hidden-xs`, `.hidden-sm`, `.hidden-md`, `.hidden-lg`, `.visible-xs-block`, `.visible-xs-inline`, `.visible-xs-inline-block`, `.visible-sm-block`, `.visible-sm-inline`, `.visible-sm-inline-block`, `.visible-md-block`, `.visible-md-inline`, `.visible-md-inline-block`, `.visible-lg-block`, `.visible-lg-inline` e `.visible-lg-inline-block`.
+  - Removemos das v4 alphas: `.hidden-xs-up`, `.hidden-xs-down,`, `.hidden-sm-up`, `.hidden-sm-down`, `.hidden-md-up`, `.hidden-md-down`, `.hidden-lg-up` e `.hidden-lg-down`.
+- Os utilitários de impressão não iniciam mais com `.hidden-` ou `.visible-`, mas com `.d-print-`.
+  - Classes antigas: `.visible-print-block`, `.visible-print-inline`, `.visible-print-inline-block` e `.hidden-print`;
+  - Novas classes: `.d-print-block`, `.d-print-inline`, `.d-print-inline-block` e `.d-print-none`.
+
+Invés de usar classes explícitas `.visible-*`, faça um elemento visível, simplesmente, não escondendo-o naquele tamanho de tela. Você pode combinar uma classe `.d-*-none` com outra `.d-*-block` para mostrar um elemento só em um intervalo de tamanhos de telas (ex: `.d-none.d-md-block.d-xl-none` mostra o elemento só em dispositivos médios e grandes).
+
+Com as mudanças nos breakpoints do grid (na v4), você vai ter que usar um breakpoint maior que o usual, se quiser atingir o mesmo resultado. As novas classes utilitárias não tentam acomodar menos casos comuns, onde a visibilidade de um elemento não pode ser expressa como um simples intervalo de tamnhos de viewports. Nesses casos, você precisará de CSS personalizado, invés.
