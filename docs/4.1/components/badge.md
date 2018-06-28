@@ -1,57 +1,57 @@
 ---
 layout: docs
 title: Badges
-description: Documentation and examples for badges, our small count and labeling component.
+description: Documentação e exemplos sobre os badges, nosso pequeno componente para contagem e rótulos.
 group: components
 toc: true
 ---
 
-## Example
+## Exemplo
 
-Badges scale to match the size of the immediate parent element by using relative font sizing and `em` units.
+Os badges escalam para combinar com o tamanho do elemento pai imediato, usando font-size relativa e unidade `em`.
 
 <div class="bd-example">
-<div class="h1">Example heading <span class="badge badge-secondary">New</span></div>
-<div class="h2">Example heading <span class="badge badge-secondary">New</span></div>
-<div class="h3">Example heading <span class="badge badge-secondary">New</span></div>
-<div class="h4">Example heading <span class="badge badge-secondary">New</span></div>
-<div class="h5">Example heading <span class="badge badge-secondary">New</span></div>
-<div class="h6">Example heading <span class="badge badge-secondary">New</span></div>
+<div class="h1">Cabeçalho exemplo <span class="badge badge-secondary">Novo</span></div>
+<div class="h2">Cabeçalho exemplo <span class="badge badge-secondary">Novo</span></div>
+<div class="h3">Cabeçalho exemplo <span class="badge badge-secondary">Novo</span></div>
+<div class="h4">Cabeçalho exemplo <span class="badge badge-secondary">Novo</span></div>
+<div class="h5">Cabeçalho exemplo <span class="badge badge-secondary">Novo</span></div>
+<div class="h6">Cabeçalho exemplo <span class="badge badge-secondary">Novo</span></div>
 </div>
 
 {% highlight html %}
-<h1>Example heading <span class="badge badge-secondary">New</span></h1>
-<h2>Example heading <span class="badge badge-secondary">New</span></h2>
-<h3>Example heading <span class="badge badge-secondary">New</span></h3>
-<h4>Example heading <span class="badge badge-secondary">New</span></h4>
-<h5>Example heading <span class="badge badge-secondary">New</span></h5>
-<h6>Example heading <span class="badge badge-secondary">New</span></h6>
+<h1>Cabeçalho exemplo <span class="badge badge-secondary">Novo</span></h1>
+<h2>Cabeçalho exemplo <span class="badge badge-secondary">Novo</span></h2>
+<h3>Cabeçalho exemplo <span class="badge badge-secondary">Novo</span></h3>
+<h4>Cabeçalho exemplo <span class="badge badge-secondary">Novo</span></h4>
+<h5>Cabeçalho exemplo <span class="badge badge-secondary">Novo</span></h5>
+<h6>Cabeçalho exemplo <span class="badge badge-secondary">Novo</span></h6>
 {% endhighlight %}
 
-Badges can be used as part of links or buttons to provide a counter.
+Badges podem ser usados como parte de links ou botões para realizar contagem.
 
 {% capture example %}
 <button type="button" class="btn btn-primary">
-  Notifications <span class="badge badge-light">4</span>
+  Notificações <span class="badge badge-light">4</span>
 </button>
 {% endcapture %}
 {% include example.html content=example %}
 
-Note that depending on how they are used, badges may be confusing for users of screen readers and similar assistive technologies. While the styling of badges provides a visual cue as to their purpose, these users will simply be presented with the content of the badge. Depending on the specific situation, these badges may seem like random additional words or numbers at the end of a sentence, link, or button.
+Perceba que dependendo do uso, badges podem ser confusos para usuários de leitores de telas e tecnologias assistivas similares. Apesar do estilo dos badges serem intuitivos, esses usuários vão ser apresentados só ao conteúdo contido neles. Por isso, dependendo da situação, esses badges podem parecer palavras ou números quaisquer ao final da frase, link ou botão.
 
-Unless the context is clear (as with the "Notifications" example, where it is understood that the "4" is the number of notifications), consider including additional context with a visually hidden piece of additional text.
+A não ser que o contexto esteja claro (como no exemplo "Notificações", onde é entendido que o 4 é o número de notificações), considere criar contexto com um texto adicional escondido visualmente.
 
 {% capture example %}
 <button type="button" class="btn btn-primary">
-  Profile <span class="badge badge-light">9</span>
-  <span class="sr-only">unread messages</span>
+  Perfil <span class="badge badge-light">9</span>
+  <span class="sr-only">Mensagens não lidas</span>
 </button>
 {% endcapture %}
 {% include example.html content=example %}
 
-## Contextual variations
+## Variações contextuais
 
-Add any of the below mentioned modifier classes to change the appearance of a badge.
+Adicione qualquer uma das classes modificadoras mencionadas abaixo para mudar a aparência de um badge.
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
@@ -61,9 +61,9 @@ Add any of the below mentioned modifier classes to change the appearance of a ba
 
 {% include callout-warning-color-assistive-technologies.md %}
 
-## Pill badges
+## Badges em pílulas
 
-Use the `.badge-pill` modifier class to make badges more rounded (with a larger `border-radius` and additional horizontal `padding`). Useful if you miss the badges from v3.
+Use a classe modificadora `.badge-pill` para fazer com que os badges fiquem mais arredondados (`border-radius` maior e `padding` horizontal adicional). É útil se você precisa dos badges da v3.
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
@@ -73,7 +73,7 @@ Use the `.badge-pill` modifier class to make badges more rounded (with a larger 
 
 ## Links
 
-Using the contextual `.badge-*` classes on an `<a>` element quickly provide _actionable_ badges with hover and focus states.
+Usando as classes contextuais `.badge-*`, em um elemento `<a>`, rapidamente, consiga badges _acionáveis_ com estados hover e focus.
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
