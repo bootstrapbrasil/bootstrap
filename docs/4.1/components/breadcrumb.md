@@ -1,11 +1,11 @@
 ---
 layout: docs
 title: Breadcrumb
-description: Indicate the current page's location within a navigational hierarchy that automatically adds separators via CSS.
+description: Indica a localização da página atual, dentro de uma hierarquia de navegação e, automaticamente, coloca separadores usando CSS.
 group: components
 ---
 
-## Example
+## Exemplo
 
 {% capture example %}
 <nav aria-label="breadcrumb">
@@ -17,42 +17,42 @@ group: components
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Library</li>
+    <li class="breadcrumb-item active" aria-current="page">Biblioteca</li>
   </ol>
 </nav>
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item"><a href="#">Library</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Data</li>
+    <li class="breadcrumb-item"><a href="#">Biblioteca</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Dados</li>
   </ol>
 </nav>
 {% endcapture %}
 {% include example.html content=example %}
 
-## Changing the separator
+## Como escolher o separador
 
-Separators are automatically added in CSS through [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) and [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content). They can be changed by changing `$breadcrumb-divider`. The [quote](https://sass-lang.com/documentation/Sass/Script/Functions.html#quote-instance_method) function is needed to generate the quotes around a string, so if you want `>` as seperator, you can use this:
+Separadores são, automaticamente, adicionados com CSS usando [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) e [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content). Você pode escolhê-los, alterando a variável `$breadcrumb-divider`. A função [quote](https://sass-lang.com/documentation/Sass/Script/Functions.html#quote-instance_method) é necessária para gerar as aspas ao redor de uma string, então, se você quer `>` como um separador, pode usar isso:
  
 ```scss
 $breadcrumb-divider: quote(">");
 ```
 
-It's also possible to use a **base64 embedded SVG icon**:
+Também é possível usar um **ícone SVG base64 embutido**:
 
 ```scss
-$breadcrumb-divider: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxwYXRoIGQ9Ik0yLjUgMEwxIDEuNSAzLjUgNCAxIDYuNSAyLjUgOGw0LTQtNC00eiIgZmlsbD0iY3VycmVudENvbG9yIi8+PC9zdmc+);
+$breadcrumb-divider: url(Dados:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxwYXRoIGQ9Ik0yLjUgMEwxIDEuNSAzLjUgNCAxIDYuNSAyLjUgOGw0LTQtNC00eiIgZmlsbD0iY3VycmVudENvbG9yIi8+PC9zdmc+);
 ```
 
-The separator can be removed by setting `$breadcrumb-divider` to `none`:
+O separador pode ser removido definindo o valor de `$breadcrumb-divider` como `none`:
 
 ```scss
 $breadcrumb-divider: none;
 ```
 
-## Accessibility
+## Acessibilidade
 
-Since breadcrumbs provide a navigation, it's a good idea to add a meaningful label such as `aria-label="breadcrumb"` to describe the type of navigation provided in the `<nav>` element, as well as applying an `aria-current="page"` to the last item of the set to indicate that it represents the current page.
+Já que breadcrumbs provém uma navegação, é uma boa ideia adicionar um atributo significativo como `aria-label="breadcrumb"` para descrever o tipo de navegação provida no elemento `<nav>`, assim como aplicar um `aria-current="page"` ao último item para indicar que ele representa a atual página.
 
-For more information, see the [WAI-ARIA Authoring Practices for the breadcrumb pattern](https://www.w3.org/TR/wai-aria-practices/#breadcrumb).
+Para mais informações, veja: [WAI-ARIA Authoring Practices for the breadcrumb pattern](https://www.w3.org/TR/wai-aria-practices/#breadcrumb).
