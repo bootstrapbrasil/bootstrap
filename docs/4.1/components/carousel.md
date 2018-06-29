@@ -1,80 +1,80 @@
 ---
 layout: docs
 title: Carousel
-description: A slideshow component for cycling through elements—images or slides of text—like a carousel.
+description: Um componente de slideshow para fazer um giro através de elementos (imagens ou slides de texto), como se fosse um carrosel.
 group: components
 toc: true
 ---
 
-## How it works
+## Como funciona
 
-The carousel is a slideshow for cycling through a series of content, built with CSS 3D transforms and a bit of JavaScript. It works with a series of images, text, or custom markup. It also includes support for previous/next controls and indicators.
+O carousel é um slideshow para fazer um giro em vários coteúdos, construído com CSS 3D transforms e um pouco de JavaScript. Ele funciona com o uso de imagens, texto ou marcação personalizada. Também possui suporte para controles anterior, próximo e indicadores.
 
-In browsers where the [Page Visibility API](https://www.w3.org/TR/page-visibility/) is supported, the carousel will avoid sliding when the webpage is not visible to the user (such as when the browser tab is inactive, the browser window is minimized, etc.).
+Nos navegadores onde a [API Page Visibility](https://www.w3.org/TR/page-visibility/) é suportada, o carousel vai evitar deslizar quando a página não está visível para o usuário (como quando o browser está inativo, janela minimizada, etc).
 
-Please be aware that nested carousels are not supported, and carousels are generally not compliant with accessibility standards.
+Por favor, esteja atento que carousels aninhados não são suportados e não são, geralmente, amigáveis aos padrões de acessibilidades.
 
-Lastly, if you're building our JavaScript from source, it [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util).
+Por último, se você está construindo nosso JavaScript a partir da fonte, vai precisar do [`util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util).
 
-## Example
+## Exemplo
 
-Carousels don't automatically normalize slide dimensions. As such, you may need to use additional utilities or custom styles to appropriately size content. While carousels support previous/next controls and indicators, they're not explicitly required. Add and customize as you see fit.
+Carousels não normalizam dimensões, automaticamente. Assim, você pode precisar usar utilitários adicionais ou estilos personalizados para dimensionar conteúdos, apropriadamente. Apesar de carousels suportarem controles anterior, próximo e indicadores, eles não são obrigatórios, necessariamente. Use e abuse, como quiser.
 
-**The `.active` class needs to be added to one of the slides** otherwise the carousel will not be visible. Also be sure to set a unique id on the `.carousel` for optional controls, especially if you're using multiple carousels on a single page. Control and indicator elements must have a `data-target` attribute (or `href` for links) that matches the id of the `.carousel` element.
+**A classe `.active` precisa ser usada em um dos slides,** caso contrário, o carousel não ficará visível. Também, se assegure de definir um único ID no `.carousel` para os controles opcionais, especialmente, se você está usando múltiplos carousels em uma página. Elementos de controle e indicador devem ter um atributo `data-target` (ou links `href`) que combinam com o ID do elemento `.carousel`.
 
-### Slides only
+### Só slides
 
-Here's a carousel with slides only. Note the presence of the `.d-block` and `.w-100` on carousel images to prevent browser default image alignment.
+Aqui está um carousel só com slides. Perceba a presença do `.d-block` e `.w-100` nas imagens do carousel para evitar alinhamento padrão de imagens do navegador.
 
 {% capture example %}
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=777&fg=555&text=First slide" alt="First slide">
+      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=777&fg=555&text=Primeiro Slide" alt="Primeiro Slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=666&fg=444&text=Second slide" alt="Second slide">
+      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=666&fg=444&text=Segundo Slide" alt="Segundo Slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=555&fg=333&text=Third slide" alt="Third slide">
+      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=555&fg=333&text=Terceiro Slide" alt="Terceiro Slide">
     </div>
   </div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-### With controls
+### Com controles
 
-Adding in the previous and next controls:
+Adicionando os controles anterior e próximo, temos isso:
 
 {% capture example %}
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=777&fg=555&text=First slide" alt="First slide">
+      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=777&fg=555&text=Primeiro Slide" alt="Primeiro Slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=666&fg=444&text=Second slide" alt="Second slide">
+      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=666&fg=444&text=Segundo Slide" alt="Segundo Slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=555&fg=333&text=Third slide" alt="Third slide">
+      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=555&fg=333&text=Terceiro Slide" alt="Terceiro Slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
+    <span class="sr-only">Anterior</span>
   </a>
   <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
+    <span class="sr-only">Próximo</span>
   </a>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-### With indicators
+### Com indicadores
 
-You can also add the indicators to the carousel, alongside the controls, too.
+Você também pode adicionar indicadores ao carousel, além dos controles.
 
 {% capture example %}
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -85,30 +85,30 @@ You can also add the indicators to the carousel, alongside the controls, too.
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=777&fg=555&text=First slide" alt="First slide">
+      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=777&fg=555&text=Primeiro Slide" alt="Primeiro Slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=666&fg=444&text=Second slide" alt="Second slide">
+      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=666&fg=444&text=Segundo Slide" alt="Segundo Slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=555&fg=333&text=Third slide" alt="Third slide">
+      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=555&fg=333&text=Terceiro Slide" alt="Terceiro Slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
+    <span class="sr-only">Anterior</span>
   </a>
   <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
+    <span class="sr-only">Próximo</span>
   </a>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-### With captions
+### Com legenda
 
-Add captions to your slides easily with the `.carousel-caption` element within any `.carousel-item`. They can be easily hidden on smaller viewports, as shown below, with optional [display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/). We hide them initially with `.d-none` and bring them back on medium-sized devices with `.d-md-block`.
+Adicione legendas nos seus slides, facilmente, usando o elemento `.carousel-caption` dentro de qualquer `.carousel-item`. Eles podem ser escondidos, facilmente, em qualquer viewport menor, como mostrado é mostrado abaixo, usando [utilitários display]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/). Escondemos eles, inicialmente, com `.d-none` e trazemos de volta em dispositivos de tamanho mediano, usando `.d-md-block`.
 
 <div class="bd-example">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -119,34 +119,34 @@ Add captions to your slides easily with the `.carousel-caption` element within a
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=777&fg=555&text=First slide" alt="First slide">
+        <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=777&fg=555&text=Primeiro Slide" alt="Primeiro Slide">
         <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
+          <h5>Título do primeiro slide</h5>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=666&fg=444&text=Second slide" alt="Second slide">
+        <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=666&fg=444&text=Segundo Slide" alt="Segundo Slide">
         <div class="carousel-caption d-none d-md-block">
-          <h5>Second slide label</h5>
+          <h5>Título do segundo slide</h5>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=555&fg=333&text=Third slide" alt="Third slide">
+        <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=555&fg=333&text=Terceiro Slide" alt="Terceiro Slide">
         <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
+          <h5>Título do terceiro slide</h5>
           <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
         </div>
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
+      <span class="sr-only">Anterior</span>
     </a>
     <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
+      <span class="sr-only">Próximo</span>
     </a>
   </div>
 </div>
@@ -163,61 +163,61 @@ Add captions to your slides easily with the `.carousel-caption` element within a
 
 ### Crossfade
 
-Add `.carousel-fade` to your carousel to animate slides with a fade transition instead of a slide.
+Use `.carousel-fade` no seu carousel para animar os slides com uma transição esmaecida, invés de um simples slide.
 
 {% capture example %}
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=777&fg=555&text=First slide" alt="First slide">
+      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=777&fg=555&text=Primeiro Slide" alt="Primeiro Slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=666&fg=444&text=Second slide" alt="Second slide">
+      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=666&fg=444&text=Segundo Slide" alt="Segundo Slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=555&fg=333&text=Third slide" alt="Third slide">
+      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=555&fg=333&text=Terceiro Slide" alt="Terceiro Slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
+    <span class="sr-only">Anterior</span>
   </a>
   <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
+    <span class="sr-only">Próximo</span>
   </a>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
 
-## Usage
+## Modo de uso
 
-### Via data attributes
+### Via atributos data
 
-Use data attributes to easily control the position of the carousel. `data-slide` accepts the keywords `prev` or `next`, which alters the slide position relative to its current position. Alternatively, use `data-slide-to` to pass a raw slide index to the carousel `data-slide-to="2"`, which shifts the slide position to a particular index beginning with `0`.
+Use atributos data para, facilmente, controlar a posição do carousel. O `data-slide` aceita as palavras-chaves `prev` ou `next`, as quais alteram a posição do slide, de acordo com sua atual posição. Opcionalmente, use `data-slide-to` para passar um index ao carousel, o qual muda a posição do slide para o index específico, com valores começando em `0` (ex: `data-slide-to="2"`).
 
-The `data-ride="carousel"` attribute is used to mark a carousel as animating starting at page load. **It cannot be used in combination with (redundant and unnecessary) explicit JavaScript initialization of the same carousel.**
+O atributo `data-ride="carousel"` é usado para declarar que o carousel vai começar a animação assim que a página carregar. **Este atributo não pode ser usado em combinação com uma (redundante e desnecessária) inicialização JavaScript explícita, do mesmo carousel.**
 
 ### Via JavaScript
 
-Call carousel manually with:
+Invoque o carousel, manualmente, usando:
 
 {% highlight js %}
 $('.carousel').carousel()
 {% endhighlight %}
 
-### Options
+### Opções
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-interval=""`.
+Opções podem ser passadas via atributos data ou JavaScript. Para atributos data, anexe o nome da opção no prefixo `data-`, como acontece em `data-interval=""`.
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th style="width: 100px;">Name</th>
-      <th style="width: 50px;">Type</th>
-      <th style="width: 50px;">Default</th>
-      <th>Description</th>
+      <th style="width: 100px;">Nome</th>
+      <th style="width: 50px;">Tipo</th>
+      <th style="width: 50px;">Padrão</th>
+      <th>Descrição</th>
     </tr>
   </thead>
   <tbody>
@@ -225,43 +225,43 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td>interval</td>
       <td>number</td>
       <td>5000</td>
-      <td>The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle.</td>
+      <td>A quantidade de tempo de espera entre a troca de slides. Se o valor é false, o carousel não vai girar, automaticamente.</td>
     </tr>
     <tr>
       <td>keyboard</td>
-      <td>boolean</td>
+      <td>booleano</td>
       <td>true</td>
-      <td>Whether the carousel should react to keyboard events.</td>
+      <td>Diz se o carousel deve reagir aos eventos de teclado.</td>
     </tr>
     <tr>
       <td>pause</td>
-      <td>string | boolean</td>
+      <td>string | booleano</td>
       <td>"hover"</td>
-      <td><p>If set to <code>"hover"</code>, pauses the cycling of the carousel on <code>mouseenter</code> and resumes the cycling of the carousel on <code>mouseleave</code>. If set to <code>false</code>, hovering over the carousel won't pause it.</p>
-      <p>On touch-enabled devices, when set to <code>"hover"</code>, cycling will pause on <code>touchend</code> (once the user finished interacting with the carousel) for two intervals, before automatically resuming. Note that this is in addition to the above mouse behavior.</p></td>
+      <td><p>Se tiver definido como <code>"hover"</code>, pausa o ciclo do carousel no evento <code>mouseenter</code> e volta o ciclo no <code>mouseleave</code>. Se definido para <code>false</code>, passar o mouse sobre o carousel não irá pausá-lo.</p>
+      <p>Em dispositivos com touch, quando tiver definido o valor <code>"hover"</code>, o ciclo vai pausar no evento <code>touchend</code> (uma vez que o usuário parar de interagir com o carousel) por dois intervalos, antes de voltar sozinho, novamente. Perceba que isso acontece devido ao comportamento de mouse, mencionado acima.</p></td>
     </tr>
     <tr>
       <td>ride</td>
       <td>string</td>
       <td>false</td>
-      <td>Autoplays the carousel after the user manually cycles the first item. If "carousel", autoplays the carousel on load.</td>
+      <td>Auto inicia o carousel, depois do usuário clicar no primeiro item, manualmente. Se definido com o valor "carousel", o carousel começa assim que carrega.</td>
     </tr>
     <tr>
       <td>wrap</td>
       <td>boolean</td>
       <td>true</td>
-      <td>Whether the carousel should cycle continuously or have hard stops.</td>
+      <td>Diz se o carousel deve girar continuamente ou ter paradas bruscas.</td>
     </tr>
   </tbody>
 </table>
 
-### Methods
+### Métodos
 
 {% include callout-danger-async-methods.md %}
 
 #### `.carousel(options)`
 
-Initializes the carousel with an optional options `object` and starts cycling through items.
+Inicializa o carousel com um `object` de opções opcional e inicia o ciclo dos itens.
 
 {% highlight js %}
 $('.carousel').carousel({
@@ -271,64 +271,64 @@ $('.carousel').carousel({
 
 #### `.carousel('cycle')`
 
-Cycles through the carousel items from left to right.
+Gira pelos itens do carousel, da esquerda para direita.
 
 #### `.carousel('pause')`
 
-Stops the carousel from cycling through items.
+Impede o carousel de girar pelos itens.
 
-#### `.carousel(number)`
+#### `.carousel(Número)`
 
-Cycles the carousel to a particular frame (0 based, similar to an array). **Returns to the caller before the target item has been shown** (i.e. before the `slid.bs.carousel` event occurs).
+Gira o carousel para um frame particular (começa em 0, como uma array). **Retorna ao invocador, antes do item alvo ser mostrado** (antes do evento `slid.bs.carousel` ocorrer).
 
 #### `.carousel('prev')`
 
-Cycles to the previous item. **Returns to the caller before the previous item has been shown** (i.e. before the `slid.bs.carousel` event occurs).
+Gira para o item anterior. **Retorna ao invocador, antes do item anterior ser mostrado** (antes do evento `slid.bs.carousel` ocorrer).
 
 #### `.carousel('next')`
 
-Cycles to the next item. **Returns to the caller before the next item has been shown** (i.e. before the `slid.bs.carousel` event occurs).
+Gira para o próximo item. **Retorna ao invocador, antes do próximo item ser mostrado** (antes do evento `slid.bs.carousel` ocorrer).
 
 #### `.carousel('dispose')`
 
-Destroys an element's carousel.
+Destroi um elemento do carousel.
 
-### Events
+### Eventos
 
-Bootstrap's carousel class exposes two events for hooking into carousel functionality. Both events have the following additional properties:
+A classe carousel do Bootstrap tem dois evento para serem ligados a funcionalidade do carousel. Ambos eventos possuem as seguintes propriedades adicionais:
 
-- `direction`: The direction in which the carousel is sliding (either `"left"` or `"right"`).
-- `relatedTarget`: The DOM element that is being slid into place as the active item.
-- `from`: The index of the current item
-- `to`: The index of the next item
+- `direction`: a direção na qual o carousel está deslizando (tanto `"left"` quanto `"right"`);
+- `relatedTarget`: o elemento DOM que está sendo deslizado para o lugar do item ativo;
+- `from`: o index do atual item;
+- `to`: o index do próximo item.
 
-All carousel events are fired at the carousel itself (i.e. at the `<div class="carousel">`).
+Todos eventos carousel são acionados no próprio carousel (acionados no elemento `<div class="carousel">`).
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th style="width: 150px;">Event Type</th>
-      <th>Description</th>
+      <th style="width: 150px;">Tipo de evento</th>
+      <th>Descrição</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>slide.bs.carousel</td>
-      <td>This event fires immediately when the <code>slide</code> instance method is invoked.</td>
+      <td>Este evento aciona, imediatamente, quando o método <code>slide</code> é invocado.</td>
     </tr>
     <tr>
       <td>slid.bs.carousel</td>
-      <td>This event is fired when the carousel has completed its slide transition.</td>
+      <td>Este evento é acionado quando o carousel acabou de finalizar sua transição.</td>
     </tr>
   </tbody>
 </table>
 
 {% highlight js %}
 $('#myCarousel').on('slide.bs.carousel', function () {
-  // do something…
+  // Faça algo...
 })
 {% endhighlight %}
 
-### Change transition duration
+### Mude a duração da transição
 
-The transition duration of `.carousel-item` can be changed with the `$carousel-transition` Sass variable before compiling or custom styles if you're using the compiled CSS. If multiple transitions are applied, make sure the transform transition is defined first (eg. `transition: transform 2s ease, opacity .5s ease-out`).
+A duração da transição do `.carousel-item` pode ser alterada na variável Sass `$carousel-transition`, antes de compilar ou em estilos personalizados (se você está usando CSS compilado). Se várias transições são aplicadas, se assegure da transição `transform` ser declarada primeiro (ex: `transition: transform 2s ease, opacity .5s ease-out`).
