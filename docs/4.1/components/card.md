@@ -1,86 +1,87 @@
 ---
 layout: docs
 title: Cards
-description: Bootstrap's cards provide a flexible and extensible content container with multiple variants and options.
+description: Os cards Bootstrap proporcionam um container de conteúdo flexível e extensível com múltiplos variantes e opções.
 group: components
 toc: true
 ---
 
-## About
+## Sobre
 
-A **card** is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. If you're familiar with Bootstrap 3, cards replace our old panels, wells, and thumbnails. Similar functionality to those components is available as modifier classes for cards.
+Um **card** é um container de conteúdo flexível e extensível. Ele tem opções para cabeçalhos e rodapés, uma larga variedade de conteúdo, cores de background contextuais e opções de display poderosas. Se você é familiarizado com Bootstrap 3, saiba que os cards substituem nossos antigos panels, wells e thumbnails. Uma funcionalidade similar a destes componentes está disponível, usando classes modificadoras para cards.
 
-## Example
+## Exemplo
 
-Cards are built with as little markup and styles as possible, but still manage to deliver a ton of control and customization. Built with flexbox, they offer easy alignment and mix well with other Bootstrap components. They have no `margin` by default, so use [spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) as needed.
+Cards são feitos com menos marcação HTML e estilos possível, mas ainda assim conseguem entregar bastante controle e personalização. Feitos com flexbox, oferecem fácil alinhamento e combinação com outros componentes. Por padrão, não possuem `margin`, então, use [utilitários de espaçamento]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/), se necessário.
 
-Below is an example of a basic card with mixed content and a fixed width. Cards have no fixed width to start, so they'll naturally fill the full width of its parent element. This is easily customized with our various [sizing options](#sizing).
+Abaixo, tem um exemplo de um card básico com conteúdo misto e largura fixa. Cards não possuem largura fixa, inicialmente, então, eles vão preencher toda a largura de seu elemento pai, naturalmente. Isso é fácilmente personalizado com nossas várias [opções de tamanhos](#sizing).
 
 {% capture example %}
 <div class="card" style="width: 18rem;">
-  <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
+  <img class="card-img-top" data-src="holder.js/100px180/" alt="Imagem de capa do card">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Título do card</h5>
+    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+    <a href="#" class="btn btn-primary">Visitar</a>
   </div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-## Content types
+## Tipos de conteúdo
 
-Cards support a wide variety of content, including images, text, list groups, links, and more. Below are examples of what's supported.
+Cards suportam uma larga variedade de conteúdos, incluindo imagens, texto, grupo de listas, links e muito mais. Abaixo, temos oquê é suportado.
 
 ### Body
 
-The building block of a card is the `.card-body`. Use it whenever you need a padded section within a card.
+A base de um card é o `.card-body`. Use ele, sempre que precisar de um espaço dentro do card.
 
 {% capture example %}
 <div class="card">
   <div class="card-body">
-    This is some text within a card body.
+    Isto é um texto dentro de um card.
   </div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-### Titles, text, and links
+### Títulos, textos e cards.
 
-Card titles are used by adding `.card-title` to a `<h*>` tag. In the same way, links are added and placed next to each other by adding `.card-link` to an `<a>` tag.
+Os títulos dos card são usados adicionando a classe `.card-title` em uma tag `<h*>`. Da mesma maneira, links são adicionados e posicionados próximos um dos outros, colocando `.card-link` em um elemento `<a>`.
 
-Subtitles are used by adding a `.card-subtitle` to a `<h*>` tag. If the `.card-title` and the `.card-subtitle` items are placed in a `.card-body` item, the card title and subtitle are aligned nicely.
+Subtitulos são criadas usando uma `.card-subtitle` em uma tag `<h*>`. Se os itens `.card-title` e `.card-subtitle` são colocados em um `.card-body`, os títulos e subtitulos serão alinhados, adequadamente.
 
 {% capture example %}
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <h5 class="card-title">Título do card</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Subtitulo do card</h6>
+    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+    <a href="#" class="card-link">Link do card</a>
+    <a href="#" class="card-link">Outro link</a>
   </div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-### Images
+### Imagens
 
-`.card-img-top` places an image to the top of the card. With `.card-text`, text can be added to the card. Text within `.card-text` can also be styled with the standard HTML tags.
+A `.card-img-top` posiciona uma imagem no topo do card. Com `.card-text`, textos podem ser adicionados ao card. O texto dentro do `.card-text` também pode ser estilizado com as tags HTML padrões.
 
 {% capture example %}
 <div class="card" style="width: 18rem;">
-  <img class="card-img-top" data-src="holder.js/100px180/?text=Image cap" alt="Card image cap">
+  <img class="card-img-top" data-src="holder.js/100px180/?text=Image cap" alt="Imagem de capa do card">
   <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
   </div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-### List groups
+### Grupo e listas
 
-Create lists of content in a card with a flush list group.
+Crie listas de conteúdo em um card, usando um grupo de listas.
+
 
 {% capture example %}
 <div class="card" style="width: 18rem;">
@@ -96,7 +97,7 @@ Create lists of content in a card with a flush list group.
 {% capture example %}
 <div class="card" style="width: 18rem;">
   <div class="card-header">
-    Featured
+    Destaque
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item">Cras justo odio</li>
@@ -107,16 +108,16 @@ Create lists of content in a card with a flush list group.
 {% endcapture %}
 {% include example.html content=example %}
 
-### Kitchen sink
+### Baguncinha
 
-Mix and match multiple content types to create the card you need, or throw everything in there. Shown below are image styles, blocks, text styles, and a list group—all wrapped in a fixed-width card.
+Misture e combine vários tipos de conteúdos para ter o card que precisa. Mostrando abaixo, estão estilos de imagens, blocos, estilos de textos e grupo de listas, todos dentro de um card com largura fixa.
 
 {% capture example %}
 <div class="card" style="width: 18rem;">
-  <img class="card-img-top" data-src="holder.js/100px180/?text=Image cap" alt="Card image cap">
+  <img class="card-img-top" data-src="holder.js/100px180/?text=Image cap" alt="Imagem de capa do card">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 class="card-title">Título do card</h5>
+    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item">Cras justo odio</li>
@@ -124,40 +125,40 @@ Mix and match multiple content types to create the card you need, or throw every
     <li class="list-group-item">Vestibulum at eros</li>
   </ul>
   <div class="card-body">
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <a href="#" class="card-link">Link do card</a>
+    <a href="#" class="card-link">Outro link</a>
   </div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-### Header and footer
+### Cabeçalho e rodapé
 
-Add an optional header and/or footer within a card.
+Coloque um cabeçalho e/ou rodapé opcional, dentro de um card.
 
 {% capture example %}
 <div class="card">
   <div class="card-header">
-    Featured
+    Destaque
   </div>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Título especial</h5>
+    <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
+    <a href="#" class="btn btn-primary">Visitar</a>
   </div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-Card headers can be styled by adding `.card-header` to `<h*>` elements.
+Cabeçalhos de cards podem ser estilizados usando `.card-header` em elementos `<h*>`.
 
 {% capture example %}
 <div class="card">
-  <h5 class="card-header">Featured</h5>
+  <h5 class="card-header">Destaque</h5>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Título especial</h5>
+    <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
+    <a href="#" class="btn btn-primary">Visitar</a>
   </div>
 </div>
 {% endcapture %}
@@ -166,12 +167,12 @@ Card headers can be styled by adding `.card-header` to `<h*>` elements.
 {% capture example %}
 <div class="card">
   <div class="card-header">
-    Quote
+    Citação
   </div>
   <div class="card-body">
     <blockquote class="blockquote mb-0">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      <footer class="blockquote-footer">Alguém famoso em <cite title="Título da fonte">Título da fonte</cite></footer>
     </blockquote>
   </div>
 </div>
@@ -181,45 +182,45 @@ Card headers can be styled by adding `.card-header` to `<h*>` elements.
 {% capture example %}
 <div class="card text-center">
   <div class="card-header">
-    Featured
+    Destaque
   </div>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Título especial</h5>
+    <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
+    <a href="#" class="btn btn-primary">Visitar</a>
   </div>
   <div class="card-footer text-muted">
-    2 days ago
+    2 dias atrás
   </div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-## Sizing
+## Tamanhos
 
-Cards assume no specific `width` to start, so they'll be 100% wide unless otherwise stated. You can change this as needed with custom CSS, grid classes, grid Sass mixins, or utilities.
+Os cards não recebem nenhuma largura inicial específica, então, eles vão ter 100% da largura do pai, se não for declarado. Você pode mudar isso, se necessário, usando CSS personalizado, classes grid, mixins grid Sass ou utilitários.
 
-### Using grid markup
+### Usando a marcação do grid
 
-Using the grid, wrap cards in columns and rows as needed.
+Usando o grid, envolva cards em colunas e rows, o quanto quiser.
 
 {% capture example %}
 <div class="row">
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">Título especial</h5>
+        <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
+        <a href="#" class="btn btn-primary">Visitar</a>
       </div>
     </div>
   </div>
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">Título especial</h5>
+        <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
+        <a href="#" class="btn btn-primary">Visitar</a>
       </div>
     </div>
   </div>
@@ -227,98 +228,98 @@ Using the grid, wrap cards in columns and rows as needed.
 {% endcapture %}
 {% include example.html content=example %}
 
-### Using utilities
+### Usando utilitários
 
-Use our handful of [available sizing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/sizing/) to quickly set a card's width.
+Use nosso punhado de [utilitários para dimensionamento]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/sizing/) e defina a largura de um card, rapidamente.
 
 {% capture example %}
 <div class="card w-75">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Button</a>
+    <h5 class="card-title">Título do card</h5>
+    <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
+    <a href="#" class="btn btn-primary">Botão</a>
   </div>
 </div>
 
 <div class="card w-50">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Button</a>
+    <h5 class="card-title">Título do card</h5>
+    <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
+    <a href="#" class="btn btn-primary">Botão</a>
   </div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-### Using custom CSS
+### Usando CSS personalizado
 
-Use custom CSS in your stylesheets or as inline styles to set a width.
+Use CSS personalizado em suas folhas de estilos ou estilos inline para definir a largura.
 
 {% capture example %}
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Título especial</h5>
+    <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
+    <a href="#" class="btn btn-primary">Visitar</a>
   </div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-## Text alignment
+## Alinhamento de texto
 
-You can quickly change the text alignment of any card—in its entirety or specific parts—with our [text align classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/#text-alignment).
+Você pode alterar o alinhamento de texto de qualquer card, rapidamente, em seu todo ou partes específicas, com nossas [classes de alinhamento]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/#text-alignment).
 
 {% capture example %}
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Título especial</h5>
+    <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
+    <a href="#" class="btn btn-primary">Visitar</a>
   </div>
 </div>
 
 <div class="card text-center" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Título especial</h5>
+    <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
+    <a href="#" class="btn btn-primary">Visitar</a>
   </div>
 </div>
 
 <div class="card text-right" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Título especial</h5>
+    <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
+    <a href="#" class="btn btn-primary">Visitar</a>
   </div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-## Navigation
+## Navegação
 
-Add some navigation to a card's header (or block) with Bootstrap's [nav components]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navs/).
+Adicione alguma navegação no cabeçalho do card com os [componentes nav]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navs/) do Bootstrap.
 
 {% capture example %}
 <div class="card text-center">
   <div class="card-header">
     <ul class="nav nav-tabs card-header-tabs">
       <li class="nav-item">
-        <a class="nav-link active" href="#">Active</a>
+        <a class="nav-link active" href="#">Ativo</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+        <a class="nav-link disabled" href="#">Desativado</a>
       </li>
     </ul>
   </div>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Título especial</h5>
+    <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
+    <a href="#" class="btn btn-primary">Visitar</a>
   </div>
 </div>
 {% endcapture %}
@@ -329,84 +330,84 @@ Add some navigation to a card's header (or block) with Bootstrap's [nav componen
   <div class="card-header">
     <ul class="nav nav-pills card-header-pills">
       <li class="nav-item">
-        <a class="nav-link active" href="#">Active</a>
+        <a class="nav-link active" href="#">Ativo</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+        <a class="nav-link disabled" href="#">Desativado</a>
       </li>
     </ul>
   </div>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Título especial</h5>
+    <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
+    <a href="#" class="btn btn-primary">Visitar</a>
   </div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-## Images
+## Imagens
 
-Cards include a few options for working with images. Choose from appending "image caps" at either end of a card, overlaying images with card content, or simply embedding the image in a card.
+Cards possuem algumas opções para trabalharmos com imagens. Escolha entre anexar "capas com imagens" no final do card, sobrepor ela com o conteúdo ou, simplesmente, embutir a imagem no card.
 
-### Image caps
+### Capas com imagens
 
-Similar to headers and footers, cards can include top and bottom "image caps"—images at the top or bottom of a card.
+Semelhante aos cabeçalhos e rodapés, cards podem ter capas com imagens na parte inferior ou superior.
 
 {% capture example %}
 <div class="card mb-3">
-  <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
+  <img class="card-img-top" data-src="holder.js/100px180/" alt="Imagem de capa do card">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <h5 class="card-title">Título do card</h5>
+    <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior, para demonstração.</p>
+    <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
   </div>
 </div>
 <div class="card">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <h5 class="card-title">Título do card</h5>
+    <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior, para demonstração.</p>
+    <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
   </div>
-  <img class="card-img-bottom" data-src="holder.js/100px180/" alt="Card image cap">
+  <img class="card-img-bottom" data-src="holder.js/100px180/" alt="Imagem de capa do card">
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-### Image overlays
+### Sobreposição de imagens
 
-Turn an image into a card background and overlay your card's text. Depending on the image, you may or may not need additional styles or utilities.
+Transforme uma imagem em background de card, sobrepondo o texto do seu card. Dependendo da imagem, você pode precisar de estilos ou utilitários adicionais.
 
 {% capture example %}
 <div class="card bg-dark text-white">
-  <img class="card-img" data-src="holder.js/100px270/#55595c:#373a3c/text:Card image" alt="Card image">
+  <img class="card-img" data-src="holder.js/100px270/#55595c:#373a3c/text:Card image" alt="Imagem do card">
   <div class="card-img-overlay">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text">Last updated 3 mins ago</p>
+    <h5 class="card-title">Título do card</h5>
+    <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior, para demonstração.</p>
+    <p class="card-text">Atualizados 3 minutos atrás</p>
   </div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-## Card styles
+## Estilos de card
 
-Cards include various options for customizing their backgrounds, borders, and color.
+Cards possuem várias opções para customizar seus backgrounds, bordas e cores.
 
-### Background and color
+### Background e cor
 
-Use [text and background utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) to change the appearance of a card.
+Use [utilitários de texto e background]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) para mudar a aparência do card.
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
 <div class="card{% unless color.name == "light" %} text-white{% endunless %} bg-{{ color.name }} mb-3" style="max-width: 18rem;">
-  <div class="card-header">Header</div>
+  <div class="card-header">Cabeçalho</div>
   <div class="card-body">
-    <h5 class="card-title">{{ color.name | capitalize }} card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 class="card-title">Título de Card {{ color.name | capitalize }}</h5>
+    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
   </div>
 </div>{% endfor %}
 {% endcapture %}
@@ -414,108 +415,108 @@ Use [text and background utilities]({{ site.baseurl }}/docs/{{ site.docs_version
 
 {% include callout-warning-color-assistive-technologies.md %}
 
-### Border
+### Bordas
 
-Use [border utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/borders/) to change just the `border-color` of a card. Note that you can put `.text-{color}` classes on the parent `.card` or a subset of the card's contents as shown below.
+Use [utilitários de bordas]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/borders/) para mudar só a cor das bordas de um card. Perceba que você pode usar as classes `.text-{color}` no `.card` pai ou um subconjunto de cards, como mostrado abaixo.
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
 <div class="card border-{{ color.name }} mb-3" style="max-width: 18rem;">
-  <div class="card-header">Header</div>
+  <div class="card-header">Cabeçalho</div>
   <div class="card-body{% unless color.name == "light" %} text-{{ color.name }}{% endunless %}">
-    <h5 class="card-title">{{ color.name | capitalize }} card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 class="card-title">Título de Card {{ color.name | capitalize }}</h5>
+    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
   </div>
 </div>{% endfor %}
 {% endcapture %}
 {% include example.html content=example %}
 
-### Mixins utilities
+### Utilitários mixins
 
-You can also change the borders on the card header and footer as needed, and even remove their `background-color` with `.bg-transparent`.
+Você também pode mudar as bordas no cabeçalho e rodapé do card, como quiser. Ainda pior: pode remover suas `background-color` com `.bg-transparent`.
 
 {% capture example %}
 <div class="card border-success mb-3" style="max-width: 18rem;">
-  <div class="card-header bg-transparent border-success">Header</div>
+  <div class="card-header bg-transparent border-success">Cabeçalho</div>
   <div class="card-body text-success">
-    <h5 class="card-title">Success card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 class="card-title">Título de Card Success</h5>
+    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
   </div>
-  <div class="card-footer bg-transparent border-success">Footer</div>
+  <div class="card-footer bg-transparent border-success">Rodapé</div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-## Card layout
+## Layout do card
 
-In addition to styling the content within cards, Bootstrap includes a few options for laying out series of cards. For the time being, **these layout options are not yet responsive**.
+Além da estilização do conteúdo dentro dos cards, Bootstrap possui algumas opções para a criação de vários cards. No momento, **estas opções de layout ainda não são responsivas**.
 
-### Card groups
+### Grupo de cards
 
-Use card groups to render cards as a single, attached element with equal width and height columns. Card groups use `display: flex;` to achieve their uniform sizing.
+Use grupo de cards para renderizá-los como um único elemento anexado com largura e altura igual. Grupo de cards usam `display: flex;` para conseguir seus tamanhos adequados.
 
 {% capture example %}
 <div class="card-group">
   <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
+    <img class="card-img-top" data-src="holder.js/100px180/" alt="Imagem de capa do card">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <h5 class="card-title">Título do card</h5>
+      <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior, para demonstração.</p>
+      <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
+    <img class="card-img-top" data-src="holder.js/100px180/" alt="Imagem de capa do card">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <h5 class="card-title">Título do card</h5>
+      <p class="card-text">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
+      <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
+    <img class="card-img-top" data-src="holder.js/100px180/" alt="Imagem de capa do card">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <h5 class="card-title">Título do card</h5>
+      <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior que o primeiro, para mostrar a altura igual, em ação.</p>
+      <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
     </div>
   </div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-When using card groups with footers, their content will automatically line up.
+Quando usar grupo de cards com rodapé, seus conteúdos vão se alinhar automaticamente.
 
 {% capture example %}
 <div class="card-group">
   <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
+    <img class="card-img-top" data-src="holder.js/100px180/" alt="Imagem de capa do card">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <h5 class="card-title">Título do card</h5>
+      <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior, para demonstração.</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
+      <small class="text-muted">Atualizados 3 minutos atrás</small>
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
+    <img class="card-img-top" data-src="holder.js/100px180/" alt="Imagem de capa do card">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <h5 class="card-title">Título do card</h5>
+      <p class="card-text">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
+      <small class="text-muted">Atualizados 3 minutos atrás</small>
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
+    <img class="card-img-top" data-src="holder.js/100px180/" alt="Imagem de capa do card">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <h5 class="card-title">Título do card</h5>
+      <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior que o primeiro, para mostrar a altura igual, em ação.</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
+      <small class="text-muted">Atualizados 3 minutos atrás</small>
     </div>
   </div>
 </div>
@@ -524,89 +525,89 @@ When using card groups with footers, their content will automatically line up.
 
 ### Card decks
 
-Need a set of equal width and height cards that aren't attached to one another? Use card decks.
+Precisa de um conjunto de cards com larguras e alturas iguais, mas sem que estejam interligados? Use os card decks.
 
 {% capture example %}
 <div class="card-deck">
   <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px200/" alt="Card image cap">
+    <img class="card-img-top" data-src="holder.js/100px200/" alt="Imagem de capa do card">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <h5 class="card-title">Título do card</h5>
+      <p class="card-text">Este é um card mais longo com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior.</p>
+      <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px200/" alt="Card image cap">
+    <img class="card-img-top" data-src="holder.js/100px200/" alt="Imagem de capa do card">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <h5 class="card-title">Título do card</h5>
+      <p class="card-text">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
+      <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px200/" alt="Card image cap">
+    <img class="card-img-top" data-src="holder.js/100px200/" alt="Imagem de capa do card">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <h5 class="card-title">Título do card</h5>
+      <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior que o primeiro, para mostrar a altura igual, em ação.</p>
+      <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
     </div>
   </div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-Just like with card groups, card footers in decks will automatically line up.
+Assim como os grupos de cards, rodapés de cards nos decks vão se alinhar, automaticamente.
 
 {% capture example %}
 <div class="card-deck">
   <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
+    <img class="card-img-top" data-src="holder.js/100px180/" alt="Imagem de capa do card">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <h5 class="card-title">Título do card</h5>
+      <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior, para demonstração.</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
+      <small class="text-muted">Atualizados 3 minutos atrás</small>
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
+    <img class="card-img-top" data-src="holder.js/100px180/" alt="Imagem de capa do card">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <h5 class="card-title">Título do card</h5>
+      <p class="card-text">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
+      <small class="text-muted">Atualizados 3 minutos atrás</small>
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
+    <img class="card-img-top" data-src="holder.js/100px180/" alt="Imagem de capa do card">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <h5 class="card-title">Título do card</h5>
+      <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior que o primeiro, para mostrar a altura igual, em ação.</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
+      <small class="text-muted">Atualizados 3 minutos atrás</small>
     </div>
   </div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-### Card columns
+### Colunas de cards
 
-Cards can be organized into [Masonry](https://masonry.desandro.com/)-like columns with just CSS by wrapping them in `.card-columns`. Cards are built with CSS `column` properties instead of flexbox for easier alignment. Cards are ordered from top to bottom and left to right.
+Cards podem ser organizados de uma maneira parecida com as colunas [Masonry](https://masonry.desandro.com/), apenas com CSS e envoltos em uma `.card-column`. Eles são feitos com propriedades CSS `column`, invés de flexbox, para fácil alinhamento. Além do mais, são orientados de cima para baixo, da esquerda para direita.
 
-**Heads up!** Your mileage with card columns may vary. To prevent cards breaking across columns, we must set them to `display: inline-block` as `column-break-inside: avoid` isn't a bulletproof solution yet.
+**Atenção!** Sua experiência com colunas de cards pode variar. Para evitar cards bugando nas colunas, devemos defini-los como `display: inline-block`, já que `column-break-inside: avoid` ainda não é uma solução infalível.
 
 {% capture example %}
 <div class="card-columns">
   <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px160/" alt="Card image cap">
+    <img class="card-img-top" data-src="holder.js/100px160/" alt="Imagem de capa do card">
     <div class="card-body">
-      <h5 class="card-title">Card title that wraps to a new line</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <h5 class="card-title">Título do card que quebra em uma nova linha</h5>
+      <p class="card-text">Este é um card mais longo com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior.</p>
     </div>
   </div>
   <div class="card p-3">
@@ -614,17 +615,17 @@ Cards can be organized into [Masonry](https://masonry.desandro.com/)-like column
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
       <footer class="blockquote-footer">
         <small class="text-muted">
-          Someone famous in <cite title="Source Title">Source Title</cite>
+          Alguém famoso em <cite title="Título da fonte">Título da fonte</cite>
         </small>
       </footer>
     </blockquote>
   </div>
   <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px160/" alt="Card image cap">
+    <img class="card-img-top" data-src="holder.js/100px160/" alt="Imagem de capa do card">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <h5 class="card-title">Título do card</h5>
+      <p class="card-text">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
+      <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
     </div>
   </div>
   <div class="card bg-primary text-white text-center p-3">
@@ -632,43 +633,43 @@ Cards can be organized into [Masonry](https://masonry.desandro.com/)-like column
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
       <footer class="blockquote-footer">
         <small>
-          Someone famous in <cite title="Source Title">Source Title</cite>
+          Alguém famoso em <cite title="Título da fonte">Título da fonte</cite>
         </small>
       </footer>
     </blockquote>
   </div>
   <div class="card text-center">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <h5 class="card-title">Título do card</h5>
+      <p class="card-text">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
+      <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
     </div>
   </div>
   <div class="card">
-    <img class="card-img" data-src="holder.js/100px260/" alt="Card image">
+    <img class="card-img" data-src="holder.js/100px260/" alt="Imagem do card">
   </div>
   <div class="card p-3 text-right">
     <blockquote class="blockquote mb-0">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
       <footer class="blockquote-footer">
         <small class="text-muted">
-          Someone famous in <cite title="Source Title">Source Title</cite>
+          Alguém famoso em <cite title="Título da fonte">Título da fonte</cite>
         </small>
       </footer>
     </blockquote>
   </div>
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <h5 class="card-title">Título do card</h5>
+      <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior que o primeiro, para mostrar a altura igual, em ação.</p>
+      <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
     </div>
   </div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-Card columns can also be extended and customized with some additional code. Shown below is an extension of the `.card-columns` class using the same CSS we use—CSS columns— to generate a set of responsive tiers for changing the number of columns.
+Colunas de cards também podem ser extendidas e customizadas com algum código personalizado. Abaixo, vemos uma extensão da classe `.card-columns` usando o mesmo CSS que usamos para gerar uma graduação responsiva de alteração do número de colunas.
 
 {% highlight scss %}
 .card-columns {
