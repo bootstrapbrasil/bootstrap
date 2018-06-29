@@ -1,15 +1,15 @@
 ---
 layout: docs
-title: Buttons
-description: Use Bootstrap's custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
+title: Botões
+description: Use os botões Bootstrap personalizados para ações em formulários, diálogos e outras coisas. Lembrando que esse componente tem suporte a escolha de tamanhos, estados e muito mais.
 group: components
 redirect_from: "/docs/4.1/components/"
 toc: true
 ---
 
-## Examples
+## Exemplos
 
-Bootstrap includes several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.
+Bootstrap possui vários estilos de botões pré-definidos, cada um com seu próprosito semântico e outros recursos extras para mais controle.
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
@@ -23,22 +23,22 @@ Bootstrap includes several predefined button styles, each serving its own semant
 
 ## Button tags
 
-The `.btn` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>` or `<input>` elements (though some browsers may apply a slightly different rendering).
+A classe `.btn` foi desenhada para ser usada com o elemento `<button>`. No entanto, você também pode usar esta classe nos elementos `<a>` ou `<input>`, apesar de alguns browser aplicarem um visual um pouco diferente.
 
-When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a `role="button"` to appropriately convey their purpose to assistive technologies such as screen readers.
+Quando usando classes de botão em elementos `<a>` que funcionam como gatilhos in-page (igual aos conteúdos colapsáveis), invés de link para novas páginas ou seções dentro da página atual, estas âncoras devem receber `role="button"` para expliciar seu propósito a tecnologias assistivas, como leitores de telas.
 
 {% capture example %}
 <a class="btn btn-primary" href="#" role="button">Link</a>
-<button class="btn btn-primary" type="submit">Button</button>
+<button class="btn btn-primary" type="submit">Botão</button>
 <input class="btn btn-primary" type="button" value="Input">
 <input class="btn btn-primary" type="submit" value="Submit">
 <input class="btn btn-primary" type="reset" value="Reset">
 {% endcapture %}
 {% include example.html content=example %}
 
-## Outline buttons
+## Botões outline
 
-In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.
+Precisa de um botão, mas sem cor de backround? Substitua as classes modificadoras padrões pelas `.btn-outline-*` que removem todas as imagens de background e cores, em qualquer botão.
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
@@ -46,96 +46,98 @@ In need of a button, but not the hefty background colors they bring? Replace the
 {% endcapture %}
 {% include example.html content=example %}
 
-## Sizes
+## Tamanhos
 
-Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes.
+Botões grandes ou pequenos? Use `.btn-lg` ou `.btn-sm` para tamanhos alternativos ao padrão.
 
 {% capture example %}
-<button type="button" class="btn btn-primary btn-lg">Large button</button>
-<button type="button" class="btn btn-secondary btn-lg">Large button</button>
+<button type="button" class="btn btn-primary btn-lg">Botão grande</button>
+<button type="button" class="btn btn-secondary btn-lg">Botão grande</button>
 {% endcapture %}
 {% include example.html content=example %}
 
 {% capture example %}
-<button type="button" class="btn btn-primary btn-sm">Small button</button>
-<button type="button" class="btn btn-secondary btn-sm">Small button</button>
+<button type="button" class="btn btn-primary btn-sm">Botão pequeno</button>
+<button type="button" class="btn btn-secondary btn-sm">Botão pequeno</button>
 {% endcapture %}
 {% include example.html content=example %}
 
-Create block level buttons—those that span the full width of a parent—by adding `.btn-block`.
+Crie botões block-level (ocupam toda a largura do elemento pai), usando a classe `.btn-block`.
 
 {% capture example %}
-<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-<button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
+<button type="button" class="btn btn-primary btn-lg btn-block">Botão block-level</button>
+<button type="button" class="btn btn-secondary btn-lg btn-block">Botão block-level</button>
 {% endcapture %}
 {% include example.html content=example %}
 
-## Active state
+## Estado ativo
 
-Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. **There's no need to add a class to `<button>`s as they use a pseudo-class**. However, you can still force the same active appearance with `.active` (and include the <code>aria-pressed="true"</code> attribute) should you need to replicate the state programmatically.
+Os botões parecem pressionados (background, borda e sombra internas mais escuras), quando estão em estado ativo. **Não há necessidade de usar a classe no `<button>`, porque eles usam uma pseudo-classe.** No entanto, você ainda pode forçar a aparência de estado ativo com a classe `.active` e incuir o atributo <code>aria-pressed="true"</code>, se precisar.
 
 {% capture example %}
-<a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
+<a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Link primário</a>
 <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Link</a>
 {% endcapture %}
 {% include example.html content=example %}
 
-## Disabled state
+## Estado desativado
 
-Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element.
+Faça botões parecerem inativos, usando o atributo booleano `disabled` em qualquer elemento `<button>`.
 
 {% capture example %}
-<button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
-<button type="button" class="btn btn-secondary btn-lg" disabled>Button</button>
+<button type="button" class="btn btn-lg btn-primary" disabled>Botão primário</button>
+<button type="button" class="btn btn-secondary btn-lg" disabled>Botão</button>
 {% endcapture %}
 {% include example.html content=example %}
 
-Disabled buttons using the `<a>` element behave a bit different:
+Botões desativados usando o elemento `<a>` se comportam um pouco diferente:
 
-- `<a>`s don't support the `disabled` attribute, so you must add the `.disabled` class to make it visually appear disabled.
-- Some future-friendly styles are included to disable all `pointer-events` on anchor buttons. In browsers which support that property, you won't see the disabled cursor at all.
-- Disabled buttons should include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies.
+- O elemento `<a>` não suport o atributo `disabled`, então, você deve usar a classe `.disabled` para fazê-lo parecer desativado, visualmente;
+- Alguns estilos (que ainda não são bem suportados) são usados para desativarem todos os `pointer-events`, em botões âncora;
+  - Em browsers que suportam essa propriedade, você não verá o cursor desativado.
+- Botões desativados devem ter o atributo `aria-disabled="true"` para indicar o estado do elemento para tecnologias assistivas.
 
 {% capture example %}
-<a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
+<a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Link primário</a>
 <a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Link</a>
 {% endcapture %}
 {% include example.html content=example %}
 
 {% capture callout %}
-##### Link functionality caveat
+##### Problemas com a funcionalidade de link
 
-The `.disabled` class uses `pointer-events: none` to try to disable the link functionality of `<a>`s, but that CSS property is not yet standardized. In addition, even in browsers that do support `pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a `tabindex="-1"` attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.
+A class `.disabled` usa `pointer-events: none` para tentar desativar a funcionalidade de link do `<a>`, mas esta propriedade CSS ainda não foi padronizada. Além disso, até em navegadores que suportam `pointer-events: none`, a navegação por teclado continua inatingida, significando que tanto usuários com ou sem tecnologias assistivas ainda conseguirão ativar estes links. Portanto, para evitar isso, use o atributo `tabindex="-1"` (evita que tenham foco) nestes links e use seu próprio JavaScript  para desativar as funcionalidades.
+
 {% endcapture %}
 {% include callout.html content=callout type="warning" %}
 
-## Button plugin
+## Plugin de botão
 
-Do more with buttons. Control button states or create groups of buttons for more components like toolbars.
+Faça mais com botões. Controle estados ou crie grupos de botões, para mais componentes como toolbars.
 
-### Toggle states
+### Alternar estados
 
-Add `data-toggle="button"` to toggle a button's `active` state. If you're pre-toggling a button, you must manually add the `.active` class **and** `aria-pressed="true"` to the `<button>`.
+Use `data-toggle="button"` para alternar o estado `ativo` do botão. Se você pré-ativar o botão, deve usar a classe `.active` **e** o atributo `aria-pressed="true"`, no `<button>`.
 
 {% capture example %}
 <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
-  Single toggle
+  Única alternância
 </button>
 {% endcapture %}
 {% include example.html content=example %}
 
-### Checkbox and radio buttons
+### Botões checkbox e radio
 
-Bootstrap's `.button` styles can be applied to other elements, such as `<label>`s, to provide checkbox or radio style button toggling. Add `data-toggle="buttons"` to a `.btn-group` containing those modified buttons to enable their toggling behavior via JavaScript and add `.btn-group-toggle` to style the `<input>`s within your buttons. **Note that you can create single input-powered buttons or groups of them.**
+Os estilos do `.button` Bootstrap podem seren usado em outros elementos, como `<label>` para se ter um botão no estilo checkbox ou radio com alternância. Use `data-toggle="buttons"` em um `.btn-group` para estilizar o os `inputs` dentro de seus botões. **Perceba que você pode criar botões com apenas um input ou grupos deles**.
 
-The checked state for these buttons is **only updated via `click` event** on the button. If you use another method to update the input—e.g., with `<input type="reset">` or by manually applying the input's `checked` property—you'll need to toggle `.active` on the `<label>` manually.
+O estado checado destes botões **só é atualizado através do evento de clique**, no botão. Se você usar outro método para atualizar o input (ex: `<input type="reset">` ou aplicando a propriedade `checked`, manualmente), vai precisar anternar a classe `.active` da `<label>`, manualmente.
 
-Note that pre-checked buttons require you to manually add the `.active` class to the input's `<label>`.
+Note que botões pré-checados requerem que você coloque a classe `.active`, manualmente, no input do `<label>`.
 
 {% capture example %}
 <div class="btn-group-toggle" data-toggle="buttons">
   <label class="btn btn-secondary active">
-    <input type="checkbox" checked autocomplete="off"> Checked
+    <input type="checkbox" checked autocomplete="off"> Checado
   </label>
 </div>
 {% endcapture %}
@@ -144,7 +146,7 @@ Note that pre-checked buttons require you to manually add the `.active` class to
 {% capture example %}
 <div class="btn-group btn-group-toggle" data-toggle="buttons">
   <label class="btn btn-secondary active">
-    <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
+    <input type="radio" name="options" id="option1" autocomplete="off" checked> Ativo
   </label>
   <label class="btn btn-secondary">
     <input type="radio" name="options" id="option2" autocomplete="off"> Radio
@@ -156,9 +158,9 @@ Note that pre-checked buttons require you to manually add the `.active` class to
 {% endcapture %}
 {% include example.html content=example %}
 
-### Methods
+### Métodos
 
-| Method | Description |
+| Método | Descrição |
 | --- | --- |
-| `$().button('toggle')` | Toggles push state. Gives the button the appearance that it has been activated. |
-| `$().button('dispose')` | Destroys an element's button. |
+| `$().button('toggle')` | Alterna o estado. Dá ao botão uma aparência como se estivesse ativado. |
+| `$().button('dispose')` | Destroi o botão de um elemento. |
