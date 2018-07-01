@@ -1,53 +1,53 @@
 ---
 layout: docs
-title: Forms
-description: Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.
+title: Formulários
+description: Exemplos, instruções para estilizar campos de formulários, opções de layout e componentes personalizados para criar uma grande variedade de formulários.
 group: components
 toc: true
 ---
 
-## Overview
+## Visão geral
 
-Bootstrap's form controls expand on [our Rebooted form styles]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/#forms) with classes. Use these classes to opt into their customized displays for a more consistent rendering across browsers and devices.
+Campos de formulários Bootstrap extendem os [estilos herdados do Reboot]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/#forms), graças a classes. Use estas classes para conseguir uma exibição personalizada e, portanto, uma renderização nos browsers e dispositivos, mais consistentes.
 
-Be sure to use an appropriate `type` attribute on all inputs (e.g., `email` for email address or `number` for numerical information) to take advantage of newer input controls like email verification, number selection, and more.
+Se assegure de usar um atributo `type` adequado em todos inputs (`email` em campos de email, por exemplo) para conseguir se aproveitar dos novos inputs, como seletores de números, verificadores de emails, etc.
 
-Here's a quick example to demonstrate Bootstrap's form styles. Keep reading for documentation on required classes, form layout, and more.
+Aqui está um rápido exemplo para demonstrar os estilos de formulário Bootstrap. Continue lendo a documentação para descobrir sobre classes obrigatórias, layout de formulários e muito mais.
 
 {% capture example %}
 <form>
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <label for="exampleInputEmail1">Endereço de email</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+    <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <label for="exampleInputPassword1">Senha</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
   </div>
   <div class="form-group form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    <label class="form-check-label" for="exampleCheck1">Clique em mim</label>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 {% endcapture %}
 {% include example.html content=example %}
 
-## Form controls
+## Campos de formulário
 
-Textual form controls—like `<input>`s, `<select>`s, and `<textarea>`s—are styled with the `.form-control` class. Included are styles for general appearance, focus state, sizing, and more.
+Campos de formulário textuais como `<input>`, `<select>` e `<textarea>` são estilizados com a classe `.form-control`. Ela possui estilos para aparência, estado de foco e muito mais.
 
-Be sure to explore our [custom forms](#custom-forms) to further style `<select>`s.
+Tenha certeza de explorar nossos [formulários personalizados](#custom-forms) para estilos de `<select>`.
 
 {% capture example %}
 <form>
   <div class="form-group">
-    <label for="exampleFormControlInput1">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    <label for="exampleFormControlInput1">Endereço de email</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
   </div>
   <div class="form-group">
-    <label for="exampleFormControlSelect1">Example select</label>
+    <label for="exampleFormControlSelect1">Select de exemplo</label>
     <select class="form-control" id="exampleFormControlSelect1">
       <option>1</option>
       <option>2</option>
@@ -57,7 +57,7 @@ Be sure to explore our [custom forms](#custom-forms) to further style `<select>`
     </select>
   </div>
   <div class="form-group">
-    <label for="exampleFormControlSelect2">Example multiple select</label>
+    <label for="exampleFormControlSelect2">Exemplo de select múltiplo</label>
     <select multiple class="form-control" id="exampleFormControlSelect2">
       <option>1</option>
       <option>2</option>
@@ -67,88 +67,88 @@ Be sure to explore our [custom forms](#custom-forms) to further style `<select>`
     </select>
   </div>
   <div class="form-group">
-    <label for="exampleFormControlTextarea1">Example textarea</label>
+    <label for="exampleFormControlTextarea1">Exemplo de textarea</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
 </form>
 {% endcapture %}
 {% include example.html content=example %}
 
-For file inputs, swap the `.form-control` for `.form-control-file`.
+Para inputs de arquivo, troque o `.form-control` por `.form-control-file`.
 
 {% capture example %}
 <form>
   <div class="form-group">
-    <label for="exampleFormControlFile1">Example file input</label>
+    <label for="exampleFormControlFile1">Exemplo de input de arquivo</label>
     <input type="file" class="form-control-file" id="exampleFormControlFile1">
   </div>
 </form>
 {% endcapture %}
 {% include example.html content=example %}
 
-### Sizing
+### Tamanhos
 
-Set heights using classes like `.form-control-lg` and `.form-control-sm`.
+Defina alturas, usando classes como `.form-control-lg` e `.form-control-sm`.
 
 {% capture example %}
 <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
-<input class="form-control" type="text" placeholder="Default input">
+<input class="form-control" type="text" placeholder="Input padrão">
 <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
 {% endcapture %}
 {% include example.html content=example %}
 
 {% capture example %}
 <select class="form-control form-control-lg">
-  <option>Large select</option>
+  <option>Select grande</option>
 </select>
 <select class="form-control">
-  <option>Default select</option>
+  <option>Select padrão</option>
 </select>
 <select class="form-control form-control-sm">
-  <option>Small select</option>
+  <option>Select pequeno</option>
 </select>
 {% endcapture %}
 {% include example.html content=example %}
 
-## Range Inputs
+## Inputs range
 
-Set horizontally scrollable range inputs using `.form-control-range`.
+Crie um input range, usando `.form-control-range`.
 
 {% capture example %}
 <form>
   <div class="form-group">
-    <label for="formControlRange">Example Range input</label>
+    <label for="formControlRange">Exemplo de input range</label>
     <input type="range" class="form-control-range" id="formControlRange">
   </div>
 </form>
 {% endcapture %}
 {% include example.html content=example %}
 
-### Readonly
+### Input só de leitura
 
-Add the `readonly` boolean attribute on an input to prevent modification of the input's value. Read-only inputs appear lighter (just like disabled inputs), but retain the standard cursor.
+Use o atributo booleano `readonly` em um input para evitar alterações no valor dele. Inputs `readonly` são mais esmaecidos (como os desativados), mas preservam o cursor padrão.
 
 {% capture example %}
-<input class="form-control" type="text" placeholder="Readonly input here…" readonly>
+<input class="form-control" type="text" placeholder="Input só de leitura, aqui..." readonly>
 {% endcapture %}
 {% include example.html content=example %}
 
-### Readonly plain text
+### Input só de leitura em texto
 
-If you want to have `<input readonly>` elements in your form styled as plain text, use the `.form-control-plaintext` class to remove the default form field styling and preserve the correct margin and padding.
+Se você quiser elementos `<input readonly>` em seu formuláro, mas no estilo de texto, use a classe `.form-control-plaintext` para remover os estilos padrões do campo, preservando margem e padding.
 
 {% capture example %}
 <form>
   <div class="form-group row">
     <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
     <div class="col-sm-10">
-      <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+      <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@exemplo.com">
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+    <label for="inputPassword" class="col-sm-2 col-form-label">Senha</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+      <input type="password" class="form-control" id="inputPassword" placeholder="Senha">
     </div>
   </div>
 </form>
@@ -159,40 +159,40 @@ If you want to have `<input readonly>` elements in your form styled as plain tex
 <form class="form-inline">
   <div class="form-group mb-2">
     <label for="staticEmail2" class="sr-only">Email</label>
-    <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
+    <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@exemplo.com">
   </div>
   <div class="form-group mx-sm-3 mb-2">
-    <label for="inputPassword2" class="sr-only">Password</label>
-    <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+    <label for="inputPassword2" class="sr-only">Senha</label>
+    <input type="password" class="form-control" id="inputPassword2" placeholder="Senha">
   </div>
-  <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
+  <button type="submit" class="btn btn-primary mb-2">Confirmar identidade</button>
 </form>
 {% endcapture %}
 {% include example.html content=example %}
 
-## Checkboxes and radios
+## Checkboxes e radios
 
-Default checkboxes and radios are improved upon with the help of `.form-check`, **a single class for both input types that improves the layout and behavior of their HTML elements**. Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.
+Checkboxes e radios padrões são aprimorados com ajuda da `.form-check`, **uma classe para os dois tipos de input que melhora o layout e comportamento de seus elementos HTML**. Checkboxes são para selecionar várias opções em uma lista, enquanto radios são para selecionar uma em muitas.
 
-Disabled checkboxes and radios are supported, but to provide a `not-allowed` cursor on hover of the parent `<label>`, you'll need to add the `disabled` attribute to the `.form-check-input`. The disabled attribute will apply a lighter color to help indicate the input's state.
+Checkboxes e radios desativados são suportados, mas para se ter um cursor `not-allowed` quando passá-lo sobre o `<label>` pai, você precisará adicionar o atributo `disabled` no elemento com `.form-check-input`. O atributo disabled vai aplicar um cor mais clara para indicar o estado do input.
 
-Checkboxes and radios use are built to support HTML-based form validation and provide concise, accessible labels. As such, our `<input>`s and `<label>`s are sibling elements as opposed to an `<input>` within a `<label>`. This is slightly more verbose as you must specify `id` and `for` attributes to relate the `<input>` and `<label>`.
+Checkboxes e radios são feitos para terem suporte a validação de formulário HTML e prover labels consisos e acessíveis. Assim, nossos `<input>` e `<label>` são elementos irmãos, diferente de um `<input>` dentro de uma `<label>`. Isso é um pouco mais massante, já que você precisa especificar atributos `id` e `for` para vincular o `<input>` a `<label>`.
 
-### Default (stacked)
+### Padrão (empilhados)
 
-By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with `.form-check`.
+Por padrão, qualquer número de checkboxes e radios, que são irmãos imediatos, vão se empilhar e receber espaçamento apropriado com a classe `.form-check`.
 
 {% capture example %}
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
   <label class="form-check-label" for="defaultCheck1">
-    Default checkbox
+    Checkbox padrão
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
   <label class="form-check-label" for="defaultCheck2">
-    Disabled checkbox
+    Checkbox desativado
   </label>
 </div>
 {% endcapture %}
@@ -200,21 +200,21 @@ By default, any number of checkboxes and radios that are immediate sibling will 
 
 {% capture example %}
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="opcao1" checked>
   <label class="form-check-label" for="exampleRadios1">
-    Default radio
+    Radio padrão
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2">
   <label class="form-check-label" for="exampleRadios2">
-    Second default radio
+    Segundo radio padrão
   </label>
 </div>
 <div class="form-check disabled">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="opcao3" disabled>
   <label class="form-check-label" for="exampleRadios3">
-    Disabled radio
+    Radio desativado
   </label>
 </div>
 {% endcapture %}
@@ -222,88 +222,88 @@ By default, any number of checkboxes and radios that are immediate sibling will 
 
 ### Inline
 
-Group checkboxes or radios on the same horizontal row by adding `.form-check-inline` to any `.form-check`.
+Crie grupos de checkboxes ou radios, na mesma linha horizontal, usando `.form-check-inline` em qualquer `.form-check`.
 
 {% capture example %}
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="opcao1">
   <label class="form-check-label" for="inlineCheckbox1">1</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="opcao2">
   <label class="form-check-label" for="inlineCheckbox2">2</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-  <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="opcao3" disabled>
+  <label class="form-check-label" for="inlineCheckbox3">3 (desativado)</label>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
 {% capture example %}
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="opcao1">
   <label class="form-check-label" for="inlineRadio1">1</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="opcao2">
   <label class="form-check-label" for="inlineRadio2">2</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
-  <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="opcao3" disabled>
+  <label class="form-check-label" for="inlineRadio3">3 (desativado)</label>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-### Without labels
+### Sem labels
 
-Add `.position-static` to inputs within `.form-check` that don't have any label text. Remember to still provide some form of label for assistive technologies (for instance, using `aria-label`).
+Use `.position-static` em inputs dentro de `.form-check`, os quais não possuem qualquer texto de label. Lembre-se de, ainda assim, criar algum tipo de label para tecnologias assistivas (usando `aria-label`, por exemplo).
 
 {% capture example %}
 <div class="form-check">
-  <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+  <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="opcao1" aria-label="...">
 </div>
 <div class="form-check">
-  <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+  <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="opcao1" aria-label="...">
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
 ## Layout
 
-Since Bootstrap applies `display: block` and `width: 100%` to almost all our form controls, forms will by default stack vertically. Additional classes can be used to vary this layout on a per-form basis.
+Já que Bootstrap aplica `display: block` e `width: 100%` em quase todos campos de formulários, eles vão se empilhar, por padrão. Classes adicionais podem ser usadas para variar este layout.
 
-### Form groups
+### Grupos de formulários
 
-The `.form-group` class is the easiest way to add some structure to forms. It provides a flexible class that encourages proper grouping of labels, controls, optional help text, and form validation messaging. By default it only applies `margin-bottom`, but it picks up additional styles in `.form-inline` as needed. Use it with `<fieldset>`s, `<div>`s, or nearly any other element.
+A classe `.form-group` é o jeito mais fácil de adicionar alguma estrutura aos formulários. Ela cria uma base para o agrupamento apropriado de labels, controles, textos de ajuda e mensagens de validação de formulário. Por padrão, ela só aplica `margin-bottom`, mas usa alguns estilos adicionais de `form-inline`, sempre que necessário. Use-a em `<fieldset>`, `<div>` ou quase qualquer outro elemento.
 
 {% capture example %}
 <form>
   <div class="form-group">
-    <label for="formGroupExampleInput">Example label</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+    <label for="formGroupExampleInput">Label exemplo</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Input exemplo">
   </div>
   <div class="form-group">
-    <label for="formGroupExampleInput2">Another label</label>
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+    <label for="formGroupExampleInput2">Outra label</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Outro input">
   </div>
 </form>
 {% endcapture %}
 {% include example.html content=example %}
 
-### Form grid
+### Grid de formulário
 
-More complex forms can be built using our grid classes. Use these for form layouts that require multiple columns, varied widths, and additional alignment options.
+Formulários mais complexos podem ser feitos usando classes do grid. Use-as para fazer layouts de formulários que precisam de várias colunas, larguras e outras opções de alinhamento.
 
 {% capture example %}
 <form>
   <div class="row">
     <div class="col">
-      <input type="text" class="form-control" placeholder="First name">
+      <input type="text" class="form-control" placeholder="Nome">
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="Last name">
+      <input type="text" class="form-control" placeholder="Sobrenome">
     </div>
   </div>
 </form>
@@ -312,23 +312,23 @@ More complex forms can be built using our grid classes. Use these for form layou
 
 #### Form row
 
-You may also swap `.row` for `.form-row`, a variation of our standard grid row that overrides the default column gutters for tighter and more compact layouts.
+Você também pode trocar `.row` por `.form-row`, uma variação de nosso grid row padrão, a qual sobrescreve as gutters padrões das colunas para conseguir layouts mais compactos.
 
 {% capture example %}
 <form>
   <div class="form-row">
     <div class="col">
-      <input type="text" class="form-control" placeholder="First name">
+      <input type="text" class="form-control" placeholder="Nome">
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="Last name">
+      <input type="text" class="form-control" placeholder="Sobrenome">
     </div>
   </div>
 </form>
 {% endcapture %}
 {% include example.html content=example %}
 
-More complex layouts can also be created with the grid system.
+Layouts mais complexos também podem ser criados com o sistema grid.
 
 {% capture example %}
 <form>
@@ -338,53 +338,53 @@ More complex layouts can also be created with the grid system.
       <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
     </div>
     <div class="form-group col-md-6">
-      <label for="inputPassword4">Password</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+      <label for="inputPassword4">Senha</label>
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputAddress">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <label for="inputAddress">Endereço</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Rua dos Bobos, nº 0">
   </div>
   <div class="form-group">
-    <label for="inputAddress2">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    <label for="inputAddress2">Endereço 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartamento, hotel, casa, etc.">
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputCity">City</label>
+      <label for="inputCity">Cidade</label>
       <input type="text" class="form-control" id="inputCity">
     </div>
     <div class="form-group col-md-4">
-      <label for="inputState">State</label>
-      <select id="inputState" class="form-control">
-        <option selected>Choose...</option>
+      <label for="inputEstado">Estado</label>
+      <select id="inputEstado" class="form-control">
+        <option selected>Escolher...</option>
         <option>...</option>
       </select>
     </div>
     <div class="form-group col-md-2">
-      <label for="inputZip">Zip</label>
-      <input type="text" class="form-control" id="inputZip">
+      <label for="inputCEP">CEP</label>
+      <input type="text" class="form-control" id="inputCEP">
     </div>
   </div>
   <div class="form-group">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" id="gridCheck">
       <label class="form-check-label" for="gridCheck">
-        Check me out
+        Clique em mim
       </label>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button type="submit" class="btn btn-primary">Entrar</button>
 </form>
 {% endcapture %}
 {% include example.html content=example %}
 
-#### Horizontal form
+#### Formulário horizontal
 
-Create horizontal forms with the grid by adding the `.row` class to form groups and using the `.col-*-*` classes to specify the width of your labels and controls. Be sure to add `.col-form-label` to your `<label>`s as well so they're vertically centered with their associated form controls.
+Crie formulários horizontais com o grid, usando a classe `.row` em grupos de formulários e as classes `.col-*-*` para especificar a largura de seus labels e controles. Também, se assegure de usar `.col-form-label` no seu `<label>`, para que ele se centralize verticalmente com seus campos de formulário.
 
-At times, you maybe need to use margin or padding utilities to create that perfect alignment you need. For example, we've removed the `padding-top` on our stacked radio inputs label to better align the text baseline.
+As vezes, você pode precisar usar utilitários de margem ou padding para criar o alinhamento perfeito que precisa. Por exemplo, nós removemos `padding-top` em nossos inputs radios empilhados para melhorar o alinhamento da baseline do texto.
 
 {% capture example %}
 <form>
@@ -395,9 +395,9 @@ At times, you maybe need to use margin or padding utilities to create that perfe
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Senha</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Senha">
     </div>
   </div>
   <fieldset class="form-group">
@@ -405,21 +405,21 @@ At times, you maybe need to use margin or padding utilities to create that perfe
       <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
       <div class="col-sm-10">
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="opcao1" checked>
           <label class="form-check-label" for="gridRadios1">
-            First radio
+            Primeiro radio
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="opcao2">
           <label class="form-check-label" for="gridRadios2">
-            Second radio
+            Segundo radio
           </label>
         </div>
         <div class="form-check disabled">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="opcao3" disabled>
           <label class="form-check-label" for="gridRadios3">
-            Third disabled radio
+            Terceiro radio desativado
           </label>
         </div>
       </div>
@@ -431,23 +431,23 @@ At times, you maybe need to use margin or padding utilities to create that perfe
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="gridCheck1">
         <label class="form-check-label" for="gridCheck1">
-          Example checkbox
+          Checkbox exemplo
         </label>
       </div>
     </div>
   </div>
   <div class="form-group row">
     <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary">Sign in</button>
+      <button type="submit" class="btn btn-primary">Entrar</button>
     </div>
   </div>
 </form>
 {% endcapture %}
 {% include example.html content=example %}
 
-##### Horizontal form label sizing
+##### Dimensionamento horizontal de labels
 
-Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg` and `.form-control-sm`.
+Tenha certeza de usar `.col-form-label-sm` ou `.col-form-label-lg` em um `<label>` ou `<legend>` para, adequadamente, seguir o tamanho de `.form-control-lg` e `.form-control-sm`.
 
 {% capture example %}
 <form>
@@ -473,354 +473,359 @@ Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s o
 {% endcapture %}
 {% include example.html content=example %}
 
-#### Column sizing
+#### Tamanho de colunas
 
-As shown in the previous examples, our grid system allows you to place any number of `.col`s within a `.row` or `.form-row`. They'll split the available width equally between them. You may also pick a subset of your columns to take up more or less space, while the remaining `.col`s equally split the rest, with specific column classes like `.col-7`.
+Como mostrado nos exemplos anteriores, nosso sistema de grid permite que você use qualquer número de `.col`, dentro de um `.row` ou `.form-row`. Elas vão dividir a largura disponível, igualmente, entre si. Você também pode escolher se um subconjunto de colunas pode tomar mais ou menos espaço, enquanto as `.col` restantes dividem o resto do espaço, usando classes de colunas como `.col-7`.
 
 {% capture example %}
 <form>
   <div class="form-row">
     <div class="col-7">
-      <input type="text" class="form-control" placeholder="City">
+      <input type="text" class="form-control" placeholder="Cidade">
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="State">
+      <input type="text" class="form-control" placeholder="Estado">
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="Zip">
+      <input type="text" class="form-control" placeholder="CEP">
     </div>
   </div>
 </form>
 {% endcapture %}
 {% include example.html content=example %}
 
-#### Auto-sizing
+#### Auto dimensionamento
 
-The example below uses a flexbox utility to vertically center the contents and changes `.col` to `.col-auto` so that your columns only take up as much space as needed. Put another way, the column sizes itself based on the contents.
+O exemplo abaixo usa utilitário flexbox para centralizar verticalmente os conteúdos e troca `.col` por `.col-auto` para que suas colunas só usem o espaço necessário. Em outras palavras, a coluna vai crescer sozinha, baseando-se no tamanho de seus conteúdos.
 
 {% capture example %}
 <form>
   <div class="form-row align-items-center">
     <div class="col-auto">
-      <label class="sr-only" for="inlineFormInput">Name</label>
-      <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Jane Doe">
+      <label class="sr-only" for="inlineFormInput">Nome</label>
+      <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Fulano">
     </div>
     <div class="col-auto">
-      <label class="sr-only" for="inlineFormInputGroup">Username</label>
+      <label class="sr-only" for="inlineFormInputGroup">Usuário</label>
       <div class="input-group mb-2">
         <div class="input-group-prepend">
           <div class="input-group-text">@</div>
         </div>
-        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Usuário">
       </div>
     </div>
     <div class="col-auto">
       <div class="form-check mb-2">
         <input class="form-check-input" type="checkbox" id="autoSizingCheck">
         <label class="form-check-label" for="autoSizingCheck">
-          Remember me
+          Lembrar de mim
         </label>
       </div>
     </div>
     <div class="col-auto">
-      <button type="submit" class="btn btn-primary mb-2">Submit</button>
+      <button type="submit" class="btn btn-primary mb-2">Enviar</button>
     </div>
   </div>
 </form>
 {% endcapture %}
 {% include example.html content=example %}
 
-You can then remix that once again with size-specific column classes.
+Você também pode repetir isso, mas com classes de colunas de tamanhos específicos.
 
 {% capture example %}
 <form>
   <div class="form-row align-items-center">
     <div class="col-sm-3 my-1">
-      <label class="sr-only" for="inlineFormInputName">Name</label>
-      <input type="text" class="form-control" id="inlineFormInputName" placeholder="Jane Doe">
+      <label class="sr-only" for="inlineFormInputName">Nome</label>
+      <input type="text" class="form-control" id="inlineFormInputName" placeholder="Fulano">
     </div>
     <div class="col-sm-3 my-1">
-      <label class="sr-only" for="inlineFormInputGroupUsername">Username</label>
+      <label class="sr-only" for="inlineFormInputGroupUsername">Usuário</label>
       <div class="input-group">
         <div class="input-group-prepend">
           <div class="input-group-text">@</div>
         </div>
-        <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+        <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Usuário">
       </div>
     </div>
     <div class="col-auto my-1">
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
         <label class="form-check-label" for="autoSizingCheck2">
-          Remember me
+          Lembrar de mim
         </label>
       </div>
     </div>
     <div class="col-auto my-1">
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">Enviar</button>
     </div>
   </div>
 </form>
 {% endcapture %}
 {% include example.html content=example %}
 
-And of course [custom form controls](#custom-forms) are supported.
+E, é claro, [campos de formulário personalizados](#custom-forms) são suportados.
 
 {% capture example %}
 <form>
   <div class="form-row align-items-center">
     <div class="col-auto my-1">
-      <label class="mr-sm-2" for="inlineFormCustomSelect">Preference</label>
+      <label class="mr-sm-2" for="inlineFormCustomSelect">Preferência</label>
       <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-        <option selected>Choose...</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+        <option selected>Escolher...</option>
+        <option value="1">Um</option>
+        <option value="2">Dois</option>
+        <option value="3">Três</option>
       </select>
     </div>
     <div class="col-auto my-1">
       <div class="custom-control custom-checkbox mr-sm-2">
         <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-        <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
+        <label class="custom-control-label" for="customControlAutosizing">Lembrar preferências</label>
       </div>
     </div>
     <div class="col-auto my-1">
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">Enviar</button>
     </div>
   </div>
 </form>
 {% endcapture %}
 {% include example.html content=example %}
 
-### Inline forms
+### formulários inline
 
-Use the `.form-inline` class to display a series of labels, form controls, and buttons on a single horizontal row. Form controls within inline forms vary slightly from their default states.
+Use a classe `.form-inline` pora mostrar vários labels, controles e botões, em uma única linha. Campos dentro de formulários inline são um pouco diferente de seus estados padrões.
 
-- Controls are `display: flex`, collapsing any HTML white space and allowing you to provide alignment control with [spacing]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) and [flexbox]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) utilities.
-- Controls and input groups receive `width: auto` to override the Bootstrap default `width: 100%`.
-- Controls **only appear inline in viewports that are at least 576px wide** to account for narrow viewports on mobile devices.
+- Controles usam `display: flex`, colapsando qualquer espaço HTML em branco e permitindo que você tenha controle de alinhamento com utilitários de [espaçamento]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) e [flexbox]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/);
+- Grupos de controles e inputs recebem `width: auto` para sobrescrever o padrão do Bootstrap `width: 100%`;
+- Controles **só aparecem inline em viewports que possuem, pelo menos, 576px de largura**, levando em conta viewports estreitas em dispositivos móveis.
 
-You may need to manually address the width and alignment of individual form controls with [spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) (as shown below). Lastly, be sure to always include a `<label>` with each form control, even if you need to hide it from non-screenreader visitors with `.sr-only`.
+Você pode precisar definir a largura e alinhamento individual dos campos, usando [utilitários de espaçamento]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) (como mostrado abaixo). Por último, se assegure de sempre usar uma `<label>` em cada controle, mesmo se você precisar escondê-lo de usuários sem leitores de telas, usando `.sr-only`.
 
 {% capture example %}
 <form class="form-inline">
-  <label class="sr-only" for="inlineFormInputName2">Name</label>
-  <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">
+  <label class="sr-only" for="inlineFormInputName2">Nome</label>
+  <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Fulano">
 
-  <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+  <label class="sr-only" for="inlineFormInputGroupUsername2">Usuário</label>
   <div class="input-group mb-2 mr-sm-2">
     <div class="input-group-prepend">
       <div class="input-group-text">@</div>
     </div>
-    <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
+    <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Usuário">
   </div>
 
   <div class="form-check mb-2 mr-sm-2">
     <input class="form-check-input" type="checkbox" id="inlineFormCheck">
     <label class="form-check-label" for="inlineFormCheck">
-      Remember me
+      Lembrar de mim
     </label>
   </div>
 
-  <button type="submit" class="btn btn-primary mb-2">Submit</button>
+  <button type="submit" class="btn btn-primary mb-2">Enviar</button>
 </form>
 {% endcapture %}
 {% include example.html content=example %}
 
-Custom form controls and selects are also supported.
+Controles de formuários e selects personalizados são suportados, também.
 
 {% capture example %}
 <form class="form-inline">
-  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Preference</label>
+  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Preferência</label>
   <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-    <option selected>Choose...</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
+    <option selected>Escolher...</option>
+    <option value="1">Um</option>
+    <option value="2">Dois</option>
+    <option value="3">Três</option>
   </select>
 
   <div class="custom-control custom-checkbox my-1 mr-sm-2">
     <input type="checkbox" class="custom-control-input" id="customControlInline">
-    <label class="custom-control-label" for="customControlInline">Remember my preference</label>
+    <label class="custom-control-label" for="customControlInline">Lembrar preferências</label>
   </div>
 
-  <button type="submit" class="btn btn-primary my-1">Submit</button>
+  <button type="submit" class="btn btn-primary my-1">Enviar</button>
 </form>
 {% endcapture %}
 {% include example.html content=example %}
 
 {% capture callout %}
-##### Alternatives to hidden labels
-Assistive technologies such as screen readers will have trouble with your forms if you don't include a label for every input. For these inline forms, you can hide the labels using the `.sr-only` class. There are further alternative methods of providing a label for assistive technologies, such as the `aria-label`, `aria-labelledby` or `title` attribute. If none of these are present, assistive technologies may resort to using the `placeholder` attribute, if present, but note that use of `placeholder` as a replacement for other labelling methods is not advised.
+##### Opções para esconder labels
+
+Tecnologias assistivas como leitores de telas sempre vão ter problemas nos formulários, se você não colocar um label em cada input. Nesses formulários inline, você pode esconder as labels usando a classe `.sr-only`. Também há outros métodos de criar uma label para tecnologias assistivas, como os atributos `aria-label`, `aria-labelledby` e `title`. Se nenhum deles é usado, tecnologias assistivas podem recorrer ao atributo `placeholder` (se existir), mas perceba que o uso de `placeholder` como substituto não é aconselhável, nesses casos.
 {% endcapture %}
 {% include callout.html content=callout type="warning" %}
 
-## Help text
+## Texto de ajuda
 
-Block-level help text in forms can be created using `.form-text` (previously known as `.help-block` in v3). Inline help text can be flexibly implemented using any inline HTML element and utility classes like `.text-muted`.
+Textos de ajuda block-level em formulários podem ser criado usando `.form-text` (anteriormente, conhecido como `.help-block`, na v3). Textos de ajuda inline podem ser implementados, sem problemas, usando qualquer elemento HTML inline e classes utilitárias como `.text-muted`.
 
 {% capture callout %}
-##### Associating help text with form controls
+##### Associando textos de ajuda com campos de formulário
 
-Help text should be explicitly associated with the form control it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this help text when the user focuses or enters the control.
+Textos de ajuda devem ser, explicitamente, associados aos campos de formulário que eles remetem, usando o atributo `aria-describedby`. Isso vai garantir que tecnologias assistivas (como leitores de telas) mostrem esse texto de ajuda, quando o usuário foca ou entra no campo.
 {% endcapture %}
 {% include callout.html content=callout type="warning" %}
 
-Help text below inputs can be styled with `.form-text`. This class includes `display: block` and adds some top margin for easy spacing from the inputs above.
+Textos de ajuda abaixo podem ser estilizados com `.form-text`. Essa classe possui `display: block` e adiciona alguma margem no topo para fácil distanciamento dos inputs acima.
 
 {% capture example %}
-<label for="inputPassword5">Password</label>
+<label for="inputPassword5">Senha</label>
 <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
 <small id="passwordHelpBlock" class="form-text text-muted">
-  Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+  Sua senha deve ter entre 8 e 20 caracteres, os quais devem ser letras e números, sem espaços, caracteres especiais ou emojis.
 </small>
 {% endcapture %}
 {% include example.html content=example %}
 
-Inline text can use any typical inline HTML element (be it a `<small>`, `<span>`, or something else) with nothing more than a utility class.
+Textos inline devem usar qualquer elemento HTML inline, seja `<small>`, `<span>` ou qualquer outra coisa, além de classes utilitárias.
 
 {% capture example %}
 <form class="form-inline">
   <div class="form-group">
-    <label for="inputPassword6">Password</label>
+    <label for="inputPassword6">Senha</label>
     <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
     <small id="passwordHelpInline" class="text-muted">
-      Must be 8-20 characters long.
+      Deve ter entre 8 e 20 caracteres.
     </small>
   </div>
 </form>
 {% endcapture %}
 {% include example.html content=example %}
 
-## Disabled forms
+## Desativar formulários
 
-Add the `disabled` boolean attribute on an input to prevent user interactions and make it appear lighter.
+Use o atributo booleano `disabled` em um input para evitar interações e fazê-lo parecer mais esmaecido.
 
 {% highlight html %}
-<input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+<input class="form-control" id="disabledInput" type="text" placeholder="Input desativado..." disabled>
 {% endhighlight %}
 
-Add the `disabled` attribute to a `<fieldset>` to disable all the controls within.
+Use o atributo `disabled` em um `<fieldset>` para desativar todos os campos dentro dele.
 
 {% capture example %}
 <form>
   <fieldset disabled>
     <div class="form-group">
-      <label for="disabledTextInput">Disabled input</label>
-      <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+      <label for="disabledTextInput">Input desativado</label>
+      <input type="text" id="disabledTextInput" class="form-control" placeholder="Input desativado">
     </div>
     <div class="form-group">
-      <label for="disabledSelect">Disabled select menu</label>
+      <label for="disabledSelect">Menu select desativado</label>
       <select id="disabledSelect" class="form-control">
-        <option>Disabled select</option>
+        <option>Select desativado</option>
       </select>
     </div>
     <div class="form-check">
       <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
       <label class="form-check-label" for="disabledFieldsetCheck">
-        Can't check this
+        Não é possível clicar aqui
       </label>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Enviar</button>
   </fieldset>
 </form>
 {% endcapture %}
 {% include example.html content=example %}
 
 {% capture callout %}
-##### Caveat with anchors
+##### Probleminha com âncoras
 
-By default, browsers will treat all native form controls (`<input>`, `<select>` and `<button>` elements) inside a `<fieldset disabled>` as disabled, preventing both keyboard and mouse interactions on them. However, if your form also includes `<a ... class="btn btn-*">` elements, these will only be given a style of `pointer-events: none`. As noted in the section about [disabled state for buttons]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/buttons/#disabled-state) (and specifically in the sub-section for anchor elements), this CSS property is not yet standardized and isn't fully supported in Internet Explorer 10, and won't prevent keyboard users from being able to focus or activate these links. So to be safe, use custom JavaScript to disable such links.
+Por padrão, navegadores vão tratar todo campo de formulário nativo (`<input>`, `<select>` e `<button>`), dentro de um `<fieldset disabled>`, como desativado. Dessa maneira, não será possível haver interação de teclado ou mouse, neles. No entanto, se seu formulário também possui elementos `<a ... class="btn btn-*">`, estes só vão receber o estilo `pointer-events: none`. Como falado na seção sobre [estado desativado de botões]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/buttons/#disabled-state) (e na sub-seção de elementos âncoras, especialmente), esta propriedade CSS ainda não foi padronizada e não é suportada, totalmente, no Internet Explorer 10, além não evitar que usuários de teclado de serem capazes de ativarem estes links. Portanto, para ter segurança, use JavaScript personalizado  para desativar tais links.
 {% endcapture %}
 {% include callout.html content=callout type="warning" %}
 
 {% capture callout %}
-#### Cross-browser compatibility
+#### Compatibilidade cross-browser
 
-While Bootstrap will apply these styles in all browsers, Internet Explorer 11 and below don't fully support the `disabled` attribute on a `<fieldset>`. Use custom JavaScript to disable the fieldset in these browsers.
+Apesar do Bootstrap aplicar estes estilos em todos os browsers, Internet Explorer 11 e versões anteriores não vão suportar o atributo `disabled` em `<fieldset>`, totalmente. Use JavaScript personalizado para desativar o fieldset, nesses browsers.
 {% endcapture %}
 {% include callout.html content=callout type="danger" %}
 
-## Validation
+## Validação
 
-Provide valuable, actionable feedback to your users with HTML5 form validation–[available in all our supported browsers](https://caniuse.com/#feat=form-validation). Choose from the browser default validation feedback, or implement custom messages with our built-in classes and starter JavaScript.
+Dê um feedback significativo e acionável aos seus usuários, usando validação de formulário HTML5 ([disponível em todos os nossos browsers suportados](https://caniuse.com/#feat=form-validation)). Escolha entre o feedback de validação padrão do browser ou implemente mensagens personalizadas com nossas classes integradas e JavaScript.
 
 {% capture callout %}
-We currently recommend using custom validation styles, as native browser default validation messages are not consistently exposed to assistive technologies in all browsers (most notably, Chrome on desktop and mobile).
+Atualmente, recomendamos usar estilos de validação personalizados, já que mensagens de validação padrões não são, totalmente, expostas a tecnologias assistivas, em todos browsers (no Chrome desktop e mobile, mais notavelmente).
 {% endcapture %}
 {% include callout.html content=callout type="warning" %}
 
-### How it works
+### Como funciona
 
-Here's how form validation works with Bootstrap:
+Aqui está como validação de formulário funciona, usando Bootstrap:
 
-- HTML form validation is applied via CSS's two pseudo-classes, `:invalid` and `:valid`. It applies to `<input>`, `<select>`, and `<textarea>` elements.
-- Bootstrap scopes the `:invalid` and `:valid` styles to parent `.was-validated` class, usually applied to the `<form>`. Otherwise, any required field without a value shows up as invalid on page load. This way, you may choose when to activate them (typically after form submission is attempted).
-- To reset the appearance of the form (for instance, in the case of dynamic form submissions using AJAX), remove the `.was-validated` class from the `<form>` again after submission.
-- As a fallback, `.is-invalid` and `.is-valid` classes may be used instead of the pseudo-classes for [server side validation](#server-side). They do not require a `.was-validated` parent class.
-- Due to constraints in how CSS works, we cannot (at present) apply styles to a `<label>` that comes before a form control in the DOM without the help of custom JavaScript.
-- All modern browsers support the [constraint validation API](https://www.w3.org/TR/html5/sec-forms.html#the-constraint-validation-api), a series of JavaScript methods for validating form controls.
-- Feedback messages may utilize the [browser defaults](#browser-defaults) (different for each browser, and unstylable via CSS) or our custom feedback styles with additional HTML and CSS.
-- You may provide custom validity messages with `setCustomValidity` in JavaScript.
+- A validação de formulário HTML é aplicada usando duas pseudo-classes CSS: `:invalid` e `:valid`;
+  - Ela é aplicada em `<input>`, `<select>` e `<textarea>`.
+- Bootstrap limita o scopo de `:invalid` e `:valid` a classe pai `.was-validated`, usualmente, aplicada no `<form>`;
+  - Caso contrário, qualquer campo obrigatório sem um valor será mostrado como inválido, ao carregar a página;
+  - Assim, você pode escolher quando ativá-los (tipicamente, depois do envio de formulário).
+- Para resetar a aparência do formulário (no caso de envio de dados dinâmico, via AJAX, por exemplo), remova a classe `.was-validated` do `<form>`, depois de cada envio;
+- Como um fallback, as classes `is-invalid` e `.is-valid` podem ser usadas, invés das pseudo-classes para [validação server side](#server-side);
+  - Não exigem uma classe pai `.was-validated`.
+- Devido as limitações do CSS, não podemos (no momento) aplicar estilos em uma `<label>` que venha antes de um campo de formulário (no DOM), sem a ajuda de JavaScript;
+- Todos browsers modernos suportam a [constraint validation API](https://www.w3.org/TR/html5/sec-forms.html#the-constraint-validation-api), uma série de métodos JavaScript para validar campos de formulário;
+- Mensagens de feedback podem usar os [padrões do browser](#browser-defaults) (diferente em cada e não estilizável, via CSS) ou nossos estilos de feedback personalizados, com HTML e CSS extra;
+- Você pode prover mensagens de validação personalizadas com `setCustomValidity`, no JavaScript.
 
-With that in mind, consider the following demos for our custom form validation styles, optional server side classes, and browser defaults.
+Com isso em mente, preste atenção nas seguintes demonstrações de nossos estilos de validação de formulários personalizados, classes server-side opcionais e padrões dos browsers.
 
-### Custom styles
+### Estilos personalizados
 
-For custom Bootstrap form validation messages, you'll need to add the `novalidate` boolean attribute to your `<form>`. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript. Try to submit the form below; our JavaScript will intercept the submit button and relay feedback to you.
+Para mensagens de validação Bootstrap personalizadas, você precisará colocar o atributo booleano `novalidate` em seu `<form>`. Isso desativa as dicas padrões do browser, mas continua tendo acesso as APIs de validação de formulário, no JavaScript. Tente enviar o formulário abaixo e veja que nosso JavaScript irá interceptar o botão "Enviar" e retornar um feedback a você.
 
-When attempting to submit, you'll see the `:invalid` and `:valid` styles applied to your form controls.
+Quando tentando enviar o formulário, verá os estilos `:invalid` e `:valid` aplicados em seus campos de formulário.
 
 {% capture example %}
 <form class="needs-validation" novalidate>
   <div class="form-row">
     <div class="col-md-4 mb-3">
-      <label for="validationCustom01">First name</label>
-      <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
+      <label for="validationCustom01">Primeiro nome</label>
+      <input type="text" class="form-control" id="validationCustom01" placeholder="Nome" value="Mark" required>
       <div class="valid-feedback">
-        Looks good!
+        Tudo certo!
       </div>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationCustom02">Last name</label>
-      <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+      <label for="validationCustom02">Sobrenome</label>
+      <input type="text" class="form-control" id="validationCustom02" placeholder="Sobrenome" value="Otto" required>
       <div class="valid-feedback">
-        Looks good!
+        Tudo certo!
       </div>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationCustomUsername">Username</label>
+      <label for="validationCustomUsername">Usuário</label>
       <div class="input-group">
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroupPrepend">@</span>
         </div>
-        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Usuário" aria-describedby="inputGroupPrepend" required>
         <div class="invalid-feedback">
-          Please choose a username.
+          Por favor, escolha um nome de usuário.
         </div>
       </div>
     </div>
   </div>
   <div class="form-row">
     <div class="col-md-6 mb-3">
-      <label for="validationCustom03">City</label>
-      <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+      <label for="validationCustom03">Cidade</label>
+      <input type="text" class="form-control" id="validationCustom03" placeholder="Cidade" required>
       <div class="invalid-feedback">
-        Please provide a valid city.
+        Por favor, informe uma cidade válida.
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationCustom04">State</label>
-      <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+      <label for="validationCustom04">Estado</label>
+      <input type="text" class="form-control" id="validationCustom04" placeholder="Estado" required>
       <div class="invalid-feedback">
-        Please provide a valid state.
+        Por favor, informe um estado válido.
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationCustom05">Zip</label>
-      <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+      <label for="validationCustom05">CEP</label>
+      <input type="text" class="form-control" id="validationCustom05" placeholder="CEP" required>
       <div class="invalid-feedback">
-        Please provide a valid zip.
+        Por favor, informe um CEP válido.
       </div>
     </div>
   </div>
@@ -828,24 +833,24 @@ When attempting to submit, you'll see the `:invalid` and `:valid` styles applied
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
       <label class="form-check-label" for="invalidCheck">
-        Agree to terms and conditions
+        Concordo com os termos e condições
       </label>
       <div class="invalid-feedback">
-        You must agree before submitting.
+        Você deve concordar, antes de continuar.
       </div>
     </div>
   </div>
-  <button class="btn btn-primary" type="submit">Submit form</button>
+  <button class="btn btn-primary" type="submit">Enviar</button>
 </form>
 
 <script>
-// Example starter JavaScript for disabling form submissions if there are invalid fields
+// Exemplo de JavaScript inicial para desativar envios de formulário, se houver campos inválidos.
 (function() {
   'use strict';
   window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    // Pega todos os formulários que nós queremos aplicar estilos de validação Bootstrap personalizados.
     var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
+    // Faz um loop neles e evita o envio
     var validation = Array.prototype.filter.call(forms, function(form) {
       form.addEventListener('submit', function(event) {
         if (form.checkValidity() === false) {
@@ -861,114 +866,116 @@ When attempting to submit, you'll see the `:invalid` and `:valid` styles applied
 {% endcapture %}
 {% include example.html content=example %}
 
-### Browser defaults
+### Padrões dos browsers
 
-Not interested in custom validation feedback messages or writing JavaScript to change form behaviors? All good, you can use the browser defaults. Try submitting the form below. Depending on your browser and OS, you'll see a slightly different style of feedback.
+Não tem interesse em feedback de validação personalizado ou em escrever JavaScript para mudar os comportamentos do formulário? Tudo bem! Use os padrões dos navegadores.
 
-While these feedback styles cannot be styled with CSS, you can still customize the feedback text through JavaScript.
+Tente enviar o formulário abaixo. Dependendo do seu browser e SO, verá um estilo de feedback pouco diferente.
+
+Apesar destes estilos não poderem serem estilizados com CSS, você ainda pode personalizar o texto de feedback, usando JavaScript.
 
 {% capture example %}
 <form>
   <div class="form-row">
     <div class="col-md-4 mb-3">
-      <label for="validationDefault01">First name</label>
-      <input type="text" class="form-control" id="validationDefault01" placeholder="First name" value="Mark" required>
+      <label for="validationDefault01">Primeiro nome</label>
+      <input type="text" class="form-control" id="validationDefault01" placeholder="Nome" value="Mark" required>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationDefault02">Last name</label>
-      <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="Otto" required>
+      <label for="validationDefault02">Sobrenome</label>
+      <input type="text" class="form-control" id="validationDefault02" placeholder="Sobrenome" value="Otto" required>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationDefaultUsername">Username</label>
+      <label for="validationDefaultUsername">Usuário</label>
       <div class="input-group">
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroupPrepend2">@</span>
         </div>
-        <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Username" aria-describedby="inputGroupPrepend2" required>
+        <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Usuário" aria-describedby="inputGroupPrepend2" required>
       </div>
     </div>
   </div>
   <div class="form-row">
     <div class="col-md-6 mb-3">
-      <label for="validationDefault03">City</label>
-      <input type="text" class="form-control" id="validationDefault03" placeholder="City" required>
+      <label for="validationDefault03">Cidade</label>
+      <input type="text" class="form-control" id="validationDefault03" placeholder="Cidade" required>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationDefault04">State</label>
-      <input type="text" class="form-control" id="validationDefault04" placeholder="State" required>
+      <label for="validationDefault04">Estado</label>
+      <input type="text" class="form-control" id="validationDefault04" placeholder="Estado" required>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationDefault05">Zip</label>
-      <input type="text" class="form-control" id="validationDefault05" placeholder="Zip" required>
+      <label for="validationDefault05">CEP</label>
+      <input type="text" class="form-control" id="validationDefault05" placeholder="CEP" required>
     </div>
   </div>
   <div class="form-group">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
       <label class="form-check-label" for="invalidCheck2">
-        Agree to terms and conditions
+        Concordo com os termos e condições
       </label>
     </div>
   </div>
-  <button class="btn btn-primary" type="submit">Submit form</button>
+  <button class="btn btn-primary" type="submit">Enviar</button>
 </form>
 {% endcapture %}
 {% include example.html content=example %}
 
-### Server side
+### Server-side
 
-We recommend using client side validation, but in case you require server side, you can indicate invalid and valid form fields with `.is-invalid` and `.is-valid`. Note that `.invalid-feedback` is also supported with these classes.
+Recomendamos usar validação client-side, mas se precisar de server-side, poderá indicar campos de formulário válidos e invalidos com as classes `.is-invalid` and `.is-valid`. Perceba que `.invalid-feedback` também pode ser usada com essas classes.
 
 {% capture example %}
 <form>
   <div class="form-row">
     <div class="col-md-4 mb-3">
-      <label for="validationServer01">First name</label>
-      <input type="text" class="form-control is-valid" id="validationServer01" placeholder="First name" value="Mark" required>
+      <label for="validationServer01">Primeiro nome</label>
+      <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Nome" value="Mark" required>
       <div class="valid-feedback">
-        Looks good!
+        Tudo certo!
       </div>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationServer02">Last name</label>
-      <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name" value="Otto" required>
+      <label for="validationServer02">Sobrenome</label>
+      <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Sobrenome" value="Otto" required>
       <div class="valid-feedback">
-        Looks good!
+        Tudo certo!
       </div>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationServerUsername">Username</label>
+      <label for="validationServerUsername">Usuário</label>
       <div class="input-group">
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroupPrepend3">@</span>
         </div>
-        <input type="text" class="form-control is-invalid" id="validationServerUsername" placeholder="Username" aria-describedby="inputGroupPrepend3" required>
+        <input type="text" class="form-control is-invalid" id="validationServerUsername" placeholder="Usuário" aria-describedby="inputGroupPrepend3" required>
         <div class="invalid-feedback">
-          Please choose a username.
+          Por favor, escolha um nome de usuário.
         </div>
       </div>
     </div>
   </div>
   <div class="form-row">
     <div class="col-md-6 mb-3">
-      <label for="validationServer03">City</label>
-      <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="City" required>
+      <label for="validationServer03">Cidade</label>
+      <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="Cidade" required>
       <div class="invalid-feedback">
-        Please provide a valid city.
+        Por favor, informe uma cidade válida.
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationServer04">State</label>
-      <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="State" required>
+      <label for="validationServer04">Estado</label>
+      <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="Estado" required>
       <div class="invalid-feedback">
-        Please provide a valid state.
+        Por favor, informe um estado válido.
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationServer05">Zip</label>
-      <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="Zip" required>
+      <label for="validationServer05">CEP</label>
+      <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="CEP" required>
       <div class="invalid-feedback">
-        Please provide a valid zip.
+        Por favor, informe um CEP válido.
       </div>
     </div>
   </div>
@@ -976,54 +983,54 @@ We recommend using client side validation, but in case you require server side, 
     <div class="form-check">
       <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
       <label class="form-check-label" for="invalidCheck3">
-        Agree to terms and conditions
+        Concordo com os termos e condições
       </label>
       <div class="invalid-feedback">
-        You must agree before submitting.
+        Você deve concordar, antes de continuar.
       </div>
     </div>
   </div>
-  <button class="btn btn-primary" type="submit">Submit form</button>
+  <button class="btn btn-primary" type="submit">Enviar</button>
 </form>
 {% endcapture %}
 {% include example.html content=example %}
 
-### Supported elements
+### Elementos suportados
 
-Our example forms show native textual `<input>`s above, but form validation styles are available for our custom form controls, too.
+Nossos formulários de exemplo mostram `inputs` textuais nativos, abaixo, mas estilos de validação de formulário estão disponíveis para nossos controles de formulários personalizados, também.
 
 {% capture example %}
 <form class="was-validated">
   <div class="custom-control custom-checkbox mb-3">
     <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
-    <label class="custom-control-label" for="customControlValidation1">Check this custom checkbox</label>
-    <div class="invalid-feedback">Example invalid feedback text</div>
+    <label class="custom-control-label" for="customControlValidation1">Olha só, esse checkbox personalizado</label>
+    <div class="invalid-feedback">Exemplo de texto para feedback inválido</div>
   </div>
 
   <div class="custom-control custom-radio">
     <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
-    <label class="custom-control-label" for="customControlValidation2">Toggle this custom radio</label>
+    <label class="custom-control-label" for="customControlValidation2">Clique neste radio personalizado</label>
   </div>
   <div class="custom-control custom-radio mb-3">
     <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" required>
-    <label class="custom-control-label" for="customControlValidation3">Or toggle this other custom radio</label>
-    <div class="invalid-feedback">More example invalid feedback text</div>
+    <label class="custom-control-label" for="customControlValidation3">Ou clique neste outro radio personalizado</label>
+    <div class="invalid-feedback">Mais exemplo de texto para feedback inválido</div>
   </div>
 
   <div class="form-group">
     <select class="custom-select" required>
-      <option value="">Open this select menu</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+      <option value="">Abra este menu select</option>
+      <option value="1">Um</option>
+      <option value="2">Dois</option>
+      <option value="3">Três</option>
     </select>
-    <div class="invalid-feedback">Example invalid custom select feedback</div>
+    <div class="invalid-feedback">Exemplo de feedback invalido para o select</div>
   </div>
 
   <div class="custom-file">
     <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-    <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-    <div class="invalid-feedback">Example invalid custom file feedback</div>
+    <label class="custom-file-label" for="validatedCustomFile">Escolher arquivo...</label>
+    <div class="invalid-feedback">Exemplo de feedback inválido para input file</div>
   </div>
 </form>
 {% endcapture %}
@@ -1031,103 +1038,103 @@ Our example forms show native textual `<input>`s above, but form validation styl
 
 ### Tooltips
 
-If your form layout allows it, you can swap the `.{valid|invalid}-feedback` classes for `.{valid|invalid}-tooltip` classes to display validation feedback in a styled tooltip. Be sure to have a parent with `position: relative` on it for tooltip positioning. In the example below, our column classes have this already, but your project may require an alternative setup.
+Se o layout do seu formulário permite, você pode trocar as classes `.{valid|invalid}-feedback` pelas `.{valid|invalid}-tooltip` para mostrar o feedback de validação em um tooltip. Se assegure de ter um elemento pai com `position: relative` para o posicionamento do tooltip. No exemplo abaixo, nossas classes de coluna já possuem isso, mas seu projeto pode ter uma estrutura diferente.
 
 {% capture example %}
 <form class="needs-validation" novalidate>
   <div class="form-row">
     <div class="col-md-4 mb-3">
-      <label for="validationTooltip01">First name</label>
-      <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
+      <label for="validationTooltip01">Primeiro nome</label>
+      <input type="text" class="form-control" id="validationTooltip01" placeholder="Nome" value="Mark" required>
       <div class="valid-tooltip">
-        Looks good!
+        Tudo certo!
       </div>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationTooltip02">Last name</label>
-      <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto" required>
+      <label for="validationTooltip02">Sobrenome</label>
+      <input type="text" class="form-control" id="validationTooltip02" placeholder="Sobrenome" value="Otto" required>
       <div class="valid-tooltip">
-        Looks good!
+        Tudo certo!
       </div>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationTooltipUsername">Username</label>
+      <label for="validationTooltipUsername">Usuário</label>
       <div class="input-group">
         <div class="input-group-prepend">
           <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
         </div>
-        <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend" required>
+        <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Usuário" aria-describedby="validationTooltipUsernamePrepend" required>
         <div class="invalid-tooltip">
-          Please choose a unique and valid username.
+          Por favor, escolha um usuário válido e único.
         </div>
       </div>
     </div>
   </div>
   <div class="form-row">
     <div class="col-md-6 mb-3">
-      <label for="validationTooltip03">City</label>
-      <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required>
+      <label for="validationTooltip03">Cidade</label>
+      <input type="text" class="form-control" id="validationTooltip03" placeholder="Cidade" required>
       <div class="invalid-tooltip">
-        Please provide a valid city.
+        Por favor, informe uma cidade válida.
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationTooltip04">State</label>
-      <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required>
+      <label for="validationTooltip04">Estado</label>
+      <input type="text" class="form-control" id="validationTooltip04" placeholder="Estado" required>
       <div class="invalid-tooltip">
-        Please provide a valid state.
+        Por favor, informe um estado válido.
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationTooltip05">Zip</label>
-      <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required>
+      <label for="validationTooltip05">CEP</label>
+      <input type="text" class="form-control" id="validationTooltip05" placeholder="CEP" required>
       <div class="invalid-tooltip">
-        Please provide a valid zip.
+        Por favor, informe um CEP válido.
       </div>
     </div>
   </div>
-  <button class="btn btn-primary" type="submit">Submit form</button>
+  <button class="btn btn-primary" type="submit">Enviar</button>
 </form>
 {% endcapture %}
 {% include example.html content=example %}
 
-## Custom forms
+## Formulários personalizados
 
-For even more customization and cross browser consistency, use our completely custom form elements to replace the browser defaults. They're built on top of semantic and accessible markup, so they're solid replacements for any default form control.
+Para mais customização ainda e consistência cross-browser, use nossos elementos de formulário personalizados para substituir os padrões dos browsers. Eles são feitos com base em marcação semântica e acessível, então, são substituições sólidas para qualquer campo de formulário padrão.
 
-### Checkboxes and radios
+### Checkboxes e radios
 
-Each checkbox and radio is wrapped in a `<div>` with a sibling `<span>` to create our custom control and a `<label>` for the accompanying text. Structurally, this is the same approach as our default `.form-check`.
+Cada checkbox e radio é envolto em uma `<div>` com um `<span>` irmão para criar nosso campo personalizado e um `<label>` para acompanhar o texto. Estruturalmente, esta é a mesma abordagem que nossa `.form-check` padrão.
 
-We use the sibling selector (`~`) for all our `<input>` states—like `:checked`—to properly style our custom form indicator. When combined with the `.custom-control-label` class, we can also style the text for each item based on the `<input>`'s state.
+Nós usamos o seletor de irmão (`~`) para todos os nossos estados de `inputs` (`:checked`, por exemplo) para, adequadamente, estilizar nosso indicador de formulário personalizado. Quando combinado com a classe `.custom-control-label`, também podemos estilizar o texto em cada item, baseando-se no estado do `<input>`.
 
-We hide the default `<input>` with `opacity` and use the `.custom-control-label` to build a new custom form indicator in its place with `::before` and `::after`. Unfortunately we can't build a custom one from just the `<input>` because CSS's `content` doesn't work on that element.
+Nós escondemos o `<input>` padrão com `opacity` e usamos a `.custom-control-label` para fazer um novo indicador de formulário, em seu lugar, com `::before` e `::after`. Infelizmente, não podemos fazer um personalizado só a partir do `<input>`, porque a propriedade CSS `content` não funciona no elemento.
 
-In the checked states, we use **base64 embedded SVG icons** from [Open Iconic](https://useiconic.com/open). This provides us the best control for styling and positioning across browsers and devices.
+Nos estados `:checked`, usamos **ícones SVG base64 embutidos** do [Open Iconic](https://useiconic.com/open). Ele nos dá o melhor controle para estilizar e posicionar, através dos browsers e dispositivos.
 
 #### Checkboxes
 
 {% capture example %}
 <div class="custom-control custom-checkbox">
   <input type="checkbox" class="custom-control-input" id="customCheck1">
-  <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+  <label class="custom-control-label" for="customCheck1">Olha só, esse checkbox personalizado</label>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-Custom checkboxes can also utilize the `:indeterminate` pseudo class when manually set via JavaScript (there is no available HTML attribute for specifying it).
+Checkboxes personalizados também podem usar a pseudo-classe `:indeterminate`, quando, manualmente, definida via JavaScript (não existe nenhum atributo HTML para defini-la).
 
 <div class="bd-example bd-example-indeterminate">
   <div class="custom-control custom-checkbox">
     <input type="checkbox" class="custom-control-input" id="customCheck2">
-    <label class="custom-control-label" for="customCheck2">Check this custom checkbox</label>
+    <label class="custom-control-label" for="customCheck2">Olha só, esse checkbox personalizado</label>
   </div>
 </div>
 
-If you're using jQuery, something like this should suffice:
+Se você está usando jQuery, algo como isso deve servir:
 
 {% highlight js %}
-$('.your-checkbox').prop('indeterminate', true)
+$('.seu-checkbox').prop('indeterminate', true)
 {% endhighlight %}
 
 #### Radios
@@ -1135,11 +1142,11 @@ $('.your-checkbox').prop('indeterminate', true)
 {% capture example %}
 <div class="custom-control custom-radio">
   <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-  <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+  <label class="custom-control-label" for="customRadio1">Clique neste radio personalizado</label>
 </div>
 <div class="custom-control custom-radio">
   <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-  <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
+  <label class="custom-control-label" for="customRadio2">Ou clique neste outro radio personalizado</label>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
@@ -1149,132 +1156,134 @@ $('.your-checkbox').prop('indeterminate', true)
 {% capture example %}
 <div class="custom-control custom-radio custom-control-inline">
   <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-  <label class="custom-control-label" for="customRadioInline1">Toggle this custom radio</label>
+  <label class="custom-control-label" for="customRadioInline1">Clique neste radio personalizado</label>
 </div>
 <div class="custom-control custom-radio custom-control-inline">
   <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-  <label class="custom-control-label" for="customRadioInline2">Or toggle this other custom radio</label>
+  <label class="custom-control-label" for="customRadioInline2">Ou clique neste outro radio personalizado</label>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-#### Disabled
+#### Desativado
 
-Custom checkboxes and radios can also be disabled. Add the `disabled` boolean attribute to the `<input>` and the custom indicator and label description will be automatically styled.
+Checkboxes e radios também podem ser desativados. Coloque o atributo booleano `disabled` em um `<input>` e o indicador personalizado e a descrição da label vão ser estilizados, automaticamente.
 
 {% capture example %}
 <div class="custom-control custom-checkbox">
   <input type="checkbox" class="custom-control-input" id="customCheckDisabled" disabled>
-  <label class="custom-control-label" for="customCheckDisabled">Check this custom checkbox</label>
+  <label class="custom-control-label" for="customCheckDisabled">Olha só, esse checkbox personalizado</label>
 </div>
 
 <div class="custom-control custom-radio">
   <input type="radio" id="radio3" name="radioDisabled" id="customRadioDisabled" class="custom-control-input" disabled>
-  <label class="custom-control-label" for="customRadioDisabled">Toggle this custom radio</label>
+  <label class="custom-control-label" for="customRadioDisabled">Clique neste radio personalizado</label>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-### Select menu
+### Menu select
 
-Custom `<select>` menus need only a custom class, `.custom-select` to trigger the custom styles.
+Menus de `<select>` personalizados só precisam de uma classe personalizada `.custom-select`, para ativar os estilos personalizados.
 
 {% capture example %}
 <select class="custom-select">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+  <option selected>Abra este menu select</option>
+  <option value="1">Um</option>
+  <option value="2">Dois</option>
+  <option value="3">Três</option>
 </select>
 {% endcapture %}
 {% include example.html content=example %}
 
-You may also choose from small and large custom selects to match our similarly sized text inputs.
+Você também pode escolher entre `selects` personalizados pequenos ou grandes, para combinar com nossos inputs estilizados similarmente.
 
 {% capture example %}
 <select class="custom-select custom-select-lg mb-3">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+  <option selected>Abra este menu select</option>
+  <option value="1">Um</option>
+  <option value="2">Dois</option>
+  <option value="3">Três</option>
 </select>
 
 <select class="custom-select custom-select-sm">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+  <option selected>Abra este menu select</option>
+  <option value="1">Um</option>
+  <option value="2">Dois</option>
+  <option value="3">Três</option>
 </select>
 {% endcapture %}
 {% include example.html content=example %}
 
-The `multiple` attribute is also supported:
+O atributo `multiple` também é suportado:
 
 {% capture example %}
 <select class="custom-select" multiple>
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+  <option selected>Abra este menu select</option>
+  <option value="1">Um</option>
+  <option value="2">Dois</option>
+  <option value="3">Três</option>
 </select>
 {% endcapture %}
 {% include example.html content=example %}
 
-As is the `size` attribute:
+Assim como o atributo `size`:
 
 {% capture example %}
 <select class="custom-select" size="3">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+  <option selected>Abra este menu select</option>
+  <option value="1">Um</option>
+  <option value="2">Dois</option>
+  <option value="3">Três</option>
 </select>
 {% endcapture %}
 {% include example.html content=example %}
 
 ### Range
 
-Create custom `<input type="range">` controls with `.custom-range`. The track (the background) and thumb (the value) are both styled to appear the same across browsers. As only IE and Firefox support "filling" their track from the left or right of the thumb as a means to visually indicate progress, we do not currently support it.
+Crie um `<input type="range">` personalizado, usando `.custom-range`. A trilha e o valor são ambos estilizados para aparecerem da mesma maneira, nos diferentes browsers. Já que só o IE e o Firefox suportam preencher a trilha (da esquerda para a direita), como um indicador visual de progresso, nós não suportamos isso, ainda.
 
 {% capture example %}
-<label for="customRange1">Example range</label>
+<label for="customRange1">Range exemplo</label>
 <input type="range" class="custom-range" id="customRange1">
 {% endcapture %}
 {% include example.html content=example %}
 
-Range inputs have implicit values for `min` and `max`—`0` and `100`, respectively. You may specify new values for those using the `min` and `max` attributes.
+Inputs range possuem valores padrões inplícitos para `min` e `max`, sendo eles `0` and `100`, respectivamente. Você pode especificar novos valores para os inputs que estiverem usando os atributos `min` and `max`.
 
 {% capture example %}
-<label for="customRange2">Example range</label>
+<label for="customRange2">Range exemplo</label>
 <input type="range" class="custom-range" min="0" max="5" id="customRange2">
 {% endcapture %}
 {% include example.html content=example %}
 
-By default, range inputs "snap" to integer values. To change this, you can specify a `step` value. In the example below, we double the number of steps by using `step="0.5"`.
+Por padrão, inputs range pulam por valores inteiros. Para mudar isso, você pode especificar a quantia de pulos. No exemplo abaixo, dobramos a quantia de pulos, usando `step="0.5"`.
 
 {% capture example %}
-<label for="customRange3">Example range</label>
+<label for="customRange3">Range exemplo</label>
 <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3">
 {% endcapture %}
 {% include example.html content=example %}
 
-### File browser
+### Explorador de arquivos
 
-The file input is the most gnarly of the bunch and requires additional JavaScript if you'd like to hook them up with functional *Choose file...* and selected file name text.
+O input de arquivos é o mais cabuloso de todos e exige JavaScript adicional, se você quiser ter um *Escolher arquivo...*  e nome de arquivo selecionado funcional.
 
 {% capture example %}
 <div class="custom-file">
   <input type="file" class="custom-file-input" id="customFile">
-  <label class="custom-file-label" for="customFile">Choose file</label>
+  <label class="custom-file-label" for="customFile">Escolher arquivo</label>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-We hide the default file `<input>` via `opacity` and instead style the `<label>`. The button is generated and positioned with `::after`. Lastly, we declare a `width` and `height` on the `<input>` for proper spacing for surrounding content.
+- Nós escondemos o `<input>` de arquivo via `opacity` e, pelo contrário, estilizamos o `<label>`;
+- O botão é gerado e posicionado com `::after`;
+- Por último, nós declaramos `width` e `height` no `<input>` para espaçamento em volta do conteúdo, apropriado.
 
-#### Translating or customizing the strings
+#### Traduzindo ou customizando as strings
 
-The [`:lang()` pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:lang) is used to allow for translation of the "Browse" text into other languages. Override or add entries to the `$custom-file-text` Sass variable with the relevant [language tag](https://en.wikipedia.org/wiki/IETF_language_tag) and localized strings. The English strings can be customized the same way. For example, here's how one might add a Spanish translation (Spanish's language code is `es`):
+A [pseudo-classe `:lang()`](https://developer.mozilla.org/en-US/docs/Web/CSS/:lang) é usada para permitir a tradução do texto "Browse", em outras linguagens. Sobrescreva ou adicione valores na variável `$custom-file-text` com uma [tag de linguagem](https://en.wikipedia.org/wiki/IETF_language_tag) e a string referente ao local. Por exemplo, assim é como você pode adicionar tradução para o espanhol (a tag de linguagem do espanhol é `es`):
 
 {% highlight scss %}
 $custom-file-text: (
@@ -1283,7 +1292,7 @@ $custom-file-text: (
 );
 {% endhighlight %}
 
-Here's `lang(es)` in action on the custom file input for a Spanish translation:
+Aqui está a `lang(es)`, em ação, no input de arquivo personalizado para a tradução espanhol:
 
 {% capture example %}
 <div class="custom-file">
@@ -1293,4 +1302,4 @@ Here's `lang(es)` in action on the custom file input for a Spanish translation:
 {% endcapture %}
 {% include example.html content=example %}
 
-You'll need to set the language of your document (or subtree thereof) correctly in order for the correct text to be shown. This can be done using [the `lang` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang) on the `<html>` element or the [`Content-Language` HTTP header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.12), among other methods.
+Você precisará definir a linguagem de seu documento, corretamente, para que o texto correto seja mostrado. Isso pode ser feito usando o [atributo `lang`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang) no elemento `<html>` ou [`Content-Language` HTTP header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.12), junto com os outros métodos.
