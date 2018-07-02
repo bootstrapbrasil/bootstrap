@@ -1,21 +1,21 @@
 ---
 layout: docs
 title: Progress
-description: Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
+description: Documentação e exemplos de uso das barras de progresso Bootstrap, além de barras empilhadas, backgrounds animados e rótulos.
 group: components
 toc: true
 ---
 
-## How it works
+## Como funciona
 
-Progress components are built with two HTML elements, some CSS to set the width, and a few attributes. We don't use [the HTML5 `<progress>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress), ensuring you can stack progress bars, animate them, and place text labels over them.
+Componentes de progresso são feitos com dois elementos HTML, um pouco de CSS para a largura e outros atributos. Não usamos [o elemento HTML5 `<progress>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress) para garantir que você possa empilhar barras de progresso e colocar textos sobre elas.
 
-- We use the `.progress` as a wrapper to indicate the max value of the progress bar.
-- We use the inner `.progress-bar` to indicate the progress so far.
-- The `.progress-bar` requires an inline style, utility class, or custom CSS to set their width.
-- The `.progress-bar` also requires some `role` and `aria` attributes to make it accessible.
+- Nós usamos o elemento com `.progress` como um envolto para indicar o valor máximo da barra de progresso;
+- Nós usamos o elemento interno com `.progress-bar` para indicar o progresso da barra, até então;
+- A `.progress-bar` exige um CSS inline, classe utilitária ou CSS personalizado, para definir sua largura;
+- A classe `.progress-bar` também exige o uso de alguns atributos `role` e `aria` para fazê-lo acessível.
 
-Put that all together, and you have the following examples.
+Junte tudo isso e consiga o seguinte:
 
 {% capture example %}
 <div class="progress">
@@ -36,7 +36,7 @@ Put that all together, and you have the following examples.
 {% endcapture %}
 {% include example.html content=example %}
 
-Bootstrap provides a handful of [utilities for setting width]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/sizing/). Depending on your needs, these may help with quickly configuring progress.
+Bootstrap provê um punhado de [utilitários para definir largura]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/sizing/). Dependendo de suas necessidades, elas podem ajudar a configurar seu progresso, rapidamente.
 
 {% capture example %}
 <div class="progress">
@@ -45,9 +45,9 @@ Bootstrap provides a handful of [utilities for setting width]({{ site.baseurl }}
 {% endcapture %}
 {% include example.html content=example %}
 
-## Labels
+## Rótulos
 
-Add labels to your progress bars by placing text within the `.progress-bar`.
+Use rótulos em suas barras de progressos, colocando texto dentro do elemento com `.progress-bar`.
 
 {% capture example %}
 <div class="progress">
@@ -56,9 +56,9 @@ Add labels to your progress bars by placing text within the `.progress-bar`.
 {% endcapture %}
 {% include example.html content=example %}
 
-## Height
+## Altura
 
-We only set a `height` value on the `.progress`, so if you change that value the inner `.progress-bar` will automatically resize accordingly.
+Nós só definimos um valor para altura no `.progress`, então, se você alterar o valor, o elemento interno `.progress-bar` vai se redimensionar propocionalmente, automaticamente.
 
 {% capture example %}
 <div class="progress" style="height: 1px;">
@@ -72,7 +72,7 @@ We only set a `height` value on the `.progress`, so if you change that value the
 
 ## Backgrounds
 
-Use background utility classes to change the appearance of individual progress bars.
+Use classes utilitárias de background para mudar a aparência das barras de progresso.
 
 {% capture example %}
 <div class="progress">
@@ -90,9 +90,9 @@ Use background utility classes to change the appearance of individual progress b
 {% endcapture %}
 {% include example.html content=example %}
 
-## Multiple bars
+## Múltiplas barrras
 
-Include multiple progress bars in a progress component if you need.
+Crie várias barras de progresso, dentro de um único componente de progresso, se precisar.
 
 {% capture example %}
 <div class="progress">
@@ -103,9 +103,9 @@ Include multiple progress bars in a progress component if you need.
 {% endcapture %}
 {% include example.html content=example %}
 
-## Striped
+## Listrada
 
-Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gradient over the progress bar's background color.
+Adicione `.progress-bar-striped` em qualquer `.progress-bar` para aplicar uma listra sobre a cor de fundo, via gradiente CSS.
 
 {% capture example %}
 <div class="progress">
@@ -126,16 +126,16 @@ Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gra
 {% endcapture %}
 {% include example.html content=example %}
 
-## Animated stripes
+## Listras animadas
 
-The striped gradient can also be animated. Add `.progress-bar-animated` to `.progress-bar` to animate the stripes right to left via CSS3 animations.
+O gradiente listrado também pode ser animado. Use `.progress-bar-animated` no `.progress-bar` para animar as listras, da direita para esquerda, via animações CSS3.
 
 <div class="bd-example">
   <div class="progress">
     <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
   </div>
   <button type="button" class="btn btn-secondary bd-toggle-animated-progress" data-toggle="button" aria-pressed="false" autocomplete="off">
-    Toggle animation
+    Ligar animação
   </button>
 </div>
 
