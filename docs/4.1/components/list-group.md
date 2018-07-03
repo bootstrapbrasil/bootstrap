@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: List group
-description: List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within.
+title: Grupo de lista
+description: Grupos de listas são componentes flexíveis e poderosos para mostrar vários conteúdos. Modifique e aprimore-o para suportar quase qualquer conteúdo.
 group: components
 toc: true
 ---
 
-## Basic example
+## Exemplo básico
 
-The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed.
+O grupo de lista mais básico é uma `<ul>` com `<li>` e algumas classes específicas. Desenvolva com as opções a seguir ou com seu próprio CSS, dependendo da sua necessidade.
 
 {% capture example %}
 <ul class="list-group">
@@ -21,9 +21,9 @@ The most basic list group is an unordered list with list items and the proper cl
 {% endcapture %}
 {% include example.html content=example %}
 
-## Active items
+## Itens ativos
 
-Add `.active` to a `.list-group-item` to indicate the current active selection.
+Use `.active` em um `.list-group-item` para indicar a seleção ativa, no momento.
 
 {% capture example %}
 <ul class="list-group">
@@ -36,9 +36,9 @@ Add `.active` to a `.list-group-item` to indicate the current active selection.
 {% endcapture %}
 {% include example.html content=example %}
 
-## Disabled items
+## Itens desativados
 
-Add `.disabled` to a `.list-group-item` to make it _appear_ disabled. Note that some elements with `.disabled` will also require custom JavaScript to fully disable their click events (e.g., links).
+Use `.disabled` em um `.list-group-item` para fazê-lo ter _aparência_ desativada. Perceba que alguns elementos com `.disabled` vão precisar de JavaScript customizado para desativar seus eventos de clique, totalmente (ex: links).
 
 {% capture example %}
 <ul class="list-group">
@@ -51,11 +51,11 @@ Add `.disabled` to a `.list-group-item` to make it _appear_ disabled. Note that 
 {% endcapture %}
 {% include example.html content=example %}
 
-## Links and buttons
+## Links e botões
 
-Use `<a>`s or `<button>`s to create _actionable_ list group items with hover, disabled, and active states by adding `.list-group-item-action`. We separate these pseudo-classes to ensure list groups made of non-interactive elements (like `<li>`s or `<div>`s) don't provide a click or tap affordance.
+Use `<a>` ou `<button>` para criar itens do grupo de lista _acionáveis_ com estados hover, disabled e active, adicionando `.list-group-item-action`. Nós separamos estas pseudo-classes, para assegurar que grupos de listas feitos com elementos não interativos (tipo `<li>` ou `<div>`) não permitam insinuações de clique ou toque. 
 
-Be sure to **not use the standard `.btn` classes here**.
+Se assegure de **não usar as classes `.btn` padrões, aqui**.
 
 {% capture example %}
 <div class="list-group">
@@ -70,7 +70,7 @@ Be sure to **not use the standard `.btn` classes here**.
 {% endcapture %}
 {% include example.html content=example %}
 
-With `<button>`s, you can also make use of the `disabled` attribute instead of the `.disabled` class. Sadly, `<a>`s don't support the disabled attribute.
+Com `<button>`, você também pode fazer uso do atributo `disabled`, invés da classe `.disabled`. Infelizmente, elementos `<a>` não suportam o atributo disabled.
 
 {% capture example %}
 <div class="list-group">
@@ -87,7 +87,7 @@ With `<button>`s, you can also make use of the `disabled` attribute instead of t
 
 ## Flush
 
-Add `.list-group-flush` to remove some borders and rounded corners to render list group items edge-to-edge in a parent container (e.g., cards).
+Use `.list-group-flush` para remover algumas bordas e cantos arredondados para renderizar itens do grupo de lista, de ponta-a-ponta, em um container pai.
 
 {% capture example %}
 <ul class="list-group list-group-flush">
@@ -100,82 +100,82 @@ Add `.list-group-flush` to remove some borders and rounded corners to render lis
 {% endcapture %}
 {% include example.html content=example %}
 
-## Contextual classes
+## Classes contextuais
 
-Use contextual classes to style list items with a stateful background and color.
+Use classes contextuais para estilizar itens da lista com belos caracteres e cor de fundo.
 
 {% capture example %}
 <ul class="list-group">
   <li class="list-group-item">Dapibus ac facilisis in</li>
 
   {% for color in site.data.theme-colors %}
-  <li class="list-group-item list-group-item-{{ color.name }}">A simple {{ color.name }} list group item</li>{% endfor %}
+  <li class="list-group-item list-group-item-{{ color.name }}">Um simples item {{ color.name }} do grupo de lista</li>{% endfor %}
 </ul>
 {% endcapture %}
 {% include example.html content=example %}
 
-Contextual classes also work with `.list-group-item-action`. Note the addition of the hover styles here not present in the previous example. Also supported is the `.active` state; apply it to indicate an active selection on a contextual list group item.
+Classes contextuais também funcionam com `.list-group-item-action`. Perceba a presença dos estilos hover, os quais não estavam no presentes no exemplo anterior. O estado `.active` também é suportado, bastando aplicá-lo para indicar uma seleção ativa em um item do grupo de lista.
 
 {% capture example %}
 <div class="list-group">
   <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
 
   {% for color in site.data.theme-colors %}
-  <a href="#" class="list-group-item list-group-item-action list-group-item-{{ color.name }}">A simple {{ color.name }} list group item</a>{% endfor %}
+  <a href="#" class="list-group-item list-group-item-action list-group-item-{{ color.name }}">Um simples item {{ color.name }} do grupo de lista</a>{% endfor %}
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
 {% include callout-warning-color-assistive-technologies.md %}
 
-## With badges
+## Usando badges
 
-Add badges to any list group item to show unread counts, activity, and more with the help of some [utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/).
+Coloque badges em qualquer item do grupo de lista para exibir contadores, atividade e muito mais, com ajuda de alguns [utilitários]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/).
 
 {% capture example %}
 <ul class="list-group">
   <li class="list-group-item d-flex justify-content-between align-items-center">
-    Cras justo odio
-    <span class="badge badge-primary badge-pill">14</span>
+    Cras alemanha odio
+    <span class="badge badge-primary badge-pill">7</span>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-center">
     Dapibus ac facilisis in
-    <span class="badge badge-primary badge-pill">2</span>
+    <span class="badge badge-primary badge-pill">x</span>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-center">
-    Morbi leo risus
+    Morbi brasil risus
     <span class="badge badge-primary badge-pill">1</span>
   </li>
 </ul>
 {% endcapture %}
 {% include example.html content=example %}
 
-## Custom content
+## Conteúdo customizado
 
-Add nearly any HTML within, even for linked list groups like the one below, with the help of [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/).
+Coloque quase qualquer HTML dentro, mesmo em grupos de listas linkados, como o mostrado abaixo, com ajuda de [utilitários flexbox]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/).
 
 {% capture example %}
 <div class="list-group">
   <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">List group item heading</h5>
-      <small>3 days ago</small>
+      <h5 class="mb-1">Cabeçalho do item</h5>
+      <small>3 dias atrás</small>
     </div>
     <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
     <small>Donec id elit non mi porta.</small>
   </a>
   <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">List group item heading</h5>
-      <small class="text-muted">3 days ago</small>
+      <h5 class="mb-1">Cabeçalho do item</h5>
+      <small class="text-muted">3 dias atrás</small>
     </div>
     <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
     <small class="text-muted">Donec id elit non mi porta.</small>
   </a>
   <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">List group item heading</h5>
-      <small class="text-muted">3 days ago</small>
+      <h5 class="mb-1">Cabeçalho do item</h5>
+      <small class="text-muted">3 dias atrás</small>
     </div>
     <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
     <small class="text-muted">Donec id elit non mi porta.</small>
@@ -184,18 +184,18 @@ Add nearly any HTML within, even for linked list groups like the one below, with
 {% endcapture %}
 {% include example.html content=example %}
 
-## JavaScript behavior
+## Comportamento JavaScript
 
-Use the tab JavaScript plugin—include it individually or through the compiled `bootstrap.js` file—to extend our list group to create tabbable panes of local content.
+Use o plugin JavaScript tab (inclua-o, individualmente, ou usando o arquivo compilado `bootstrap.js`) para aprimorar nosso grupo de lista para criar paineis de abas de conteúdo local.
 
 <div class="bd-example" role="tabpanel">
   <div class="row">
     <div class="col-4">
       <div class="list-group" id="list-tab" role="tablist">
-        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="tab" href="#list-home" role="tab" aria-controls="list-home">Home</a>
-        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="tab" href="#list-profile" role="tab" aria-controls="list-profile">Profile</a>
-        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="tab" href="#list-messages" role="tab" aria-controls="list-messages">Messages</a>
-        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="tab" href="#list-settings" role="tab" aria-controls="list-settings">Settings</a>
+        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="tab" href="#lista-home" role="tab" aria-controls="list-home">Home</a>
+        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="tab" href="#list-profile" role="tab" aria-controls="list-profile">Perfil</a>
+        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="tab" href="#lista-mensagens" role="tab" aria-controls="list-messages">Mensagens</a>
+        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="tab" href="#lista-configuracoes" role="tab" aria-controls="list-settings">Configurações</a>
       </div>
     </div>
     <div class="col-8">
@@ -221,10 +221,10 @@ Use the tab JavaScript plugin—include it individually or through the compiled 
 <div class="row">
   <div class="col-4">
     <div class="list-group" id="list-tab" role="tablist">
-      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
-      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
-      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
-      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
+      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#lista-home" role="tab" aria-controls="home">Home</a>
+      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Perfil</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#lista-mensagens" role="tab" aria-controls="messages">Mensagens</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#lista-configuracoes" role="tab" aria-controls="settings">Configurações</a>
     </div>
   </div>
   <div class="col-8">
@@ -238,140 +238,140 @@ Use the tab JavaScript plugin—include it individually or through the compiled 
 </div>
 {% endhighlight %}
 
-### Using data attributes
+### via atributos data
 
-You can activate a list group navigation without writing any JavaScript by simply specifying `data-toggle="list"` or on an element. Use these data attributes on `.list-group-item`.
+Você pode ativar uma nevegação do grupo de lista, sem escrever qualquer JavaScript, simplesmente, especificando `data-toggle="list"` em um elemento. Use estes atributos data em um `.list-group-item`.
 
 <div role="tabpanel">
 {% highlight html %}
-<!-- List group -->
-<div class="list-group" id="myList" role="tablist">
+<!-- Grupo de lista -->
+<div class="list-group" id="minhaLista" role="tablist">
   <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab">Home</a>
-  <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">Profile</a>
-  <a class="list-group-item list-group-item-action" data-toggle="list" href="#messages" role="tab">Messages</a>
-  <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings" role="tab">Settings</a>
+  <a class="list-group-item list-group-item-action" data-toggle="list" href="#perfil" role="tab">Perfil</a>
+  <a class="list-group-item list-group-item-action" data-toggle="list" href="#mensagens" role="tab">Mensagens</a>
+  <a class="list-group-item list-group-item-action" data-toggle="list" href="#configuracoes" role="tab">Configurações</a>
 </div>
 
-<!-- Tab panes -->
+<!-- Painel de abas -->
 <div class="tab-content">
   <div class="tab-pane active" id="home" role="tabpanel">...</div>
-  <div class="tab-pane" id="profile" role="tabpanel">...</div>
-  <div class="tab-pane" id="messages" role="tabpanel">...</div>
-  <div class="tab-pane" id="settings" role="tabpanel">...</div>
+  <div class="tab-pane" id="perfil" role="tabpanel">...</div>
+  <div class="tab-pane" id="mensagens" role="tabpanel">...</div>
+  <div class="tab-pane" id="configuracoes" role="tabpanel">...</div>
 </div>
 {% endhighlight %}
 </div>
 
 ### Via JavaScript
 
-Enable tabbable list item via JavaScript (each list item needs to be activated individually):
+Ative uma aba item de lista, via JavaScript (cada item de lista precisa ser ativado, individualmente):
 
 {% highlight js %}
-$('#myList a').on('click', function (e) {
+$('#minhaLista a').on('click', function (e) {
   e.preventDefault()
   $(this).tab('show')
 })
 {% endhighlight %}
 
-You can activate individual list item in several ways:
+Você pode ativar itens de listas individuais, em diversas maneiras:
 
 {% highlight js %}
-$('#myList a[href="#profile"]').tab('show') // Select tab by name
-$('#myList a:first-child').tab('show') // Select first tab
-$('#myList a:last-child').tab('show') // Select last tab
-$('#myList a:nth-child(3)').tab('show') // Select third tab
+$('#minhaLista a[href="#perfil"]').tab('show') // Selecione pelo ID da tag
+$('#minhaLista a:first-child').tab('show') // Seleciona primeira aba
+$('#minhaLista a:last-child').tab('show') // Seleciona última aba
+$('#minhaLista a:nth-child(3)').tab('show') // Seleciona terceira aba
 {% endhighlight %}
 
-### Fade effect
+### Efeito fade
 
-To make tabs panel fade in, add `.fade` to each `.tab-pane`. The first tab pane must also have `.show` to make the initial content visible.
+Para fazer o painel de abas receber o efeito fade in, use `.fade` em cada `.tab-pane`. A primeira aba também deve receber `.show`, para fazer o conteúdo inicial visível.
 
 {% highlight html %}
 <div class="tab-content">
   <div class="tab-pane fade show active" id="home" role="tabpanel">...</div>
-  <div class="tab-pane fade" id="profile" role="tabpanel">...</div>
-  <div class="tab-pane fade" id="messages" role="tabpanel">...</div>
-  <div class="tab-pane fade" id="settings" role="tabpanel">...</div>
+  <div class="tab-pane fade" id="perfil" role="tabpanel">...</div>
+  <div class="tab-pane fade" id="mensagens" role="tabpanel">...</div>
+  <div class="tab-pane fade" id="configuracoes" role="tabpanel">...</div>
 </div>
 {% endhighlight %}
 
-### Methods
+### Métodos
 
 #### $().tab
 
-Activates a list item element and content container. Tab should have either a `data-target` or an `href` targeting a container node in the DOM.
+Ativa um item de lista e o container de conteúdo. Abas devem ter um `data-target` ou um `href` remetendo a um container, no DOM.
 
 {% highlight html %}
-<div class="list-group" id="myList" role="tablist">
+<div class="list-group" id="minhaLista" role="tablist">
   <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab">Home</a>
-  <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">Profile</a>
-  <a class="list-group-item list-group-item-action" data-toggle="list" href="#messages" role="tab">Messages</a>
-  <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings" role="tab">Settings</a>
+  <a class="list-group-item list-group-item-action" data-toggle="list" href="#perfil" role="tab">Perfil</a>
+  <a class="list-group-item list-group-item-action" data-toggle="list" href="#mensagens" role="tab">Mensagens</a>
+  <a class="list-group-item list-group-item-action" data-toggle="list" href="#configuracoes" role="tab">Configurações</a>
 </div>
 
 <div class="tab-content">
   <div class="tab-pane active" id="home" role="tabpanel">...</div>
-  <div class="tab-pane" id="profile" role="tabpanel">...</div>
-  <div class="tab-pane" id="messages" role="tabpanel">...</div>
-  <div class="tab-pane" id="settings" role="tabpanel">...</div>
+  <div class="tab-pane" id="perfil" role="tabpanel">...</div>
+  <div class="tab-pane" id="mensagens" role="tabpanel">...</div>
+  <div class="tab-pane" id="configuracoes" role="tabpanel">...</div>
 </div>
 
 <script>
   $(function () {
-    $('#myList a:last-child').tab('show')
+    $('#minhaLista a:last-child').tab('show')
   })
 </script>
 {% endhighlight %}
 
 #### .tab('show')
 
-Selects the given list item and shows its associated pane. Any other list item that was previously selected becomes unselected and its associated pane is hidden. **Returns to the caller before the tab pane has actually been shown** (for example, before the `shown.bs.tab` event occurs).
+Seleciona o item de lista específico e mostra o painel associado a ele. Qualquer outro item de lista que foi, anteriormente selecionado, se torna não selecionado e seu painel associado se esconde. **Retorna ao invocador, antes do painel de abas ser exibido, de fato** (antes do evento `shown.bs.tab` ocorrer, por exemplo).
 
 {% highlight js %}
-$('#someListItem').tab('show')
+$('#algumListItem').tab('show')
 {% endhighlight %}
 
-### Events
+### Eventos
 
-When showing a new tab, the events fire in the following order:
+Quando mostrando uma nova aba, os eventos se acionam na seguinte ordem:
 
-1. `hide.bs.tab` (on the current active tab)
-2. `show.bs.tab` (on the to-be-shown tab)
-3. `hidden.bs.tab` (on the previous active tab, the same one as for the `hide.bs.tab` event)
-4. `shown.bs.tab` (on the newly-active just-shown tab, the same one as for the `show.bs.tab` event)
+1. `hide.bs.tab` (na aba ativa, no momento)
+2. `show.bs.tab` (na aba que está para ser exibida)
+3. `hidden.bs.tab` (na aba ativa anteriormente, a mesma do evento `hide.bs.tab`)
+4. `shown.bs.tab` (na aba recém ativa, a mesma do evento `show.bs.tab`)
 
-If no tab was already active, the `hide.bs.tab` and `hidden.bs.tab` events will not be fired.
+Se nenhuma aba já foi ativada, os eventos `hide.bs.tab` e `hidden.bs.tab` não serão mostrados.
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th style="width: 150px;">Event type</th>
-      <th>Description</th>
+      <th style="width: 150px;">Tipo de evento</th>
+      <th>Descrição</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>show.bs.tab</td>
-      <td>This event fires on tab show, but before the new tab has been shown. Use <code>event.target</code> and <code>event.relatedTarget</code> to target the active tab and the previous active tab (if available) respectively.</td>
+      <td>Este evento é acionado na exibição de aba, mas antes da nova aba ser exibida. Use <code>event.target</code> e <code>event.relatedTarget</code> para atingir a aba ativa e a aba anteriormente ativa, respectivamente.</td>
     </tr>
     <tr>
       <td>shown.bs.tab</td>
-      <td>This event fires on tab show after a tab has been shown. Use <code>event.target</code> and <code>event.relatedTarget</code> to target the active tab and the previous active tab (if available) respectively.</td>
+      <td>Este evento é acionado na exibição de aba, depois da aba ser mostrada. Use <code>event.target</code> e <code>event.relatedTarget</code> para atingir a aba ativa e a aba anteriormente ativa, respectivamente.</td>
     </tr>
     <tr>
       <td>hide.bs.tab</td>
-      <td>This event fires when a new tab is to be shown (and thus the previous active tab is to be hidden). Use <code>event.target</code> and <code>event.relatedTarget</code> to target the current active tab and the new soon-to-be-active tab, respectively.</td>
+      <td>Este evento é acionado quando uma nova aba está para ser exibida e a aba anterior está para ser oculta. Use <code>event.target</code> e <code>event.relatedTarget</code> para atingir a aba ativa, no momento, e a próxima aba que está para ser ativa, respectivamente.</td>
     </tr>
     <tr>
       <td>hidden.bs.tab</td>
-      <td>This event fires after a new tab is shown (and thus the previous active tab is hidden). Use <code>event.target</code> and <code>event.relatedTarget</code> to target the previous active tab and the new active tab, respectively.</td>
+      <td>Este evento é acionado depois de uma nova aba ser exibida e a aba ativada anteriormente estar escondida. Use <code>event.target</code> e <code>event.relatedTarget</code> para atingir a aba ativa anteriormente e a nova aba ativa, respectivamente.</td>
     </tr>
   </tbody>
 </table>
 
 {% highlight js %}
 $('a[data-toggle="list"]').on('shown.bs.tab', function (e) {
-  e.target // newly activated tab
-  e.relatedTarget // previous active tab
+  e.target // Aba recém ativa
+  e.relatedTarget // Aba ativa anteriorment
 })
 {% endhighlight %}
