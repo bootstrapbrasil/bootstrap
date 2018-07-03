@@ -1,48 +1,51 @@
 ---
 layout: docs
 title: Navbar
-description: Documentation and examples for Bootstrap's powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.
+description: Documentação e exemplos para o poderoso e responsivo cabeçalho de navegação, o navbar. Inclui suporte para logo, navegação, plugin collapse e muito mais.
 group: components
 toc: true
 ---
 
-## How it works
+## Como funciona
 
-Here's what you need to know before getting started with the navbar:
+Aqui está oquê você precisa saber, antes de começar a usar o navbar:
 
-- Navbars require a wrapping `.navbar` with `.navbar-expand{-sm|-md|-lg|-xl}` for responsive collapsing and [color scheme](#color-schemes) classes.
-- Navbars and their contents are fluid by default. Use [optional containers](#containers) to limit their horizontal width.
-- Use our [spacing]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) and [flex]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) utility classes for controlling spacing and alignment within navbars.
-- Navbars are responsive by default, but you can easily modify them to change that. Responsive behavior depends on our Collapse JavaScript plugin.
-- Navbars are hidden by default when printing. Force them to be printed by adding `.d-print` to the `.navbar`. See the [display]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/) utility class.
-- Ensure accessibility by using a `<nav>` element or, if using a more generic element such as a `<div>`, add a `role="navigation"` to every navbar to explicitly identify it as a landmark region for users of assistive technologies.
+- Navbars precisam de um `.navbar` com `.navbar-expand{-sm|-md|-lg|-xl}` (para responsividade) e classes do [esquema de cores](#color-schemes);
+- Navbars e seus conteúdos são fluidos, por padrão;
+  - Use [containers alternativos](#containers) para limitar suas larguras.
+- Use nossas classes utilitárias de [espaçamento]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) e [flex]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) para controlar o espaço e alinhamento, dentro das navbars;
+- Navbars são responsivos, por padrão, mas você pode modificar isso, facilmente;
+  - Comportamento responsivo depende do nosso plugin JavaScript Collapse.
+- Navbars são escondidos, por padrão, quando imprimindo. Forçe-os a serem imprimidos, usando a classe `.d-print` no `.navbar`;
+  - Leia sobre a classe utilitária [display]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/).
+- Garanta acessibilidade com o elemento `<nav>` ou, se estiver usando um elemento mais genérico (como `<div>`), coloque `role="navigation"` em cada navbar para identificá-lo como tal, em tecnologias assistivas.
 
-Read on for an example and list of supported sub-components.
+Continue lendo para ver um exemplo e lista de sub-componentes suportados.
 
-## Supported content
+## Conteúdo suportado
 
-Navbars come with built-in support for a handful of sub-components. Choose from the following as needed:
+Navbars vem com suporte integrado para um punhado de sub-componentes. Escolha entre os seguintes, sempre que precisar:
 
-- `.navbar-brand` for your company, product, or project name.
-- `.navbar-nav` for a full-height and lightweight navigation (including support for dropdowns).
-- `.navbar-toggler` for use with our collapse plugin and other [navigation toggling](#responsive-behaviors) behaviors.
-- `.form-inline` for any form controls and actions.
-- `.navbar-text` for adding vertically centered strings of text.
-- `.collapse.navbar-collapse` for grouping and hiding navbar contents by a parent breakpoint.
+- `.navbar-brand` para o nome de seu projeto, produto ou companhia;
+- `.navbar-nav` para obter uma leve navegação com suporte a dropdowns;
+- `.navbar-toggler` para usar com nosso plugin collapse e outros comportamentos;
+- `.form-inline` para qualquer campo de formulário e ações;
+- `.navbar-text` para adicionar texto centralizado verticalmente;
+- `.collapse.navbar-collapse` para agrupar e esconder conteúdos navbar, de acordo com o breakpoint do pai.
 
-Here's an example of all the sub-components included in a responsive light-themed navbar that automatically collapses at the `lg` (large) breakpoint.
+Aqui está um exemplo de todos os sub-componentes incluídos em um navbar light responsivo, o qual colapsa no breakpoint `lg` (large, em português: grande), automaticamente.
 
 {% capture example %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Home <span class="sr-only">(página atual)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
@@ -52,48 +55,48 @@ Here's an example of all the sub-components included in a responsive light-theme
           Dropdown
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Ação</a>
+          <a class="dropdown-item" href="#">Outra ação</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#">Algo mais aqui</a>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+        <a class="nav-link disabled" href="#">Desativado</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
     </form>
   </div>
 </nav>
 {% endcapture %}
 {% include example.html content=example %}
 
-This example uses [color]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) (`bg-light`) and [spacing]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) (`my-2`, `my-lg-0`, `mr-sm-0`, `my-sm-0`) utility classes.
+Este exemplo usa utilitários de [cor]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) (`bg-light`) e [espaçamento]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) (`my-2`, `my-lg-0`, `mr-sm-0` e `my-sm-0`).
 
-### Brand
+### Marca
 
-The `.navbar-brand` can be applied to most elements, but an anchor works best as some elements might require utility classes or custom styles.
+A classe `.navbar-brand` pode ser aplicada na maioria dos elementos, mas uma âncora funciona melhor, já que alguns elementos precisam de classes utilitárias ou estilos customizados.
 
 {% capture example %}
-<!-- As a link -->
+<!-- Como um link -->
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
 </nav>
 
-<!-- As a heading -->
+<!-- Como um span -->
 <nav class="navbar navbar-light bg-light">
   <span class="navbar-brand mb-0 h1">Navbar</span>
 </nav>
 {% endcapture %}
 {% include example.html content=example %}
 
-Adding images to the `.navbar-brand` will likely always require custom styles or utilities to properly size. Here are some examples to demonstrate.
+Colocar imagens no `.navbar-brand` vai, provavelmente, sempre precisar de estilos customizados ou utilitários para dimensionamento, adequado. Aqui estão alguns exemplos para demonstrar.
 
 {% capture example %}
-<!-- Just an image -->
+<!-- Só uma imagem -->
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">
     <img src="{{ site.baseurl }}/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
@@ -103,7 +106,7 @@ Adding images to the `.navbar-brand` will likely always require custom styles or
 {% include example.html content=example %}
 
 {% capture example %}
-<!-- Image and text -->
+<!-- Imagem e texto -->
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">
     <img src="{{ site.baseurl }}/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -115,29 +118,29 @@ Adding images to the `.navbar-brand` will likely always require custom styles or
 
 ### Nav
 
-Navbar navigation links build on our `.nav` options with their own modifier class and require the use of [toggler classes](#toggler) for proper responsive styling. **Navigation in navbars will also grow to occupy as much horizontal space as possible** to keep your navbar contents securely aligned.
+Links de navegação navbar são feitos com nossas opções `.nav`, suas próprias classes modificadoras e precisam usar [classes togglers](#toggler), para estilização responsiva apropriada. **Navegação em navbars também vão crescer para ocupar o maior espaço horizontal possível**, mantendo os conteúdos do seu navbar alinhados.
 
-Active states—with `.active`—to indicate the current page can be applied directly to `.nav-link`s or their immediate parent `.nav-item`s.
+Estados ativos (classe `.active`) para indicar a página atual podem ser aplicados, diretamente, no `.nav-link` ou seus pais imediatos `.nav-item`.
 
 {% capture example %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">Destaques</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link" href="#">Preços</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+        <a class="nav-link disabled" href="#">Desativado</a>
       </li>
     </ul>
   </div>
@@ -145,53 +148,53 @@ Active states—with `.active`—to indicate the current page can be applied dir
 {% endcapture %}
 {% include example.html content=example %}
 
-And because we use classes for our navs, you can avoid the list-based approach entirely if you like.
+E porque nós usamos classes em nossos navs, você pode evitar a abordagem baseada em lista, se quiser.
 
 {% capture example %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Features</a>
-      <a class="nav-item nav-link" href="#">Pricing</a>
-      <a class="nav-item nav-link disabled" href="#">Disabled</a>
+      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(Página atual)</span></a>
+      <a class="nav-item nav-link" href="#">Destaques</a>
+      <a class="nav-item nav-link" href="#">Preços</a>
+      <a class="nav-item nav-link disabled" href="#">Desativado</a>
     </div>
   </div>
 </nav>
 {% endcapture %}
 {% include example.html content=example %}
 
-You may also utilize dropdowns in your navbar nav. Dropdown menus require a wrapping element for positioning, so be sure to use separate and nested elements for `.nav-item` and `.nav-link` as shown below.
+Você também pode usar dropdowns em seu nav da navbar. Menus dropdown precisam de um elemento envolto para posicionamento, então, se assegure de usar elementos aninhados e separados para `.nav-item` e `.nav-link`, como mostrado abaixo.
 
 {% capture example %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">Destaques</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link" href="#">Preços</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown link
+          Link dropdown
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#">Ação</a>
+          <a class="dropdown-item" href="#">Outra ação</a>
+          <a class="dropdown-item" href="#">Algo mais aqui</a>
         </div>
       </li>
     </ul>
@@ -200,34 +203,34 @@ You may also utilize dropdowns in your navbar nav. Dropdown menus require a wrap
 {% endcapture %}
 {% include example.html content=example %}
 
-### Forms
+### Formulários
 
-Place various form controls and components within a navbar with `.form-inline`.
+Coloque vários campos de formulário e componentes, dentro de um navbar com `.form-inline`.
 
 {% capture example %}
 <nav class="navbar navbar-light bg-light">
   <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
   </form>
 </nav>
 {% endcapture %}
 {% include example.html content=example %}
 
-Immediate children elements in `.navbar` use flex layout and will default to `justify-content: between`. Use additional [flex utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) as needed to adjust this behavior.
+Elementos filhos imediatos no `.navbar` usam layout flex e vão ter `justify-content: between`, por padrão. Use [utilitários flex ]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) sempre que precisar, para ajustar este comportamento.
 
 {% capture example %}
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand">Navbar</a>
   <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
   </form>
 </nav>
 {% endcapture %}
 {% include example.html content=example %}
 
-Input groups work, too:
+Grupos de input também funcionam:
 
 {% capture example %}
 <nav class="navbar navbar-light bg-light">
@@ -236,151 +239,151 @@ Input groups work, too:
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon1">@</span>
       </div>
-      <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+      <input type="text" class="form-control" placeholder="Usuário" aria-label="Usuário" aria-describedby="basic-addon1">
     </div>
   </form>
 </nav>
 {% endcapture %}
 {% include example.html content=example %}
 
-Various buttons are supported as part of these navbar forms, too. This is also a great reminder that vertical alignment utilities can be used to align different sized elements.
+Vários botões dentro dos formulários navbar também são suportados. Isso é um bom lembrete que utilitários de alinhamento vertical podem ser usados para linhar elementos de diferentes tamanhos.
 
 {% capture example %}
 <nav class="navbar navbar-light bg-light">
   <form class="form-inline">
-    <button class="btn btn-outline-success" type="button">Main button</button>
-    <button class="btn btn-sm btn-outline-secondary" type="button">Smaller button</button>
+    <button class="btn btn-outline-success" type="button">Botão principal</button>
+    <button class="btn btn-sm btn-outline-secondary" type="button">Botão menor</button>
   </form>
 </nav>
 {% endcapture %}
 {% include example.html content=example %}
 
-### Text
+### Texto
 
-Navbars may contain bits of text with the help of `.navbar-text`. This class adjusts vertical alignment and horizontal spacing for strings of text.
+Navbars podem conter pedaços de textos, com ajuda do `.navbar-text`. Esta classe configura o alinhamento vertical e espaçamento horizontal, em linhas de textos.
 
 {% capture example %}
 <nav class="navbar navbar-light bg-light">
   <span class="navbar-text">
-    Navbar text with an inline element
+    Texto navbar com um elemento inline
   </span>
 </nav>
 {% endcapture %}
 {% include example.html content=example %}
 
-Mix and match with other components and utilities as needed.
+Misture e combine com outros componentes e utilitários, se precisar.
 
 {% capture example %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar w/ text</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+  <a class="navbar-brand" href="#">Navbar com texto</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#textoNavbar" aria-controls="textoNavbar" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarText">
+  <div class="collapse navbar-collapse" id="textoNavbar">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">Destaques</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link" href="#">Preços</a>
       </li>
     </ul>
     <span class="navbar-text">
-      Navbar text with an inline element
+      Texto navbar com um elemento inline
     </span>
   </div>
 </nav>
 {% endcapture %}
 {% include example.html content=example %}
 
-## Color schemes
+## Esquema de cores
 
-Theming the navbar has never been easier thanks to the combination of theming classes and `background-color` utilities. Choose from `.navbar-light` for use with light background colors, or `.navbar-dark` for dark background colors. Then, customize with `.bg-*` utilities.
+Tematizar o navbar nunca foi tão fácil, graças a combinação de classes temas e utilitários `background-color`. Escolha de `.navbar-light` (cores de fundo leves) até `.navbar-dark` (cores de fundo escuras). Depois, personalize o resto com utilitários `.bg-*`.
 
 <div class="bd-example">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#corNavbar01" aria-controls="corNavbar01" aria-expanded="false" aria-label="Alterna navegação">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarColor01">
+    <div class="collapse navbar-collapse" id="corNavbar01">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">Destaques</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href="#">Preços</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="#">Sobre</a>
         </li>
       </ul>
       <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+        <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Pesquisar</button>
       </form>
     </div>
   </nav>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#corNavbar02" aria-controls="corNavbar02" aria-expanded="false" aria-label="Alterna navegação">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarColor02">
+    <div class="collapse navbar-collapse" id="corNavbar02">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">Destaques</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href="#">Preços</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="#">Sobre</a>
         </li>
       </ul>
       <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Pesquisar</button>
       </form>
     </div>
   </nav>
 
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
     <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#corNavbar03" aria-controls="corNavbar03" aria-expanded="false" aria-label="Alterna navegação">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarColor03">
+    <div class="collapse navbar-collapse" id="corNavbar03">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">Destaques</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href="#">Preços</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="#">Sobre</a>
         </li>
       </ul>
       <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Pesquisar</button>
       </form>
     </div>
   </nav>
@@ -388,21 +391,21 @@ Theming the navbar has never been easier thanks to the combination of theming cl
 
 {% highlight html %}
 <nav class="navbar navbar-dark bg-dark">
-  <!-- Navbar content -->
+  <!-- Conteúdo do navbar -->
 </nav>
 
 <nav class="navbar navbar-dark bg-primary">
-  <!-- Navbar content -->
+  <!-- Conteúdo do navbar -->
 </nav>
 
 <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-  <!-- Navbar content -->
+  <!-- Conteúdo do navbar -->
 </nav>
 {% endhighlight %}
 
 ## Containers
 
-Although it's not required, you can wrap a navbar in a `.container` to center it on a page or add one within to only center the contents of a [fixed or static top navbar](#placement).
+Apesar de não ser necessário, você pode envolver um `.container` em um navbar para centralizá-lo na página ou colocar um `.container` dentro para centralizar os conteúdos de um [navbar top fixo ou estático](#placement).
 
 {% capture example %}
 <div class="container">
@@ -413,7 +416,7 @@ Although it's not required, you can wrap a navbar in a `.container` to center it
 {% endcapture %}
 {% include example.html content=example %}
 
-When the container is within your navbar, its horizontal padding is removed at breakpoints lower than your specified `.navbar-expand{-sm|-md|-lg|-xl}` class. This ensures we're not doubling up on padding unnecessarily on lower viewports when your navbar is collapsed.
+Quando o container está dentro do seu navbar, seu padding horizontal é removido em breakpoints menores que sua classe `.navbar-expand{-sm|-md|-lg|-xl}` especificada. Isso garante que não dobraremos o padding, desnecessariamente, em viewports menores, quando seu navbar está expandido.
 
 {% capture example %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -424,29 +427,29 @@ When the container is within your navbar, its horizontal padding is removed at b
 {% endcapture %}
 {% include example.html content=example %}
 
-## Placement
+## Posicionamento
 
-Use our [position utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/position/) to place navbars in non-static positions. Choose from fixed to the top, fixed to the bottom, or stickied to the top (scrolls with the page until it reaches the top, then stays there). Fixed navbars use `position: fixed`, meaning they're pulled from the normal flow of the DOM and may require custom CSS (e.g., `padding-top` on the `<body>`) to prevent overlap with other elements.
+Use nossos [utilitários de posicionamento]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/position/) para posicionar navbars em locais não estáticos. Escolha entre fixo ao topo, fixo a parte inferior ou sticky top (rola com a página e fica fixo, quando ele alcança a topo). Navbars fixos usam `position: fixed`, significando que eles estão a parte do fluxo comum do DOM e podem precisar CSS customizado (ex: `padding-top` no `<body>`) para evitar sobreposição com outros elementos.
 
-Also note that **`.sticky-top` uses `position: sticky`, which [isn't fully supported in every browser](https://caniuse.com/#feat=css-sticky)**.
+Também perceba que **`.sticky-top` usa `position: sticky`, oquê [não é suportado, totalmente, em todos browsers](https://caniuse.com/#feat=css-sticky)**.
 
 {% capture example %}
 <nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">Default</a>
+  <a class="navbar-brand" href="#">Padrão</a>
 </nav>
 {% endcapture %}
 {% include example.html content=example %}
 
 {% capture example %}
 <nav class="navbar fixed-top navbar-light bg-light">
-  <a class="navbar-brand" href="#">Fixed top</a>
+  <a class="navbar-brand" href="#">Fixo na parte superior</a>
 </nav>
 {% endcapture %}
 {% include example.html content=example %}
 
 {% capture example %}
 <nav class="navbar fixed-bottom navbar-light bg-light">
-  <a class="navbar-brand" href="#">Fixed bottom</a>
+  <a class="navbar-brand" href="#">Fixo na parte inferior</a>
 </nav>
 {% endcapture %}
 {% include example.html content=example %}
@@ -458,80 +461,82 @@ Also note that **`.sticky-top` uses `position: sticky`, which [isn't fully suppo
 {% endcapture %}
 {% include example.html content=example %}
 
-## Responsive behaviors
+## Comportamentos responsivos
 
-Navbars can utilize `.navbar-toggler`, `.navbar-collapse`, and `.navbar-expand{-sm|-md|-lg|-xl}` classes to change when their content collapses behind a button. In combination with other utilities, you can easily choose when to show or hide particular elements.
+Navbars podem utilizar classes `.navbar-toggler`, `.navbar-collapse` e `.navbar-expand{-sm|-md|-lg|-xl}` para alterar quando o conteúdo colapsa, atrás do botão. Em combinação com outros utilitários, você pode escolher quando mostrar ou esconder certos elementos, facilmente.
 
-For navbars that never collapse, add the `.navbar-expand` class on the navbar. For navbars that always collapse, don't add any `.navbar-expand` class.
+Para navbars que não estão sempre colapsados, use a classe `.navbar-expand` no navbar. Para navbars que estão sempre colapsados, não coloque nenhuma classe `.navbar-expand`.
 
 ### Toggler
 
-Navbar togglers are left-aligned by default, but should they follow a sibling element like a `.navbar-brand`, they'll automatically be aligned to the far right. Reversing your markup will reverse the placement of the toggler. Below are examples of different toggle styles.
+Togglers navbar são alinhados a esquerda, por padrão, mas se eles seguem um elemento irmão como `.navbar-brand`, vão ser alinhados a direita, automaticamente. Revertendo sua marcação HTML vai reverter o posicionamento do toggler.
 
-With no `.navbar-brand` shown in lowest breakpoint:
+Abaixo, temos exemplos de diferentes estilos de togglers.
+
+Sem `.navbar-brand` exibido, em breakpoints menores:
 
 {% capture example %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <a class="navbar-brand" href="#">Hidden brand</a>
+    <a class="navbar-brand" href="#">Marca escondida</a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+        <a class="nav-link disabled" href="#">Desativado</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
     </form>
   </div>
 </nav>
 {% endcapture %}
 {% include example.html content=example %}
 
-With a brand name shown on the left and toggler on the right:
+Com o nome da marca exibido na esquerda e o toggler na direita:
 
 {% capture example %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+        <a class="nav-link disabled" href="#">Desativado</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
     </form>
   </div>
 </nav>
 {% endcapture %}
 {% include example.html content=example %}
 
-With a toggler on the left and brand name on the right:
+Com toggler na esquerda e nome da marca na direita:
 
 {% capture example %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
   <a class="navbar-brand" href="#">Navbar</a>
@@ -539,38 +544,38 @@ With a toggler on the left and brand name on the right:
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+        <a class="nav-link disabled" href="#">Desativado</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
     </form>
   </div>
 </nav>
 {% endcapture %}
 {% include example.html content=example %}
 
-### External content
+### Conteúdo externo
 
-Sometimes you want to use the collapse plugin to trigger hidden content elsewhere on the page. Because our plugin works on the `id` and `data-target` matching, that's easily done!
+Algumas vezes você quer usar o plugin collapse para acionar conteúdo oculto, em algum lugar da página. Porque nosso plugin funciona com o pareamento de `id` e `data-target`, isso pode ser feito, facilmente!
 
 {% capture example %}
 <div class="pos-f-t">
   <div class="collapse" id="navbarToggleExternalContent">
     <div class="bg-dark p-4">
-      <h5 class="text-white h4">Collapsed content</h5>
-      <span class="text-muted">Toggleable via the navbar brand.</span>
+      <h5 class="text-white h4">Conteúdo expandido</h5>
+      <span class="text-muted">Expansível, atráves da marca no navbar.</span>
     </div>
   </div>
   <nav class="navbar navbar-dark bg-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Alterna navegação">
       <span class="navbar-toggler-icon"></span>
     </button>
   </nav>
