@@ -1,52 +1,58 @@
 ---
 layout: docs
 title: Modal
-description: Use Bootstrap's JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.
+description: Use o plugin JavaScript modal para criar diálogos em seu site para notificações e outros tipos de conteúdos customizados.
 group: components
 toc: true
 ---
 
-## How it works
+## Como funciona
 
-Before getting started with Bootstrap's modal component, be sure to read the following as our menu options have recently changed.
+Antes de começar a usar o modal Bootstrap, se assegure de ler o seguinte, já que nossas opções de menu mudaram, recentemente.
 
-- Modals are built with HTML, CSS, and JavaScript. They're positioned over everything else in the document and remove scroll from the `<body>` so that modal content scrolls instead.
-- Clicking on the modal "backdrop" will automatically close the modal.
-- Bootstrap only supports one modal window at a time. Nested modals aren't supported as we believe them to be poor user experiences.
-- Modals use `position: fixed`, which can sometimes be a bit particular about its rendering. Whenever possible, place your modal HTML in a top-level position to avoid potential interference from other elements. You'll likely run into issues when nesting a `.modal` within another fixed element.
-- Once again, due to `position: fixed`, there are some caveats with using modals on mobile devices. [See our browser support docs]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/browsers-devices/#modals-and-dropdowns-on-mobile) for details.
-- Due to how HTML5 defines its semantics, [the `autofocus` HTML attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus) has no effect in Bootstrap modals. To achieve the same effect, use some custom JavaScript:
+- Modals são feitos com HTML, CSS e JavaScript;
+  - Eles são posicionados acima de todas as coisas do documento e removem rolagem do `<body>` para que o conteúdo do modal role.
+- Clicar na tela atrás do modal vai fazer com que ele seja fechado, automaticamente;
+- Bootstrap só suporta uma janela modal, por vez;
+  - Modals aninhados não são suportados, já que acreditamos proporcionarem pobres experiências ou usuário.
+- Modals usam `position: fixed`, o que pode ser um pouco chatinha, no que diz a respeito de sua renderização;
+  - Sempre que possível, coloque o HTML do seu modal em uma posição prioritária para evitar potenciais interferências de outros elementos;
+  - Você vai passar por problemas, quando aninhar um `.modal` com outro elemento fixo.
+- Mais uma vez, devido a `position: fixed`, existem alguns problemas sobre o uso de modais em dispositivos móveis;
+  - [Veja nossa documentação de suporte a browsers]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/browsers-devices/#modals-and-dropdowns-on-mobile), para mais detalhes.
+- Dado como HTML5 define suas semânticas, o [atributo HTML `autofocus`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus) não tem efeito em modals Bootstrap.
+  - Para alcançar o mesmo efeito, use algum tipo de JavaScript customizado:
 
 {% highlight js %}
-$('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
+$('#meuModal').on('shown.bs.modal', function () {
+  $('#meuInput').trigger('focus')
 })
 {% endhighlight %}
 
-Keep reading for demos and usage guidelines.
+Continue lendo, para demonstrações e instruções de uso.
 
-## Examples
+## Exemplos
 
-### Modal components
+### Componentes modal
 
-Below is a _static_ modal example (meaning its `position` and `display` have been overridden). Included are the modal header, modal body (required for `padding`), and modal footer (optional). We ask that you include modal headers with dismiss actions whenever possible, or provide another explicit dismiss action.
+Abaixo, temos um exemplo de modal _static_ (`position` e `display` sobrescritos). Pode-se ver o cabeçalho, corpo (precisa de padding) e footer (opcional) do modal. Nós só pedimos que você crie cabeçalhos modal com recursos de dispensa, sempre que possível, ou dê outra opção de dispensa ao usuário.
 
 <div class="bd-example bd-example-modal">
   <div class="modal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <h5 class="modal-title">Título do modal</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          <p>Modal body text goes here.</p>
+          <p>Texto do corpo do modal, é aqui.</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-primary">Salvar mudanças</button>
         </div>
       </div>
     </div>
@@ -58,42 +64,42 @@ Below is a _static_ modal example (meaning its `position` and `display` have bee
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <h5 class="modal-title">Título do modal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <p>Modal body text goes here.</p>
+        <p>Texto do corpo do modal, é aqui.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Salvar mudanças</button>
       </div>
     </div>
   </div>
 </div>
 {% endhighlight %}
 
-### Live demo
+### Demonstração em tempo real
 
-Toggle a working modal demo by clicking the button below. It will slide down and fade in from the top of the page.
+Veja um exemplo de modal, clicando no botão abaixo. Ele vai deslizar para baixo, enquanto aparece gradualmente.
 
 <div id="exampleModalLive" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLiveLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLiveLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <h5 class="modal-title" id="exampleModalLiveLabel">Título do modal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <p>Woohoo, you're reading this text in a modal!</p>
+        <p>Aêêê! Você tá vendo esse texto, dentro do modal.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Salvar mudanças</button>
       </div>
     </div>
   </div>
@@ -101,23 +107,23 @@ Toggle a working modal demo by clicking the button below. It will slide down and
 
 <div class="bd-example">
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLive">
-    Launch demo modal
+    Abrir modal de demonstração
   </button>
 </div>
 
 {% highlight html %}
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
+<!-- Botão para acionar modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
+  Abrir modal de demonstração
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -125,24 +131,24 @@ Toggle a working modal demo by clicking the button below. It will slide down and
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Salvar mudanças</button>
       </div>
     </div>
   </div>
 </div>
 {% endhighlight %}
 
-### Scrolling long content
+### Rolando conteúdo longo
 
-When modals become too long for the user's viewport or device, they scroll independent of the page itself. Try the demo below to see what we mean.
+Quando modals são muito longos para a viewport do usuário ou dispositivo, eles possuem rolagem independente da página. Teste a demo abaixo, para saber de oquê estamos falando.
 
-<div id="exampleModalLong" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+<div id="ModalLongoExemplo" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="TituloModalLongoExemplo" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <h5 class="modal-title" id="TituloModalLongoExemplo">Título do modal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -167,32 +173,32 @@ When modals become too long for the user's viewport or device, they scroll indep
         <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Salvar mudanças</button>
       </div>
     </div>
   </div>
 </div>
 
 <div class="bd-example">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-    Launch demo modal
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalLongoExemplo">
+    Abrir modal de demonstração
   </button>
 </div>
 
 {% highlight html %}
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-  Launch demo modal
+<!-- Botão para acionar modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalLongoExemplo">
+  Abrir modal de demonstração
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+<div class="modal fade" id="ModalLongoExemplo" tabindex="-1" role="dialog" aria-labelledby="TituloModalLongoExemplo" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <h5 class="modal-title" id="TituloModalLongoExemplo">Título do modal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -200,24 +206,24 @@ When modals become too long for the user's viewport or device, they scroll indep
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Salvar mudanças</button>
       </div>
     </div>
   </div>
 </div>
 {% endhighlight %}
 
-### Vertically centered
+### Verticalmente centralizado
 
-Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
+Use `.modal-dialog-centered` no `.modal-dialog` para, verticalmente, centralizar o modal.
 
-<div id="exampleModalCenter" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div id="ExemploModalCentralizado" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <h5 class="modal-title" id="TituloModalCentralizado">Título do modal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -225,32 +231,32 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
         <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Salvar mudanças</button>
       </div>
     </div>
   </div>
 </div>
 
 <div class="bd-example">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-    Launch demo modal
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ExemploModalCentralizado">
+    Abrir modal de demonstração
   </button>
 </div>
 
 {% highlight html %}
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-  Launch demo modal
+<!-- Botão para acionar modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ExemploModalCentralizado">
+  Abrir modal de demonstração
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <h5 class="modal-title" id="TituloModalCentralizado">Título do modal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -258,37 +264,37 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Salvar mudanças</button>
       </div>
     </div>
   </div>
 </div>
 {% endhighlight %}
 
-### Tooltips and popovers
+### Tooltips e popovers
 
-[Tooltips]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/tooltips/) and [popovers]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/popovers/) can be placed within modals as needed. When modals are closed, any tooltips and popovers within are also automatically dismissed.
+[Tooltips]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/tooltips/) e [popovers]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/popovers/) podem ser posicionados dentro de modals, sempre que necessário. Quando modals são fechados, qualquer tooltip ou popover dentro deles e fechado, automaticamente.
 
 <div id="exampleModalPopovers" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalPopoversLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalPopoversLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <h5 class="modal-title" id="exampleModalPopoversLabel">Título do modal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <h5>Popover in a modal</h5>
-        <p>This <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="Popover body content is set in this attribute." data-container="#exampleModalPopovers">button</a> triggers a popover on click.</p>
+        <h5>Popover em um modal</h5>
+        <p>Este <a href="#" role="button" class="btn btn-secondary popover-test" title="Título do popover" data-content="O conteúdo do popover é definido aqui." data-container="#exampleModalPopovers">botão</a> aciona um popover, ao clicar nele.</p>
         <hr>
-        <h5>Tooltips in a modal</h5>
-        <p><a href="#" class="tooltip-test" title="Tooltip" data-container="#exampleModalPopovers">This link</a> and <a href="#" class="tooltip-test" title="Tooltip" data-container="#exampleModalPopovers">that link</a> have tooltips on hover.</p>
+        <h5>Tooltips em um modal</h5>
+        <p><a href="#" class="tooltip-test" title="Tooltip" data-container="#exampleModalPopovers">Este link</a> e <a href="#" class="tooltip-test" title="Tooltip" data-container="#exampleModalPopovers">este outro</a> mostra tooltips, quando passamos o mouse sobre.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Salvar mudanças</button>
       </div>
     </div>
   </div>
@@ -296,30 +302,30 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
 
 <div class="bd-example">
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalPopovers">
-    Launch demo modal
+    Abrir modal de demonstração
   </button>
 </div>
 
 {% highlight html %}
 <div class="modal-body">
-  <h5>Popover in a modal</h5>
-  <p>This <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p>
+  <h5>Popover em um modal</h5>
+  <p>Este <a href="#" role="button" class="btn btn-secondary popover-test" title="Título do popover" data-content="O conteúdo do popover é definido aqui.">botão</a> aciona um popover, ao clicar nele.</p>
   <hr>
-  <h5>Tooltips in a modal</h5>
-  <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> have tooltips on hover.</p>
+  <h5>Tooltips em um modal</h5>
+  <p><a href="#" class="tooltip-test" title="Tooltip">Este link</a> e <a href="#" class="tooltip-test" title="Tooltip">este outro</a> mostra tooltips, quando passamos o mouse sobre eles.</p>
 </div>
 {% endhighlight %}
 
-### Using the grid
+### Usando o grid
 
-Utilize the Bootstrap grid system within a modal by nesting `.container-fluid` within the `.modal-body`. Then, use the normal grid system classes as you would anywhere else.
+Use o sistema grid Bootstrap dentro de um modal, aninhando `.container-fluid` no `.modal-body`. Depois, use as classes do sistema grid, assim como faria em outros locais.
 
 <div id="gridSystemModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="gridModalLabel">Grids in modals</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h5 class="modal-title" id="gridModalLabel">Grids em modals</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
         <div class="container-fluid bd-example-row">
@@ -350,8 +356,8 @@ Utilize the Bootstrap grid system within a modal by nesting `.container-fluid` w
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Salvar mudanças</button>
       </div>
     </div>
   </div>
@@ -359,7 +365,7 @@ Utilize the Bootstrap grid system within a modal by nesting `.container-fluid` w
 
 <div class="bd-example">
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#gridSystemModal">
-  Launch demo modal
+  Abrir modal de demonstração
 </button>
 </div>
 
@@ -394,41 +400,41 @@ Utilize the Bootstrap grid system within a modal by nesting `.container-fluid` w
 </div>
 {% endhighlight %}
 
-### Varying modal content
+### Variando o conteúdo de modais
 
-Have a bunch of buttons that all trigger the same modal with slightly different contents? Use `event.relatedTarget` and [HTML `data-*` attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes) (possibly [via jQuery](https://api.jquery.com/data/)) to vary the contents of the modal depending on which button was clicked.
+Tem vários botões que acionam o mesmo modal, mas com o conteúdo um pouco diferente? Use `event.relatedTarget` e [atributos HTML `data-*`](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes) ([via jQuery](https://api.jquery.com/data/), se possível) para variar o conteúdo do modal, dependendo de qual botão foi clicado.
 
-Below is a live demo followed by example HTML and JavaScript. For more information, [read the modal events docs](#events) for details on `relatedTarget`.
+Abaixo, temos uma demonstração seguida de um exemplo HTML e JavaScript. Para mais informação, [leia a documentação de eventos do modal](#events) para detalhes sobre `relatedTarget`.
 
 {% capture example %}
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Falar com @mdo</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Falar com @fat</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Falar com @getbootstrap</button>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <h5 class="modal-title" id="exampleModalLabel">Nova mensagem</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         <form>
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <label for="recipient-name" class="col-form-label">Destinatário:</label>
             <input type="text" class="form-control" id="recipient-name">
           </div>
           <div class="form-group">
-            <label for="message-text" class="col-form-label">Message:</label>
+            <label for="message-text" class="col-form-label">Mensagem:</label>
             <textarea class="form-control" id="message-text"></textarea>
           </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Enviar</button>
       </div>
     </div>
   </div>
@@ -438,19 +444,19 @@ Below is a live demo followed by example HTML and JavaScript. For more informati
 
 {% highlight js %}
 $('#exampleModal').on('show.bs.modal', function (event) {
-  var button = $(event.relatedTarget) // Button that triggered the modal
-  var recipient = button.data('whatever') // Extract info from data-* attributes
-  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var button = $(event.relatedTarget) // Botão que acionou o modal
+  var recipient = button.data('whatever') // Extrai informação dos atributos data-*
+  // Se necessário, você pode iniciar uma requisição AJAX aqui e, então, fazer a atualização em um callback.
+  // Atualiza o conteúdo do modal. Nós vamos usar jQuery, aqui. No entanto, você poderia usar uma biblioteca de data binding ou outros métodos.
   var modal = $(this)
-  modal.find('.modal-title').text('New message to ' + recipient)
+  modal.find('.modal-title').text('Nova mensagem para ' + recipient)
   modal.find('.modal-body input').val(recipient)
 })
 {% endhighlight %}
 
-### Remove animation
+### Remover animação
 
-For modals that simply appear rather than fade in to view, remove the `.fade` class from your modal markup.
+Para modals que, simplesmente, aparecem de supetão, invés de gradualmente, remova a classe `.fade` da marcação do seu modal.
 
 {% highlight html %}
 <div class="modal" tabindex="-1" role="dialog" aria-labelledby="..." aria-hidden="true">
@@ -458,30 +464,30 @@ For modals that simply appear rather than fade in to view, remove the `.fade` cl
 </div>
 {% endhighlight %}
 
-### Dynamic heights
+### Alturas dinâmicas
 
-If the height of a modal changes while it is open, you should call `$('#myModal').modal('handleUpdate')` to readjust the modal's position in case a scrollbar appears.
+Se a altura do modal muda enquanto é aberta, você deveria invocar `$('#meuModal').modal('handleUpdate')` para reajustar a posição do modal, caso a barra de rolagem apareça.
 
-### Accessibility
+### Acessibilidade
 
-Be sure to add `role="dialog"` and `aria-labelledby="..."`, referencing the modal title, to `.modal`, and `role="document"` to the `.modal-dialog` itself. Additionally, you may give a description of your modal dialog with `aria-describedby` on `.modal`.
+Se assegure de usar `role="dialog"` e `aria-labelledby="..."`, remetendo o título do modal ao `.modal` e `role="document"` ao `.modal-dialog`. Alternativamente, você pode dar uma descrição do seu modal, no `aria-describedby` do `.modal`.
 
-### Embedding YouTube videos
+### Embutindo vídeos do YouTube
 
-Embedding YouTube videos in modals requires additional JavaScript not in Bootstrap to automatically stop playback and more. [See this helpful Stack Overflow post](https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal) for more information.
+Embutir vídeos do YouTube em modals pede JavaScript adicional, para parar o playback e outras coisas, automaticamente. [Veja este ótimo post, no Stack Overflow](https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal), para mais informação.
 
-## Optional sizes
+## Tamanhos opcionais
 
-Modals have two optional sizes, available via modifier classes to be placed on a `.modal-dialog`. These sizes kick in at certain breakpoints to avoid horizontal scrollbars on narrower viewports.
+Modals possuem dois tamanhos alternativos, disponíveis via classes modificadoras e a serem colocadas em um `.modal-dialog`. Estes tamanhos são cancelados, em certos breakpoints, para evitar rolagem horizontal em viewports menores.
 
 <div class="bd-example">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Small modal</button>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Modal grande</button>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Modal pequeno</button>
 </div>
 
 {% highlight html %}
-<!-- Large modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
+<!-- Modal grande -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Modal grande</button>
 
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -491,8 +497,8 @@ Modals have two optional sizes, available via modifier classes to be placed on a
   </div>
 </div>
 
-<!-- Small modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Small modal</button>
+<!-- Modal pequeno -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Modal pequeno</button>
 
 <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
@@ -508,8 +514,8 @@ Modals have two optional sizes, available via modifier classes to be placed on a
     <div class="modal-content">
 
       <div class="modal-header">
-        <h5 class="modal-title h4" id="myLargeModalLabel">Large modal</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <h5 class="modal-title h4" id="myLargeModalLabel">Modal grande</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -524,8 +530,8 @@ Modals have two optional sizes, available via modifier classes to be placed on a
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title h4" id="mySmallModalLabel">Small modal</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <h5 class="modal-title h4" id="mySmallModalLabel">Modal pequeno</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -536,140 +542,140 @@ Modals have two optional sizes, available via modifier classes to be placed on a
   </div>
 </div>
 
-## Usage
+## Modo de uso
 
-The modal plugin toggles your hidden content on demand, via data attributes or JavaScript. It also adds `.modal-open` to the `<body>` to override default scrolling behavior and generates a `.modal-backdrop` to provide a click area for dismissing shown modals when clicking outside the modal.
+O plugin modal alterna a visibilidade do seu conteúdo, via atributos data ou JavaScript. Ele também coloca `.modal-open` no `<body>` para sobrescrever o comportamento padrão de rolagem e gerar um `.modal-backdrop` para dar uma área de clique fora do modal que permite fechá-lo.
 
-### Via data attributes
+### Via atributos data
 
-Activate a modal without writing JavaScript. Set `data-toggle="modal"` on a controller element, like a button, along with a `data-target="#foo"` or `href="#foo"` to target a specific modal to toggle.
+Ativa o modal sem escrever JavaScript. Defina `data-toggle="modal"` em um elemento de controle (como um botão), junto com um `data-target="#foo"` ou `href="#foo"` que remeta a um modal específico a ser acionado.
 
 {% highlight html %}
-<button type="button" data-toggle="modal" data-target="#myModal">Launch modal</button>
+<button type="button" data-toggle="modal" data-target="#meuModal">Abrir modal</button>
 {% endhighlight %}
 
 ### Via JavaScript
 
-Call a modal with id `myModal` with a single line of JavaScript:
+Invoque um modal com ID `meuModal`, usando uma única linha JavaScript:
 
-{% highlight js %}$('#myModal').modal(options){% endhighlight %}
+{% highlight js %}$('#meuModal').modal(options){% endhighlight %}
 
-### Options
+### Parâmetros
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-backdrop=""`.
+Parâmetros podem ser passados via atributos data ou JavaScript. Para atributos data, anexe o nome do parâmetro ao prefixo `data-*`, como em `data-backdrop=""`.
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th style="width: 100px;">Name</th>
-      <th style="width: 50px;">Type</th>
-      <th style="width: 50px;">Default</th>
-      <th>Description</th>
+      <th style="width: 100px;">Nome</th>
+      <th style="width: 50px;">Tipo</th>
+      <th style="width: 50px;">Padrão</th>
+      <th>Descrição</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>backdrop</td>
-      <td>boolean or the string <code>'static'</code></td>
+      <td>booleano ou a string <code>'static'</code></td>
       <td>true</td>
-      <td>Includes a modal-backdrop element. Alternatively, specify <code>static</code> for a backdrop which doesn't close the modal on click.</td>
+      <td>Cria um elemento modal backdrop. Alternativamente, use <code>static</code> para um backdrop que não fecha o modal, ao clicar.</td>
     </tr>
     <tr>
       <td>keyboard</td>
       <td>boolean</td>
       <td>true</td>
-      <td>Closes the modal when escape key is pressed</td>
+      <td>Fecha o modal, quando a tecla <kbd>esc</kbd> é pressionada.</td>
     </tr>
     <tr>
       <td>focus</td>
       <td>boolean</td>
       <td>true</td>
-      <td>Puts the focus on the modal when initialized.</td>
+      <td>Foca no modal, quando inicializado.</td>
     </tr>
     <tr>
       <td>show</td>
       <td>boolean</td>
       <td>true</td>
-      <td>Shows the modal when initialized.</td>
+      <td>Mostra o modal, quando inicializado.</td>
     </tr>
   </tbody>
 </table>
 
-### Methods
+### Métodos
 
 {% include callout-danger-async-methods.md %}
 
 #### `.modal(options)`
 
-Activates your content as a modal. Accepts an optional options `object`.
+Define seu conteúdo como um modal. Aceita um `objeto` de parâmetros, opcional.
 
 {% highlight js %}
-$('#myModal').modal({
+$('#meuModal').modal({
   keyboard: false
 })
 {% endhighlight %}
 
 #### `.modal('toggle')`
 
-Manually toggles a modal. **Returns to the caller before the modal has actually been shown or hidden** (i.e. before the `shown.bs.modal` or `hidden.bs.modal` event occurs).
+Manualmente, alterna a visibilidade do modal. **Retorna ao invocador, antes do modal ter sido exibido ou escondido, de fato** (antes dos eventos `shown.bs.modal` ou `hidden.bs.modal` ocorrerem).
 
-{% highlight js %}$('#myModal').modal('toggle'){% endhighlight %}
+{% highlight js %}$('#meuModal').modal('toggle'){% endhighlight %}
 
 #### `.modal('show')`
 
-Manually opens a modal. **Returns to the caller before the modal has actually been shown** (i.e. before the `shown.bs.modal` event occurs).
+Manualmente, abre o modal. **Retorna ao invocador, antes do modal ter sido exibido, de fato** (antes do evento `shown.bs.modal` ocorrer).
 
-{% highlight js %}$('#myModal').modal('show'){% endhighlight %}
+{% highlight js %}$('#meuModal').modal('show'){% endhighlight %}
 
 #### `.modal('hide')`
 
-Manually hides a modal. **Returns to the caller before the modal has actually been hidden** (i.e. before the `hidden.bs.modal` event occurs).
+Manualmente, esconde o modal. **Retorna ao invocador, antes do modal ter sido escondido, de fato** (antes do evento `hidden.bs.modal` ocorrer).
 
-{% highlight js %}$('#myModal').modal('hide'){% endhighlight %}
+{% highlight js %}$('#meuModal').modal('hide'){% endhighlight %}
 
 #### `.modal('handleUpdate')`
 
-Manually readjust the modal's position if the height of a modal changes while it is open (i.e. in case a scrollbar appears).
+Manualmente, reajuste a posição do modal se a altura dele se alterar, enquanto está aberto (caso uma barra de rolagem apareça).
 
-{% highlight js %}$('#myModal').modal('handleUpdate'){% endhighlight %}
+{% highlight js %}$('#meuModal').modal('handleUpdate'){% endhighlight %}
 
 #### `.modal('dispose')`
 
-Destroys an element's modal.
+Destrói o modal de um elemento.
 
-### Events
+### Eventos
 
-Bootstrap's modal class exposes a few events for hooking into modal functionality. All modal events are fired at the modal itself (i.e. at the `<div class="modal">`).
+A classe modal Bootstrap possui alguns eventos para criar a funcionalidade modal, em si. Todos eventos modal são acionados nele mesmo (no `<div class="modal">`).
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th style="width: 150px;">Event Type</th>
-      <th>Description</th>
+      <th style="width: 150px;">Tipo de evento</th>
+      <th>Descrição</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>show.bs.modal</td>
-      <td>This event fires immediately when the <code>show</code> instance method is called. If caused by a click, the clicked element is available as the <code>relatedTarget</code> property of the event.</td>
+      <td>Este evento é acionado, imediatamente, quando o método <code>show</code> é invocado. Se acionado por um clique, o elemento clicado fica disponível como a propriedade <code>relatedTarget</code> do evento.</td>
     </tr>
     <tr>
       <td>shown.bs.modal</td>
-      <td>This event is fired when the modal has been made visible to the user (will wait for CSS transitions to complete). If caused by a click, the clicked element is available as the <code>relatedTarget</code> property of the event.</td>
+      <td>Este evento é acionado quando o modal se torna visível ao usuário (espera as transições CSS finalizarem). Se acionado por um clique, o elemento clicado fica disponível como a propriedade <code>relatedTarget</code> do evento.</td>
     </tr>
     <tr>
       <td>hide.bs.modal</td>
-      <td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
+      <td>Este evento é acionado, imediatamente, quando o método <code>hide</code> é invocado.</td>
     </tr>
     <tr>
       <td>hidden.bs.modal</td>
-      <td>This event is fired when the modal has finished being hidden from the user (will wait for CSS transitions to complete).</td>
+      <td>Este evento é acionado quando o modal acaba de ser oculto ao usuário (espera as transições CSS finalizarem).</td>
     </tr>
   </tbody>
 </table>
 
 {% highlight js %}
-$('#myModal').on('hidden.bs.modal', function (e) {
-  // do something...
+$('#meuModal').on('hidden.bs.modal', function (e) {
+  // Faça algo, aqui...
 })
 {% endhighlight %}
