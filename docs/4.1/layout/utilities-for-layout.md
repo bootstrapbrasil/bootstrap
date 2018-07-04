@@ -1,25 +1,25 @@
 ---
 layout: docs
-title: Utilities for layout
-description: For faster mobile-friendly and responsive development, Bootstrap includes dozens of utility classes for showing, hiding, aligning, and spacing content.
+title: Utilitários para layout
+description: Para um desenvolvimento responsivo, mobile-friendly, mais rápido, Bootstrap possui uma dúzia de classes utilitárias para exibir, esconder, alinha e espaçar conteúdo.
 group: layout
 toc: true
 ---
 
-## Changing `display`
+## Alterando `display`
 
-Use our [display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/) for responsively toggling common values of the `display` property. Mix it with our grid system, content, or components to show or hide them across specific viewports.
+Use nossos [utilitários de display]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/) para, responsivamente, alternar valores comuns da propriedade `display`. Misture-os com nosso sistema grid, conteúdo e componentes a serem exibidos ou ocultos, em viewports específicos.
 
-## Flexbox options
+## Opções flexbox
 
-Bootstrap 4 is built with flexbox, but not every element's `display` has been changed to `display: flex` as this would add many unnecessary overrides and unexpectedly change key browser behaviors. Most of [our components]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/alerts/) are built with flexbox enabled.
+Bootstrap 4 é feito com flexbox, mas nem todo `display` de elementos foram altreados para `display: flex`, já que isso faria muitas sobrescrições desnecessárias e mudanças inesperadas em comportamentos chaves de browsers. A maior parte de [nossos componentes]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/alerts/) são feitos com flexbox ativado.
 
-Should you need to add `display: flex` to an element, do so with `.d-flex` or one of the responsive variants (e.g., `.d-sm-flex`). You'll need this class or `display` value to allow the use of our extra [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) for sizing, alignment, spacing, and more.
+Se precisar ativar `display: flex` em um elemento, faça colocando `.d-flex` ou uma das variações responsivas (ex: `.-sm-flex`). Você precisará desta classe ou valor `display` para conseguir usar o resto de nossos [utilitários flexbox]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) para dimensionamento, alinhamento, espaçamento, etc.
 
-## Margin and padding
+## Margem e padding
 
-Use the `margin` and `padding` [spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) to control how elements and components are spaced and sized. Bootstrap 4 includes a five-level scale for spacing utilities, based on a `1rem` value default `$spacer` variable. Choose values for all viewports (e.g., `.mr-3` for `margin-right: 1rem`), or pick responsive variants to target specific viewports (e.g., `.mr-md-3` for `margin-right: 1rem` starting at the `md` breakpoint).
+Use os [utilitários de espaçamento]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) de `margin` e `padding` para controlar como elementos e componentes são espaçados e dimensionados. Bootstrap 4 possui uma escala de cinco níveis para utilitários de espaçamento, baseado no valor padrão `1rem` da variável `$spacer`. Escolha valores para todas viewports (`.mr-3`, no caso `margin-right: 1rem`) ou variações responsivas para mirar em viewports específicas (`.mr-md-3` para `margin-right: 1rem` em viewports do breakpoint `md`).
 
-## Toggle `visibility`
+## Alternar `visibility`
 
-When toggling `display` isn't needed, you can toggle the `visibility` of an element with our [visibility utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/visibility/). Invisible elements will still affect the layout of the page, but are visually hidden from visitors.
+Quando alternar o valor da `display` não é necessário, você pode alternar o valor da `visibility` de algum elemento, usando nossos [utilitários de visibilidade]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/visibility/). Elementos invisíveis vão continuar a afetar o layout da página, mas são ocultos dos usuários, visualmente.
