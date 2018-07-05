@@ -1,22 +1,22 @@
 ---
 layout: docs
-title: Media object
-description: Documentation and examples for Bootstrap's media object to construct highly repetitive components like blog comments, tweets, and the like.
+title: Objeto de mídia
+description: Documentação e exemplos para o objeto de mídia Bootstrap, construído para componentes repetitivos como comentários de blog, tweets, etc.
 group: layout
 toc: true
 ---
 
-## Example
+## Exemplo
 
-The [media object](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) helps build complex and repetitive components where some media is positioned alongside content that doesn't wrap around said media. Plus, it does this with only two required classes thanks to flexbox.
+O [objeto de mídia](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) ajuda construir componentes complexos e repetitivos, onde alguma mídia é posicionada ao lado do conteúdo. Além do mais, isso é possível só com duas classes, graças ao flexbox.
 
-Below is an example of a single media object. Only two classes are required—the wrapping `.media` and the `.media-body` around your content. Optional padding and margin can be controlled through [spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/).
+Abaixo, temos um exemplo de um objeto de mídia. Apenas duas classes são necessárias (o elemento pai `.media` e o corpo `.media-body`), em volta de seus conteúdos. Margem e padding adicionais podem ser usados com [utilitários de espaçamento]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/).
 
 {% capture example %}
 <div class="media">
-  <img class="mr-3" data-src="holder.js/64x64" alt="Generic placeholder image">
+  <img class="mr-3" data-src="holder.js/64x64" alt="Imagem de exemplo genérica">
   <div class="media-body">
-    <h5 class="mt-0">Media heading</h5>
+    <h5 class="mt-0">Cabeçalho da mídia</h5>
     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
   </div>
 </div>
@@ -24,31 +24,31 @@ Below is an example of a single media object. Only two classes are required—th
 {% include example.html content=example %}
 
 {% capture callout %}
-##### Flexbug #12: Inline elements aren't treated as flex items
+##### Flexbug #12: Elementos inline não são tratados como flex items
 
-Internet Explorer 10-11 do not render inline elements like links or images (or `::before` and `::after` pseudo-elements) as flex items. The only workaround is to set a non-inline `display` value (e.g., `block`, `inline-block`, or `flex`). We suggest using `.d-flex`, one of our [display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/), as an easy fix.
+Internet Explorer 10-11 não renderiza elementos inline, como links ou imagens (ou pseudo-elementos `::before` e `::after`), como flex items. A única solução é definir um valor não-inline `display` (`block`, `inline-block` ou `flex`). Nós sugerimos usar `.d-flex`, um de nossos [utilitários display]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/), como uma solução fácil.
 
-**Source:** [Flexbugs on GitHub](https://github.com/philipwalton/flexbugs#flexbug-12)
+**Fonte:** [Flexbugs no GitHub](https://github.com/philipwalton/flexbugs#flexbug-12)
 {% endcapture %}
 {% include callout.html content=callout type="warning" %}
 
-## Nesting
+## Aninhamento
 
-Media objects can be infinitely nested, though we suggest you stop at some point. Place nested `.media` within the `.media-body` of a parent media object.
+Objetos de mídia podem ser aninhados infinitamente, apesar de sugerirmos que você pare, em algum ponto. Coloque `.media` aninhado dentro do `.media-body` de um objeto mídia pai aninhado.
 
 {% capture example %}
 <div class="media">
-  <img class="mr-3" data-src="holder.js/64x64" alt="Generic placeholder image">
+  <img class="mr-3" data-src="holder.js/64x64" alt="Imagem de exemplo genérica">
   <div class="media-body">
-    <h5 class="mt-0">Media heading</h5>
+    <h5 class="mt-0">Cabeçalho da mídia</h5>
     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
 
     <div class="media mt-3">
       <a class="pr-3" href="#">
-        <img data-src="holder.js/64x64" alt="Generic placeholder image">
+        <img data-src="holder.js/64x64" alt="Imagem de exemplo genérica">
       </a>
       <div class="media-body">
-        <h5 class="mt-0">Media heading</h5>
+        <h5 class="mt-0">Cabeçalho da mídia</h5>
         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
       </div>
     </div>
@@ -57,15 +57,15 @@ Media objects can be infinitely nested, though we suggest you stop at some point
 {% endcapture %}
 {% include example.html content=example %}
 
-## Alignment
+## Alinhamento
 
-Media in a media object can be aligned with flexbox utilities to the top (default), middle, or end of your `.media-body` content.
+A mídia, em um objeto de mídia, pode ser alinhada com utilitários flexbox na parte superior, meio ou fim do conteúdo do `.media-body`.
 
 {% capture example %}
 <div class="media">
-  <img class="align-self-start mr-3" data-src="holder.js/64x64" alt="Generic placeholder image">
+  <img class="align-self-start mr-3" data-src="holder.js/64x64" alt="Imagem de exemplo genérica">
   <div class="media-body">
-    <h5 class="mt-0">Top-aligned media</h5>
+    <h5 class="mt-0">Mídia alinhada ao topo</h5>
     <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
     <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
   </div>
@@ -75,9 +75,9 @@ Media in a media object can be aligned with flexbox utilities to the top (defaul
 
 {% capture example %}
 <div class="media">
-  <img class="align-self-center mr-3" data-src="holder.js/64x64" alt="Generic placeholder image">
+  <img class="align-self-center mr-3" data-src="holder.js/64x64" alt="Imagem de exemplo genérica">
   <div class="media-body">
-    <h5 class="mt-0">Center-aligned media</h5>
+    <h5 class="mt-0">Mídia centralizada</h5>
     <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
     <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
   </div>
@@ -87,9 +87,9 @@ Media in a media object can be aligned with flexbox utilities to the top (defaul
 
 {% capture example %}
 <div class="media">
-  <img class="align-self-end mr-3" data-src="holder.js/64x64" alt="Generic placeholder image">
+  <img class="align-self-end mr-3" data-src="holder.js/64x64" alt="Imagem de exemplo genérica">
   <div class="media-body">
-    <h5 class="mt-0">Bottom-aligned media</h5>
+    <h5 class="mt-0">Mídia alinhada na parte inferior</h5>
     <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
     <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
   </div>
@@ -97,45 +97,45 @@ Media in a media object can be aligned with flexbox utilities to the top (defaul
 {% endcapture %}
 {% include example.html content=example %}
 
-## Order
+## Ordem
 
-Change the order of content in media objects by modifying the HTML itself, or by adding some custom flexbox CSS to set the `order` property (to an integer of your choosing).
+Altere a ordem do conteúdo, em objetos de mídia, modificando o próprio HTML ou usando algum CSS flexbox customizado para definir o valor da propriedade `order` em um número inteiro de sua escolha.
 
 {% capture example %}
 <div class="media">
   <div class="media-body">
-    <h5 class="mt-0 mb-1">Media object</h5>
+    <h5 class="mt-0 mb-1">Objeto mídia</h5>
     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
   </div>
-  <img class="ml-3" data-src="holder.js/64x64" alt="Generic placeholder image">
+  <img class="ml-3" data-src="holder.js/64x64" alt="Imagem de exemplo genérica">
 </div>
 {% endcapture %}
 {% include example.html content=example %}
 
-## Media list
+## Lista de mídia
 
-Because the media object has so few structural requirements, you can also use these classes on list HTML elements. On your `<ul>` or `<ol>`, add the `.list-unstyled` to remove any browser default list styles, and then apply `.media` to your `<li>`s. As always, use spacing utilities wherever needed to fine tune.
+Devido as poucas exigências do objeto de mídia, você também pode usar estas classes em elementos HTML de lista. Em seu `<ul>` ou `<ol>`, use a classe `.list-unstyled` para remover qualquer estilo de lista padrão e, então, aplique `.media` no seu `<li>`. Como sempre: use utilitários de espaçamento, onde quer que precise.
 
 {% capture example %}
 <ul class="list-unstyled">
   <li class="media">
-    <img class="mr-3" data-src="holder.js/64x64" alt="Generic placeholder image">
+    <img class="mr-3" data-src="holder.js/64x64" alt="Imagem de exemplo genérica">
     <div class="media-body">
-      <h5 class="mt-0 mb-1">List-based media object</h5>
+      <h5 class="mt-0 mb-1">Objeto de mídia baseado em lista</h5>
       Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
     </div>
   </li>
   <li class="media my-4">
-    <img class="mr-3" data-src="holder.js/64x64" alt="Generic placeholder image">
+    <img class="mr-3" data-src="holder.js/64x64" alt="Imagem de exemplo genérica">
     <div class="media-body">
-      <h5 class="mt-0 mb-1">List-based media object</h5>
+      <h5 class="mt-0 mb-1">Objeto de mídia baseado em lista</h5>
       Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
     </div>
   </li>
   <li class="media">
-    <img class="mr-3" data-src="holder.js/64x64" alt="Generic placeholder image">
+    <img class="mr-3" data-src="holder.js/64x64" alt="Imagem de exemplo genérica">
     <div class="media-body">
-      <h5 class="mt-0 mb-1">List-based media object</h5>
+      <h5 class="mt-0 mb-1">Objeto de mídia baseado em lista</h5>
       Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
     </div>
   </li>
