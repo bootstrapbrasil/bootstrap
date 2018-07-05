@@ -24,7 +24,7 @@ Embora os containers possam ser aninhados, a maioria dos layouts não exige um c
 
 {% highlight html %}
 <div class="container">
-  <!-- Content here -->
+  <!-- Conteúdo aqui -->
 </div>
 {% endhighlight %}
 
@@ -45,30 +45,30 @@ Use `.container-fluid` para um container com de largura total, abrangindo toda a
 {% endhighlight %}
 
 
-## Pontos de parada reponsivos
+## Breakpoints reponsivos
 
-Como o bootstrap é desenvolvido para ser "mobile first" usamos varias [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) para criar sensíveis pontos de parada para nossos layouts e interfaces. Esses pontos são baseadas em larguras de área de visualização miníma e nos permitem dimensionar conforme muda o tamanho da área de visualização.
+Como o bootstrap é desenvolvido para ser "mobile first" usamos varias [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) para criar sensíveis breakpoints para nossos layouts e interfaces. Esses pontos são baseadas em larguras de área de visualização miníma e nos permitem dimensionar conforme muda o tamanho da área de visualização.
 
-Bootstrap usa principalmente os seguintes intervalos de media queries, ou pontos de paradas, em nossos arquivos de origem do SASS para os layouts, sistemas de grid e componentes.
+Bootstrap usa principalmente os seguintes intervalos de media queries, ou breakpoints, em nossos arquivos de origem do SASS para os layouts, sistemas de grid e componentes.
 
 {% highlight scss %}
-// Extra small devices (portrait phones, less than 576px)
-// No media query since this is the default in Bootstrap
+// Dispositivos extra small (telefones em modo retrato, com menos de 576px)
+// Sem media query, já que este é o padrão, no Bootstrap.
 
-// Small devices (landscape phones, 576px and up)
+// Dispositivos small (telefones em modo paisagem, com 576px ou mais)
 @media (min-width: 576px) { ... }
 
-// Medium devices (tablets, 768px and up)
+// Dispositivos médios (tablets com 768px ou mais)
 @media (min-width: 768px) { ... }
 
-// Large devices (desktops, 992px and up)
+// Dispositivos large (desktops com 992px ou mais)
 @media (min-width: 992px) { ... }
 
-// Extra large devices (large desktops, 1200px and up)
+// Dispositivos extra large (desktops grandes com 1200px ou mais)
 @media (min-width: 1200px) { ... }
 {% endhighlight %}
 
-Como escrevemos nosso CSS de origem no Sass, todas as nossas consultas de mídia estão disponíveis via mixins do Sass:
+Como escrevemos nosso CSS fonte no Sass, todas as nossas consultas de mídia estão disponíveis via mixins do Sass:
 
 {% highlight scss %}
 @include media-breakpoint-up(xs) { ... }
@@ -77,9 +77,9 @@ Como escrevemos nosso CSS de origem no Sass, todas as nossas consultas de mídia
 @include media-breakpoint-up(lg) { ... }
 @include media-breakpoint-up(xl) { ... }
 
-// Example usage:
+// Exemplo de uso:
 @include media-breakpoint-up(sm) {
-  .some-class {
+  .alguma-classe {
     display: block;
   }
 }
@@ -88,20 +88,20 @@ Como escrevemos nosso CSS de origem no Sass, todas as nossas consultas de mídia
 Ocasionalmente, usamos media queries que seguem na outra direção (no tamanho da tela fornecida *ou menor*):
 
 {% highlight scss %}
-// Extra small devices (portrait phones, less than 576px)
+// Dispositivos extra small (telefones em modo retrato, com menos de 576px)
 @media (max-width: 575.98px) { ... }
 
-// Small devices (landscape phones, less than 768px)
+// Dispositivos small (telefones em modo paisagem, com menos de 768px)
 @media (max-width: 767.98px) { ... }
 
-// Medium devices (tablets, less than 992px)
+// Dispositivos médios (tablets com menos de 992px)
 @media (max-width: 991.98px) { ... }
 
-// Large devices (desktops, less than 1200px)
+// Dispositivos large (desktops com menos de 1200px)
 @media (max-width: 1199.98px) { ... }
 
-// Extra large devices (large desktops)
-// No media query since the extra-large breakpoint has no upper bound on its width
+// Dispositivos extra large (desktops grandes)
+// Nenhuma media query, já que o breakpoint extra large não possui nenhum limite acima.
 {% endhighlight %}
 
 {% include callout-info-mediaqueries-breakpoints.md %}
@@ -118,23 +118,23 @@ Mais uma vez, essas media queries também estão disponíveis via mixins Sass:
 Há também media queries e mixins para selecionar um único segmento com o tamanho da tela separado pelo tamanho minímo e tamanho máximo.
 
 {% highlight scss %}
-// Extra small devices (portrait phones, less than 576px)
+// Dispositivos extra small (telefones em modo retrato, com menos de 576px)
 @media (max-width: 575.98px) { ... }
 
-// Small devices (landscape phones, 576px and up)
+// Dispositivos small (telefones em modo paisagem, com 576px ou mais)
 @media (min-width: 576px) and (max-width: 767.98px) { ... }
 
-// Medium devices (tablets, 768px and up)
+// Dispositivos médios (tablets com 768px ou mais)
 @media (min-width: 768px) and (max-width: 991.98px) { ... }
 
-// Large devices (desktops, 992px and up)
+// Dispositivos large (desktops com 992px ou mais)
 @media (min-width: 992px) and (max-width: 1199.98px) { ... }
 
-// Extra large devices (large desktops, 1200px and up)
+// Dispositivos extra large (desktops grandes com 1200px ou mais)
 @media (min-width: 1200px) { ... }
 {% endhighlight %}
 
-Essas media queries também estão disponíveis via Sass mixins: 
+Essas media queries também estão disponíveis via mixins Sass: 
 
 {% highlight scss %}
 @include media-breakpoint-only(xs) { ... }
@@ -144,15 +144,15 @@ Essas media queries também estão disponíveis via Sass mixins:
 @include media-breakpoint-only(xl) { ... }
 {% endhighlight %}
 
-Da mesma forma, as media querias podem abranger várias larguras de pontos de parada.
+Da mesma forma, as media querias podem abranger várias larguras de breakpoints.
 
 {% highlight scss %}
-// Example
-// Apply styles starting from medium devices and up to extra large devices
+// Exemplo
+// Aplica estilos, começando de dispositivos médios até os extra larges
 @media (min-width: 768px) and (max-width: 1199.98px) { ... }
 {% endhighlight %}
 
-O Sass mixin para selecionar o mesmo tamanho de tela seria:
+O mixin Sass para selecionar o mesmo tamanho de tela seria:
 
 {% highlight scss %}
 @include media-breakpoint-between(md, xl) { ... }
@@ -160,11 +160,11 @@ O Sass mixin para selecionar o mesmo tamanho de tela seria:
 
 ## Z-index
 
-Several Bootstrap components utilize `z-index`, the CSS property that helps control layout by providing a third axis to arrange content. We utilize a default z-index scale in Bootstrap that's been designed to properly layer navigation, tooltips and popovers, modals, and more.
+Vários componentes Bootstrap usam `z-index`, a propriedade CSS que ajuda controlar layout, provendo um terceiro eixo para mover o conteúdo. Nós usamos uma escala z-index padrão, no Bootstrap. Ela foi desenhada para dispor nvegações, tooltips, popovers, modals e etc, adequadamente.
 
-These higher values start at an arbitrary number, high and specific enough to ideally avoid conflicts. We need a standard set of these across our layered components—tooltips, popovers, navbars, dropdowns, modals—so we can be reasonably consistent in the behaviors. There's no reason we couldn't have used `100`+ or `500`+.
+Estes valores maiores começam em um número arbitrário, grande e específico o suficiente para, com sorte, evitar conflitos. Nós precisamos de um conjunto de valores padrões desse para que nossos componentes dispostos em camadas (tooltips, popovers, navbars, dropdowns e modals) sejam, razoavelmente, consistentes em seus comportamentos. Não há motivos para não termos usado valores maiores que `100` ou `500`, ou não.
 
-We don't encourage customization of these individual values; should you change one, you likely need to change them all.
+Nós não encorajamos a personalização desses valores, individualmente. Se precisar alterar um deles, provavelmente, vai precisar mudar todos eles.
 
 {% highlight scss %}
 $zindex-dropdown:          1000 !default;
@@ -176,4 +176,4 @@ $zindex-popover:           1060 !default;
 $zindex-tooltip:           1070 !default;
 {% endhighlight %}
 
-To handle overlapping borders within components (e.g., buttons and inputs in input groups), we use low single digit `z-index` values of `1`, `2`, and `3` for default, hover, and active states. On hover/focus/active, we bring a particular element to the forefront with a higher `z-index` value to show their border over the sibling elements.
+Para lidar com sobreposição de bordas dentro de componentes (ex: botões em grupos de inputs), nós usamos os baixos valores `z-index` de `1`, `2` e `3` para estados padrões, hover e active. Em hover, focus e active, nós trazemos um elemento específico à frente, usando um valor `z-index` maior para mostrar suas bordas, invés de seus elementos.
