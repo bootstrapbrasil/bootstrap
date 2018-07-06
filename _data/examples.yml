@@ -2,54 +2,74 @@
   description: "Novos componentes e templates para ajudar a galera, rapidamente, começar com o Bootstrap e demonstrar boas práticas a serem usadas no framework."
   examples:
     - name: Album
+      nameTranslate: Álbum
       description: "Template de página simples para galerias de fotos, portfólios, etc."
     - name: Pricing
+      nameTranslate: Preços
       description: "Exemplo de página de preços feita com card e personalizados cabeçalhos e rodapé."
     - name: Checkout
+      nameTranslate: Checkout
       description: "Formulário de checkout customizado para mostrar nossos componentes de formulário e seus recursos de validação."
     - name: Product
+      nameTranslate: Produto
       description: "Página de marketing focada em produto e bem trabalhada com o grid e imagens."
     - name: Cover
+      nameTranslate: Capa
       description: "Um template para construir simples e lindas home pages."
     - name: Carousel
+      nameTranslate: Carousel
       description: "Customize a barra de navegação o e carousel, então, adicione alguns novos componentes."
     - name: Blog
+      nameTranslate: Blog
       description: "Blog no estilo de revista com cabeçalho, navegação e conteúdo destacado."
     - name: Dashboard
+      nameTranslate: Painel administrativo
       description: "Painel de controle administrativo básico com sidebar fixo e barra de navegação."
     - name: Sign-in
+      nameTranslate: Login
       description: "Layout e design de formulário customizado para um simples formulário de login."
     - name: Sticky footer
+      nameTranslate: Rodapé fixo
       description: "Grude o rodapé a parte inferior da viewport, quando o conteúdo da página é curto."
     - name: Sticky footer navbar
+      nameTranslate: Rodapé fixo com barra de navegação
       description: "Grude o rodapé a parte inferior da viewport e uma barra de navegação no topo."
 
 - category: Framework
   description: "Exemplos que focam em implementar componentes fornecidos pelo Bootstrap."
   examples:
     - name: "Starter template"
+      nameTranslate: Template inicial
       description: "Nada, além do básico: CSS e JavaScript compilado."
     - name: Grid
+      nameTranslate: Grid
       description: "Vários exemplos de layouts grid, usando os quatro breakpoins, aninhamento e outras coisas."
     - name: Jumbotron
+      nameTranslate: Jumbotron
       description: "Constrói uma barra de navegação e algumas colunas grid básicas, ao redor do jumbotron."
 
-- category: Navbars
+- category: Barras de navegação
   description: "Pega o componente navbar padrão e mostra como ele pode ser movido, posicionado e aprimorado."
   examples:
     - name: Navbars
+      nameTranslate: Barras de navegação
       description: "Demonstração de todas as opções e containers responsivos para a barra de navegação."
     - name: Navbar static
+      nameTranslate: Barra de navegação static
       description: "Exemplo de barra de navegação static no topo, ao lado de alguns conteúdos adicionais."
     - name: Navbar fixed
+      nameTranslate: Barra de navegação fixed
       description: "Exemplo de barra de navegação fixed no top, ao lado de alguns conteúdos extras."
     - name: Navbar bottom
+      nameTranslate: Barra de navegação bottom
       description: "Exemplo de barra de navegação na parte inferior, ao de lado de alguns conteúdos adicionais."
 
 - category: Experimentos
   description: "Exemplo que foca em recursos e técnicas amigáveis do futuro."
   examples:
     - name: Floating labels
+      nameTranslate: Labels flutantes
       description: "Embeleze seus formulários simples com labels flutuantes, em seus inputs."
     - name: Offcanvas
+      nameTranslate: Offcanvas
       description: "Transforme sua barra de navegação expansível em um menu offcanvas deslizante."
