@@ -1,55 +1,55 @@
-- category: Custom components
-  description: "Brand new components and templates to help folks quickly get started with Bootstrap and demonstrate best practices for adding onto the framework."
+- category: Componentes personalizados
+  description: "Novos componentes e templates para ajudar a galera, rapidamente, começar com o Bootstrap e demonstrar boas práticas a serem usadas no framework."
   examples:
     - name: Album
-      description: "Simple one-page template for photo galleries, portfolios, and more."
+      description: "Template de página simples para galerias de fotos, portfólios, etc."
     - name: Pricing
-      description: "Example pricing page built with Cards and featuring a custom header and footer."
+      description: "Exemplo de página de preços feita com card e personalizados cabeçalhos e rodapé."
     - name: Checkout
-      description: "Custom checkout form showing our form components and their validation features."
+      description: "Formulário de checkout customizado para mostrar nossos componentes de formulário e seus recursos de validação."
     - name: Product
-      description: "Lean product-focused marketing page with extensive grid and image work."
+      description: "Página de marketing focada em produto e bem trabalhada com o grid e imagens."
     - name: Cover
-      description: "A one-page template for building simple and beautiful home pages."
+      description: "Um template para construir simples e lindas home pages."
     - name: Carousel
-      description: "Customize the navbar and carousel, then add some new components."
+      description: "Customize a barra de navegação o e carousel, então, adicione alguns novos componentes."
     - name: Blog
-      description: "Magazine like blog template with header, navigation, featured content."
+      description: "Blog no estilo de revista com cabeçalho, navegação e conteúdo destacado."
     - name: Dashboard
-      description: "Basic admin dashboard shell with fixed sidebar and navbar."
+      description: "Painel de controle administrativo básico com sidebar fixo e barra de navegação."
     - name: Sign-in
-      description: "Custom form layout and design for a simple sign in form."
+      description: "Layout e design de formulário customizado para um simples formulário de login."
     - name: Sticky footer
-      description: "Attach a footer to the bottom of the viewport when page content is short."
+      description: "Grude o rodapé a parte inferior da viewport, quando o conteúdo da página é curto."
     - name: Sticky footer navbar
-      description: "Attach a footer to the bottom of the viewport with a fixed top navbar."
+      description: "Grude o rodapé a parte inferior da viewport e uma barra de navegação no topo."
 
 - category: Framework
-  description: "Examples that focus on implementing uses of built-in components provided by Bootstrap."
+  description: "Exemplos que focam em implementar componentes fornecidos pelo Bootstrap."
   examples:
     - name: "Starter template"
-      description: "Nothing but the basics: compiled CSS and JavaScript."
+      description: "Nada, além do básico: CSS e JavaScript compilado."
     - name: Grid
-      description: "Multiple examples of grid layouts with all four tiers, nesting, and more."
+      description: "Vários exemplos de layouts grid, usando os quatro breakpoins, aninhamento e outras coisas."
     - name: Jumbotron
-      description: "Build around the jumbotron with a navbar and some basic grid columns."
+      description: "Constrói uma barra de navegação e algumas colunas grid básicas, ao redor do jumbotron."
 
 - category: Navbars
-  description: "Taking the default navbar component and showing how it can be moved, placed, and extended."
+  description: "Pega o componente navbar padrão e mostra como ele pode ser movido, posicionado e aprimorado."
   examples:
     - name: Navbars
-      description: "Demonstration of all responsive and container options for the navbar."
+      description: "Demonstração de todas as opções e containers responsivos para a barra de navegação."
     - name: Navbar static
-      description: "Single navbar example of a static top navbar along with some additional content."
+      description: "Exemplo de barra de navegação static no topo, ao lado de alguns conteúdos adicionais."
     - name: Navbar fixed
-      description: "Single navbar example with a fixed top navbar along with some additional content."
+      description: "Exemplo de barra de navegação fixed no top, ao lado de alguns conteúdos extras."
     - name: Navbar bottom
-      description: "Single navbar example with a bottom navbar along with some additional content."
+      description: "Exemplo de barra de navegação na parte inferior, ao de lado de alguns conteúdos adicionais."
 
-- category: Experiments
-  description: "Examples that focus on future-friendly features or techniques."
+- category: Experimentos
+  description: "Exemplo que foca em recursos e técnicas amigáveis do futuro."
   examples:
     - name: Floating labels
-      description: "Beautifully simple forms with floating labels over your inputs."
+      description: "Embeleze seus formulários simples com labels flutuantes, em seus inputs."
     - name: Offcanvas
-      description: "Turn your expandable navbar into a sliding offcanvas menu."
+      description: "Transforme sua barra de navegação expansível em um menu offcanvas deslizante."
