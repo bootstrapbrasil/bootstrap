@@ -1,86 +1,156 @@
 - title: Getting started
+  titleTranslate: Ponto de partida
   pages:
     - title: Introduction
+    titleTranslate: Introdução
     - title: Download
+    titleTranslate: Download
     - title: Contents
+    titleTranslate: Conteúdos
     - title: Browsers & devices
+    titleTranslate: Browsers e dispositivos
     - title: JavaScript
+    titleTranslate: JavaScript
     - title: Theming
+    titleTranslate: Tematização
     - title: Build tools
+    titleTranslate: Ferramentas de build
     # - title: Best practices # TODO: Write this content
     - title: Webpack
+    titleTranslate: Webpack
     - title: Accessibility
+    titleTranslate: Acessibilidade
 
 - title: Layout
+  titleTranslate: Layout
   pages:
     - title: Overview
+    titleTranslate: Visão geral
     - title: Grid
+    titleTranslate: Grid
     - title: Media object
+    titleTranslate: Objeto de mídia
     - title: Utilities for layout
+    titleTranslate: Utilitários de layout
 
 - title: Content
+  titleTranslate: Conteúdo
   pages:
     - title: Reboot
+    titleTranslate: Reboot
     - title: Typography
+    titleTranslate: Tipografia
     - title: Code
+    titleTranslate: Código
     - title: Images
+    titleTranslate: Imagens
     - title: Tables
+    titleTranslate: Tabelas
     - title: Figures
+    titleTranslate: Figuras
 
 - title: Components
+  titleTranslate: Componentes
   pages:
     - title: Alerts
+    titleTranslate: Alertas
     - title: Badge
+    titleTranslate: Badge
     - title: Breadcrumb
+    titleTranslate: Breadcrumb
     - title: Buttons
+    titleTranslate: Botões
     - title: Button group
+    titleTranslate: Grupos de botões
     - title: Card
+    titleTranslate: Card
     - title: Carousel
+    titleTranslate: Carousel
     - title: Collapse
+    titleTranslate: Collapse
     - title: Dropdowns
+    titleTranslate: Dropdowns
     - title: Forms
+    titleTranslate: Formulários
     - title: Input group
+    titleTranslate: Grupos de input
     - title: Jumbotron
+    titleTranslate: Jumbotron
     - title: List group
+    titleTranslate: Grupos de lista
     - title: Modal
+    titleTranslate: Modal
     - title: Navs
+    titleTranslate: Navs
     - title: Navbar
+    titleTranslate: Barras de navegação
     - title: Pagination
+    titleTranslate: Paginação
     - title: Popovers
+    titleTranslate: Popovers
     - title: Progress
+    titleTranslate: Progresso
     - title: Scrollspy
+    titleTranslate: Scrollspy
     - title: Tooltips
+    titleTranslate: Tooltips
 
 - title: Utilities
+  titleTranslate: Utilitários
   pages:
     - title: Borders
+    titleTranslate: Bordas
     - title: Clearfix
+    titleTranslate: Clearfix
     - title: Close icon
+    titleTranslate: Íconde de dispensa
     - title: Colors
+    titleTranslate: Cores
     - title: Display
+    titleTranslate: Display
     - title: Embed
+    titleTranslate: Incorporação
     - title: Flex
+    titleTranslate: Flex
     - title: Float
+    titleTranslate: Float
     - title: Image replacement
+    titleTranslate: Substituição por imagens
     - title: Position
+    titleTranslate: Posição
     - title: Screenreaders
+    titleTranslate: Leitores de telas
     - title: Shadows
+    titleTranslate: Sombras
     - title: Sizing
+    titleTranslate: Dimensionamento
     - title: Spacing
+    titleTranslate: Espaçamento
     - title: Text
+    titleTranslate: Texto
     - title: Vertical align
+    titleTranslate: Alinhamento vertical
     - title: Visibility
+    titleTranslate: Visibilidade
 
 - title: Extend
-  pages:
+  pages: Extra
     - title: Approach
+    titleTranslate: Abordagem
     - title: Icons
+    titleTranslate: Ícones
 
 - title: Migration
+  titleTranslate: Migração
 
 - title: About
+  titleTranslate: Sobre
   pages:
     - title: Overview
+    titleTranslate: Visão Geral
     - title: Brand
+    titleTranslate: Marca
     - title: License
+    titleTranslate: Licença
     - title: Translations
+    titleTranslate: Traduções
