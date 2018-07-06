@@ -134,7 +134,8 @@
     titleTranslate: Visibilidade
 
 - title: Extend
-  pages: Extra
+titleTranslate: Extra
+  pages:
     - title: Approach
     titleTranslate: Abordagem
     - title: Icons
