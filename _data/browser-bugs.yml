@@ -2,7 +2,7 @@
   browser: >
     Edge
   summary: >
-    Visual artifacts in scrollable modal dialogs
+    Artefatos visuais em modals com rolagem.
   upstream_bug: >
     Edge#9011176
   origin: >
@@ -12,7 +12,7 @@
   browser: >
     Edge
   summary: >
-    Native browser tooltip for `title` shows on first keyboard focus (in addition to custom tooltip component)
+    Uso do tooltip nativo para exibir o `title`, no primeiro foco do teclado (além do componentes tooltip customizado).
   upstream_bug: >
     Edge#6793560
   origin: >
@@ -22,7 +22,7 @@
   browser: >
     Edge
   summary: >
-    Hovered element still remains in `:hover` state after scrolling away.
+    Quando o mouse passa por cima e sai, o elemento continua no estado `:hover`.
   upstream_bug: >
     Edge#5381673
   origin: >
@@ -32,7 +32,7 @@
   browser: >
     Edge
   summary: >
-    CSS `border-radius` sometimes causes lines of bleed-through of the `background-color` of the parent element.
+    `border-radius`, algumas vezes, cria linhas de vazamento no `background-color` do elemento pai.
   upstream_bug: >
     Edge#3342037
   origin: >
@@ -42,7 +42,7 @@
   browser: >
     Edge
   summary: >
-    `background` of `<tr>` is only applied to first child cell instead of all cells in the row
+    O `background` do `<tr>` só é aplicado na primeira célula filha, invés de todas células da linha.
   upstream_bug: >
     Edge#5865620
   origin: >
@@ -52,7 +52,7 @@
   browser: >
     Edge
   summary: >
-    `@-ms-viewport{width: device-width;}` has side-effect of making scrollbars auto-hide
+    `@-ms-viewport{width: device-width;}` tem o efeito colateral de causar barras de rolagem se esconderem, sozinhas.
   upstream_bug: >
     Edge#7165383
   origin: >
@@ -62,7 +62,7 @@
   browser: >
     Edge
   summary: >
-    Background color from lower layer bleeds through transparent border in some cases
+    Cor de fundo, de camadas mais baixas, vaza por bordas transparentes, em alguns casos.
   upstream_bug: >
     Edge#6274505
   origin: >
@@ -72,7 +72,7 @@
   browser: >
     Edge
   summary: >
-    Hovering over descendant SVG element fires `mouseleave` event at ancestor
+    Passar o mouse sobre elementos SVG descendentes aciona o evento `mouseleave`, no ancestral.
   upstream_bug: >
     Edge#7787318
   origin: >
@@ -82,7 +82,7 @@
   browser: >
     Edge
   summary: >
-    Active `position: fixed;` `<button>` flickers when scrolling
+    Botão ativo com `position: fixed;` começa a piscar, quando rolando a página.
   upstream_bug: >
     Edge#8770398
   origin: >
@@ -92,7 +92,7 @@
   browser: >
     Firefox
   summary: >
-    `.table-bordered` with an empty `<tbody>` is missing borders.
+    `.table-bordered` em um elemento `<tbody>` vazio, perde bordas.
   upstream_bug: >
     Mozilla#1023761
   origin: >
@@ -102,7 +102,7 @@
   browser: >
     Firefox
   summary: >
-    If the disabled state of a form control is changed via JavaScript, the normal state doesn't return after refreshing the page.
+    Se o estado disabled de um campo de formulário é alterado, via JavaScript, o estado normal não retorna ao atualizar a página.
   upstream_bug: >
     Mozilla#654072
   origin: >
@@ -112,7 +112,7 @@
   browser: >
     Firefox
   summary: >
-    `focus` events should not be fired at the `document` object
+    Eventos `focus` não devem ser acionados no objeto `document`.
   upstream_bug: >
     Mozilla#1228802
   origin: >
@@ -122,7 +122,7 @@
   browser: >
     Firefox
   summary: >
-    Wide floated table doesn't wrap onto new line
+    Tabelas com `float` não quebram em uma nova linha.
   upstream_bug: >
     Mozilla#1277782
   origin: >
@@ -132,7 +132,7 @@
   browser: >
     Firefox
   summary: >
-    Mouse sometimes not within element for purposes of `mouseenter`/`mouseleave` when it's within SVG elements
+    O mouse, às vezes, não entra em elementos SVG para acionar eventos `mouseenter`/`mouseleave`.
   upstream_bug: >
     Mozilla#577785
   origin: >
@@ -142,7 +142,7 @@
   browser: >
     Firefox
   summary: >
-    Layout with floated columns breaks when printing
+    Layout de colunas com `float`, quebra durante impressão.
   upstream_bug: >
     Mozilla#1315994
   origin: >
@@ -152,7 +152,7 @@
   browser: >
     Firefox (Windows)
   summary: >
-    Right border of `<select>` menu is sometimes missing when screen is set to uncommon resolution
+    Borda direita do menu `<select>`, as vezes, desaparece quando a tela é configurada em resoluções incomuns.
   upstream_bug: >
     Mozilla#545685
   origin: >
@@ -160,9 +160,9 @@
 
 -
   browser: >
-    Firefox (OS X & Linux)
+    Firefox (OS X e Linux)
   summary: >
-    Badge widget causes bottom border of Tabs widget to unexpectedly not overlap
+    Badges fazem a parte inferior de abas, inesperadamente, não sobreporem-se.
   upstream_bug: >
     Mozilla#1259972
   origin: >
@@ -172,7 +172,7 @@
   browser: >
     Chrome (Android)
   summary: >
-    Tapping on an `<input>` in a scrollable overlay doesn't scroll the `<input>` into view
+    Elemento `<input>` não é trazido à vista, quando tocado.
   upstream_bug: >
     Chromium#595210
   origin: >
@@ -182,17 +182,17 @@
   browser: >
     Chrome (OS X)
   summary: >
-    Clicking above `<input type="number">` increment button flashes the decrement button.
+    Clicando acima do botão de incremento de um `<input type="number">` faz o botão de decremento piscar.
   upstream_bug: >
     Chromium#419108
   origin: >
-    Offshoot of Bootstrap#8350 & Chromium#337668
+    Desdobramento de Bootstrap#8350 e Chromium#337668
 
 -
   browser: >
     Chrome
   summary: >
-    CSS infinite linear animation with alpha transparency leaks memory.
+    Animação CSS linear inifinita com transparência alpha causa vazamento de memória.
   upstream_bug: >
     Chromium#429375
   origin: >
@@ -202,17 +202,17 @@
   browser: >
     Chrome
   summary: >
-    `table-cell` borders not overlapping despite `margin-right: -1px`
+    Bordas da `table-cell` não sobrepõe, mesmo com `margin-right: -1px`.
   upstream_bug: >
     Chromium#749848
   origin: >
-    Bootstrap#17438, Bootstrap#14237
+    Bootstrap#17438 e Bootstrap#14237
 
 -
   browser: >
     Chrome
   summary: >
-    Clicking scrollbar in `<select multiple>` with overflowed options will select nearby `<option>`
+    Clicando na barra de rolagem no `<select multiple>`, com opções transbordadas, seleciona `<option>` próximos.
   upstream_bug: >
     Chromium#597642
   origin: >
@@ -222,7 +222,7 @@
   browser: >
     Chrome
   summary: >
-    Don't make `:hover` sticky on touch-friendly webpages
+    Não faz o `:hover` ser grudento, em páginas touch-friendly.
   upstream_bug: >
     Chromium#370155
   origin: >
@@ -232,7 +232,7 @@
   browser: >
     Chrome
   summary: >
-    `position: absolute` element that's wider than its column is incorrectly clipped to column boundary
+    Elemento com `position: absolute` que é maior que sua coluna é, incorretamente, cortado pelas fronteiras da coluna.
   upstream_bug: >
     Chromium#269061
   origin: >
@@ -240,9 +240,9 @@
 
 -
   browser: >
-    Chrome (Windows & Linux)
+    Chrome (Windows e Linux)
   summary: >
-    Animation glitch when returning to inactive tab after animations occurred while tab was hidden.
+    Falha de animação, depois de retornar a uma aba inativa que estava rodando a animação.
   upstream_bug: >
     Chromium#449180
   origin: >
@@ -252,7 +252,7 @@
   browser: >
     Chrome
   summary: >
-    Significant performance hit for dynamic SVGs with text depending on the number of fonts in `font-family`.
+    Perca de desempenho significativa, em SVGs dinâmicos com texto, dependendo do número de fontes em `font-family`.
   upstream_bug: >
     Chromium#781344
   origin: >
@@ -262,7 +262,8 @@
   browser: >
     Safari
   summary: >
-    `rem` units in media queries should be calculated using `font-size: initial`, not the root element's `font-size`
+    Unidades `rem`, em media queries, devem ser calculadas usando `font-size: initial`, mas não `font-size` do elemento raiz.
+    
   upstream_bug: >
     WebKit#156684
   origin: >
@@ -272,7 +273,7 @@
   browser: >
     Safari
   summary: >
-    Link to container with id and tabindex results in container being ignored by VoiceOver (affects skip links)
+    Link para um container com `id` e `tabindex` resulta no container sendo ignorado pelo VoiceOver (afeta puladores de links).
   upstream_bug: >
     WebKit#163658
   origin: >
@@ -282,7 +283,7 @@
   browser: >
     Safari
   summary: >
-    CSS `min-width` and `max-width` media features should not round fractional pixel
+    As media features CSS `min-width` e `max-width` não arredondam valores pixel com decimais.
   upstream_bug: >
     WebKit#178261
   origin: >
@@ -292,7 +293,7 @@
   browser: >
     Safari (OS X)
   summary: >
-    `px`, `em`, and `rem` should all behave the same in media queries when page zoom is applied
+    `px`, `em` e `rem` deveriam todos se comportar da mesma forma, em media queries, quando zoom na página é aplicado.
   upstream_bug: >
     WebKit#156687
   origin: >
@@ -302,21 +303,21 @@
   browser: >
     Safari (OS X)
   summary: >
-    Weird button behavior with some `<input type="number">` elements.
+    Comportamentos de botão esquisitos, em alguns elementos `<input type="number">`.
   upstream_bug: >
     WebKit#137269, Safari#18834768
   origin: >
     Bootstrap#8350,
-    Normalize#283,
+    Normalize#283 e
     Chromium#337668
 
 -
   browser: >
     Safari (OS X)
   summary: >
-    Small font size when printing webpage with fixed-width `.container`.
+    Pequeno tamanho de fonte, quando imprimindo uma página com `.container` de largura fixa.
   upstream_bug: >
-    WebKit#138192, Safari#19435018
+    WebKit#138192 e Safari#19435018
   origin: >
     Bootstrap#14868
 
@@ -324,9 +325,9 @@
   browser: >
     Safari (iOS)
   summary: >
-    `transform: translate3d(0,0,0);` rendering bug.
+    Bug de renderização do `transform: translate3d(0,0,0);`.
   upstream_bug: >
-    WebKit#138162, Safari#18804973
+    WebKit#138162 e Safari#18804973
   origin: >
     Bootstrap#14603
 
@@ -334,9 +335,9 @@
   browser: >
     Safari (iOS)
   summary: >
-    Text input's cursor doesn't move while scrolling the page.
+    Cursor do input de texto não se move, durante a rolagem da página.
   upstream_bug: >
-    WebKit#138201, Safari#18819624
+    WebKit#138201 e Safari#18819624
   origin: >
     Bootstrap#14708
 
@@ -344,9 +345,9 @@
   browser: >
     Safari (iOS)
   summary: >
-    Can't move cursor to start of text after entering long string of text into `<input type="text">`
+    Nâo é possível mover o cursor para o inicio do texto, depois de digitar uma longa linha de texto, dentro do `<input type="text">`.
   upstream_bug: >
-    WebKit#148061, Safari#22299624
+    WebKit#148061 e Safari#22299624
   origin: >
     Bootstrap#16988
 
@@ -354,17 +355,17 @@
   browser: >
     Safari (iOS)
   summary: >
-    `display: block` causes text of temporal `<input>`s to become vertically misaligned
+    `display: block` causa textos de `<input>` temporais se tornarem, verticalmente, desalinhados.
   upstream_bug: >
-    WebKit#139848, Safari#19434878
+    WebKit#139848 e Safari#19434878
   origin: >
-    Bootstrap#11266, Bootstrap#13098
+    Bootstrap#11266 e Bootstrap#13098
 
 -
   browser: >
     Safari (iOS)
   summary: >
-    Tapping on `<body>` doesn't fire `click` events
+    Tocar no `<body>` não aciona eventos de clique.
   upstream_bug: >
     WebKit#151933
   origin: >
@@ -374,7 +375,7 @@
   browser: >
     Safari (iOS)
   summary: >
-    `position:fixed` is incorrectly positioned when tab bar is visible on iPhone 6S+ Safari
+    `position:fixed` é posicionado, incorretamente, quando a barra de abas está visível, no Safari do iPhone 6S+.
   upstream_bug: >
     WebKit#153056
   origin: >
@@ -384,9 +385,9 @@
   browser: >
     Safari (iOS)
   summary: >
-    Tapping into an `<input>` within a `position:fixed` element scrolls to the top of the page
+    Tocar em um `<input>` dentro de um elemento com `position:fixed` rola para o topo da página.
   upstream_bug: >
-    WebKit#153224, Safari#24235301
+    WebKit#153224 e Safari#24235301
   origin: >
     Bootstrap#17497
 
@@ -394,7 +395,7 @@
   browser: >
     Safari (iOS)
   summary: >
-    `<body>` with `overflow:hidden` CSS is scrollable on iOS
+    `<body>` com CSS `overflow:hidden` continua sendo rolável, no iOS.
   upstream_bug: >
     WebKit#153852
   origin: >
@@ -404,7 +405,7 @@
   browser: >
     Safari (iOS)
   summary: >
-    Scroll gesture in text field in `position:fixed` element sometimes scrolls `<body>` instead of scrollable ancestor
+    Gesto de rolagem em campos de texto dentro de elementos com `position:fixed`, as vezes, rola o `<body>`, invés do ancestral rolável.
   upstream_bug: >
     WebKit#153856
   origin: >
@@ -414,7 +415,7 @@
   browser: >
     Safari (iOS)
   summary: >
-    Modal with `-webkit-overflow-scrolling: touch` doesn't become scrollable after added text makes it taller
+    Modal com `-webkit-overflow-scrolling: touch` não se torna rolável, depois do texto adicionado fazê-lo maior.
   upstream_bug: >
     WebKit#158342
   origin: >
@@ -424,7 +425,7 @@
   browser: >
     Safari (iOS)
   summary: >
-    Don't make `:hover` sticky on touch-friendly webpages
+    Não faz o `:hover` ser grudento, em páginas touch-friendly.
   upstream_bug: >
     WebKit#158517
   origin: >
@@ -434,7 +435,7 @@
   browser: >
     Safari (iOS)
   summary: >
-    Element which is `position:fixed` disappears after opening a `<select>` menu
+    Elemento, que tem `position:fixed`, desaparece depois de abrir um menu `<select>`.
   upstream_bug: >
     WebKit#162362
   origin: >
@@ -444,8 +445,8 @@
   browser: >
     Safari (iPad Pro)
   summary: >
-    Rendering of descendants of `position: fixed` element gets clipped on iPad Pro in Landscape orientation
+    Renderização de descendentes de um elemento com `position: fixed` é cortada, no iPad Pro, na orientação em paisagem.
   upstream_bug: >
-    WebKit#152637, Safari#24030853
+    WebKit#152637 e Safari#24030853
   origin: >
     Bootstrap#18738
