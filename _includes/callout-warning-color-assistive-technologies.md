@@ -1,6 +1,6 @@
 {% capture callout %}
-##### Conveying meaning to assistive technologies
+##### Transmitindo significado a tecnologias assistivas
 
-Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (e.g. the visible text), or is included through alternative means, such as additional text hidden with the `.sr-only` class.
+Usando cor para adicionar significado só fornece uma indicação visual, a qual não será transmitida para usuários de tecnologias assistivas (como leitores de telas). Se assegure que a informação denotada pela cor é tanto destacada do conteúdo (ex: o texto visível) ou está incluída em meios alternativos, como textos extras escondidos com a classe `.sr-class`.
 {% endcapture %}
 {% include callout.html content=callout type="warning" %}
