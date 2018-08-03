@@ -1,0 +1,452 @@
+-
+  browser: >
+    Edge
+  summary: >
+    Artefatos visuais em modals com rolagem.
+  upstream_bug: >
+    Edge#9011176
+  origin: >
+    Bootstrap#20755
+
+-
+  browser: >
+    Edge
+  summary: >
+    Uso do tooltip nativo para exibir o `title`, no primeiro foco do teclado (além do componentes tooltip customizado).
+  upstream_bug: >
+    Edge#6793560
+  origin: >
+    Bootstrap#18692
+
+-
+  browser: >
+    Edge
+  summary: >
+    Quando o mouse passa por cima e sai, o elemento continua no estado `:hover`.
+  upstream_bug: >
+    Edge#5381673
+  origin: >
+    Bootstrap#14211
+
+-
+  browser: >
+    Edge
+  summary: >
+    `border-radius`, algumas vezes, cria linhas de vazamento no `background-color` do elemento pai.
+  upstream_bug: >
+    Edge#3342037
+  origin: >
+    Bootstrap#16671
+
+-
+  browser: >
+    Edge
+  summary: >
+    O `background` do `<tr>` só é aplicado na primeira célula filha, invés de todas células da linha.
+  upstream_bug: >
+    Edge#5865620
+  origin: >
+    Bootstrap#18504
+
+-
+  browser: >
+    Edge
+  summary: >
+    `@-ms-viewport{width: device-width;}` tem o efeito colateral de causar barras de rolagem se esconderem, sozinhas.
+  upstream_bug: >
+    Edge#7165383
+  origin: >
+    Bootstrap#18543
+
+-
+  browser: >
+    Edge
+  summary: >
+    Cor de fundo, de camadas mais baixas, vaza por bordas transparentes, em alguns casos.
+  upstream_bug: >
+    Edge#6274505
+  origin: >
+    Bootstrap#18228
+
+-
+  browser: >
+    Edge
+  summary: >
+    Passar o mouse sobre elementos SVG descendentes aciona o evento `mouseleave`, no ancestral.
+  upstream_bug: >
+    Edge#7787318
+  origin: >
+    Bootstrap#19670
+
+-
+  browser: >
+    Edge
+  summary: >
+    Botão ativo com `position: fixed;` começa a piscar, quando rolando a página.
+  upstream_bug: >
+    Edge#8770398
+  origin: >
+    Bootstrap#20507
+
+-
+  browser: >
+    Firefox
+  summary: >
+    `.table-bordered` em um elemento `<tbody>` vazio, perde bordas.
+  upstream_bug: >
+    Mozilla#1023761
+  origin: >
+    Bootstrap#13453
+
+-
+  browser: >
+    Firefox
+  summary: >
+    Se o estado disabled de um campo de formulário é alterado, via JavaScript, o estado normal não retorna ao atualizar a página.
+  upstream_bug: >
+    Mozilla#654072
+  origin: >
+    Bootstrap#793
+
+-
+  browser: >
+    Firefox
+  summary: >
+    Eventos `focus` não devem ser acionados no objeto `document`.
+  upstream_bug: >
+    Mozilla#1228802
+  origin: >
+    Bootstrap#18365
+
+-
+  browser: >
+    Firefox
+  summary: >
+    Tabelas com `float` não quebram em uma nova linha.
+  upstream_bug: >
+    Mozilla#1277782
+  origin: >
+    Bootstrap#19839
+
+-
+  browser: >
+    Firefox
+  summary: >
+    O mouse, às vezes, não entra em elementos SVG para acionar eventos `mouseenter`/`mouseleave`.
+  upstream_bug: >
+    Mozilla#577785
+  origin: >
+    Bootstrap#19670
+
+-
+  browser: >
+    Firefox
+  summary: >
+    Layout de colunas com `float`, quebra durante impressão.
+  upstream_bug: >
+    Mozilla#1315994
+  origin: >
+    Bootstrap#21092
+
+-
+  browser: >
+    Firefox (Windows)
+  summary: >
+    Borda direita do menu `<select>`, as vezes, desaparece quando a tela é configurada em resoluções incomuns.
+  upstream_bug: >
+    Mozilla#545685
+  origin: >
+    Bootstrap#15990
+
+-
+  browser: >
+    Firefox (macOS & Linux)
+  summary: >
+    Badges fazem a parte inferior de abas, inesperadamente, não sobreporem-se.
+  upstream_bug: >
+    Mozilla#1259972
+  origin: >
+    Bootstrap#19626
+
+-
+  browser: >
+    Chrome (Android)
+  summary: >
+    Elemento `<input>` não é trazido à vista, quando tocado.
+  upstream_bug: >
+    Chromium#595210
+  origin: >
+    Bootstrap#17338
+
+-
+  browser: >
+    Chrome (macOS)
+  summary: >
+    Clicando acima do botão de incremento de um `<input type="number">` faz o botão de decremento piscar.
+  upstream_bug: >
+    Chromium#419108
+  origin: >
+    Desdobramento de Bootstrap#8350 e Chromium#337668
+
+-
+  browser: >
+    Chrome
+  summary: >
+    Animação CSS linear inifinita com transparência alpha causa vazamento de memória.
+  upstream_bug: >
+    Chromium#429375
+  origin: >
+    Bootstrap#14409
+
+-
+  browser: >
+    Chrome
+  summary: >
+    Bordas da `table-cell` não sobrepõe, mesmo com `margin-right: -1px`.
+  upstream_bug: >
+    Chromium#749848
+  origin: >
+    Bootstrap#17438 e Bootstrap#14237
+
+-
+  browser: >
+    Chrome
+  summary: >
+    Clicando na barra de rolagem no `<select multiple>`, com opções transbordadas, seleciona `<option>` próximos.
+  upstream_bug: >
+    Chromium#597642
+  origin: >
+    Bootstrap#19810
+
+-
+  browser: >
+    Chrome
+  summary: >
+    Não faz o `:hover` ser grudento, em páginas touch-friendly.
+  upstream_bug: >
+    Chromium#370155
+  origin: >
+    Bootstrap#12832
+
+-
+  browser: >
+    Chrome
+  summary: >
+    Elemento com `position: absolute` que é maior que sua coluna é, incorretamente, cortado pelas fronteiras da coluna.
+  upstream_bug: >
+    Chromium#269061
+  origin: >
+    Bootstrap#20161
+
+-
+  browser: >
+    Chrome (Windows e Linux)
+  summary: >
+    Falha de animação, depois de retornar a uma aba inativa que estava rodando a animação.
+  upstream_bug: >
+    Chromium#449180
+  origin: >
+    Bootstrap#15298
+
+-
+  browser: >
+    Chrome
+  summary: >
+    Perca de desempenho significativa, em SVGs dinâmicos com texto, dependendo do número de fontes em `font-family`.
+  upstream_bug: >
+    Chromium#781344
+  origin: >
+    Bootstrap#24673
+
+-
+  browser: >
+    Safari
+  summary: >
+    Unidades `rem`, em media queries, devem ser calculadas usando `font-size: initial`, mas não `font-size` do elemento raiz.
+
+  upstream_bug: >
+    WebKit#156684
+  origin: >
+    Bootstrap#17403
+
+-
+  browser: >
+    Safari
+  summary: >
+    Link para um container com `id` e `tabindex` resulta no container sendo ignorado pelo VoiceOver (afeta puladores de links).
+  upstream_bug: >
+    WebKit#163658
+  origin: >
+    Bootstrap#20732
+
+-
+  browser: >
+    Safari
+  summary: >
+    As media features CSS `min-width` e `max-width` não arredondam valores pixel com decimais.
+  upstream_bug: >
+    WebKit#178261
+  origin: >
+    Bootstrap#25166
+
+-
+  browser: >
+    Safari (macOS)
+  summary: >
+    `px`, `em` e `rem` deveriam todos se comportar da mesma forma, em media queries, quando zoom na página é aplicado.
+  upstream_bug: >
+    WebKit#156687
+  origin: >
+    Bootstrap#17403
+
+-
+  browser: >
+    Safari (macOS)
+  summary: >
+    Comportamentos de botão esquisitos, em alguns elementos `<input type="number">`.
+  upstream_bug: >
+    WebKit#137269, Safari#18834768
+  origin: >
+    Bootstrap#8350,
+    Normalize#283 e
+    Chromium#337668
+
+-
+  browser: >
+    Safari (macOS)
+  summary: >
+    Pequeno tamanho de fonte, quando imprimindo uma página com `.container` de largura fixa.
+  upstream_bug: >
+    WebKit#138192 e Safari#19435018
+  origin: >
+    Bootstrap#14868
+
+-
+  browser: >
+    Safari (iOS)
+  summary: >
+    Bug de renderização do `transform: translate3d(0,0,0);`.
+  upstream_bug: >
+    WebKit#138162 e Safari#18804973
+  origin: >
+    Bootstrap#14603
+
+-
+  browser: >
+    Safari (iOS)
+  summary: >
+    Cursor do input de texto não se move, durante a rolagem da página.
+  upstream_bug: >
+    WebKit#138201 e Safari#18819624
+  origin: >
+    Bootstrap#14708
+
+-
+  browser: >
+    Safari (iOS)
+  summary: >
+    Nâo é possível mover o cursor para o inicio do texto, depois de digitar uma longa linha de texto, dentro do `<input type="text">`.
+  upstream_bug: >
+    WebKit#148061 e Safari#22299624
+  origin: >
+    Bootstrap#16988
+
+-
+  browser: >
+    Safari (iOS)
+  summary: >
+    `display: block` causa textos de `<input>` temporais se tornarem, verticalmente, desalinhados.
+  upstream_bug: >
+    WebKit#139848 e Safari#19434878
+  origin: >
+    Bootstrap#11266 e Bootstrap#13098
+
+-
+  browser: >
+    Safari (iOS)
+  summary: >
+    Tocar no `<body>` não aciona eventos de clique.
+  upstream_bug: >
+    WebKit#151933
+  origin: >
+    Bootstrap#16028
+
+-
+  browser: >
+    Safari (iOS)
+  summary: >
+    `position:fixed` é posicionado, incorretamente, quando a barra de abas está visível, no Safari do iPhone 6S+.
+  upstream_bug: >
+    WebKit#153056
+  origin: >
+    Bootstrap#18859
+
+-
+  browser: >
+    Safari (iOS)
+  summary: >
+    Tocar em um `<input>` dentro de um elemento com `position:fixed` rola para o topo da página.
+  upstream_bug: >
+    WebKit#153224 e Safari#24235301
+  origin: >
+    Bootstrap#17497
+
+-
+  browser: >
+    Safari (iOS)
+  summary: >
+    `<body>` com CSS `overflow:hidden` continua sendo rolável, no iOS.
+  upstream_bug: >
+    WebKit#153852
+  origin: >
+    Bootstrap#14839
+
+-
+  browser: >
+    Safari (iOS)
+  summary: >
+    Gesto de rolagem em campos de texto dentro de elementos com `position:fixed`, as vezes, rola o `<body>`, invés do ancestral rolável.
+  upstream_bug: >
+    WebKit#153856
+  origin: >
+    Bootstrap#14839
+
+-
+  browser: >
+    Safari (iOS)
+  summary: >
+    Modal com `-webkit-overflow-scrolling: touch` não se torna rolável, depois do texto adicionado fazê-lo maior.
+  upstream_bug: >
+    WebKit#158342
+  origin: >
+    Bootstrap#17695
+
+-
+  browser: >
+    Safari (iOS)
+  summary: >
+    Não faz o `:hover` ser grudento, em páginas touch-friendly.
+  upstream_bug: >
+    WebKit#158517
+  origin: >
+    Bootstrap#12832
+
+-
+  browser: >
+    Safari (iOS)
+  summary: >
+    Elemento, que tem `position:fixed`, desaparece depois de abrir um menu `<select>`.
+  upstream_bug: >
+    WebKit#162362
+  origin: >
+    Bootstrap#20759
+
+-
+  browser: >
+    Safari (iPad Pro)
+  summary: >
+    Renderização de descendentes de um elemento com `position: fixed` é cortada, no iPad Pro, na orientação em paisagem.
+  upstream_bug: >
+    WebKit#152637 e Safari#24030853
+  origin: >
+    Bootstrap#18738

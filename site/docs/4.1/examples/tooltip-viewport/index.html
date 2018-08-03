@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+
+    <title>Exemplo de tooltip em diferentes viewports, usando Bootstrap.</title>
+
+    <!-- Principal CSS do Bootstrap -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilos customizados para esse template -->
+    <link href="tooltip-viewport.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <button type="button" class="btn btn-secondary float-right tooltip-bottom" title="Isso vai se mover para a esquerda">Muda para a esquerda</button>
+    <button type="button" class="btn btn-secondary tooltip-bottom" title="Isso vai se mover para a direita">Muda para a direita</button>
+    <button type="button" class="btn btn-secondary tooltip-right" title="Isso vai se mover para baixo">Muda para baixo</button>
+
+    <button type="button" class="btn btn-secondary tooltip-right btn-bottom" title="Isso vai se mover para cima">Muda para cima</button>
+
+    <div class="container-viewport">
+      <button type="button" class="btn btn-secondary tooltip-viewport-bottom" title="Isso vai se mover para a esquerda">Muda para a esquerda</button>
+      <button type="button" class="btn btn-secondary tooltip-viewport-right" title="Isso vai se mover para baixo">Muda para baixo</button>
+
+      <button type="button" class="btn btn-secondary float-right tooltip-viewport-bottom" title="Isso vai se mover para a direita">Muda para a direita</button>
+
+      <button type="button" class="btn btn-secondary tooltip-viewport-right btn-bottom" title="Isso vai se mover para cima">Muda para cima</button>
+    </div>
+
+    <!-- Principal JavaScript do Bootstrap
+    ================================================== -->
+    <!-- Foi colocado no final para a página carregar mais rápido -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="tooltip-viewport.js"></script>
+  </body>
+</html>
