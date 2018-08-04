@@ -485,7 +485,7 @@ Modals possuem três tamanhos alternativos, disponíveis via classes modificador
     <tr>
       <th>Tamanho</th>
       <th>Classe</th>
-      <th>Modal max-width</th>
+      <th>Largura máxima</th>
     </tr>
   </thead>
   <tbody>
@@ -496,7 +496,7 @@ Modals possuem três tamanhos alternativos, disponíveis via classes modificador
     </tr>
     <tr>
       <td>Padrão</td>
-      <td class="text-muted">None</td>
+      <td class="text-muted">Nenhuma</td>
       <td><code>500px</code></td>
     </tr>
     <tr>
@@ -512,17 +512,17 @@ Modals possuem três tamanhos alternativos, disponíveis via classes modificador
   </tbody>
 </table>
 
-Our default modal without modifier class constitutes the "medium" size modal.
+Nosso modal padrão sem classe modificadora constitui o modal de tamanho médio.
 
 <div class="bd-example">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl">Extra large modal</button>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Small modal</button>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl">Modal extra grande</button>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Modal grande</button>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Modal pequeno</button>
 </div>
 
 {% highlight html %}
-<!-- Extra large modal -->
-<button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl">Extra large modal</button>
+<!-- Modal extra grande -->
+<button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl">Modal extra grande</button>
 
 <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl">
@@ -532,8 +532,8 @@ Our default modal without modifier class constitutes the "medium" size modal.
   </div>
 </div>
 
-<!-- Large modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
+<!-- Modal grande -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Modal grande</button>
 
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -560,7 +560,7 @@ Our default modal without modifier class constitutes the "medium" size modal.
     <div class="modal-content">
 
       <div class="modal-header">
-        <h5 class="modal-title h4" id="myExtraLargeModalLabel">Extra large modal</h5>
+        <h5 class="modal-title h4" id="myExtraLargeModalLabel">Modal extra grande</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
