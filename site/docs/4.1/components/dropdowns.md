@@ -848,12 +848,13 @@ Parâmetros sempre podem ser passados usando atributos ou JavaScript. Para atrib
 ### Eventos
 
 Todos eventos dropdown são acionados no elemento pai do `.dropdown-menu` e possuem uma propriedade `relatedTarget`, a qual tem o valor referente ao elemento âncora de alternância.
-`hide.bs.dropdown` and `hidden.bs.dropdown` events have a `clickEvent` property (only when the original event type is `click`) that contains an Event Object for the click event.
+
+Os eventos `hide.bs.dropdown` e `hidden.bs.dropdown` possuem uma propriedade `clickEvent` (só quando o tipo do evento original é `click`), a qual contém um objeto de evento (Event Object) para o evento do clique.
 
 | Evento | Descrição |
 | --- | --- |
 | `show.bs.dropdown` | Este evento é acionado, imediatamente, quando o método show é invocado. |
-| `shown.bs.dropdown` | Este evento é acionado quando o dropdown se torna visível ao usuário (espera as transições CSS finalizarem) |
+| `shown.bs.dropdown` | Este evento é acionado quando o dropdown se torna visível ao usuário (espera as transições CSS finalizarem). |
 | `hide.bs.dropdown` | Este evento é acionado, imediatamente, quando o método hide foi invocado. |
 | `hidden.bs.dropdown`| Este evento é acionado quando o dropdown acaba de se esconder do usuário (espera as transições CSS finalizarem). |
 
