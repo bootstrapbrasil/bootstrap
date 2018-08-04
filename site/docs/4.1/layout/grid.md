@@ -334,14 +334,14 @@ Não quer que suas colunas, simplesmente, empilhem-se em alguns breakpoints? Use
 
 ### Gutters
 
-Gutters can be responsively adjusted by breakpoint-specific padding and negative margin utility classes. To change the gutters in a given row, pair a negative margin utility on the `.row` and matching padding utilities on the `.col`s.
+Gutters podem ser ajustadas, responsivamente, por utilitários de margem negativa e padding. Para alterar as gutters em uma certa row, combine utilitários de margem negativa (na `.row`) e um padding correspondente nas `.col`s. 
 
-Here's an example of customizing the Bootstrap grid at the large (`lg`) breakpoint and above. We've increased the `.col` padding with `.px-lg-5` and then counteracted that with `.mx-lg-n5` on the parent `.row`.
+Aqui está um exemplo de customização do grid Bootstrap no breakpoint large (`lg`) e acima. Nós aumentamos o padding do `.col` com `.px-lg-5` e, então, o neutralizamos com `.mx-lg-n5` na `.row` pai.
 
 {% capture example %}
 <div class="row mx-lg-n5">
-  <div class="col py-3 px-lg-5 border bg-light">Custom column padding</div>
-  <div class="col py-3 px-lg-5 border bg-light">Custom column padding</div>
+  <div class="col py-3 px-lg-5 border bg-light">Padding de coluna customizado.</div>
+  <div class="col py-3 px-lg-5 border bg-light">Padding de coluna customizado.</div>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
