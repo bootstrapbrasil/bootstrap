@@ -93,9 +93,9 @@ $('#exemplo').tooltip(options)
 {% endhighlight %}
 
 {% capture callout %}
-##### Overflow `auto` and `scroll`
+##### Overflow `auto` e `scroll`
 
-Tooltip position attempts to automatically change when a parent container has `overflow: auto` or `overflow: scroll` like our `.table-responsive`, but still keeps the original placement's positioning. To resolve, set the `boundary` option to anything other than default value, `'scrollParent'`, such as `'window'`:
+O tooltip tenta, automaticamente, mudar sua posição quando um container pai tem `overflow: auto` ou `overflow: scroll` (como acontece em `.table-responsive`), mas ainda assim preserva o espaço do posicionalmento original. Para resolver, altere o parâmetro `boundary` para qualquer coisa que não o valor padrão (`'scrollParent'`), como `'window'`.
 
 {% highlight js %}
 $('#example').tooltip({ boundary: 'window' })
