@@ -241,7 +241,7 @@ Você pode achar e personalizar estas variáveis para opções globais, no arqui
 | `$enable-grid-classes`      | `true` (padrão) ou `false`        | Ativa a geração de classes CSS para o grid (ex: `.container`, `.row`, `.col-md-1`, etc). |
 | `$enable-caret`             | `true` (padrão) ou `false`        | Ativa a setinha do `.dropdown-toggle` usando pseudo-elementos. |
 | `$enable-print-styles`      | `true` (padrão) ou `false`        | Ativa estilos para otimizar impressões. |
-| `$enable-validation-icons`  | `true` (default) or `false`       | Enables `background-image` icons within textual inputs and some custom forms for validation states. |
+| `$enable-validation-icons`  | `true` (padrão) ou `false`       | Ativa ícones `background-image`, dentro de inputs textuais e alguns formulários personalizados, para estados de validação. |
 
 ## Cor
 
