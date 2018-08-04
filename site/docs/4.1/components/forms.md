@@ -1192,7 +1192,7 @@ Checkboxes e radios também podem ser desativados. Coloque o atributo booleano `
 
 ### Menu select
 
-Menus de `<select>` personalizados só precisam de uma classe personalizada `.custom-select`, para ativar os estilos personalizados. Custom styles are limited to the `<select>`'s initial appearance and cannot modify the `<option>`s due to browser limitations.
+Menus de `<select>` personalizados só precisam de uma classe personalizada `.custom-select`, para ativar os estilos personalizados. Estilos customizados são limitados a aparência inicial do `<select>` e não podem modificar os `<option>`s, devido a restrições de browsers.
 
 {% capture example %}
 <select class="custom-select">
