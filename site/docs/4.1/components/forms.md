@@ -774,7 +774,7 @@ Com isso em mente, preste atenção nas seguintes demonstrações de nossos esti
 
 Para mensagens de validação Bootstrap personalizadas, você precisará colocar o atributo booleano `novalidate` em seu `<form>`. Isso desativa as dicas padrões do browser, mas continua tendo acesso as APIs de validação de formulário, no JavaScript. Tente enviar o formulário abaixo e veja que nosso JavaScript irá interceptar o botão "Enviar" e retornar um feedback a você. Quando tentando enviar o formulário, verá os estilos `:invalid` e `:valid` aplicados em seus campos de formulário.
 
-Custom feedback styles apply custom colors, borders, focus styles, and background icons to better communicate feedback. Background icons for `<select>`s are only available with `.custom-select`, and not `.form-control`.
+Estilos de feedback customizados aplicam cores, bordas, estilos de foco e ícones de background personalizados, para melhor transmitir o feedback. Ícones de background para `<select>`s só estão disponíveis com `.custom-select` e não `form-control`.
 
 {% capture example %}
 <form class="needs-validation" novalidate>
