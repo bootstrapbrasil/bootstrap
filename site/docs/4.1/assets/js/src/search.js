@@ -23,7 +23,7 @@
       var url = suggestion.url
       url = suggestion.isLvl1 ? url.split('#')[0] : url
       // If it's a title we remove the anchor so it does not jump.
-      window.location.href = url
+      window.location.href = url.replace('.com', '.com.br')
     },
     transformData: function (hits) {
       return hits.map(function (hit) {
