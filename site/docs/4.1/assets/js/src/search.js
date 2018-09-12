@@ -30,7 +30,7 @@
         // When in production, return the result as is,
         // otherwise remove our url from it.
         var siteurl = inputElement.getAttribute('data-siteurl')
-        var urlRE = /^https?:\/\/getbootstrap\.com/
+        var urlRE = /^https?:\/\/getbootstrap\.com\.br/
 
         hit.url = siteurl.match(urlRE) ? hit.url : hit.url.replace(urlRE, '')
 
