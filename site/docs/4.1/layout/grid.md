@@ -267,7 +267,7 @@ O grid Bootstrap possui cinco graus de classes pré-definidas, para construir la
 
 ### Todos breakpoints
 
-Para grids que são iguais, independente do tamanho dox dispositivos, use as classes `.col` e `.col-*`. Especifique uma classe numerada quando você precisar que uma coluna específica seja dimensionada. Caso contrário, sinta-se a vontade de usar só `.col`.
+Para grids que são iguais, independente do tamanho dos dispositivos, use as classes `.col` e `.col-*`. Especifique uma classe numerada quando você precisar que uma coluna específica seja dimensionada. Caso contrário, sinta-se a vontade de usar só `.col`.
 
 <div class="bd-example-row">
 {% capture example %}
