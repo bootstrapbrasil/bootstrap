@@ -37,7 +37,7 @@ Resumindo, assim é como funciona:
 
 - Containers criam meios para centralizar e, horizontalmente, preencher os conteúdos de seu site;
   - Use `.container` para ter uma largura responsiva em pixel ou `.container-fluid` para ter `width: 100%`, em todas viewports e tamanhos de disposivos.
-- Rows são elemntos para envolver colunas;
+- Rows são elementos para envolver colunas;
   - Cada coluna tem `padding` horizontal (gutter) para controlar o espaço, entre elas.
     - Este `padding`, depois, é cancelado com rows usando margens negativas. Assim, todo conteúdo em suas colunas é, visualmente, alinhado a esquerda.
 - Em um layout grid, o conteúdo deve ser posicionado dentro de colunas e só elas podem ser filhos imediatos de `.row`s;
