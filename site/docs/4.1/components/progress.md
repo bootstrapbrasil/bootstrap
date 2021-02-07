@@ -90,7 +90,7 @@ Use classes utilitárias de background para mudar a aparência das barras de pro
 {% endcapture %}
 {% include example.html content=example %}
 
-## Múltiplas barrras
+## Múltiplas barras
 
 Crie várias barras de progresso, dentro de um único componente de progresso, se precisar.
 
